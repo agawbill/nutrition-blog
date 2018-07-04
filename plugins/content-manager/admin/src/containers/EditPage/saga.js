@@ -1,5 +1,5 @@
 import { LOCATION_CHANGE } from 'react-router-redux';
-import { findIndex, get, isArray, isEmpty,   isNumber, isString, map } from 'lodash';
+import { findIndex, get, isArray, isEmpty, includes, isNumber, isString, map } from 'lodash';
 import {
   call,
   cancel,
@@ -9,6 +9,8 @@ import {
   take,
   takeLatest,
 } from 'redux-saga/effects';
+
+import { makeSelectSchema } from 'containers/App/selectors';
 
 // Utils.
 import cleanData from 'utils/cleanData';
@@ -41,6 +43,20 @@ function* dataGet(action) {
       call(request, '/content-manager/layout', { method: 'GET', params }),
     ];
     const pluginHeaderTitle = yield call(templateObject, { mainField: action.mainField }, response);
+
+    // Remove the updated_at & created_at fields so it is updated correctly when using Postgres or MySQL db
+    if (response.updated_at) {
+      delete response.created_at;
+      delete response.updated_at;
+    }
+
+    // Remove the updatedAt & createdAt fields so it is updated correctly when using MongoDB
+    if (response.updatedAt) {
+      delete response.createdAt;
+      delete response.updatedAt;
+
+    }
+
     yield put(getDataSucceeded(action.id, response, pluginHeaderTitle.mainField));
     yield put(getLayoutSucceeded(layout));
   } catch(err) {
@@ -64,12 +80,15 @@ export function* submit() {
   const isCreating = yield select(makeSelectIsCreating());
   const record = yield select(makeSelectRecord());
   const source = yield select(makeSelectSource());
+  const schema = yield select(makeSelectSchema());
+  let shouldAddTranslationSuffix = false;
 
   try {
     // Show button loader
     yield put(setLoader());
     const recordCleaned = Object.keys(record).reduce((acc, current) => {
-      const cleanedData = cleanData(record[current], 'value', 'id');
+      const attrType = source !== 'content-manager' ? get(schema, ['plugins', source, currentModelName, 'fields', current, 'type'], null) : get(schema, [currentModelName, 'fields', current, 'type'], null);
+      const cleanedData = attrType === 'json' ? record[current] : cleanData(record[current], 'value', 'id');
 
       if (isString(cleanedData) || isNumber(cleanedData)) {
         acc.append(current, cleanedData);
@@ -89,7 +108,7 @@ export function* submit() {
           acc.append(current, JSON.stringify(data));
         }
       } else {
-        acc.append(current, JSON.stringify(cleanedData));
+        acc.append(current,  JSON.stringify(cleanedData));
       }
 
       return acc;
@@ -122,6 +141,12 @@ export function* submit() {
     if (isArray(err.response.payload.message)) {
       const errors = err.response.payload.message.reduce((acc, current) => {
         const error = current.messages.reduce((acc, current) => {
+          if (includes(current.id, 'Auth')) {
+            acc.id = `users-permissions.${current.id}`;
+            shouldAddTranslationSuffix = true;
+
+            return acc;
+          }
           acc.errorMessage = current.id;
 
           return acc;
@@ -131,11 +156,13 @@ export function* submit() {
         return acc;
       }, []);
 
-      const name = get(err.response.payload.message, ['0', 'messages', '0', 'field']);
+      const name = get(err.response.payload.message, ['0', 'messages', '0', 'field', '0']);
 
       yield put(setFormErrors([{ name, errors }]));
     }
-    strapi.notification.error(isCreating ? 'content-manager.error.record.create' : 'content-manager.error.record.update');
+
+    const notifErrorPrefix = source === 'users-permissions' && shouldAddTranslationSuffix ? 'users-permissions.' : '';
+    strapi.notification.error(`${notifErrorPrefix}${get(err.response, ['payload', 'message', '0', 'messages', '0', 'id'], isCreating ? 'content-manager.error.record.create' : 'content-manager.error.record.update')}`);
   } finally {
     yield put(unsetLoader());
   }

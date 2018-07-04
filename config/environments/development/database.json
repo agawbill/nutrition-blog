@@ -9,11 +9,12 @@
         "port": 27017,
         "database": "strapi",
         "username": "",
-        "password": "",
+        "password": ""
+      },
+      "options": {
         "authenticationDatabase": "",
         "ssl": false
-      },
-      "options": {}
+      }
     }
   }
 }

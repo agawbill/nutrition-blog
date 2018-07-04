@@ -38,10 +38,6 @@
       "via": "users",
       "plugin": "users-permissions",
       "configurable": false
-    },
-    "posts": {
-      "collection": "post",
-      "via": "author"
     }
   }
 }
