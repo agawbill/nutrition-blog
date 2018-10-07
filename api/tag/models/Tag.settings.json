@@ -10,10 +10,11 @@
   },
   "attributes": {
     "name": {
+      "default": "",
       "type": "string"
     },
-    "posts": {
-      "collection": "post",
+    "categories": {
+      "collection": "category",
       "via": "tags",
       "dominant": true
     }

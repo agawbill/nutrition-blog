@@ -10,14 +10,12 @@
   },
   "attributes": {
     "title": {
+      "default": "",
       "type": "string"
     },
     "content": {
+      "default": "",
       "type": "text"
-    },
-    "tags": {
-      "collection": "tag",
-      "via": "posts"
     },
     "category": {
       "model": "category",
