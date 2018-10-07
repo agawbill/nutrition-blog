@@ -20,21 +20,9 @@
   },
   "dependencies": {
     "lodash": "4.x.x",
-    "strapi": "3.0.0-alpha.13.1",
-    "strapi-hook-mongoose": "3.0.0-alpha.13.1"
+    "strapi": "3.0.0-alpha.14.2",
+    "strapi-hook-mongoose": "3.0.0-alpha.14.2"
   },
-  "author": {
-    "name": "pierreburgy",
-    "email": "",
-    "url": ""
-  },
-  "maintainers": [
-    {
-      "name": "pierreburgy",
-      "email": "",
-      "url": ""
-    }
-  ],
   "strapi": {
     "packageManager": "npm"
   },
