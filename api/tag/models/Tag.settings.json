@@ -13,8 +13,8 @@
       "default": "",
       "type": "string"
     },
-    "categories": {
-      "collection": "category",
+    "posts": {
+      "collection": "post",
       "via": "tags",
       "dominant": true
     }

@@ -18,6 +18,10 @@
       "configurable": false,
       "required": true
     },
+    "provider": {
+      "type": "string",
+      "configurable": false
+    },
     "password": {
       "type": "password",
       "minLength": 6,
@@ -33,7 +37,7 @@
       "type": "boolean",
       "default": false,
       "configurable": false
-    }, 
+    },
     "blocked": {
       "type": "boolean",
       "default": false,

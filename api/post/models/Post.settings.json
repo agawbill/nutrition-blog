@@ -17,8 +17,14 @@
       "default": "",
       "type": "text"
     },
-    "category": {
-      "model": "category",
+    "cover": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "tags": {
+      "collection": "tag",
       "via": "posts"
     }
   }
