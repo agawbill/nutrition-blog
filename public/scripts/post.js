@@ -12,7 +12,6 @@ $(document).ready(() => {
           <h4 class="card-title">
             <a href="/posts/${post._id}">${post.title}</a>
           </h4>
-          Posted by: ${post.user.username}
           <p>
             <center><img src="${
               post.cover.url
