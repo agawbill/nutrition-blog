@@ -31,21 +31,11 @@
       "default": false,
       "type": "boolean"
     },
-    "user": {
-      "model": "user",
-      "via": "posts",
-      "plugin": "users-permissions"
-    },
     "category": {
       "default": "",
       "type": "enumeration",
       "required": true,
-      "enum": [
-        "news",
-        " sports",
-        " technology",
-        " entertainment"
-      ]
+      "enum": ["news", " sports", " technology", " entertainment"]
     }
   }
 }
