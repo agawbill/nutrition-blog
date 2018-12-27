@@ -10,7 +10,7 @@ $(document).ready(() => {
       $("#postContainer").append(`
         <div class="col-lg-12 col-md-12 mb-12">
           <h4 class="card-title">
-            <a href="/post.html?id=${item._id}">${post.title}</a>
+            <a href="/post.html?id=${post._id}">${post.title}</a>
           </h4>
           <p>
             <center><img src="${
