@@ -334,7 +334,7 @@ $(document).ready(() => {
       for (let i = 0; i < data.length; i++) {
         const item = data[i];
 
-        if (item.selectedPost == true) {
+        if (item.Избранное == true) {
           selectedPosts.unshift(item);
         }
 
