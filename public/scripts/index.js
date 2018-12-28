@@ -221,7 +221,7 @@ const randomSixCycle = () => {
 
   for (let i = 0; i < randomSix.length; i++) {
     const item = randomSix[i];
-    if (i === 1 || 3) {
+    if (i === 1 || i == 3) {
       const node = `
       <div class="col-lg-4 col-md-4 mb-4" style="position:relative;line-height:0px!important;float:center; border-left: 1px solid navy; border-right: 1px solid navy;">
         <h4 class="card-title">
