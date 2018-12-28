@@ -211,12 +211,12 @@ const selectedCycle = () => {
   }
 };
 const randomSixCycle = () => {
-  const allArray = [technology, news, entertainment];
+  const allArray = [technology, sports, entertainment];
 
   for (let i = 0; i < allArray.length; i++) {
     const item = allArray[i];
-    item.splice(item[item.length - 1]).unshift(randomSix);
-    item.splice(item[item.length - 2]).unshift(randomSix);
+    item.splice(item[item.length - 1], 1).unshift(randomSix);
+    item.splice(item[item.length - 2], 1).unshift(randomSix);
   }
 
   for (let i = 0; i < randomSix.length; i++) {
