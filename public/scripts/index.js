@@ -108,7 +108,7 @@ const entertainmentCycle = () => {
     if (i === 2) {
       const item = entertainment[i];
       const ent = `
-    <div class="col-lg-4 col-md-4 mb-4" style="position:relative;line-height:0px!important;float:center; border-left: 1px solid navy; border-right: 1px solid navy;">
+    <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;float:center; border-left: 1px solid navy; border-right: 1px solid navy;">
       <h4 class="card-title">
         <a href="/post.html?id=${item._id}">${item.title}</a>
       </h4>
@@ -124,7 +124,7 @@ const entertainmentCycle = () => {
     } else {
       const item = entertainment[i];
       const ent = `
-    <div class="col-lg-4 col-md-4 mb-4" style="position:relative;line-height:0px!important;">
+    <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;">
       <h4 class="card-title">
         <a href="/post.html?id=${item._id}">${item.title}</a>
       </h4>
@@ -207,8 +207,7 @@ const sportsCycle = () => {
   for (let i = 1; i < sports.length; i++) {
     if (i === 4) {
       break;
-    }
-    if (i === 2) {
+    } else if (i === 2) {
       const item = sports[i];
       const sport = `
     <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;float:center; border-left: 1px solid navy; border-right: 1px solid navy;">
