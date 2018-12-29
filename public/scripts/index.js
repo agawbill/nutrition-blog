@@ -340,7 +340,7 @@ $(document).ready(() => {
 
         if (item.category == "Наши Беседы") {
           news.unshift(item);
-        } else if (item.category == " Питание") {
+        } else if (item.category == " Партнеры") {
           technology.unshift(item);
         } else if (item.category == " Здоровье") {
           entertainment.unshift(item);
