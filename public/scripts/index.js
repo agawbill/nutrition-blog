@@ -368,8 +368,6 @@ $(document).ready(() => {
     if (selectedPosts.length !== 0) {
       selectedCycle();
     }
-    if (randomSix.length !== 0) {
-      randomSixCycle();
-    }
+    randomSixCycle();
   });
 });
