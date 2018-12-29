@@ -214,7 +214,7 @@ const selectedCycle = () => {
 const randomSixCycle = () => {
   for (let i = 0; i < allArray.length; i++) {
     const item = allArray[i];
-    if (i === 1 || i == 3) {
+    if (i === 1 || i == 4) {
       const node = `
       <div class="col-lg-4 col-md-4 mb-4" style="position:relative;line-height:0px!important;float:center; border-left: 1px solid navy; border-right: 1px solid navy;">
         <h4 class="card-title">
@@ -246,74 +246,6 @@ const randomSixCycle = () => {
       $("#randomSix").append(node);
     }
   }
-  // const technology1 = technology[technology.length - 1];
-  // const technology2 = technology[technology.length - 2];
-  // const news1 = news[news.length - 1];
-  // const news2 = news[news.length - 2];
-  // const entertainment1 = entertainment[entertainment.length - 1];
-  // const entertainment2 = entertainment[entertainment.length - 2];
-  // const six = `
-  // <div class="col-lg-4 col-md-4 mb-4" style="position:relative;border-right: 0px">
-  //   <a href="/post.html?id=${technology1._id}"><h5>${
-  //   technology1.description
-  // }</h5></a>
-  //   <p>
-  //   ${technology1.content.substring(0, 50)}
-  //   </p>
-  //   </br>
-  //   <span class="date">${technology1.createdAt}</span>
-  //
-  // </div>
-  // <div class="col-lg-4 col-md-4 mb-4" style="position:relative;border-left: 1px solid navy; border-right: 1px solid navy;">
-  //   <a href="/post.html?id=${technology2._id}"><h5>${
-  //   technology2.description
-  // }</h5></a>
-  //   <p>
-  //   ${technology2.content.substring(0, 50)}
-  //   </p>
-  //   </br>
-  //   <span class="date">${technology2.createdAt}</span>
-  // </div>
-  // <div class="col-lg-4 col-md-4 mb-4" style="position:relative;border-right: 0px">
-  //   <a href="/post.html?id=${news1._id}"><h5>${news1.description}</h5></a>
-  //   <p>
-  //   ${news1.content.substring(0, 50)}
-  //   </p>
-  //   </br>
-  //   <span class="date">${news1.createdAt}</span>
-  //
-  // </div>
-  // <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 0px">
-  //   <a href="/post.html?id=${news2._id}"><h5>${news2.description}</h5></a>
-  //   <p>
-  //   ${news2.content.substring(0, 50)}
-  //   </p>
-  //   </br>
-  //   <span class="date">${news2.createdAt}</span>
-  // </div>
-  // <div class="col-lg-4 col-md-4 mb-4" style="position:relative;border-left: 1px solid navy; border-right: 1px solid navy;">
-  //   <a href="/post.html?id=${entertainment1._id}"><h5>${
-  //   entertainment1.description
-  // }</h5></a>
-  //   <p>
-  //   ${entertainment1.content.substring(0, 50)}
-  //   </p>
-  //   </br>
-  //   <span class="date">${entertainment1.createdAt}</span>
-  //
-  // </div>
-  // <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 0px">
-  //   <a href="/post.html?id=${entertainment2._id}"><h5>${
-  //   entertainment2.description
-  // }</h5></a>
-  //   <p>
-  //   ${entertainment2.content.substring(0, 50)}
-  //   </p>
-  //   </br>
-  //   <span class="date">${entertainment2.createdAt}</span>
-  // </div>
-  // `;
-  // $("#randomSix").append(six);
 };
 
 $(document).ready(() => {
@@ -341,7 +273,6 @@ $(document).ready(() => {
           sports.unshift(item);
         }
       }
-
       allArray = [
         sports[sports.length - 1],
         sports[sports.length - 2],
@@ -350,7 +281,6 @@ $(document).ready(() => {
         entertainment[entertainment.length - 1],
         entertainment[entertainment.length - 2]
       ];
-      console.log(allArray);
     },
     catch: err => {
       console.log(err);
