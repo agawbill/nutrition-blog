@@ -214,13 +214,6 @@ const selectedCycle = () => {
 const randomSixCycle = () => {
   for (let i = 0; i < allArray.length; i++) {
     const item = allArray[i];
-    console.log(item._id);
-    item.splice(item.length - 1, 1).unshift(randomSix);
-    item.splice(item.length - 2, 1).unshift(randomSix);
-  }
-
-  for (let i = 0; i < randomSix.length; i++) {
-    const item = randomSix[i];
     if (i === 1 || i == 3) {
       const node = `
       <div class="col-lg-4 col-md-4 mb-4" style="position:relative;line-height:0px!important;float:center; border-left: 1px solid navy; border-right: 1px solid navy;">
@@ -362,25 +355,24 @@ $(document).ready(() => {
     catch: err => {
       console.log(err);
     }
-  })
-    .then(() => {
-      if (sports.length !== 0) {
-        sportsCycle();
-      }
-      if (entertainment.length !== 0) {
-        entertainmentCycle();
-      }
-      if (news.length !== 0) {
-        newsCycle();
-      }
-      if (technology.legnth !== 0) {
-        techCycle();
-      }
-      if (selectedPosts.length !== 0) {
-        selectedCycle();
-      }
-    })
-    .then(() => {
+  }).then(() => {
+    if (sports.length !== 0) {
+      sportsCycle();
+    }
+    if (entertainment.length !== 0) {
+      entertainmentCycle();
+    }
+    if (news.length !== 0) {
+      newsCycle();
+    }
+    if (technology.legnth !== 0) {
+      techCycle();
+    }
+    if (selectedPosts.length !== 0) {
+      selectedCycle();
+    }
+    if (allArray.length !== 0) {
       randomSixCycle();
-    });
+    }
+  });
 });
