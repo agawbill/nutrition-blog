@@ -160,7 +160,7 @@ const techCycle = () => {
     if (i === 2) {
       const item = technology[i];
       const tech = `
-    <div class="col-lg-4 col-md-4 mb-4" style="position:relative;line-height:0px!important;float:center; border-left: 1px solid navy; border-right: 1px solid navy;">
+    <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;float:center; border-left: 1px solid navy; border-right: 1px solid navy;">
       <h4 class="card-title">
         <a href="/post.html?id=${item._id}">${item.title}</a>
       </h4>
@@ -176,7 +176,7 @@ const techCycle = () => {
     } else {
       const item = technology[i];
       const tech = `
-    <div class="col-lg-4 col-md-4 mb-4" style="position:relative;line-height:0px!important;">
+    <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;">
       <h4 class="card-title">
         <a href="/post.html?id=${item._id}">${item.title}</a>
       </h4>
@@ -211,7 +211,7 @@ const sportsCycle = () => {
     if (i === 2) {
       const item = sports[i];
       const sport = `
-    <div class="col-lg-4 col-md-4 mb-4" style="position:relative;line-height:0px!important;float:center; border-left: 1px solid navy; border-right: 1px solid navy;">
+    <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;float:center; border-left: 1px solid navy; border-right: 1px solid navy;">
       <h4 class="card-title">
         <a href="/post.html?id=${item._id}">${item.title}</a>
       </h4>
@@ -225,9 +225,9 @@ const sportsCycle = () => {
     `;
       $("#sportsSecond").append(sport);
     } else {
-      const item = entertainment[i];
+      const item = sports[i];
       const sport = `
-    <div class="col-lg-4 col-md-4 mb-4" style="position:relative;line-height:0px!important;">
+    <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;">
       <h4 class="card-title">
         <a href="/post.html?id=${item._id}">${item.title}</a>
       </h4>
