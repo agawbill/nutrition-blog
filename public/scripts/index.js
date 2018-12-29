@@ -247,9 +247,9 @@ const selectedCycle = () => {
 const randomSixCycle = () => {
   for (let i = 0; i < allArray.length; i++) {
     const item = allArray[i];
-    if (i === 1 || i == 4) {
+    if (i === 3 || i == 7) {
       const node = `
-      <div class="col-lg-3 col-md-3 mb-3 style="position:relative;line-height:0px!important;float:center; border-left: 1px solid navy; border-right: 1px solid navy;">
+        <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 0px">
         <h4 class="card-title">
           <a href="/post.html?id=${item._id}">${item.title}</a>
         </h4>
@@ -264,7 +264,7 @@ const randomSixCycle = () => {
       $("#randomSix").append(node);
     } else {
       const node = `
-      <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;">
+      <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;border-right:1px solid navy">
         <h4 class="card-title">
           <a href="/post.html?id=${item._id}">${item.title}</a>
         </h4>
