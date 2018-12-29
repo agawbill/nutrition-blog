@@ -32,13 +32,13 @@ const newsCycle = () => {
     if (i === 2) {
       const item = news[i];
       const news2 = `
-        <div id="blocks">
+        <div id="blocks" style="border-top: 1px solid navy;border-bottom:1px solid navy;">
           <table>
             <tr>
               <td>
                   <img src="${
                     item.cover.url
-                  }"  class="rounded" float="left" height="200vh" width="200vh" style="padding-right:10px;border-top: 1px solid navy;border-bottom:1px solid navy;">
+                  }"  class="rounded" float="left" height="200vh" width="200vh" style="padding-right:10px;">
               </td>
               <td style="width: 100%;position:relative; clear:both;">
                 <span class="newsText">
