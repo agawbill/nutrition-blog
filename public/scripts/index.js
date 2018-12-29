@@ -32,8 +32,9 @@ const newsCycle = () => {
     if (i === 2) {
       const item = news[i];
       const news2 = `
-        <div id="blocks" style="border-top: 1px solid navy!important;border-bottom:1px solid navy!important;">
+        <div id="blocks">
           <table>
+          <div style="border-top: 1px solid navy;border-bottom:1px solid navy;>"
             <tr>
               <td>
                   <img src="${
@@ -51,6 +52,7 @@ const newsCycle = () => {
                 <span class="date">${item.createdAt}</span>
               </td>
             </tr>
+            </div>
           </table>
         </div>
         <p>
