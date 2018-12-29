@@ -349,6 +349,7 @@ $(document).ready(() => {
         }
       }
 
+      console.log(sports);
       allArray.push(sports);
       console.log(allArray);
     },
