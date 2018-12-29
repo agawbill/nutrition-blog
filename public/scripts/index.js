@@ -204,10 +204,11 @@ const sportsCycle = () => {
     <span class="date2">${item.createdAt}</span>
   `;
   $("#sportsFirst").append(sport);
-  for (let i = 1; i < sports.length; i++) {
+  for (let i = 1; i < entertainment.length; i++) {
     if (i === 4) {
       break;
-    } else if (i === 2) {
+    }
+    if (i === 2) {
       const item = sports[i];
       const sport = `
     <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;float:center; border-left: 1px solid navy; border-right: 1px solid navy;">
@@ -224,7 +225,7 @@ const sportsCycle = () => {
     `;
       $("#sportsSecond").append(sport);
     } else {
-      const item = sports[i];
+      const item = entertainment[i];
       const sport = `
     <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;">
       <h4 class="card-title">
@@ -238,7 +239,7 @@ const sportsCycle = () => {
       <span class="date2">${item.createdAt}</span>
     </div>
     `;
-      $("sportsSecond").append(sport);
+      $("#sportsSecond").append(sport);
     }
   }
 };
