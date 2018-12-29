@@ -90,11 +90,23 @@ const newsCycle = () => {
 };
 
 const entertainmentCycle = () => {
-  for (let i = 0; i < entertainment.length; i++) {
-    if (i === 3) {
+  const item = entertainment[0];
+  const ent = `
+  <div class="col-lg-9 col-md-9 mb-9" style="position:relative;line-height:0px!important; border-left: 1px solid navy; border-right: 1px solid navy;">
+    <h4 class="card-title">
+      <a href="/post.html?id=${item._id}">${item.title}</a>
+    </h4>
+      <img src="${item.cover.url}" class="rounded" height="200vh" width="100%">
+    <h5>${item.description}</h5>
+    </p>
+    <span class="date2">${item.createdAt}</span>
+  </div>
+  `;
+  for (let i = 1; i < entertainment.length; i++) {
+    if (i === 4) {
       break;
     }
-    if (i === 2) {
+    if (i === 1) {
       const item = entertainment[i];
       const ent = `
     <div class="col-lg-4 col-md-4 mb-4" style="position:relative;line-height:0px!important;float:center; border-left: 1px solid navy; border-right: 1px solid navy;">
@@ -110,26 +122,10 @@ const entertainmentCycle = () => {
     </div>
     `;
       $("#entertainment").append(ent);
-    } else if (i === 0) {
-      const item = entertainment[i];
-      const ent = `
-    <div class="col-lg-9 col-md-9 mb-9" style="position:relative;line-height:0px!important;float:center; border-left: 1px solid navy; border-right: 1px solid navy;">
-      <h4 class="card-title">
-        <a href="/post.html?id=${item._id}">${item.title}</a>
-      </h4>
-        <img src="${
-          item.cover.url
-        }" class="rounded" height="200vh" width="100%">
-      <h5>${item.description}</h5>
-      </p>
-      <span class="date2">${item.createdAt}</span>
-    </div>
-    `;
-      $("#entertainment").append(ent);
     } else {
       const item = entertainment[i];
       const ent = `
-    <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;">
+    <div class="col-lg-4 col-md-4 mb-4" style="position:relative;line-height:0px!important;">
       <h4 class="card-title">
         <a href="/post.html?id=${item._id}">${item.title}</a>
       </h4>
