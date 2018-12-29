@@ -332,7 +332,7 @@ $(document).ready(() => {
     dataType: "json",
     contentType: "json",
     success: data => {
-      console.log(data);
+      // console.log(data);
       for (let i = 0; i < data.length; i++) {
         const item = data[i];
 
@@ -350,9 +350,11 @@ $(document).ready(() => {
           sports.unshift(item);
         }
       }
-      console.log(technology);
+
+      allArray.push(technology);
+      allArray.push(entertainment);
+      allArray.push(sports);
       console.log(allArray);
-      allArray = [technology, sports, entertainment];
     },
     catch: err => {
       console.log(err);
