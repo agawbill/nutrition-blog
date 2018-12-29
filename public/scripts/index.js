@@ -7,7 +7,7 @@ var sports = [];
 var newSports;
 var newTechnology;
 var newEntertainment;
-var allArray = [];
+var allArray;
 var randomSix = [];
 
 const newsCycle = () => {
@@ -356,9 +356,12 @@ $(document).ready(() => {
       newEntertainment = entertainment;
       newTechnology = technology;
 
+      allArray = [newSports, newEntertainment, newTechnology];
+
       console.log(newSports);
       console.log(newEntertainment);
       console.log(newTechnology);
+      console.log(allArray);
     },
     catch: err => {
       console.log(err);
