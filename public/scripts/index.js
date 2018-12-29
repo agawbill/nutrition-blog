@@ -354,22 +354,25 @@ $(document).ready(() => {
     catch: err => {
       console.log(err);
     }
-  }).then(() => {
-    if (sports.length !== 0) {
-      sportsCycle();
-    }
-    if (entertainment.length !== 0) {
-      entertainmentCycle();
-    }
-    if (news.length !== 0) {
-      newsCycle();
-    }
-    if (technology.legnth !== 0) {
-      techCycle();
-    }
-    if (selectedPosts.length !== 0) {
-      selectedCycle();
-    }
-    randomSixCycle();
-  });
+  })
+    .then(() => {
+      if (sports.length !== 0) {
+        sportsCycle();
+      }
+      if (entertainment.length !== 0) {
+        entertainmentCycle();
+      }
+      if (news.length !== 0) {
+        newsCycle();
+      }
+      if (technology.legnth !== 0) {
+        techCycle();
+      }
+      if (selectedPosts.length !== 0) {
+        selectedCycle();
+      }
+    })
+    .then(() => {
+      randomSixCycle();
+    });
 });
