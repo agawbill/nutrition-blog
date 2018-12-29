@@ -29,30 +29,61 @@ const newsCycle = () => {
     if (i === 4) {
       break;
     }
-    const item = news[i];
-    const news2 = `
-      <div id="blocks">
-        <table>
-          <tr>
-            <td>
-                <img src="${
-                  item.cover.url
-                }"  class="rounded" float="left" height="200vh" width="200vh" style="padding-right:10px;">
-            </td>
-            <td style="width: 100%;position:relative; clear:both;">
-              <span class="newsText">
-                  <h4 class="card-title">
-                    <a href="/post.html?id=${item._id}">${item.description}</a>
-                  </h4>
-              </span>
-              <span class="date">${item.createdAt}</span>
-            </td>
-          </tr>
-        </table>
-      </div>
-      <p>
-        `;
-    $("#newsSecond").append(news2);
+    if (i === 2) {
+      const item = news[i];
+      const news2 = `
+        <div id="blocks">
+          <table>
+            <tr>
+              <td>
+                  <img src="${
+                    item.cover.url
+                  }"  class="rounded" float="left" height="200vh" width="200vh" style="padding-right:10px;border-top: 1px solid navy;border-bottom:1px solid navy;">
+              </td>
+              <td style="width: 100%;position:relative; clear:both;">
+                <span class="newsText">
+                    <h4 class="card-title">
+                      <a href="/post.html?id=${item._id}">${
+        item.description
+      }</a>
+                    </h4>
+                </span>
+                <span class="date">${item.createdAt}</span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <p>
+          `;
+      $("#newsSecond").append(news2);
+    } else {
+      const item = news[i];
+      const news2 = `
+        <div id="blocks">
+          <table>
+            <tr>
+              <td>
+                  <img src="${
+                    item.cover.url
+                  }"  class="rounded" float="left" height="200vh" width="200vh" style="padding-right:10px;">
+              </td>
+              <td style="width: 100%;position:relative; clear:both;">
+                <span class="newsText">
+                    <h4 class="card-title">
+                      <a href="/post.html?id=${item._id}">${
+        item.description
+      }</a>
+                    </h4>
+                </span>
+                <span class="date">${item.createdAt}</span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <p>
+          `;
+      $("#newsSecond").append(news2);
+    }
   }
 };
 
@@ -255,7 +286,6 @@ $(document).ready(() => {
     dataType: "json",
     contentType: "json",
     success: data => {
-      // console.log(data);
       for (let i = 0; i < data.length; i++) {
         const item = data[i];
 
