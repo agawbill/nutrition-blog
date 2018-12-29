@@ -92,7 +92,6 @@ const newsCycle = () => {
 const entertainmentCycle = () => {
   const item = entertainment[0];
   const ent = `
-  <div class="col-lg-9 col-md-9 mb-9" style="position:relative;line-height:0px!important; border-left: 1px solid navy; border-right: 1px solid navy;">
     <h4 class="card-title">
       <a href="/post.html?id=${item._id}">${item.title}</a>
     </h4>
@@ -100,9 +99,8 @@ const entertainmentCycle = () => {
     <h5>${item.description}</h5>
     </p>
     <span class="date2">${item.createdAt}</span>
-  </div>
   `;
-  $("#entertainment").append(ent);
+  $("#entertainmentFirst").append(ent);
   for (let i = 1; i < entertainment.length; i++) {
     if (i === 4) {
       break;
@@ -122,7 +120,7 @@ const entertainmentCycle = () => {
       <span class="date2">${item.createdAt}</span>
     </div>
     `;
-      $("#entertainment").append(ent);
+      $("#entertainmentSecond").append(ent);
     } else {
       const item = entertainment[i];
       const ent = `
@@ -138,7 +136,7 @@ const entertainmentCycle = () => {
       <span class="date2">${item.createdAt}</span>
     </div>
     `;
-      $("#entertainment").append(ent);
+      $("#entertainmentSecond").append(ent);
     }
   }
 };
