@@ -212,8 +212,6 @@ const selectedCycle = () => {
   }
 };
 const randomSixCycle = () => {
-  console.log(allArray);
-
   for (let i = 0; i < allArray.length; i++) {
     const item = allArray[i];
     console.log(item._id);
@@ -351,10 +349,9 @@ $(document).ready(() => {
         }
       }
 
-      allArray.push(technology);
-      allArray.push(entertainment);
-      allArray.push(sports);
-      console.log(allArray);
+      console.log(sports);
+      console.log(technology);
+      console.log(entertainment);
     },
     catch: err => {
       console.log(err);
