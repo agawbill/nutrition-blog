@@ -4,9 +4,6 @@ var news = [];
 var entertainment = [];
 var selectedPosts = [];
 var sports = [];
-var newSports;
-var newTechnology;
-var newEntertainment;
 var allArray;
 var randomSix = [];
 
@@ -352,8 +349,15 @@ $(document).ready(() => {
         }
       }
 
-      newSports = [sports[sports.length - 1], sports[sports.length - 2]];
-      console.log(newSports);
+      allArray = [
+        sports[sports.length - 1],
+        sports[sports.length - 2],
+        technology[technology.length - 1],
+        technology[technology.length - 2],
+        entertainment[entertainment.length - 1],
+        entertainment[entertainment.length - 2]
+      ];
+      console.log(allArray);
     },
     catch: err => {
       console.log(err);
