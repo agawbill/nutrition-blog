@@ -4,6 +4,9 @@ var news = [];
 var entertainment = [];
 var selectedPosts = [];
 var sports = [];
+var newSports;
+var newTechnology;
+var newEntertainment;
 var allArray = [];
 var randomSix = [];
 
@@ -215,8 +218,8 @@ const randomSixCycle = () => {
   for (let i = 0; i < allArray.length; i++) {
     const item = allArray[i];
     console.log(item._id);
-    item.splice(item[item.length - 1], 1).unshift(randomSix);
-    item.splice(item[item.length - 2], 1).unshift(randomSix);
+    item.splice(item.length - 1, 1).unshift(randomSix);
+    item.splice(item.length - 2, 1).unshift(randomSix);
   }
 
   for (let i = 0; i < randomSix.length; i++) {
