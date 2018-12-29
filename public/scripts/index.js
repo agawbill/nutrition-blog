@@ -152,7 +152,7 @@ const techCycle = () => {
     </p>
     <span class="date2">${item.createdAt}</span>
   `;
-  $("#sportsFirst").append(tech);
+  $("#technologyFirst").append(tech);
   for (let i = 1; i < technology.length; i++) {
     if (i === 4) {
       break;
