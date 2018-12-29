@@ -33,8 +33,8 @@ const newsCycle = () => {
       const item = news[i];
       const news2 = `
         <div id="blocks">
+        <div style="border-top:1px solid navy;border-bottom:1px solid navy;width:100%;padding-top:10px;padding-bottom:10px;">
           <table>
-          <div style="border-top: 1px solid navy;border-bottom:1px solid navy;>"
             <tr>
               <td>
                   <img src="${
@@ -178,7 +178,7 @@ const sportsCycle = () => {
     if (i === 1) {
       const item = sports[i];
       const sport = `
-        <div class="col-lg-4 col-md-4 mb-4" style="position:relative;line-height:0px!important;float:center; border-left: 1px solid navy; border-right: 1px solid navy;">
+        <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;float:center; border-left: 1px solid navy; border-right: 1px solid navy;">
           <h4 class="card-title">
             <a href="/post.html?id=${item._id}">${item.title}</a>
           </h4>
@@ -249,7 +249,7 @@ const randomSixCycle = () => {
     const item = allArray[i];
     if (i === 1 || i == 4) {
       const node = `
-      <div class="col-lg-4 col-md-4 mb-4" style="position:relative;line-height:0px!important;float:center; border-left: 1px solid navy; border-right: 1px solid navy;">
+      <div class="col-lg-3 col-md-3 mb-3 style="position:relative;line-height:0px!important;float:center; border-left: 1px solid navy; border-right: 1px solid navy;">
         <h4 class="card-title">
           <a href="/post.html?id=${item._id}">${item.title}</a>
         </h4>
@@ -264,7 +264,7 @@ const randomSixCycle = () => {
       $("#randomSix").append(node);
     } else {
       const node = `
-      <div class="col-lg-4 col-md-4 mb-4" style="position:relative;line-height:0px!important;">
+      <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;">
         <h4 class="card-title">
           <a href="/post.html?id=${item._id}">${item.title}</a>
         </h4>
