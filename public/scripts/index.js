@@ -212,9 +212,11 @@ const selectedCycle = () => {
 };
 const randomSixCycle = () => {
   const allArray = [technology, sports, entertainment];
+  console.log(allArray);
 
   for (let i = 0; i < allArray.length; i++) {
     const item = allArray[i];
+    console.log(item);
     item.splice(item[item.length - 1], 1).unshift(randomSix);
     item.splice(item[item.length - 2], 1).unshift(randomSix);
   }
