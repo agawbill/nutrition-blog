@@ -350,8 +350,8 @@ $(document).ready(() => {
       }
 
       console.log(sports);
-      allArray.push(sports);
-      console.log(allArray);
+      console.log(entertainment);
+      console.log(technology);
     },
     catch: err => {
       console.log(err);
