@@ -356,10 +356,9 @@ $(document).ready(() => {
       newEntertainment = entertainment;
       newTechnology = technology;
 
-      allArray.push(newSports);
-      allArray.push(newTechnology);
-      allArray.push(newEntertainment);
-      console.log(allArray);
+      console.log(newSports);
+      console.log(newEntertainment);
+      console.log(newTechnology);
     },
     catch: err => {
       console.log(err);
