@@ -4,6 +4,7 @@ var news = [];
 var entertainment = [];
 var selectedPosts = [];
 var sports = [];
+var allArray = [technology, sports, entertainment];
 var randomSix = [];
 
 const newsCycle = () => {
@@ -211,7 +212,6 @@ const selectedCycle = () => {
   }
 };
 const randomSixCycle = () => {
-  const allArray = [technology, sports, entertainment];
   console.log(allArray);
 
   for (let i = 0; i < allArray.length; i++) {
