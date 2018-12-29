@@ -102,6 +102,7 @@ const entertainmentCycle = () => {
     <span class="date2">${item.createdAt}</span>
   </div>
   `;
+  $("#entertainment").append(ent);
   for (let i = 1; i < entertainment.length; i++) {
     if (i === 4) {
       break;
