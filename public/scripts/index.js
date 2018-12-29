@@ -349,9 +349,8 @@ $(document).ready(() => {
         }
       }
 
-      console.log(sports);
-      console.log(technology);
-      console.log(entertainment);
+      allArray.push(sports);
+      console.log(allArray);
     },
     catch: err => {
       console.log(err);
