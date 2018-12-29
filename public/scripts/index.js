@@ -352,7 +352,7 @@ $(document).ready(() => {
       console.log(sports);
       console.log(entertainment);
       console.log(technology);
-      allArray = [sports, entertainment, technology];
+      allArray = sports;
       console.log(allArray);
     },
     catch: err => {
