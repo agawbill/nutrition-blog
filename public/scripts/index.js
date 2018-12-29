@@ -350,6 +350,8 @@ $(document).ready(() => {
           sports.unshift(item);
         }
       }
+      console.log(technology);
+      console.log(allArray);
       allArray = [technology, sports, entertainment];
     },
     catch: err => {
