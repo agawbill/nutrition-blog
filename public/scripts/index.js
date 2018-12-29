@@ -352,16 +352,8 @@ $(document).ready(() => {
         }
       }
 
-      newSports = sports;
-      newEntertainment = entertainment;
-      newTechnology = technology;
-
-      allArray = [newSports, newEntertainment, newTechnology];
-
+      newSports = [sports[sports.length - 1], sports[sports.length - 2]];
       console.log(newSports);
-      console.log(newEntertainment);
-      console.log(newTechnology);
-      console.log(allArray);
     },
     catch: err => {
       console.log(err);
