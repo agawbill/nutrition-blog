@@ -92,10 +92,13 @@ const newsCycle = () => {
 const entertainmentCycle = () => {
   const item = entertainment[0];
   const ent = `
-    <h4 class="card-title">
+  <img src="${
+    item.cover.url
+  }" class="rounded" height="400vh" width="50%" style="float:right;padding-left:15px;>
+    <h4 class="bigTitle">
       <a href="/post.html?id=${item._id}">${item.title}</a>
     </h4>
-      <img src="${item.cover.url}" class="rounded" height="200vh" width="100%">
+
     <h5>${item.description}</h5>
     </p>
     <span class="date2">${item.createdAt}</span>
@@ -115,7 +118,7 @@ const entertainmentCycle = () => {
         <img src="${
           item.cover.url
         }" class="rounded" height="200vh" width="100%">
-      <h5>${item.description}</h5>
+      <h5>${item.content.substring(0, 50)}</h5>
       </p>
       <span class="date2">${item.createdAt}</span>
     </div>
@@ -144,10 +147,13 @@ const entertainmentCycle = () => {
 const techCycle = () => {
   const item = technology[0];
   const tech = `
-    <h4 class="card-title">
+  <img src="${
+    item.cover.url
+  }" class="rounded" height="400vh" width="50%" style="float:left;padding-right:15px;>
+    <h4 class="bigTitle">
       <a href="/post.html?id=${item._id}">${item.title}</a>
     </h4>
-      <img src="${item.cover.url}" class="rounded" height="200vh" width="100%">
+
     <h5>${item.description}</h5>
     </p>
     <span class="date2">${item.createdAt}</span>
@@ -167,7 +173,7 @@ const techCycle = () => {
         <img src="${
           item.cover.url
         }" class="rounded" height="200vh" width="100%">
-      <h5>${item.description}</h5>
+      <h5>${item.content.substring(0, 50)}</h5>
       </p>
       <span class="date2">${item.createdAt}</span>
     </div>
@@ -195,11 +201,14 @@ const techCycle = () => {
 const sportsCycle = () => {
   const item = sports[0];
   const sport = `
-    <h4 class="card-title">
+  <img src="${
+    item.cover.url
+  }" class="rounded" height="400vh" width="50%" style="float:left; padding-right:15px;">
+    <h4 class="bigTitle">
       <a href="/post.html?id=${item._id}">${item.title}</a>
     </h4>
-      <img src="${item.cover.url}" class="rounded" height="200vh" width="100%">
-    <h5>${item.description}</h5>
+
+    <h5>${item.content.substring(0, 50)}</h5>
     </p>
     <span class="date2">${item.createdAt}</span>
   `;
