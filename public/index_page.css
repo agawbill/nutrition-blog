@@ -112,10 +112,11 @@
       #header_logo {
         display: block;
         position: absolute; 
-        top:0px;   
-         align-items: center;
-         z-index: 1000;
-         width: auto;
+        top: 0px; 
+        left: 50px !important;
+        align-item: center;
+         text-align: center !important;
+         width: 100% !important;
                 justify-content: space-around;
       }
       .container-fluid {
