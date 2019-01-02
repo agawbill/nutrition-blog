@@ -11,19 +11,18 @@ $(document).ready(() => {
         const item = data[i];
         if (item.category == " Партнеры") {
           const node = `
-          <div class="col-lg-12 col-md-12 mb-12">
+          <li class="media">
+          <img src="${
+            item.cover.url
+          }" height="300vh" width="30%" class="rounded" align="left" style="padding-right:5px;" >
+            <div class="media-body">
             <h4 class="card-title">
               <a href="/post.html?id=${item._id}">${item.title}</a>
             </h4>
-            <img src="${
-              item.cover.url
-            }" height="300vh" width="30%" class="rounded" align="left" style="padding-right:5px;" >
             <h5>${item.description}</h5>
             <p>
-            ${item.content.substring(0, 50)}
-          </div>
-          <div class="col-lg-12 col-md-12 mb-12">
-            <hr>
+            ${item.content.substring(0, 200)}
+          </li>
           </div>
           `;
           $("#contentContainer").append(node);
