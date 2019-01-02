@@ -22,6 +22,8 @@ $(document).ready(() => {
             <h5>${item.description}</h5>
             <p>
             ${item.content.substring(0, 200)}
+            </p>
+            <span class="date2">${item.createdAt}</span>
           </li>
           </div>
           `;
