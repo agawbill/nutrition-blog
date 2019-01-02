@@ -11,7 +11,7 @@ $(document).ready(() => {
         const item = data[i];
         if (item.category == " Партнеры") {
           const node = `
-          <li class="media">
+          <li class="media" style="border-bottom: 2px dotted gray; margin-bottom: 10px; padding-bottom: 10px;">
           <img src="${
             item.cover.url
           }" height="300vh" width="30%" class="rounded" align="left" style="padding-right:5px;" >
