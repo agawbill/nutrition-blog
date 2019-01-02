@@ -27,7 +27,7 @@
       a {
         color: navy !important;
       }
-
+      
       h2 {
         margin-top: 44px;
         font-size: 1.3em;
@@ -121,7 +121,11 @@
       .container-fluid {
         max-width: 100em!important;
       }
-
+      #header_menu_blue {
+        background-color: navy;
+        height: 28px;
+        color: white;
+      }
 
       @media screen and (min-width:40em) {
         body {
