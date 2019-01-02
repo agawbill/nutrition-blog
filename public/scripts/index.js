@@ -148,8 +148,8 @@ const techCycle = () => {
   const tech = `
   <img src="${
     item.cover.url
-  }" class="rounded" height="400vh" width="50%" style="float:left;padding-right:15px;>
-    <h4 class="bigTitle">
+  }" class="rounded" height="400vh" width="50%" style="float:right;padding-left:15px;>
+    <h4 class="card-title">
       <a href="/post.html?id=${item._id}">${item.title}</a>
     </h4>
 
@@ -193,7 +193,7 @@ const techCycle = () => {
       <span class="date2">${item.createdAt}</span>
     </div>
     `;
-      $("technologySecond").append(tech);
+      $("#technologySecond").append(tech);
     }
   }
 };
@@ -212,7 +212,7 @@ const sportsCycle = () => {
     <span class="date2">${item.createdAt}</span>
   `;
   $("#sportsFirst").append(sport);
-  for (let i = 1; i < entertainment.length; i++) {
+  for (let i = 1; i < sports.length; i++) {
     if (i === 4) {
       break;
     }
@@ -233,7 +233,7 @@ const sportsCycle = () => {
     `;
       $("#sportsSecond").append(sport);
     } else {
-      const item = entertainment[i];
+      const item = sports[i];
       const sport = `
     <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;">
       <h4 class="card-title">
