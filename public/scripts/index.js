@@ -33,7 +33,7 @@ const newsCycle = () => {
       const item = news[i];
       const news2 = `
         <div id="blocks">
-        <div style="border-top:1px solid navy;border-bottom:1px solid navy;width:100%;padding-top:10px;padding-bottom:10px;">
+        <div style="border-top:2px dotted navy;border-bottom:2px dotted navy;width:100%;padding-top:10px;padding-bottom:10px;">
           <table>
             <tr>
               <td>
@@ -95,7 +95,7 @@ const entertainmentCycle = () => {
   <img src="${
     item.cover.url
   }" class="rounded" height="400vh" width="50%" style="float:right;padding-left:15px;>
-    <h4 class="bigTitle">
+    <h4 class="card-title">
       <a href="/post.html?id=${item._id}">${item.title}</a>
     </h4>
 
@@ -111,7 +111,7 @@ const entertainmentCycle = () => {
     if (i === 2) {
       const item = entertainment[i];
       const ent = `
-    <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;float:center; border-left: 1px solid navy; border-right: 1px solid navy;">
+    <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;float:center; border-left: 2px dotted navy; border-right: 2px dotted navy;">
       <h4 class="card-title">
         <a href="/post.html?id=${item._id}">${item.title}</a>
       </h4>
@@ -166,7 +166,7 @@ const techCycle = () => {
     if (i === 2) {
       const item = technology[i];
       const tech = `
-    <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;float:center; border-left: 1px solid navy; border-right: 1px solid navy;">
+    <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;float:center; border-left: 2px dotted navy; border-right: 2px dotted navy;">
       <h4 class="card-title">
         <a href="/post.html?id=${item._id}">${item.title}</a>
       </h4>
@@ -220,7 +220,7 @@ const sportsCycle = () => {
     if (i === 2) {
       const item = sports[i];
       const sport = `
-    <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;float:center; border-left: 1px solid navy; border-right: 1px solid navy;">
+    <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;float:center; border-left: 2px dotted navy; border-right: 2px dotted navy;">
       <h4 class="card-title">
         <a href="/post.html?id=${item._id}">${item.title}</a>
       </h4>
@@ -274,7 +274,7 @@ const selectedCycle = () => {
     } else {
       const item = selectedPosts[i];
       const selected = `
-      <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 1px solid navY">
+      <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 2px dotted navY">
         <a href="/post.html?id=${item._id}"><h5>${item.description}</h5></a>
         <p>
         ${item.content.substring(0, 50)}
@@ -293,7 +293,7 @@ const randomSixCycle = () => {
     const item = allArray[i];
     if (i === 3 || i == 7) {
       const node = `
-        <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 0px">
+        <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 0px;">
         <h4 class="card-title">
           <a href="/post.html?id=${item._id}">${item.title}</a>
         </h4>
@@ -308,7 +308,7 @@ const randomSixCycle = () => {
       $("#randomSix").append(node);
     } else {
       const node = `
-      <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;border-right:1px solid navy">
+      <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;border-right:2px dotted navy">
         <h4 class="card-title">
           <a href="/post.html?id=${item._id}">${item.title}</a>
         </h4>

@@ -9,7 +9,7 @@ $(document).ready(() => {
     success: data => {
       for (let i = data.length - 1; i >= 0; i--) {
         const item = data[i];
-        if (item.category == " entertainment") {
+        if (item.category == " Здоровье") {
           const node = `
           <div class="col-lg-12 col-md-12 mb-12">
             <h4 class="card-title">
