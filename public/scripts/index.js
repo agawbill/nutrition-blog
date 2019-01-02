@@ -9,14 +9,13 @@ var randomSix = [];
 
 const newsCycle = () => {
   const first = news[0];
-  const title = `
-  <h4 class="card-title">
-    <a href="/post.html?id=${first._id}">${first.title}</a>
-  </h4>
-  `;
-  $(".titleNews").append(title);
   const news1 = `
-    <img src="${first.cover.url}" height="600vh" width="100%" class="rounded" >
+    <img src="${
+      first.cover.url
+    }" height="600vh" width="100%" class="rounded" ></p>
+    <h4 class="card-title">
+      <a href="/post.html?id=${first._id}">${first.title}</a>
+    </h4>
     <h5>${first.description}</h5>
     <p>
     ${first.content.substring(0, 50)}
