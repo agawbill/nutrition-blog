@@ -10,15 +10,20 @@ $(document).ready(() => {
       $("#postContainer").append(`
         <div class="col-lg-12 col-md-12 mb-12">
           <h4 class="card-title">
-            <a href="/post.html?id=${post._id}">${post.title}</a>
+            <a href="/post.html?id=${post._id}">${post.title}:  «${
+        post.description
+      }»  </a>
           </h4>
           <p>
-            <center><img src="${
-              post.cover.url
-            }" class="rounded" height="500vh" width="500vh%"></center>
-          <h5>${post.description}</h5>
-          </p>
           <span class="date2">${post.createdAt}</span>
+          </p>
+          <p>
+            <img src="${post.cover.url}" class="rounded" width="100%"><br>
+          </p>
+          <p>
+          <h5>${post.content}</h5>
+          </p>
+
         </div>
         `);
     },
