@@ -17,9 +17,10 @@ $(document).ready(() => {
           }" height="300vh" width="30%" class="rounded" align="left" style="padding-right:5px;" >
             <div class="media-body">
             <h4 class="card-title">
-              <a href="/post.html?id=${item._id}">${item.title}</a>
+              <a href="/post.html?id=${item._id}"> ${item.title}: «${
+            item.описание
+          }»  </a>
             </h4>
-            <h5>${item.description}</h5>
             <p>
             ${item.content.substring(0, 200)}
             </p>
