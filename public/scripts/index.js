@@ -332,13 +332,16 @@ $(document).ready(() => {
     method: "GET",
     dataType: "json",
     contentType: "json",
-    succes: data => {
+    success: data => {
       for (let i = 0; i < data.length; i++) {
+        if (i === 5) {
+          break;
+        }
         const item = data[i];
         const node = `
-        <div class="col-lg-12 col-md-12 mb-12">
-          <img src="${item.url}">
-        </div>
+
+          <img src="${item.url}" width="19%" align="center">
+
         `;
         $("#banners").append(node);
       }
