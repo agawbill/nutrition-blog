@@ -18,7 +18,7 @@ $(document).ready(() => {
             <div class="media-body">
             <h4 class="card-title">
               <a href="/post.html?id=${item._id}"> ${item.title}: «${
-            item.описание
+            item.description
           }»  </a>
             </h4>
             <p>
