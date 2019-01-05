@@ -38,7 +38,7 @@ const newsCycle = () => {
               <td>
                   <img src="${
                     item.cover.url
-                  }"  class="rounded" float="left" height="200vh" width="200vh" style="padding-right:10px;">
+                  }"  class="rounded" float="left" height="200vh" width="300vh" style="padding-right:10px;">
               </td>
               <td style="width: 100%;position:relative; clear:both;">
                 <span class="newsText">
@@ -66,7 +66,7 @@ const newsCycle = () => {
               <td>
                   <img src="${
                     item.cover.url
-                  }"  class="rounded" float="left" height="200vh" width="200vh" style="padding-right:10px;">
+                  }"  class="rounded" float="left" height="200vh" width="300vh" style="padding-right:10px;">
               </td>
               <td style="width: 100%;position:relative; clear:both;">
                 <span class="newsText">
@@ -148,7 +148,7 @@ const techCycle = () => {
   const tech = `
   <img src="${
     item.cover.url
-  }" class="rounded" height="400vh" width="50%" style="float:right;padding-left:15px;>
+  }" class="rounded" height="400vh" width="50%" style="float:left;padding-right:15px;>
     <h4 class="card-title">
       <a href="/post.html?id=${item._id}">${item.title}</a>
     </h4>
@@ -204,7 +204,7 @@ const sportsCycle = () => {
   <img src="${
     item.cover.url
   }" class="rounded" height="400vh" width="50%" style="float:left; padding-right:15px;">
-    <h4 class="bigTitle">
+    <h4 class="card-title">
       <a href="/post.html?id=${item._id}">${item.title}</a>
     </h4>
 
