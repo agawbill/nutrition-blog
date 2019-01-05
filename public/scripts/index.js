@@ -93,7 +93,7 @@ const entertainmentCycle = () => {
   const ent = `
   <img src="${
     item.cover.url
-  }" class="rounded" height="400vh" width="50%" style="float:right;padding-left:15px;>
+  }" class="rounded" height="400vh" width="50%" style="float:right;padding-left:15px;">
     <h4 class="card-title">
       <a href="/post.html?id=${item._id}">${item.title}</a>
     </h4>
@@ -148,8 +148,8 @@ const techCycle = () => {
   const tech = `
   <img src="${
     item.cover.url
-  }" class="rounded" height="400vh" width="50%" style="float:left;padding-right:15px;>
-    <h4 class="card-title">
+  }" class="rounded" height="400vh" width="50%" style="float:left;padding-right:15px;">
+    <h4 class="bigTitle">
       <a href="/post.html?id=${item._id}">${item.title}</a>
     </h4>
 
