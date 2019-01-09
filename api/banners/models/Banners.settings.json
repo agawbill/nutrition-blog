@@ -1,6 +1,6 @@
 {
   "connection": "default",
-  "collectionName": "",
+  "collectionName": "banners",
   "info": {
     "name": "banners",
     "description": "Banners"
