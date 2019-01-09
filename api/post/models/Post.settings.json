@@ -1,6 +1,6 @@
 {
   "connection": "default",
-  "collectionName": "",
+  "collectionName": "post",
   "info": {
     "name": "post",
     "description": ""
@@ -10,6 +10,10 @@
   },
   "attributes": {
     "title": {
+      "default": "",
+      "type": "string"
+    },
+    "description": {
       "default": "",
       "type": "string"
     },
@@ -23,9 +27,20 @@
       "plugin": "upload",
       "required": false
     },
-    "tags": {
-      "collection": "tag",
-      "via": "posts"
+    "Избранное": {
+      "default": false,
+      "type": "boolean"
+    },
+    "category": {
+      "default": "",
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "Наши Беседы",
+        " Фитнес",
+        " Здоровье",
+        " Партнеры"
+      ]
     }
   }
 }
