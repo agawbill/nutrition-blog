@@ -131,6 +131,26 @@ hr {
   font-size: 50px;
 }
 
+.nomargin {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.right-column {
+  display: table-column;
+  height: auto;
+  float: right;
+  width: 20%;
+}
+.left-column {
+  display: table-column;
+  height: auto;
+  float: left;
+  width: 79%;
+}
+.hundredWidth {
+  width: 100%;
+}
+
 @media screen and (min-width: 40em) {
   body {
     font-size: 1.0625em;
