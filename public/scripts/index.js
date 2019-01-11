@@ -433,6 +433,9 @@ $(document).ready(() => {
     if (selectedPosts.length !== 0) {
       selectedCycle();
     }
+    if (allArray.length !== 0) {
+      randomSixCycle();
+    }
     if (recPostings.length !== 0) {
       recPostCycle();
     }
