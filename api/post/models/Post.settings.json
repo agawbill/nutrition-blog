@@ -41,6 +41,10 @@
         " Здоровье",
         " Партнеры"
       ]
+    },
+    "recPosts": {
+      "default": false,
+      "type": "boolean"
     }
   }
 }

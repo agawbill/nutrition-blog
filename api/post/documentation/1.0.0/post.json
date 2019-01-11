@@ -568,6 +568,10 @@
               " Здоровье",
               " Партнеры"
             ]
+          },
+          "recPosts": {
+            "type": "boolean",
+            "default": false
           }
         }
       },
@@ -601,6 +605,10 @@
               " Здоровье",
               " Партнеры"
             ]
+          },
+          "recPosts": {
+            "type": "boolean",
+            "default": false
           }
         }
       }

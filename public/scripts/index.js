@@ -4,6 +4,7 @@ var news = [];
 var entertainment = [];
 var selectedPosts = [];
 var sports = [];
+var recPostings = [];
 var allArray;
 var randomSix = [];
 
@@ -12,7 +13,7 @@ const newsCycle = () => {
   const news1 = `
     <img src="${
       first.cover.url
-    }" height="600vh" width="100%" class="rounded" ></p>
+    }" height="400vh" width="100%" class="rounded" ></p>
     <h4 class="card-title">
       <a href="/post.html?id=${first._id}">${first.title}</a>
     </h4>
@@ -38,9 +39,9 @@ const newsCycle = () => {
               <td>
                   <img src="${
                     item.cover.url
-                  }"  class="rounded" float="left" height="200vh" width="300vh" style="padding-right:10px;">
+                  }"  class="rounded" float="left" height="210vh" width="310vh" style="padding-right:10px;">
               </td>
-              <td style="width: 100%;position:relative; clear:both;">
+              <td style="width:100%;position:relative; clear:both;">
                 <span class="newsText">
                     <h4 class="card-title">
                       <a href="/post.html?id=${item._id}">${
@@ -66,9 +67,9 @@ const newsCycle = () => {
               <td>
                   <img src="${
                     item.cover.url
-                  }"  class="rounded" float="left" height="200vh" width="300vh" style="padding-right:10px;">
+                  }"  class="rounded" float="left" height="210vh" width="310vh" style="padding-right:10px;">
               </td>
-              <td style="width: 100%;position:relative; clear:both;">
+              <td style="width:100%;position:relative; clear:both;">
                 <span class="newsText">
                     <h4 class="card-title">
                       <a href="/post.html?id=${item._id}">${
@@ -255,6 +256,7 @@ const sportsCycle = () => {
 
 const selectedCycle = () => {
   for (let i = 0; i < selectedPosts.length; i++) {
+    console.log(selectedPosts[i]);
     if (i === 4) {
       break;
     } else if (i === 3) {
@@ -295,13 +297,16 @@ const randomSixCycle = () => {
     if (i === 2 || i === 5) {
       const node = `
         <div class="col-lg-4 col-md-4 mb-4" style="position:relative;border-right: 0px;">
+        <img src="${
+          item.cover.url
+        }" class="rounded" height="200vh" width="100%">
+        <p>
         <h4 class="card-title">
-          <a href="/post.html?id=${item._id}">${item.title}</a>
+        <a href="/post.html?id=${item._id}">${item.title}:  «${
+        item.description
+      }»  </a>
         </h4>
-          <img src="${
-            item.cover.url
-          }" class="rounded" height="200vh" width="100%">
-        <h5>${item.description}</h5>
+
         </p>
         <span class="date2">${item.createdAt}</span>
       </div>
@@ -310,19 +315,42 @@ const randomSixCycle = () => {
     } else {
       const node = `
       <div class="col-lg-4 col-md-4 mb-4" style="position:relative;line-height:0px!important;border-right:2px dotted navy">
-        <h4 class="card-title">
-          <a href="/post.html?id=${item._id}">${item.title}</a>
-        </h4>
-          <img src="${
-            item.cover.url
-          }" class="rounded"  height="200vh" width="100%">
-        <h5>${item.description}</h5>
-        <p>
+      <img src="${item.cover.url}" class="rounded" height="200vh" width="100%">
+      <p>
+      <h4 class="card-title">
+      <a href="/post.html?id=${item._id}">${item.title}:  «${
+        item.description
+      }»  </a>
+      </h4>
+
+      </p>
+
         <span class="date2">${item.createdAt}</span>
       </div>
       `;
       $("#randomSix").append(node);
     }
+  }
+};
+const recPostCycle = () => {
+  for (let i = 0; i < recPostings.length; i++) {
+    const item = recPostings[i];
+    const node = `
+      <div class="row">
+        <div style="display: block; padding-left:50px;">
+        <p>
+        <h4 class="card-title">
+        <a href="/post.html?id=${item._id}">${item.title}:  «${
+      item.description
+    }»  </a>
+        </h4>
+
+        </p>
+        <span class="date2">${item.createdAt}</span>
+      </div>
+    </div>
+      `;
+    $("#recPosts").append(node);
   }
 };
 
@@ -363,6 +391,9 @@ $(document).ready(() => {
         if (item.Избранное == true) {
           selectedPosts.unshift(item);
         }
+        if (item.recPosts == true) {
+          recPostings.unshift(item);
+        }
 
         if (item.category == "Наши Беседы") {
           news.unshift(item);
@@ -396,14 +427,14 @@ $(document).ready(() => {
     if (news.length !== 0) {
       newsCycle();
     }
-    if (technology.legnth !== 0) {
+    if (technology.length !== 0) {
       techCycle();
     }
     if (selectedPosts.length !== 0) {
       selectedCycle();
     }
-    if (allArray.length !== 0) {
-      randomSixCycle();
+    if (recPostings.length !== 0) {
+      recPostCycle();
     }
   });
 });
