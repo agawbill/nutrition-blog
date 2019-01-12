@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Banners.js service
+ * Banner.js service
  *
  * @description: A set of functions similar to controller's actions to avoid code duplication.
  */
@@ -19,14 +19,14 @@ module.exports = {
 
   fetchAll: (params) => {
     // Convert `params` object to filters compatible with Mongo.
-    const filters = strapi.utils.models.convertParams('banners', params);
+    const filters = strapi.utils.models.convertParams('banner', params);
     // Select field to populate.
-    const populate = Banners.associations
+    const populate = Banner.associations
       .filter(ast => ast.autoPopulate !== false)
       .map(ast => ast.alias)
       .join(' ');
 
-    return Banners
+    return Banner
       .find()
       .where(filters.where)
       .sort(filters.sort)
@@ -36,20 +36,20 @@ module.exports = {
   },
 
   /**
-   * Promise to fetch a/an banners.
+   * Promise to fetch a/an banner.
    *
    * @return {Promise}
    */
 
   fetch: (params) => {
     // Select field to populate.
-    const populate = Banners.associations
+    const populate = Banner.associations
       .filter(ast => ast.autoPopulate !== false)
       .map(ast => ast.alias)
       .join(' ');
 
-    return Banners
-      .findOne(_.pick(params, _.keys(Banners.schema.paths)))
+    return Banner
+      .findOne(_.pick(params, _.keys(Banner.schema.paths)))
       .populate(populate);
   },
 
@@ -61,65 +61,65 @@ module.exports = {
 
   count: (params) => {
     // Convert `params` object to filters compatible with Mongo.
-    const filters = strapi.utils.models.convertParams('banners', params);
+    const filters = strapi.utils.models.convertParams('banner', params);
 
-    return Banners
+    return Banner
       .count()
       .where(filters.where);
   },
 
   /**
-   * Promise to add a/an banners.
+   * Promise to add a/an banner.
    *
    * @return {Promise}
    */
 
   add: async (values) => {
     // Extract values related to relational data.
-    const relations = _.pick(values, Banners.associations.map(ast => ast.alias));
-    const data = _.omit(values, Banners.associations.map(ast => ast.alias));
+    const relations = _.pick(values, Banner.associations.map(ast => ast.alias));
+    const data = _.omit(values, Banner.associations.map(ast => ast.alias));
 
     // Create entry with no-relational data.
-    const entry = await Banners.create(data);
+    const entry = await Banner.create(data);
 
     // Create relational data and return the entry.
-    return Banners.updateRelations({ _id: entry.id, values: relations });
+    return Banner.updateRelations({ _id: entry.id, values: relations });
   },
 
   /**
-   * Promise to edit a/an banners.
+   * Promise to edit a/an banner.
    *
    * @return {Promise}
    */
 
   edit: async (params, values) => {
     // Extract values related to relational data.
-    const relations = _.pick(values, Banners.associations.map(a => a.alias));
-    const data = _.omit(values, Banners.associations.map(a => a.alias));
+    const relations = _.pick(values, Banner.associations.map(a => a.alias));
+    const data = _.omit(values, Banner.associations.map(a => a.alias));
 
     // Update entry with no-relational data.
-    const entry = await Banners.update(params, data, { multi: true });
+    const entry = await Banner.update(params, data, { multi: true });
 
     // Update relational data and return the entry.
-    return Banners.updateRelations(Object.assign(params, { values: relations }));
+    return Banner.updateRelations(Object.assign(params, { values: relations }));
   },
 
   /**
-   * Promise to remove a/an banners.
+   * Promise to remove a/an banner.
    *
    * @return {Promise}
    */
 
   remove: async params => {
     // Select field to populate.
-    const populate = Banners.associations
+    const populate = Banner.associations
       .filter(ast => ast.autoPopulate !== false)
       .map(ast => ast.alias)
       .join(' ');
 
     // Note: To get the full response of Mongo, use the `remove()` method
     // or add spent the parameter `{ passRawResult: true }` as second argument.
-    const data = await Banners
+    const data = await Banner
       .findOneAndRemove(params, {})
       .populate(populate);
 
@@ -128,7 +128,7 @@ module.exports = {
     }
 
     await Promise.all(
-      Banners.associations.map(async association => {
+      Banner.associations.map(async association => {
         if (!association.via || !data._id) {
           return true;
         }
@@ -149,22 +149,22 @@ module.exports = {
   },
 
   /**
-   * Promise to search a/an banners.
+   * Promise to search a/an banner.
    *
    * @return {Promise}
    */
 
   search: async (params) => {
     // Convert `params` object to filters compatible with Mongo.
-    const filters = strapi.utils.models.convertParams('banners', params);
+    const filters = strapi.utils.models.convertParams('banner', params);
     // Select field to populate.
-    const populate = Banners.associations
+    const populate = Banner.associations
       .filter(ast => ast.autoPopulate !== false)
       .map(ast => ast.alias)
       .join(' ');
 
-    const $or = Object.keys(Banners.attributes).reduce((acc, curr) => {
-      switch (Banners.attributes[curr].type) {
+    const $or = Object.keys(Banner.attributes).reduce((acc, curr) => {
+      switch (Banner.attributes[curr].type) {
         case 'integer':
         case 'float':
         case 'decimal':
@@ -188,7 +188,7 @@ module.exports = {
       }
     }, []);
 
-    return Banners
+    return Banner
       .find({ $or })
       .sort(filters.sort)
       .skip(filters.start)

@@ -3,16 +3,16 @@
     "/banners": {
       "get": {
         "deprecated": false,
-        "description": "Find all the banners's records",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve banners document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Banners"
+                    "$ref": "#/components/schemas/Banner"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Banners"
+          "Banner"
         ],
         "parameters": [
           {
@@ -168,14 +168,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new banners record",
+        "description": "Create a new record",
         "responses": {
           "200": {
-            "description": "Retrieve banners document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Banners"
+                  "$ref": "#/components/schemas/Banner"
                 }
               }
             }
@@ -213,7 +213,7 @@
         },
         "summary": "",
         "tags": [
-          "Banners"
+          "Banner"
         ],
         "requestBody": {
           "description": "",
@@ -221,7 +221,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewBanners"
+                "$ref": "#/components/schemas/NewBanner"
               }
             }
           }
@@ -231,10 +231,10 @@
     "/banners/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of banners documents",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve banners document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -280,7 +280,7 @@
         },
         "summary": "",
         "tags": [
-          "Banners"
+          "Banner"
         ],
         "parameters": []
       }
@@ -288,14 +288,14 @@
     "/banners/{_id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one banners record",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve banners document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Banners"
+                  "$ref": "#/components/schemas/Banner"
                 }
               }
             }
@@ -333,7 +333,7 @@
         },
         "summary": "",
         "tags": [
-          "Banners"
+          "Banner"
         ],
         "parameters": [
           {
@@ -350,14 +350,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single banners record",
+        "description": "Update a record",
         "responses": {
           "200": {
-            "description": "Retrieve banners document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Banners"
+                  "$ref": "#/components/schemas/Banner"
                 }
               }
             }
@@ -395,7 +395,7 @@
         },
         "summary": "",
         "tags": [
-          "Banners"
+          "Banner"
         ],
         "requestBody": {
           "description": "",
@@ -403,7 +403,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewBanners"
+                "$ref": "#/components/schemas/NewBanner"
               }
             }
           }
@@ -423,10 +423,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single banners record",
+        "description": "Delete a record",
         "responses": {
           "200": {
-            "description": "deletes a single banners based on the ID supplied",
+            "description": "deletes a single record based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -469,7 +469,7 @@
         },
         "summary": "",
         "tags": [
-          "Banners"
+          "Banner"
         ],
         "parameters": [
           {
@@ -488,7 +488,7 @@
   },
   "components": {
     "schemas": {
-      "Banners": {
+      "Banner": {
         "required": [
           "id"
         ],
@@ -506,7 +506,7 @@
           }
         }
       },
-      "NewBanners": {
+      "NewBanner": {
         "properties": {
           "title": {
             "type": "string",
@@ -522,7 +522,7 @@
   },
   "tags": [
     {
-      "name": "Banners"
+      "name": "Banner"
     }
   ]
 }

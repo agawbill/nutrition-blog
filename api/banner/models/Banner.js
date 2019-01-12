@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Lifecycle callbacks for the `Banners` model.
+ * Lifecycle callbacks for the `Banner` model.
  */
 
 module.exports = {
