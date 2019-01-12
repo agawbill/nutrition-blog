@@ -1,9 +1,9 @@
 {
   "connection": "default",
-  "collectionName": "banners",
+  "collectionName": "",
   "info": {
     "name": "banners",
-    "description": "Banners"
+    "description": ""
   },
   "options": {
     "timestamps": true
