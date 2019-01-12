@@ -26,12 +26,12 @@ const newsCycle = () => {
     `;
   $("#newsFirst").append(news1);
   for (i = 1; i < news.length; i++) {
-    if (i === 4) {
-      break;
-    }
-    if (i === 2) {
-      const item = news[i];
-      const news2 = `
+    const item = news[i];
+    if (item !== undefined) {
+      if (i === 4) {
+        break;
+      } else if (i === 2) {
+        const news2 = `
         <div id="blocks">
         <div style="border-top:2px dotted navy;border-bottom:2px dotted navy;width:100%;padding-top:10px;padding-bottom:10px;">
           <table>
@@ -45,8 +45,8 @@ const newsCycle = () => {
                 <span class="newsText">
                     <h4 class="card-title">
                       <a href="/post.html?id=${item._id}">${
-        item.description
-      }</a>
+          item.description
+        }</a>
                     </h4>
                 </span>
                 <span class="date">${item.createdAt}</span>
@@ -57,10 +57,9 @@ const newsCycle = () => {
         </div>
         <p>
           `;
-      $("#newsSecond").append(news2);
-    } else {
-      const item = news[i];
-      const news2 = `
+        $("#newsSecond").append(news2);
+      } else {
+        const news2 = `
         <div id="blocks">
           <table>
             <tr>
@@ -73,8 +72,8 @@ const newsCycle = () => {
                 <span class="newsText">
                     <h4 class="card-title">
                       <a href="/post.html?id=${item._id}">${
-        item.description
-      }</a>
+          item.description
+        }</a>
                     </h4>
                 </span>
                 <span class="date">${item.createdAt}</span>
@@ -84,7 +83,8 @@ const newsCycle = () => {
         </div>
         <p>
           `;
-      $("#newsSecond").append(news2);
+        $("#newsSecond").append(news2);
+      }
     }
   }
 };
@@ -92,10 +92,11 @@ const newsCycle = () => {
 const entertainmentCycle = () => {
   const item = entertainment[0];
   const ent = `
+
   <img src="${
     item.cover.url
-  }" class="rounded" height="400vh" width="50%" style="float:right;padding-left:15px;">
-    <h4 class="card-title">
+  }" class="rounded" height="400vh" width="70%" style="float:right;padding-right:15px;">
+    <h4 class="bigTitle">
       <a href="/post.html?id=${item._id}">${item.title}</a>
     </h4>
 
@@ -105,13 +106,13 @@ const entertainmentCycle = () => {
   `;
   $("#entertainmentFirst").append(ent);
   for (let i = 1; i < entertainment.length; i++) {
-    if (i === 4) {
-      break;
-    }
-    if (i === 2) {
-      const item = entertainment[i];
-      const ent = `
-    <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;float:center; border-left: 2px dotted navy; border-right: 2px dotted navy;">
+    const item = entertainment[i];
+    if (item !== undefined) {
+      if (i === 5) {
+        break;
+      } else if (i === 4) {
+        const ent = `
+    <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;float:center;">
       <h4 class="card-title">
         <a href="/post.html?id=${item._id}">${item.title}</a>
       </h4>
@@ -123,11 +124,11 @@ const entertainmentCycle = () => {
       <span class="date2">${item.createdAt}</span>
     </div>
     `;
-      $("#entertainmentSecond").append(ent);
-    } else {
-      const item = entertainment[i];
-      const ent = `
-    <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;">
+        $("#entertainmentSecond").append(ent);
+      } else {
+        const item = entertainment[i];
+        const ent = `
+    <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;border-right: 2px dotted navY">
       <h4 class="card-title">
         <a href="/post.html?id=${item._id}">${item.title}</a>
       </h4>
@@ -139,7 +140,8 @@ const entertainmentCycle = () => {
       <span class="date2">${item.createdAt}</span>
     </div>
     `;
-      $("#entertainmentSecond").append(ent);
+        $("#entertainmentSecond").append(ent);
+      }
     }
   }
 };
@@ -149,7 +151,7 @@ const techCycle = () => {
   const tech = `
   <img src="${
     item.cover.url
-  }" class="rounded" height="400vh" width="50%" style="float:left;padding-right:15px;">
+  }" class="rounded" height="400vh" width="70%" style="float:left;padding-right:15px;">
     <h4 class="bigTitle">
       <a href="/post.html?id=${item._id}">${item.title}</a>
     </h4>
@@ -160,13 +162,13 @@ const techCycle = () => {
   `;
   $("#technologyFirst").append(tech);
   for (let i = 1; i < technology.length; i++) {
-    if (i === 4) {
-      break;
-    }
-    if (i === 2) {
-      const item = technology[i];
-      const tech = `
-    <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;float:center; border-left: 2px dotted navy; border-right: 2px dotted navy;">
+    const item = technology[i];
+    if (item !== undefined) {
+      if (i === 5) {
+        break;
+      } else if (i === 4) {
+        const tech = `
+    <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;float:center;">
       <h4 class="card-title">
         <a href="/post.html?id=${item._id}">${item.title}</a>
       </h4>
@@ -178,11 +180,11 @@ const techCycle = () => {
       <span class="date2">${item.createdAt}</span>
     </div>
     `;
-      $("#technologySecond").append(tech);
-    } else {
-      const item = technology[i];
-      const tech = `
-    <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;">
+        $("#technologySecond").append(tech);
+      } else {
+        const item = technology[i];
+        const tech = `
+    <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;border-right: 2px dotted navY">
       <h4 class="card-title">
         <a href="/post.html?id=${item._id}">${item.title}</a>
       </h4>
@@ -194,7 +196,8 @@ const techCycle = () => {
       <span class="date2">${item.createdAt}</span>
     </div>
     `;
-      $("#technologySecond").append(tech);
+        $("#technologySecond").append(tech);
+      }
     }
   }
 };
@@ -202,9 +205,10 @@ const techCycle = () => {
 const sportsCycle = () => {
   const item = sports[0];
   const sport = `
+
   <img src="${
     item.cover.url
-  }" class="rounded" height="400vh" width="50%" style="float:left; padding-right:15px;">
+  }" class="rounded" height="400vh" width="70%" style="float:left; padding-right:15px;">
     <h4 class="card-title">
       <a href="/post.html?id=${item._id}">${item.title}</a>
     </h4>
@@ -212,16 +216,17 @@ const sportsCycle = () => {
     <h5>${item.content.substring(0, 50)}</h5>
     </p>
     <span class="date2">${item.createdAt}</span>
+
   `;
   $("#sportsFirst").append(sport);
   for (let i = 1; i < sports.length; i++) {
-    if (i === 4) {
-      break;
-    }
-    if (i === 2) {
-      const item = sports[i];
-      const sport = `
-    <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;float:center; border-left: 2px dotted navy; border-right: 2px dotted navy;">
+    const item = sports[i];
+    if (item !== undefined) {
+      if (i === 4) {
+        break;
+      } else if (i === 2) {
+        const sport = `
+    <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;float:center; border:0px;">
       <h4 class="card-title">
         <a href="/post.html?id=${item._id}">${item.title}</a>
       </h4>
@@ -233,11 +238,11 @@ const sportsCycle = () => {
       <span class="date2">${item.createdAt}</span>
     </div>
     `;
-      $("#sportsSecond").append(sport);
-    } else {
-      const item = sports[i];
-      const sport = `
-    <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;">
+        $("#sportsSecond").append(sport);
+      } else {
+        const item = sports[i];
+        const sport = `
+    <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;border-right: 2px dotted navY">
       <h4 class="card-title">
         <a href="/post.html?id=${item._id}">${item.title}</a>
       </h4>
@@ -249,19 +254,20 @@ const sportsCycle = () => {
       <span class="date2">${item.createdAt}</span>
     </div>
     `;
-      $("#sportsSecond").append(sport);
+        $("#sportsSecond").append(sport);
+      }
     }
   }
 };
 
 const selectedCycle = () => {
   for (let i = 0; i < selectedPosts.length; i++) {
-    console.log(selectedPosts[i]);
-    if (i === 4) {
-      break;
-    } else if (i === 3) {
-      const item = selectedPosts[i];
-      const selected = `
+    const item = selectedPosts[i];
+    if (item !== undefined) {
+      if (i === 4) {
+        break;
+      } else if (i === 3) {
+        const selected = `
       <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 0px">
         <a href="/post.html?id=${item._id}"><h5>${item.description}</h5></a>
         <p>
@@ -272,10 +278,10 @@ const selectedCycle = () => {
 
       </div>
       `;
-      $("#selected").append(selected);
-    } else {
-      const item = selectedPosts[i];
-      const selected = `
+        $("#selected").append(selected);
+      } else {
+        const item = selectedPosts[i];
+        const selected = `
       <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 2px dotted navY">
         <a href="/post.html?id=${item._id}"><h5>${item.description}</h5></a>
         <p>
@@ -286,7 +292,8 @@ const selectedCycle = () => {
 
       </div>
       `;
-      $("#selected").append(selected);
+        $("#selected").append(selected);
+      }
     }
   }
 };
@@ -294,8 +301,9 @@ const selectedCycle = () => {
 const randomSixCycle = () => {
   for (let i = 0; i < allArray.length; i++) {
     const item = allArray[i];
-    if (i === 2 || i === 5) {
-      const node = `
+    if (item !== undefined) {
+      if (i === 2 || i === 5) {
+        const node = `
         <div class="col-lg-4 col-md-4 mb-4" style="position:relative;border-right: 0px;">
         <img src="${
           item.cover.url
@@ -303,24 +311,24 @@ const randomSixCycle = () => {
         <p>
         <h4 class="card-title">
         <a href="/post.html?id=${item._id}">${item.title}:  «${
-        item.description
-      }»  </a>
+          item.description
+        }»  </a>
         </h4>
 
         </p>
         <span class="date2">${item.createdAt}</span>
       </div>
       `;
-      $("#randomSix").append(node);
-    } else {
-      const node = `
+        $("#randomSix").append(node);
+      } else {
+        const node = `
       <div class="col-lg-4 col-md-4 mb-4" style="position:relative;line-height:0px!important;border-right:2px dotted navy">
       <img src="${item.cover.url}" class="rounded" height="200vh" width="100%">
       <p>
       <h4 class="card-title">
       <a href="/post.html?id=${item._id}">${item.title}:  «${
-        item.description
-      }»  </a>
+          item.description
+        }»  </a>
       </h4>
 
       </p>
@@ -328,7 +336,8 @@ const randomSixCycle = () => {
         <span class="date2">${item.createdAt}</span>
       </div>
       `;
-      $("#randomSix").append(node);
+        $("#randomSix").append(node);
+      }
     }
   }
 };
