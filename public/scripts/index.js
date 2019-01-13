@@ -416,7 +416,7 @@ $(document).ready(() => {
         if (i < 6) {
           const node = `
 
-            <table style="margin-bottom:10px;">
+            <table style="margin-bottom:10px; display:block">
               <tr>
                 <td>
                     <img src="${
