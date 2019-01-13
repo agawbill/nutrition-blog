@@ -334,6 +334,7 @@ const randomSixCycle = () => {
 
         <span class="date2">${item.createdAt}</span>
       </div>
+
       `;
         $("#randomSix").append(node);
       }
@@ -435,6 +436,7 @@ $(document).ready(() => {
               </tr>
               </div>
             </table>
+            </br>
 
         `;
           $("#latestPosts").append(node);
