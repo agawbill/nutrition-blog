@@ -232,7 +232,7 @@ const sportsCycle = () => {
       </h4>
         <img src="${
           item.cover.url
-        }" class="rounded" height="200vh" width="100%">
+        }" class="rounded" height="180vh" width="100%">
       <h5>${item.description}</h5>
       </p>
       <span class="date2">${item.createdAt}</span>
@@ -248,7 +248,7 @@ const sportsCycle = () => {
       </h4>
         <img src="${
           item.cover.url
-        }" class="rounded" height="200vh" width="100%">
+        }" class="rounded" height="180vh" width="100%">
       <h5>${item.description}</h5>
       </p>
       <span class="date2">${item.createdAt}</span>
@@ -322,11 +322,11 @@ const randomSixCycle = () => {
       <div class="col-lg-4 col-md-4 mb-4" style="position:relative;line-height:0px!important;border-right:2px dotted navy; padding:4%">
       <img src="${item.cover.url}" class="rounded" height="200vh" width="90%">
       <p>
-      <h4 class="card-title">
+      <h5 class="card-title">
       <a href="/post.html?id=${item._id}">${item.title}:  «${
           item.description
         }»  </a>
-      </h4>
+      </h5>
 
       </p>
 
