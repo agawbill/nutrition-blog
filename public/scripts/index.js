@@ -416,7 +416,7 @@ $(document).ready(() => {
 
         if (i < 6) {
           const node = `
-
+          <p>
             <table style="margin-bottom:10px; display:block">
               <tr>
                 <td>
@@ -436,7 +436,7 @@ $(document).ready(() => {
               </tr>
               </div>
             </table>
-            </br>
+            </p>
 
         `;
           $("#latestPosts").append(node);
