@@ -420,7 +420,7 @@ $(document).ready(() => {
                 <td>
                     <img src="${
                       item.cover.url
-                    }"  class="rounded" height="80px" width="80px" style="padding-right:5px;">
+                    }"  class="rounded" height="60px" width="60px" style="padding-right:5px;">
                 </td>
                 <td style="width:100%;position:relative; clear:both;">
                   <span class="newsText">

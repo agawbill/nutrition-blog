@@ -97,10 +97,12 @@ hr {
   bottom: 0;
   font-weight: bold;
   color: dimgrey;
+  display: none;
 }
 .date2 {
   font-weight: bold;
   color: dimgrey;
+  display: none;
 }
 
 .newsText {
