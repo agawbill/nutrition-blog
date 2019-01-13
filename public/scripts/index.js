@@ -95,7 +95,7 @@ const entertainmentCycle = () => {
 
   <img src="${
     item.cover.url
-  }" class="rounded" height="400vh" width="70%" style="float:right;padding-right:15px;">
+  }" class="rounded" height="400vh" width="50%" style="float:right;padding-right:15px;">
     <h4 class="bigTitle">
       <a href="/post.html?id=${item._id}">${item.title}</a>
     </h4>
@@ -151,7 +151,7 @@ const techCycle = () => {
   const tech = `
   <img src="${
     item.cover.url
-  }" class="rounded" height="400vh" width="70%" style="float:left;padding-right:15px;">
+  }" class="rounded" height="400vh" width="50%" style="float:left;padding-right:15px;">
     <h4 class="bigTitle">
       <a href="/post.html?id=${item._id}">${item.title}</a>
     </h4>
@@ -208,7 +208,7 @@ const sportsCycle = () => {
 
   <img src="${
     item.cover.url
-  }" class="rounded" height="400vh" width="70%" style="float:left; padding-right:15px;">
+  }" class="rounded" height="400vh" width="50%" style="float:left; padding-right:15px;">
     <h4 class="card-title">
       <a href="/post.html?id=${item._id}">${item.title}</a>
     </h4>
@@ -259,7 +259,6 @@ const sportsCycle = () => {
     }
   }
 };
-
 const selectedCycle = () => {
   for (let i = 0; i < selectedPosts.length; i++) {
     const item = selectedPosts[i];
@@ -406,12 +405,39 @@ $(document).ready(() => {
 
         if (item.category == "Наши Беседы") {
           news.unshift(item);
-        } else if (item.category == " Партнеры") {
+        } else if (item.category == " Питание") {
           technology.unshift(item);
         } else if (item.category == " Здоровье") {
           entertainment.unshift(item);
         } else {
           sports.unshift(item);
+        }
+
+        if (i < 6) {
+          const node = `
+
+            <table style="margin-bottom:10px;">
+              <tr>
+                <td>
+                    <img src="${
+                      item.cover.url
+                    }"  class="rounded" height="80px" width="80px" style="padding-right:5px;">
+                </td>
+                <td style="width:100%;position:relative; clear:both;">
+                  <span class="newsText">
+                      <h5 class="card-title">
+                      <a href="/post.html?id=${item._id}">${item.title}:  «${
+            item.description
+          }»  </a>
+                      </h5>
+                  </span>
+                </td>
+              </tr>
+              </div>
+            </table>
+
+        `;
+          $("#latestPosts").append(node);
         }
       }
       allArray = [
