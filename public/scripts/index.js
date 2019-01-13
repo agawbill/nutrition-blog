@@ -303,10 +303,8 @@ const randomSixCycle = () => {
     if (item !== undefined) {
       if (i === 2 || i === 5) {
         const node = `
-        <div class="col-lg-4 col-md-4 mb-4" style="position:relative;border-right: 0px;">
-        <img src="${
-          item.cover.url
-        }" class="rounded" height="200vh" width="100%">
+        <div class="col-lg-4 col-md-4 mb-4" style="position:relative;border-right: 0px; padding:4%">
+        <img src="${item.cover.url}" class="rounded" height="200vh" width="90%">
         <p>
         <h4 class="card-title">
         <a href="/post.html?id=${item._id}">${item.title}:  «${
@@ -321,8 +319,8 @@ const randomSixCycle = () => {
         $("#randomSix").append(node);
       } else {
         const node = `
-      <div class="col-lg-4 col-md-4 mb-4" style="position:relative;line-height:0px!important;border-right:2px dotted navy">
-      <img src="${item.cover.url}" class="rounded" height="200vh" width="100%">
+      <div class="col-lg-4 col-md-4 mb-4" style="position:relative;line-height:0px!important;border-right:2px dotted navy; padding:4%">
+      <img src="${item.cover.url}" class="rounded" height="200vh" width="90%">
       <p>
       <h4 class="card-title">
       <a href="/post.html?id=${item._id}">${item.title}:  «${
