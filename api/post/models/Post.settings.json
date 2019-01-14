@@ -11,11 +11,13 @@
   "attributes": {
     "title": {
       "default": "",
-      "type": "string"
+      "type": "string",
+      "maxLength": 30
     },
     "description": {
       "default": "",
-      "type": "string"
+      "type": "string",
+      "maxLength": 50
     },
     "content": {
       "default": "",

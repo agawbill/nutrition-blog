@@ -499,11 +499,13 @@
           },
           "title": {
             "type": "string",
-            "default": ""
+            "default": "",
+            "maxLength": 30
           },
           "description": {
             "type": "string",
-            "default": ""
+            "default": "",
+            "maxLength": 50
           },
           "content": {
             "type": "string",
@@ -582,11 +584,13 @@
         "properties": {
           "title": {
             "type": "string",
-            "default": ""
+            "default": "",
+            "maxLength": 30
           },
           "description": {
             "type": "string",
-            "default": ""
+            "default": "",
+            "maxLength": 50
           },
           "content": {
             "type": "string",

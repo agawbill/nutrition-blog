@@ -92,7 +92,7 @@ const newsCycle = () => {
 const entertainmentCycle = () => {
   const item = entertainment[0];
   const ent = `
-
+  <div class="col-lg-16 col-md-16 mb-16">
   <img src="${
     item.cover.url
   }" class="rounded" height="400vh" width="50%" style="float:right;padding-right:15px;">
@@ -103,6 +103,7 @@ const entertainmentCycle = () => {
     <h5>${item.description}</h5>
     </p>
     <span class="date2">${item.createdAt}</span>
+    </div>
   `;
   $("#entertainmentFirst").append(ent);
   for (let i = 1; i < entertainment.length; i++) {
@@ -149,6 +150,7 @@ const entertainmentCycle = () => {
 const techCycle = () => {
   const item = technology[0];
   const tech = `
+  <div class="col-lg-16 col-md-16 mb-16">
   <img src="${
     item.cover.url
   }" class="rounded" height="400vh" width="50%" style="float:left;padding-right:15px;">
@@ -159,6 +161,7 @@ const techCycle = () => {
     <h5>${item.description}</h5>
     </p>
     <span class="date2">${item.createdAt}</span>
+    </div>
   `;
   $("#technologyFirst").append(tech);
   for (let i = 1; i < technology.length; i++) {
@@ -205,7 +208,7 @@ const techCycle = () => {
 const sportsCycle = () => {
   const item = sports[0];
   const sport = `
-
+  <div class="col-lg-16 col-md-16 mb-16">
   <img src="${
     item.cover.url
   }" class="rounded" height="400vh" width="50%" style="float:left; padding-right:15px;">
@@ -216,7 +219,7 @@ const sportsCycle = () => {
     <h5>${item.content.substring(0, 50)}</h5>
     </p>
     <span class="date2">${item.createdAt}</span>
-
+    </div>
   `;
   $("#sportsFirst").append(sport);
   for (let i = 1; i < sports.length; i++) {
