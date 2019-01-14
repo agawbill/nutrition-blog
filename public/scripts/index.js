@@ -92,7 +92,7 @@ const newsCycle = () => {
 const entertainmentCycle = () => {
   const item = entertainment[0];
   const ent = `
-  <div class="col-lg-16 col-md-16 mb-16">
+  <div class="col-lg-16 col-md-16 mb-16" style="width:100%;">
   <img src="${
     item.cover.url
   }" class="rounded" height="400vh" width="50%" style="float:right;padding-right:15px;">
@@ -102,6 +102,10 @@ const entertainmentCycle = () => {
 
     <h5>${item.description.substring(0, 35)}</h5>
     </p>
+    <p>
+    ${item.content.substring(0, 250)}
+    </p>
+    </br>
     <span class="date2">${item.createdAt}</span>
     </div>
   `;
