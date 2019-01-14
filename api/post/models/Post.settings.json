@@ -37,7 +37,7 @@
       "type": "boolean"
     },
     "category": {
-      "default": "",
+      "default": "Наши Беседы",
       "type": "enumeration",
       "required": true,
       "enum": ["Наши Беседы", "Фитнес", "Здоровье", "Питание"]

@@ -9,7 +9,7 @@ $(document).ready(() => {
     success: data => {
       for (let i = data.length - 1; i >= 0; i--) {
         const item = data[i];
-        if (item.category == " Фитнес") {
+        if (item.category == "Фитнес") {
           const node = `
           <li class="media" style="border-bottom: 2px dotted gray; margin-bottom: 10px; padding-bottom: 10px;">
           <img src="${
