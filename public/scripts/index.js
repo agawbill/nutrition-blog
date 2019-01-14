@@ -299,7 +299,7 @@ const selectedCycle = () => {
 
 const randomSixCycle = () => {
   for (let i = 0; i < allArray.length; i++) {
-    if (i == 5) {
+    if (i == 6) {
       break;
     }
     const item = allArray[i];
