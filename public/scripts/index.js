@@ -408,9 +408,9 @@ $(document).ready(() => {
 
         if (item.category == "Наши Беседы") {
           news.unshift(item);
-        } else if (item.category == " Партнеры") {
+        } else if (item.category == "Питание") {
           technology.unshift(item);
-        } else if (item.category == " Здоровье") {
+        } else if (item.category == "Здоровье") {
           entertainment.unshift(item);
         } else {
           sports.unshift(item);
