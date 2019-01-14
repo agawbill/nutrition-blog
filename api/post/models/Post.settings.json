@@ -12,12 +12,13 @@
     "title": {
       "default": "",
       "type": "string",
-      "maxLength": 30
+      "maxLength": 300,
+      "required": true
     },
     "description": {
       "default": "",
       "type": "string",
-      "maxLength": 50,
+      "maxLength": 500,
       "required": true
     },
     "content": {
