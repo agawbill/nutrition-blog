@@ -17,17 +17,19 @@
     "description": {
       "default": "",
       "type": "string",
-      "maxLength": 50
+      "maxLength": 50,
+      "required": true
     },
     "content": {
       "default": "",
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "cover": {
       "model": "file",
       "via": "related",
       "plugin": "upload",
-      "required": false
+      "required": true
     },
     "Избранное": {
       "default": false,
@@ -37,12 +39,7 @@
       "default": "",
       "type": "enumeration",
       "required": true,
-      "enum": [
-        "Наши Беседы",
-        " Фитнес",
-        " Здоровье",
-        " Партнеры"
-      ]
+      "enum": ["Наши Беседы", "Фитнес", "Здоровье", "Питание"]
     },
     "recPosts": {
       "default": false,
