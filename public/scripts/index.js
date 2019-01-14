@@ -46,7 +46,7 @@ const newsCycle = () => {
                     <h5 class="card-title">
                       <a href="/post.html?id=${
                         item._id
-                      }">${item.description.substring(0, 35)}</a>
+                      }">${item.title.substring(0, 35)}</a>
                     </h5>
                 </span>
                 <span class="date">${item.createdAt}</span>
@@ -73,7 +73,7 @@ const newsCycle = () => {
                     <h5 class="card-title">
                       <a href="/post.html?id=${
                         item._id
-                      }">${item.description.substring(0, 35)}</a>
+                      }">${item.title.substring(0, 35)}</a>
                     </h5>
                 </span>
                 <span class="date">${item.createdAt}</span>
@@ -99,9 +99,6 @@ const entertainmentCycle = () => {
     <h5 class="bigTitle">
       <a href="/post.html?id=${item._id}">${item.title.substring(0, 35)}</a>
     </h5>
-
-    <h5>${item.description.substring(0, 35)}</h5>
-    </p>
     <p>
     ${item.content.substring(0, 250)}
     </p>
@@ -140,7 +137,6 @@ const entertainmentCycle = () => {
         <img src="${
           item.cover.url
         }" class="rounded" height="200vh" width="100%">
-      <h5>${item.description.substring(0, 35)}</h5>
       </p>
       <span class="date2">${item.createdAt}</span>
     </div>
@@ -161,8 +157,6 @@ const techCycle = () => {
     <h5 class="bigTitle">
       <a href="/post.html?id=${item._id}">${item.title.substring(0, 35)}</a>
     </h5>
-
-    <h5>${item.description.substring(0, 35)}</h5>
     </p>
     <span class="date2">${item.createdAt}</span>
     </div>
@@ -198,7 +192,6 @@ const techCycle = () => {
         <img src="${
           item.cover.url
         }" class="rounded" height="200vh" width="100%">
-      <h5>${item.description.substring(0, 35)}</h5>
       </p>
       <span class="date2">${item.createdAt}</span>
     </div>
@@ -258,7 +251,6 @@ const sportsCycle = () => {
         <img src="${
           item.cover.url
         }" class="rounded" height="200vh" width="100%">
-      <h5>${item.description.substring(0, 35)}</h5>
       </p>
       <span class="date2">${item.createdAt}</span>
     </div>
@@ -277,7 +269,7 @@ const selectedCycle = () => {
       } else if (i === 3) {
         const selected = `
       <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 0px">
-        <a href="/post.html?id=${item._id}"><h5>${item.description.substring(
+        <a href="/post.html?id=${item._id}"><h5>${item.title.substring(
           0,
           35
         )}</h5></a>
@@ -294,7 +286,7 @@ const selectedCycle = () => {
         const item = selectedPosts[i];
         const selected = `
       <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 2px dotted navY">
-        <a href="/post.html?id=${item._id}"><h5>${item.description.substring(
+        <a href="/post.html?id=${item._id}"><h5>${item.title.substring(
           0,
           35
         )}</h5></a>
@@ -325,10 +317,7 @@ const randomSixCycle = () => {
         <img src="${item.cover.url}" class="rounded" height="200vh" width="90%">
         <p>
         <h5 class="card-title">
-        <a href="/post.html?id=${item._id}">${item.title.substring(
-          0,
-          20
-        )}:  «${item.description.substring(0, 20)}»  </a>
+        <a href="/post.html?id=${item._id}">${item.title.substring(0, 35)} </a>
         </h5>
 
         </p>
@@ -342,10 +331,7 @@ const randomSixCycle = () => {
       <img src="${item.cover.url}" class="rounded" height="200vh" width="90%">
       <p>
       <h5 class="card-title">
-      <a href="/post.html?id=${item._id}">${item.title.substring(
-          0,
-          20
-        )}:  «${item.description.substring(0, 20)}»  </a>
+      <a href="/post.html?id=${item._id}">${item.title.substring(0, 35)} </a>
       </h5>
 
       </p>
@@ -367,10 +353,7 @@ const recPostCycle = () => {
         <div style="display: block; padding-left:50px;">
         <p>
         <h5 class="card-title">
-        <a href="/post.html?id=${item._id}">${item.title.substring(
-      0,
-      20
-    )}:  «${item.description.substring(0, 20)}»  </a>
+        <a href="/post.html?id=${item._id}">${item.title.substring(0, 35)}  </a>
         </h5>
 
         </p>
@@ -425,9 +408,9 @@ $(document).ready(() => {
 
         if (item.category == "Наши Беседы") {
           news.unshift(item);
-        } else if (item.category == " Партнеры") {
+        } else if (item.category == "Партнеры") {
           technology.unshift(item);
-        } else if (item.category == " Здоровье") {
+        } else if (item.category == "Здоровье") {
           entertainment.unshift(item);
         } else {
           sports.unshift(item);
@@ -448,10 +431,7 @@ $(document).ready(() => {
                       <h5 class="card-title">
                       <a href="/post.html?id=${
                         item._id
-                      }">${item.title.substring(
-            0,
-            20
-          )}:  «${item.description.substring(0, 20)}»  </a>
+                      }">${item.title.substring(0, 35)}  </a>
                       </h5>
                   </span>
                 </td>
