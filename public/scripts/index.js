@@ -41,7 +41,7 @@ const newsCycle = () => {
                     item.cover.url
                   }"  class="rounded" float="left" height="210vh" width="310vh" style="padding-right:10px;">
               </td>
-              <td style="width:100%;position:relative; clear:both;">
+              <td style="width:100%;position:relative; clear:both;overflow:hidden;">
                 <span class="newsText">
                     <h5 class="card-title">
                       <a href="/post.html?id=${item._id}">${
@@ -273,7 +273,7 @@ const selectedCycle = () => {
       <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 0px">
         <a href="/post.html?id=${item._id}"><h5>${item.description}</h5></a>
         <p>
-        ${item.content.substring(0, 50)}
+        ${item.content.substring(0, 250)}
         </p>
         </br>
         <span class="date">${item.createdAt}</span>
@@ -425,7 +425,7 @@ $(document).ready(() => {
                       item.cover.url
                     }"  class="rounded" height="60px" width="60px" style="padding-right:5px;">
                 </td>
-                <td style="width:100%;position:relative; clear:both;">
+                <td style="width:100%;position:relative; clear:both;overflow:hidden;">
                   <span class="newsText">
                       <h5 class="card-title">
                       <a href="/post.html?id=${item._id}">${item.title}:  «${
