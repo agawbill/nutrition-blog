@@ -456,7 +456,6 @@ $(document).ready(() => {
             </table>
             </br>
             <div style="clear:both;"></div>
-
         `;
           $("#latestPosts").append(node);
         }
