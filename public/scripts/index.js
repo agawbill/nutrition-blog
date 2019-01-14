@@ -115,15 +115,13 @@ const entertainmentCycle = () => {
       } else if (i === 4) {
         const ent = `
     <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;float:center;">
-      <h5 class="card-title">
-        <a href="/post.html?id=${item._id}">${item.title.substring(0, 35)}</a>
-      </h5>
-        <img src="${
-          item.cover.url
-        }" class="rounded" height="200vh" width="100%">
-      <h5>${item.content.substring(0, 250)}</h5>
-      </p>
-      <span class="date2">${item.createdAt}</span>
+    <img src="${item.cover.url}" class="rounded" height="200vh" width="100%">
+  <p>
+  <h5 class="card-title">
+    <a href="/post.html?id=${item._id}">${item.title.substring(0, 35)}</a>
+  </h5>
+  </p>
+  <span class="date2">${item.createdAt}</span>
     </div>
     `;
         $("#entertainmentSecond").append(ent);
@@ -131,14 +129,13 @@ const entertainmentCycle = () => {
         const item = entertainment[i];
         const ent = `
     <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;border-right: 2px dotted navY">
-      <h5 class="card-title">
-        <a href="/post.html?id=${item._id}">${item.title.substring(0, 35)}</a>
-      </h5>
-        <img src="${
-          item.cover.url
-        }" class="rounded" height="200vh" width="100%">
-      </p>
-      <span class="date2">${item.createdAt}</span>
+    <img src="${item.cover.url}" class="rounded" height="200vh" width="100%">
+  <p>
+  <h5 class="card-title">
+    <a href="/post.html?id=${item._id}">${item.title.substring(0, 35)}</a>
+  </h5>
+  </p>
+  <span class="date2">${item.createdAt}</span>
     </div>
     `;
         $("#entertainmentSecond").append(ent);
@@ -157,6 +154,8 @@ const techCycle = () => {
     <h5 class="bigTitle">
       <a href="/post.html?id=${item._id}">${item.title.substring(0, 35)}</a>
     </h5>
+    <p>
+    ${item.content.substring(0, 250)}
     </p>
     <span class="date2">${item.createdAt}</span>
     </div>
@@ -170,15 +169,13 @@ const techCycle = () => {
       } else if (i === 4) {
         const tech = `
     <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;float:center;">
-      <h5 class="card-title">
-        <a href="/post.html?id=${item._id}">${item.title.substring(0, 35)}</a>
-      </h5>
-        <img src="${
-          item.cover.url
-        }" class="rounded" height="200vh" width="100%">
-      <h5>${item.content.substring(0, 250)}</h5>
-      </p>
-      <span class="date2">${item.createdAt}</span>
+    <img src="${item.cover.url}" class="rounded" height="200vh" width="100%">
+  <p>
+  <h5 class="card-title">
+    <a href="/post.html?id=${item._id}">${item.title.substring(0, 35)}</a>
+  </h5>
+  </p>
+  <span class="date2">${item.createdAt}</span>
     </div>
     `;
         $("#technologySecond").append(tech);
@@ -186,14 +183,13 @@ const techCycle = () => {
         const item = technology[i];
         const tech = `
     <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;border-right: 2px dotted navY">
-      <h5 class="card-title">
-        <a href="/post.html?id=${item._id}">${item.title.substring(0, 35)}</a>
-      </h5>
-        <img src="${
-          item.cover.url
-        }" class="rounded" height="200vh" width="100%">
-      </p>
-      <span class="date2">${item.createdAt}</span>
+    <img src="${item.cover.url}" class="rounded" height="200vh" width="100%">
+  <p>
+  <h5 class="card-title">
+    <a href="/post.html?id=${item._id}">${item.title.substring(0, 35)}</a>
+  </h5>
+  </p>
+  <span class="date2">${item.createdAt}</span>
     </div>
     `;
         $("#technologySecond").append(tech);
@@ -227,15 +223,13 @@ const sportsCycle = () => {
       } else if (i === 4) {
         const sport = `
     <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;float:center;">
-      <h5 class="card-title">
-        <a href="/post.html?id=${item._id}">${item.title
-          .substring(0, 35)
-          .substring(0, 35)}</a>
-      </h5>
         <img src="${
           item.cover.url
         }" class="rounded" height="200vh" width="100%">
-      <h5>${item.content.substring(0, 250)}</h5>
+      <p>
+      <h5 class="card-title">
+        <a href="/post.html?id=${item._id}">${item.title.substring(0, 35)}</a>
+      </h5>
       </p>
       <span class="date2">${item.createdAt}</span>
     </div>
@@ -245,14 +239,13 @@ const sportsCycle = () => {
         const item = sports[i];
         const sport = `
     <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;border-right: 2px dotted navY">
-      <h5 class="card-title">
-        <a href="/post.html?id=${item._id}">${item.title.substring(0, 35)}</a>
-      </h5>
-        <img src="${
-          item.cover.url
-        }" class="rounded" height="200vh" width="100%">
-      </p>
-      <span class="date2">${item.createdAt}</span>
+    <img src="${item.cover.url}" class="rounded" height="200vh" width="100%">
+  <p>
+  <h5 class="card-title">
+    <a href="/post.html?id=${item._id}">${item.title.substring(0, 35)}</a>
+  </h5>
+  </p>
+  <span class="date2">${item.createdAt}</span>
     </div>
     `;
         $("#sportsSecond").append(sport);
