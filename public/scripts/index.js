@@ -310,6 +310,9 @@ const selectedCycle = () => {
 
 const randomSixCycle = () => {
   for (let i = 0; i < allArray.length; i++) {
+    if (i == 5) {
+      break;
+    }
     const item = allArray[i];
     if (item !== undefined) {
       if (i === 2 || i === 5) {
@@ -320,8 +323,8 @@ const randomSixCycle = () => {
         <h5 class="card-title">
         <a href="/post.html?id=${item._id}">${item.title.substring(
           0,
-          35
-        )}:  «${item.description.substring(0, 35)}»  </a>
+          20
+        )}:  «${item.description.substring(0, 20)}»  </a>
         </h5>
 
         </p>
@@ -337,8 +340,8 @@ const randomSixCycle = () => {
       <h5 class="card-title">
       <a href="/post.html?id=${item._id}">${item.title.substring(
           0,
-          35
-        )}:  «${item.description.substring(0, 35)}»  </a>
+          20
+        )}:  «${item.description.substring(0, 20)}»  </a>
       </h5>
 
       </p>
@@ -362,8 +365,8 @@ const recPostCycle = () => {
         <h5 class="card-title">
         <a href="/post.html?id=${item._id}">${item.title.substring(
       0,
-      25
-    )}:  «${item.description.substring(0, 25)}»  </a>
+      20
+    )}:  «${item.description.substring(0, 20)}»  </a>
         </h5>
 
         </p>
@@ -443,8 +446,8 @@ $(document).ready(() => {
                         item._id
                       }">${item.title.substring(
             0,
-            35
-          )}:  «${item.description.substring(0, 35)}»  </a>
+            20
+          )}:  «${item.description.substring(0, 20)}»  </a>
                       </h5>
                   </span>
                 </td>
