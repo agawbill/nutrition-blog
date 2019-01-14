@@ -90,6 +90,7 @@ hr {
 #blocks {
   position: relative;
   display: inline;
+  overflow: hidden;
 }
 
 .date {
