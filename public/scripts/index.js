@@ -363,12 +363,8 @@ const recPostCycle = () => {
         <div style="display: block; padding-left:50px;">
         <p>
         <h5 class="card-title">
-        <a href="/post.html?id=${item._id}">${item.title.substring(
-      0,
-      20
-    )}:  «${item.description.substring(0, 20)}»  </a>
+          <a href="/post.html?id=${item._id}">${item.title.substring(0,35)}</a>
         </h5>
-
         </p>
         <span class="date2">${item.createdAt}</span>
       </div>
