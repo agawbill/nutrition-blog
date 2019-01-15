@@ -413,7 +413,7 @@ $(document).ready(() => {
     dataType: "json",
     contentType: "json",
     success: data => {
-      for (let i = 0; i < data.length; i++) {
+      for (let i = data.length; i > 0; i--) {
         const item = data[i];
 
         if (item.Избранное == true) {
