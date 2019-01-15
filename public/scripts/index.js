@@ -128,6 +128,8 @@ const entertainmentCycle = () => {
   <h5 class="card-title">
     <a href="/post.html?id=${item._id}">${item.title.substring(0, 35)}</a>
   </h5>
+  <p>
+  ${item.content.substring(0, 35)}
   </p>
   <span class="date2">${item.createdAt}</span>
     </div>
@@ -142,6 +144,8 @@ const entertainmentCycle = () => {
   <h5 class="card-title">
     <a href="/post.html?id=${item._id}">${item.title.substring(0, 35)}</a>
   </h5>
+  <p>
+  ${item.content.substring(0, 35)}
   </p>
   <span class="date2">${item.createdAt}</span>
     </div>
@@ -182,6 +186,8 @@ const techCycle = () => {
   <h5 class="card-title">
     <a href="/post.html?id=${item._id}">${item.title.substring(0, 35)}</a>
   </h5>
+  <p>
+  ${item.content.substring(0, 35)}
   </p>
   <span class="date2">${item.createdAt}</span>
     </div>
@@ -196,6 +202,8 @@ const techCycle = () => {
   <h5 class="card-title">
     <a href="/post.html?id=${item._id}">${item.title.substring(0, 35)}</a>
   </h5>
+  <p>
+  ${item.content.substring(0, 35)}
   </p>
   <span class="date2">${item.createdAt}</span>
     </div>
@@ -238,6 +246,8 @@ const sportsCycle = () => {
       <h5 class="card-title">
         <a href="/post.html?id=${item._id}">${item.title.substring(0, 35)}</a>
       </h5>
+      <p>
+      ${item.content.substring(0, 35)}
       </p>
       <span class="date2">${item.createdAt}</span>
     </div>
@@ -252,6 +262,8 @@ const sportsCycle = () => {
   <h5 class="card-title">
     <a href="/post.html?id=${item._id}">${item.title.substring(0, 35)}</a>
   </h5>
+  <p>
+  ${item.content.substring(0, 35)}
   </p>
   <span class="date2">${item.createdAt}</span>
     </div>
@@ -320,7 +332,8 @@ const randomSixCycle = () => {
         <h5 class="card-title">
         <a href="/post.html?id=${item._id}">${item.title.substring(0, 35)} </a>
         </h5>
-
+        <p>
+        ${item.content.substring(0, 35)}
         </p>
         <span class="date2">${item.createdAt}</span>
       </div>
@@ -335,8 +348,9 @@ const randomSixCycle = () => {
       <a href="/post.html?id=${item._id}">${item.title.substring(0, 35)} </a>
       </h5>
 
+      <p>
+      ${item.content.substring(0, 35)}
       </p>
-
         <span class="date2">${item.createdAt}</span>
       </div>
 
