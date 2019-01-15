@@ -1,4 +1,5 @@
 var $ = jQuery;
+var converter = new showdown.Converter();
 
 $(document).ready(() => {
   $.ajax({
@@ -22,7 +23,7 @@ $(document).ready(() => {
           }»  </a>
             </h4>
             <p>
-            ${item.content.substring(0, 200)}
+            ${converter.makeHtml(item.content).substring(0, 200)}
             </p>
             <span class="date2">${item.createdAt}</span>
           </li>

@@ -1,3 +1,5 @@
+var converter = new showdown.Converter();
+
 $(document).ready(() => {
   const url = new URL(window.location.href);
   const id = url.searchParams.get("id");
@@ -21,7 +23,7 @@ $(document).ready(() => {
             <img src="${post.cover.url}" class="rounded" width="100%"><br>
           </p>
           <p>
-          <h5>${post.content}</h5>
+          <h5>${converter.makeHtml(post.content)}</h5>
           </p>
 
         </div>
