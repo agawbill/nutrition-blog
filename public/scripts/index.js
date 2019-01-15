@@ -21,7 +21,7 @@ const newsCycle = () => {
     </h5>
     <h5>${first.description.substring(0, 35)}</h5>
     <p>
-    ${first.content.substring(0, 300)}
+    ${first.content.substring(0, 250)}
     </p>
     </br>
     <span class="date">${first.createdAt}</span>
@@ -51,7 +51,7 @@ const newsCycle = () => {
                       }">${item.title.substring(0, 35)}</a>
                     </h5>
                     <p>
-                    ${item.content.substring(0, 50)}
+                    ${item.content.substring(0, 35)}
                     </p>
                 </span>
                 <span class="date">${item.createdAt}</span>
@@ -81,7 +81,7 @@ const newsCycle = () => {
                       }">${item.title.substring(0, 35)}</a>
                     </h5>
                     <p>
-                    ${item.content.substring(0, 50)}
+                    ${item.content.substring(0, 35)}
                     </p>
                 </span>
                 <span class="date">${item.createdAt}</span>
@@ -108,7 +108,7 @@ const entertainmentCycle = () => {
       <a href="/post.html?id=${item._id}">${item.title.substring(0, 35)}</a>
     </h5>
     <p>
-    ${item.content.substring(0, 300)}
+    ${item.content.substring(0, 250)}
     </p>
     </br>
     <span class="date2">${item.createdAt}</span>
@@ -129,7 +129,7 @@ const entertainmentCycle = () => {
     <a href="/post.html?id=${item._id}">${item.title.substring(0, 35)}</a>
   </h5>
   <p>
-  ${item.content.substring(0, 50)}
+  ${item.content.substring(0, 35)}
   </p>
   <span class="date2">${item.createdAt}</span>
     </div>
@@ -145,7 +145,7 @@ const entertainmentCycle = () => {
     <a href="/post.html?id=${item._id}">${item.title.substring(0, 35)}</a>
   </h5>
   <p>
-  ${item.content.substring(0, 50)}
+  ${item.content.substring(0, 35)}
   </p>
   <span class="date2">${item.createdAt}</span>
     </div>
@@ -167,7 +167,7 @@ const techCycle = () => {
       <a href="/post.html?id=${item._id}">${item.title.substring(0, 35)}</a>
     </h5>
     <p>
-    ${item.content.substring(0, 300)}
+    ${item.content.substring(0, 250)}
     </p>
     <span class="date2">${item.createdAt}</span>
     </div>
@@ -187,7 +187,7 @@ const techCycle = () => {
     <a href="/post.html?id=${item._id}">${item.title.substring(0, 35)}</a>
   </h5>
   <p>
-  ${item.content.substring(0, 50)}
+  ${item.content.substring(0, 35)}
   </p>
   <span class="date2">${item.createdAt}</span>
     </div>
@@ -203,7 +203,7 @@ const techCycle = () => {
     <a href="/post.html?id=${item._id}">${item.title.substring(0, 35)}</a>
   </h5>
   <p>
-  ${item.content.substring(0, 50)}
+  ${item.content.substring(0, 35)}
   </p>
   <span class="date2">${item.createdAt}</span>
     </div>
@@ -225,7 +225,7 @@ const sportsCycle = () => {
       <a href="/post.html?id=${item._id}">${item.title.substring(0, 35)}</a>
     </h5>
 
-    <h5>${item.content.substring(0, 300)}</h5>
+    <h5>${item.content.substring(0, 250)}</h5>
     </p>
     <span class="date2">${item.createdAt}</span>
     </div>
@@ -247,7 +247,7 @@ const sportsCycle = () => {
         <a href="/post.html?id=${item._id}">${item.title.substring(0, 35)}</a>
       </h5>
       <p>
-      ${item.content.substring(0, 50)}
+      ${item.content.substring(0, 35)}
       </p>
       <span class="date2">${item.createdAt}</span>
     </div>
@@ -263,7 +263,7 @@ const sportsCycle = () => {
     <a href="/post.html?id=${item._id}">${item.title.substring(0, 35)}</a>
   </h5>
   <p>
-  ${item.content.substring(0, 50)}
+  ${item.content.substring(0, 35)}
   </p>
   <span class="date2">${item.createdAt}</span>
     </div>
@@ -287,7 +287,7 @@ const selectedCycle = () => {
           35
         )}</h5></a>
         <p>
-        ${item.content.substring(0, 300)}
+        ${item.content.substring(0, 250)}
         </p>
         </br>
         <span class="date">${item.createdAt}</span>
@@ -304,7 +304,7 @@ const selectedCycle = () => {
           35
         )}</h5></a>
         <p>
-        ${item.content.substring(0, 300)}
+        ${item.content.substring(0, 250)}
         </p>
         </br>
         <span class="date">${item.createdAt}</span>
@@ -333,7 +333,7 @@ const randomSixCycle = () => {
         <a href="/post.html?id=${item._id}">${item.title.substring(0, 35)} </a>
         </h5>
         <p>
-        ${item.content.substring(0, 50)}
+        ${item.content.substring(0, 35)}
         </p>
         <span class="date2">${item.createdAt}</span>
       </div>
@@ -349,7 +349,7 @@ const randomSixCycle = () => {
       </h5>
 
       <p>
-      ${item.content.substring(0, 50)}
+      ${item.content.substring(0, 35)}
       </p>
         <span class="date2">${item.createdAt}</span>
       </div>
@@ -362,6 +362,9 @@ const randomSixCycle = () => {
 };
 const recPostCycle = () => {
   for (let i = 0; i < recPostings.length; i++) {
+    if (i === 5) {
+      break;
+    }
     const item = recPostings[i];
     const node = `
       <div class="row">

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "01/13/2019 10:12:35 PM"
+    "x-generation-date": "01/14/2019 10:52:48 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3063,6 +3063,10 @@
       "Post": {
         "required": [
           "id",
+          "title",
+          "description",
+          "content",
+          "cover",
           "category"
         ],
         "properties": {
@@ -3072,12 +3076,12 @@
           "title": {
             "type": "string",
             "default": "",
-            "maxLength": 30
+            "maxLength": 300
           },
           "description": {
             "type": "string",
             "default": "",
-            "maxLength": 50
+            "maxLength": 500
           },
           "content": {
             "type": "string",
@@ -3135,12 +3139,12 @@
           },
           "category": {
             "type": "string",
-            "default": "",
+            "default": "Наши Беседы",
             "enum": [
               "Наши Беседы",
-              " Фитнес",
-              " Здоровье",
-              " Партнеры"
+              "Фитнес",
+              "Здоровье",
+              "Питание"
             ]
           },
           "recPosts": {
@@ -3151,18 +3155,21 @@
       },
       "NewPost": {
         "required": [
+          "title",
+          "description",
+          "content",
           "category"
         ],
         "properties": {
           "title": {
             "type": "string",
             "default": "",
-            "maxLength": 30
+            "maxLength": 300
           },
           "description": {
             "type": "string",
             "default": "",
-            "maxLength": 50
+            "maxLength": 500
           },
           "content": {
             "type": "string",
@@ -3174,12 +3181,12 @@
           },
           "category": {
             "type": "string",
-            "default": "",
+            "default": "Наши Беседы",
             "enum": [
               "Наши Беседы",
-              " Фитнес",
-              " Здоровье",
-              " Партнеры"
+              "Фитнес",
+              "Здоровье",
+              "Питание"
             ]
           },
           "recPosts": {
