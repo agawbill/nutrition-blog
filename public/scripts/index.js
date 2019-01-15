@@ -8,6 +8,8 @@ var recPostings = [];
 var allArray;
 var randomSix = [];
 
+// below are the functions to push the data to their corresponding category
+
 const newsCycle = () => {
   const first = news[0];
   const news1 = `
@@ -48,6 +50,9 @@ const newsCycle = () => {
                         item._id
                       }">${item.title.substring(0, 35)}</a>
                     </h5>
+                    <p>
+                    ${item.content.substring(0, 35)}
+                    </p>
                 </span>
                 <span class="date">${item.createdAt}</span>
               </td>
@@ -75,6 +80,9 @@ const newsCycle = () => {
                         item._id
                       }">${item.title.substring(0, 35)}</a>
                     </h5>
+                    <p>
+                    ${item.content.substring(0, 35)}
+                    </p>
                 </span>
                 <span class="date">${item.createdAt}</span>
               </td>
@@ -357,6 +365,8 @@ const recPostCycle = () => {
     $("#recPosts").append(node);
   }
 };
+
+// ajax requests to get the data
 
 $(document).ready(() => {
   $.ajax({
