@@ -417,20 +417,20 @@ $(document).ready(() => {
         const item = data[i];
 
         if (item.Избранное == true) {
-          selectedPosts.unshift(item);
+          selectedPosts.push(item);
         }
         if (item.recPosts == true) {
-          recPostings.unshift(item);
+          recPostings.push(item);
         }
 
         if (item.category == "Наши Беседы") {
-          news.unshift(item);
+          news.push(item);
         } else if (item.category == "Питание") {
-          technology.unshift(item);
+          technology.push(item);
         } else if (item.category == "Здоровье") {
-          entertainment.unshift(item);
+          entertainment.push(item);
         } else {
-          sports.unshift(item);
+          sports.push(item);
         }
 
         if (i < 6) {
