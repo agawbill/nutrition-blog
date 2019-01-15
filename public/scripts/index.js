@@ -238,7 +238,7 @@ const sportsCycle = () => {
         break;
       } else if (i === 4) {
         const sport = `
-    <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;float:center;display:block;">
+    <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;float:center;word-break: break-all">
         <img src="${
           item.cover.url
         }" class="rounded" height="200vh" width="100%">
@@ -256,7 +256,7 @@ const sportsCycle = () => {
       } else {
         const item = sports[i];
         const sport = `
-    <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;border-right: 2px dotted navY; display: block;">
+    <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;border-right: 2px dotted navY; word-break: break-all">
     <img src="${item.cover.url}" class="rounded" height="200vh" width="100%">
   <p>
   <h5 class="card-title">
