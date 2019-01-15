@@ -347,10 +347,10 @@ const recPostCycle = () => {
     const item = recPostings[i];
     const node = `
       <div class="row">
-        <div style="display: block; padding-left:50px;">
+        <div style="display: block; padding-left:35px; padding-right:35px;  ">
         <p>
         <h5 class="card-title">
-        <a href="/post.html?id=${item._id}">${item.title.substring(0, 50)+' ...'}  </a>
+        <a href="/post.html?id=${item._id}">${item.title.substring(0, 55)}  </a>
         </h5>
 
         </p>
