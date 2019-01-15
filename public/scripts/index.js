@@ -19,9 +19,9 @@ const newsCycle = () => {
       first.cover.url
     }" height="400vh" width="100%" class="rounded" ></p>
     <h5 class="card-title">
-      <a href="/post.html?id=${first._id}">${first.title.substring(0, 35)}</a>
+      <a href="/post.html?id=${first._id}">${first.title.substring(0, 100)}</a>
     </h5>
-    <h5>${first.description.substring(0, 35)}</h5>
+     
     <p>
     ${converter.makeHtml(first.content).substring(0, 250)}
     </p>
@@ -47,11 +47,11 @@ const newsCycle = () => {
               </td>
               <td style="width:100%;position:relative; clear:both;">
                 <span class="newsText">
-                    <h5 class="card-title">
+                    <h4 class="card-title">
                       <a href="/post.html?id=${
                         item._id
-                      }">${item.title.substring(0, 35)}</a>
-                    </h5>
+                      }">${item.title.substring(0, 100)}</a>
+                    </h4>
                     <p>
                     ${converter.makeHtml(item.content).substring(0, 35)}
                     </p>
@@ -77,11 +77,11 @@ const newsCycle = () => {
               </td>
               <td style="width:100%;position:relative; clear:both;">
                 <span class="newsText">
-                    <h5 class="card-title">
+                    <h4 class="card-title">
                       <a href="/post.html?id=${
                         item._id
-                      }">${item.title.substring(0, 35)}</a>
-                    </h5>
+                      }">${item.title.substring(0, 100)}</a>
+                    </h4>
                     <p>
                     ${converter.makeHtml(item.content).substring(0, 35)}
                     </p>
@@ -107,7 +107,7 @@ const entertainmentCycle = () => {
     item.cover.url
   }" class="rounded" height="400vh" width="50%" style="float:right;padding-right:15px;">
     <h5 class="bigTitle">
-      <a href="/post.html?id=${item._id}">${item.title.substring(0, 35)}</a>
+      <a href="/post.html?id=${item._id}">${item.title.substring(0, 100)}</a>
     </h5>
     <p>
     ${converter.makeHtml(item.content).substring(0, 250)}
@@ -128,7 +128,7 @@ const entertainmentCycle = () => {
     <img src="${item.cover.url}" class="rounded" height="200vh" width="100%">
   <p>
   <h5 class="card-title">
-    <a href="/post.html?id=${item._id}">${item.title.substring(0, 35)}</a>
+    <a href="/post.html?id=${item._id}">${item.title.substring(0, 100)}</a>
   </h5>
   <p>
   ${converter.makeHtml(item.content).substring(0, 35)}
@@ -144,7 +144,7 @@ const entertainmentCycle = () => {
     <img src="${item.cover.url}" class="rounded" height="200vh" width="100%">
   <p>
   <h5 class="card-title">
-    <a href="/post.html?id=${item._id}">${item.title.substring(0, 35)}</a>
+    <a href="/post.html?id=${item._id}">${item.title.substring(0, 100)}</a>
   </h5>
   <p>
   ${converter.makeHtml(item.content).substring(0, 35)}
@@ -166,7 +166,7 @@ const techCycle = () => {
     item.cover.url
   }" class="rounded" height="400vh" width="50%" style="float:left;padding-right:15px;">
     <h5 class="bigTitle">
-      <a href="/post.html?id=${item._id}">${item.title.substring(0, 35)}</a>
+      <a href="/post.html?id=${item._id}">${item.title.substring(0, 100)}</a>
     </h5>
     <p>
     ${converter.makeHtml(item.content).substring(0, 250)}
@@ -186,7 +186,7 @@ const techCycle = () => {
     <img src="${item.cover.url}" class="rounded" height="200vh" width="100%">
   <p>
   <h5 class="card-title">
-    <a href="/post.html?id=${item._id}">${item.title.substring(0, 35)}</a>
+    <a href="/post.html?id=${item._id}">${item.title.substring(0, 100)}</a>
   </h5>
   <p>
   ${converter.makeHtml(item.content).substring(0, 35)}
@@ -202,7 +202,7 @@ const techCycle = () => {
     <img src="${item.cover.url}" class="rounded" height="200vh" width="100%">
   <p>
   <h5 class="card-title">
-    <a href="/post.html?id=${item._id}">${item.title.substring(0, 35)}</a>
+    <a href="/post.html?id=${item._id}">${item.title.substring(0, 100)}</a>
   </h5>
   <p>
   ${converter.makeHtml(item.content).substring(0, 35)}
@@ -224,7 +224,7 @@ const sportsCycle = () => {
     item.cover.url
   }" class="rounded" height="400vh" width="50%" style="float:left; padding-right:15px;">
     <h5 class="card-title">
-      <a href="/post.html?id=${item._id}">${item.title.substring(0, 35)}</a>
+      <a href="/post.html?id=${item._id}">${item.title.substring(0, 100)}</a>
     </h5>
 
     <h5>${converter.makeHtml(item.content).substring(0, 250)}</h5>
@@ -246,7 +246,7 @@ const sportsCycle = () => {
         }" class="rounded" height="200vh" width="100%">
       <p>
       <h5 class="card-title">
-        <a href="/post.html?id=${item._id}">${item.title.substring(0, 35)}</a>
+        <a href="/post.html?id=${item._id}">${item.title.substring(0, 100)}</a>
       </h5>
       <p>
       ${converter.makeHtml(item.content).substring(0, 35)}
@@ -262,7 +262,7 @@ const sportsCycle = () => {
     <img src="${item.cover.url}" class="rounded" height="200vh" width="100%">
   <p>
   <h5 class="card-title">
-    <a href="/post.html?id=${item._id}">${item.title.substring(0, 35)}</a>
+    <a href="/post.html?id=${item._id}">${item.title.substring(0, 100)}</a>
   </h5>
   <p>
   ${converter.makeHtml(item.content).substring(0, 35)}
@@ -286,7 +286,7 @@ const selectedCycle = () => {
       <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 0px">
         <a href="/post.html?id=${item._id}"><h5>${item.title.substring(
           0,
-          35
+          100
         )}</h5></a>
         <p>
         ${converter.makeHtml(item.content).substring(0, 250)}
@@ -303,7 +303,7 @@ const selectedCycle = () => {
       <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 2px dotted navY">
         <a href="/post.html?id=${item._id}"><h5>${item.title.substring(
           0,
-          35
+          100
         )}</h5></a>
         <p>
         ${converter.makeHtml(item.content).substring(0, 250)}
@@ -332,7 +332,7 @@ const randomSixCycle = () => {
         <img src="${item.cover.url}" class="rounded" height="200vh" width="90%">
         <p>
         <h5 class="card-title">
-        <a href="/post.html?id=${item._id}">${item.title.substring(0, 35)} </a>
+        <a href="/post.html?id=${item._id}">${item.title.substring(0, 100)} </a>
         </h5>
         <p>
         ${converter.makeHtml(item.content).substring(0, 35)}
@@ -347,7 +347,7 @@ const randomSixCycle = () => {
       <img src="${item.cover.url}" class="rounded" height="200vh" width="90%">
       <p>
       <h5 class="card-title">
-      <a href="/post.html?id=${item._id}">${item.title.substring(0, 35)} </a>
+      <a href="/post.html?id=${item._id}">${item.title.substring(0, 100)} </a>
       </h5>
 
       <p>
@@ -370,10 +370,10 @@ const recPostCycle = () => {
     const item = recPostings[i];
     const node = `
       <div class="row">
-        <div style="display: block; padding-left:50px;">
+        <div style="display: block; padding-left:35px; padding-right:35px;  ">
         <p>
         <h5 class="card-title">
-        <a href="/post.html?id=${item._id}">${item.title.substring(0, 35)}  </a>
+        <a href="/post.html?id=${item._id}">${item.title.substring(0, 70)}  </a>
         </h5>
 
         </p>
@@ -457,9 +457,11 @@ $(document).ready(() => {
                       </h5>
                   </span>
                 </td>
+                
               </tr>
               </div>
             </table>
+            <hr>
             </br>
             <div style="clear:both;"></div>
         `;
