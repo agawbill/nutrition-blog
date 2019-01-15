@@ -362,6 +362,9 @@ const randomSixCycle = () => {
 };
 const recPostCycle = () => {
   for (let i = 0; i < recPostings.length; i++) {
+    if (i === 5) {
+      break;
+    }
     const item = recPostings[i];
     const node = `
       <div class="row">
