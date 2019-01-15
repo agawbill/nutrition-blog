@@ -45,11 +45,11 @@ const newsCycle = () => {
               </td>
               <td style="width:100%;position:relative; clear:both;">
                 <span class="newsText">
-                    <h5 class="card-title">
+                    <h4 class="card-title">
                       <a href="/post.html?id=${
                         item._id
                       }">${item.title.substring(0, 100)}</a>
-                    </h5>
+                    </h4>
                     <p>
                     
                     </p>
@@ -75,11 +75,11 @@ const newsCycle = () => {
               </td>
               <td style="width:100%;position:relative; clear:both;">
                 <span class="newsText">
-                    <h5 class="card-title">
+                    <h4 class="card-title">
                       <a href="/post.html?id=${
                         item._id
                       }">${item.title.substring(0, 100)}</a>
-                    </h5>
+                    </h4>
                     <p>
                     
                     </p>
@@ -350,7 +350,7 @@ const recPostCycle = () => {
         <div style="display: block; padding-left:35px; padding-right:35px;  ">
         <p>
         <h5 class="card-title">
-        <a href="/post.html?id=${item._id}">${item.title.substring(0, 55)}  </a>
+        <a href="/post.html?id=${item._id}">${item.title.substring(0, 70)}  </a>
         </h5>
 
         </p>
@@ -434,9 +434,11 @@ $(document).ready(() => {
                       </h5>
                   </span>
                 </td>
+                
               </tr>
               </div>
             </table>
+            <hr>
             </br>
             <div style="clear:both;"></div>
         `;
