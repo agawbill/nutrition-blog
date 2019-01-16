@@ -155,7 +155,7 @@ hr {
 }
 .bigNews {
   overflow: hidden;
-  height: 28vh;
+  height: 27vh;
 }
 
 @media screen and (min-width: 40em) {
