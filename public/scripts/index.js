@@ -406,7 +406,7 @@ const recPostCycle = () => {
       <div class="row">
         <div style="display: block; padding-left:35px; padding-right:35px;  ">
         <p>
-        <h5 class="card-title">
+        <h5 style="border-bottom:2px dashed rgb(73,86,120); padding-bottom:10px;" class="card-title">
         <a href="/post.html?id=${
           item._id
         }" style="color:black!important;">${item.title.substring(0, 70)}  </a>
