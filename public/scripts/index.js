@@ -53,7 +53,7 @@ const newsCycle = () => {
                       }">${item.title.substring(0, 100)}</a>
                     </h4>
                     <p>
-                    ${converter.makeHtml(item.content).substring(0, 35)}
+                     
                     </p>
                 </span>
                 <span class="date">${item.createdAt}</span>
@@ -83,7 +83,7 @@ const newsCycle = () => {
                       }">${item.title.substring(0, 100)}</a>
                     </h4>
                     <p>
-                    ${converter.makeHtml(item.content).substring(0, 35)}
+                     
                     </p>
                 </span>
                 <span class="date">${item.createdAt}</span>
@@ -131,7 +131,7 @@ const entertainmentCycle = () => {
     <a href="/post.html?id=${item._id}">${item.title.substring(0, 100)}</a>
   </h5>
   <p>
-  ${converter.makeHtml(item.content).substring(0, 35)}
+   
   </p>
   <span class="date2">${item.createdAt}</span>
     </div>
@@ -147,7 +147,7 @@ const entertainmentCycle = () => {
     <a href="/post.html?id=${item._id}">${item.title.substring(0, 100)}</a>
   </h5>
   <p>
-  ${converter.makeHtml(item.content).substring(0, 35)}
+   
   </p>
   <span class="date2">${item.createdAt}</span>
     </div>
@@ -189,7 +189,7 @@ const techCycle = () => {
     <a href="/post.html?id=${item._id}">${item.title.substring(0, 100)}</a>
   </h5>
   <p>
-  ${converter.makeHtml(item.content).substring(0, 35)}
+   
   </p>
   <span class="date2">${item.createdAt}</span>
     </div>
@@ -205,7 +205,7 @@ const techCycle = () => {
     <a href="/post.html?id=${item._id}">${item.title.substring(0, 100)}</a>
   </h5>
   <p>
-  ${converter.makeHtml(item.content).substring(0, 35)}
+   
   </p>
   <span class="date2">${item.createdAt}</span>
     </div>
@@ -249,7 +249,7 @@ const sportsCycle = () => {
         <a href="/post.html?id=${item._id}">${item.title.substring(0, 100)}</a>
       </h5>
       <p>
-      ${converter.makeHtml(item.content).substring(0, 35)}
+       
       </p>
       <span class="date2">${item.createdAt}</span>
     </div>
@@ -265,7 +265,7 @@ const sportsCycle = () => {
     <a href="/post.html?id=${item._id}">${item.title.substring(0, 100)}</a>
   </h5>
   <p>
-  ${converter.makeHtml(item.content).substring(0, 35)}
+   
   </p>
   <span class="date2">${item.createdAt}</span>
     </div>
@@ -335,7 +335,7 @@ const randomSixCycle = () => {
         <a href="/post.html?id=${item._id}">${item.title.substring(0, 100)} </a>
         </h5>
         <p>
-        ${converter.makeHtml(item.content).substring(0, 35)}
+         
         </p>
         <span class="date2">${item.createdAt}</span>
       </div>
@@ -351,7 +351,7 @@ const randomSixCycle = () => {
       </h5>
 
       <p>
-      ${converter.makeHtml(item.content).substring(0, 35)}
+       
       </p>
         <span class="date2">${item.createdAt}</span>
       </div>
