@@ -17,7 +17,7 @@ const newsCycle = () => {
   const news1 = `
     <img src="${
       first.cover.url
-    }" height="400vh" width="100%" class="rounded" ></p>
+    }"   width="100%" class="rounded" ></p>
     <h5 class="card-title">
       <a href="/post.html?id=${first._id}">${first.title.substring(0, 100)}</a>
     </h5>
@@ -43,7 +43,7 @@ const newsCycle = () => {
               <td>
                   <img src="${
                     item.cover.url
-                  }"  class="rounded" float="left" height="210vh" width="310vh" style="padding-right:10px;">
+                  }"  class="rounded" float="left"   width="310vh" style="padding-right:10px;">
               </td>
               <td style="width:100%;position:relative; clear:both;">
                 <span class="newsText">
@@ -73,7 +73,7 @@ const newsCycle = () => {
               <td>
                   <img src="${
                     item.cover.url
-                  }"  class="rounded" float="left" height="210vh" width="310vh" style="padding-right:10px;">
+                  }"  class="rounded" float="left"   width="310vh" style="padding-right:10px;">
               </td>
               <td style="width:100%;position:relative; clear:both;">
                 <span class="newsText">
@@ -105,7 +105,7 @@ const entertainmentCycle = () => {
   <div class="col-lg-16 col-md-16 mb-16" style="width:100%;">
   <img src="${
     item.cover.url
-  }" class="rounded" height="400vh" width="50%" style="float:right;padding-right:15px;">
+  }" class="rounded"  width="50%" style="float:right;padding-right:15px;">
     <h5 class="bigTitle">
       <a href="/post.html?id=${item._id}">${item.title.substring(0, 100)}</a>
     </h5>
@@ -164,7 +164,7 @@ const techCycle = () => {
   <div class="col-lg-16 col-md-16 mb-16">
   <img src="${
     item.cover.url
-  }" class="rounded" height="400vh" width="50%" style="float:left;padding-right:15px;">
+  }" class="rounded"   width="50%" style="float:left;padding-right:15px;">
     <h5 class="bigTitle">
       <a href="/post.html?id=${item._id}">${item.title.substring(0, 100)}</a>
     </h5>
@@ -222,7 +222,7 @@ const sportsCycle = () => {
   <div class="col-lg-16 col-md-16 mb-16">
   <img src="${
     item.cover.url
-  }" class="rounded" height="400vh" width="50%" style="float:left; padding-right:15px;">
+  }" class="rounded"   width="50%" style="float:left; padding-right:15px;">
     <h5 class="card-title">
       <a href="/post.html?id=${item._id}">${item.title.substring(0, 100)}</a>
     </h5>
