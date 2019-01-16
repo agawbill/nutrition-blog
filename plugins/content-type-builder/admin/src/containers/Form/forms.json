@@ -258,9 +258,18 @@
             "type": "select",
             "value": "integer",
             "items": [
-              { "name": "content-type-builder.form.attribute.item.number.type.integer", "value": "integer" },
-              { "name": "content-type-builder.form.attribute.item.number.type.float", "value": "float" },
-              { "name": "content-type-builder.form.attribute.item.number.type.decimal", "value": "decimal" }
+              {
+                "name": "content-type-builder.form.attribute.item.number.type.integer",
+                "value": "integer"
+              },
+              {
+                "name": "content-type-builder.form.attribute.item.number.type.float",
+                "value": "float"
+              },
+              {
+                "name": "content-type-builder.form.attribute.item.number.type.decimal",
+                "value": "decimal"
+              }
             ],
             "validations": {
               "required": true

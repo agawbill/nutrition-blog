@@ -24,7 +24,7 @@ h1 {
 }
 
 a {
-  color: rgb(73,86,120) !important;
+  color: rgb(73, 86, 120) !important;
 }
 
 h2 {
@@ -33,7 +33,7 @@ h2 {
 }
 
 h3 {
-  color: rgb(73,86,120) !important;
+  color: rgb(73, 86, 120) !important;
   margin-top: 44px;
   font-size: 1.3em;
   padding-top: 10px;
@@ -80,7 +80,7 @@ pre {
 }
 
 hr {
-  background-color: rgb(73,86,120) !important;
+  background-color: rgb(73, 86, 120) !important;
   color: rgb(84, 129, 184) !important;
   border: none;
   height: 5px !important;
@@ -125,7 +125,7 @@ hr {
   max-width: 100em !important;
 }
 #header_menu_blue {
-  background-color: rgb(73,86,120);
+  background-color: rgb(73, 86, 120);
   height: 28px;
   color: white;
 }

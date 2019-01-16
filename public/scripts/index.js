@@ -15,18 +15,20 @@ var converter = new showdown.Converter();
 const newsCycle = () => {
   const first = news[0];
   const news1 = `
-    <img src="${
-      first.cover.url
-    }"   width="100%" class="rounded" ></p>
+    <img src="${first.cover.url}"   width="100%" class="rounded" ></p>
     <h5 class="card-title">
-      <a href="/post.html?id=${first._id}">${first.title.substring(0, 100)}</a>
+      <a href="/post.html?id=${
+        first._id
+      }" style="color:black!important;">${first.title.substring(0, 100)}</a>
     </h5>
-     
+
     <p>
-    ${converter.makeHtml(first.content).substring(0, 250)}
+    <div style="overflow:hidden; height: 80%;">
+    ${converter.makeHtml(first.content)}
+    </div>
     </p>
     </br>
-    <span class="date">${first.createdAt}</span>
+    <span class="date">${first.createdAt.substring(0, 9)}</span>
     `;
   $("#newsFirst").append(news1);
   for (i = 1; i < news.length; i++) {
@@ -50,13 +52,16 @@ const newsCycle = () => {
                     <h4 class="card-title">
                       <a href="/post.html?id=${
                         item._id
-                      }">${item.title.substring(0, 100)}</a>
+                      }"style="color:black!important;">${item.title.substring(
+          0,
+          100
+        )}</a>
                     </h4>
                     <p>
-                     
+
                     </p>
                 </span>
-                <span class="date">${ item.createdAt.substring(0,9)}</span>
+                <span class="date">${item.createdAt.substring(0, 9)}</span>
               </td>
             </tr>
             </div>
@@ -80,13 +85,16 @@ const newsCycle = () => {
                     <h4 class="card-title">
                       <a href="/post.html?id=${
                         item._id
-                      }">${item.title.substring(0, 100)}</a>
+                      }" style="color:black!important;">${item.title.substring(
+          0,
+          100
+        )}</a>
                     </h4>
                     <p>
-                     
+
                     </p>
                 </span>
-                <span class="date">${ item.createdAt.substring(0,9)}</span>
+                <span class="date">${item.createdAt.substring(0, 9)}</span>
               </td>
             </tr>
           </table>
@@ -107,13 +115,15 @@ const entertainmentCycle = () => {
     item.cover.url
   }" class="rounded"  width="50%" style="float:right;padding-right:15px;">
     <h5 class="bigTitle">
-      <a href="/post.html?id=${item._id}">${item.title.substring(0, 100)}</a>
+      <a href="/post.html?id=${
+        item._id
+      }" style="color:black!important;">${item.title.substring(0, 100)}</a>
     </h5>
     <p>
     ${converter.makeHtml(item.content).substring(0, 250)}
     </p>
     </br>
-    <span class="date2">${ item.createdAt.substring(0,9)}</span>
+    <span class="date2">${item.createdAt.substring(0, 9)}</span>
     </div>
   `;
   $("#entertainmentFirst").append(ent);
@@ -128,12 +138,14 @@ const entertainmentCycle = () => {
     <img src="${item.cover.url}" class="rounded" height="200vh" width="100%">
   <p>
   <h5 class="card-title">
-    <a href="/post.html?id=${item._id}">${item.title.substring(0, 100)}</a>
+    <a href="/post.html?id=${
+      item._id
+    }" style="color:black!important;">${item.title.substring(0, 100)}</a>
   </h5>
   <p>
-   
+
   </p>
-  <span class="date2">${ item.createdAt.substring(0,9)}</span>
+  <span class="date2">${item.createdAt.substring(0, 9)}</span>
     </div>
     `;
         $("#entertainmentSecond").append(ent);
@@ -144,12 +156,14 @@ const entertainmentCycle = () => {
     <img src="${item.cover.url}" class="rounded" height="200vh" width="100%">
   <p>
   <h5 class="card-title">
-    <a href="/post.html?id=${item._id}">${item.title.substring(0, 100)}</a>
+    <a href="/post.html?id=${
+      item._id
+    }" style="color:black!important;">${item.title.substring(0, 100)}</a>
   </h5>
   <p>
-   
+
   </p>
-  <span class="date2">${ item.createdAt.substring(0,9)}</span>
+  <span class="date2">${item.createdAt.substring(0, 9)}</span>
     </div>
     `;
         $("#entertainmentSecond").append(ent);
@@ -166,12 +180,14 @@ const techCycle = () => {
     item.cover.url
   }" class="rounded"   width="50%" style="float:left;padding-right:15px;">
     <h5 class="bigTitle">
-      <a href="/post.html?id=${item._id}">${item.title.substring(0, 100)}</a>
+      <a href="/post.html?id=${
+        item._id
+      }"style="color:black!important;">${item.title.substring(0, 100)}</a>
     </h5>
     <p>
     ${converter.makeHtml(item.content).substring(0, 250)}
     </p>
-    <span class="date2">${ item.createdAt.substring(0,9)}</span>
+    <span class="date2">${item.createdAt.substring(0, 9)}</span>
     </div>
   `;
   $("#technologyFirst").append(tech);
@@ -186,12 +202,14 @@ const techCycle = () => {
     <img src="${item.cover.url}" class="rounded" height="200vh" width="100%">
   <p>
   <h5 class="card-title">
-    <a href="/post.html?id=${item._id}">${item.title.substring(0, 100)}</a>
+    <a href="/post.html?id=${
+      item._id
+    }" style="color:black!important;">${item.title.substring(0, 100)}</a>
   </h5>
   <p>
-   
+
   </p>
-  <span class="date2">${ item.createdAt.substring(0,9)}</span>
+  <span class="date2">${item.createdAt.substring(0, 9)}</span>
     </div>
     `;
         $("#technologySecond").append(tech);
@@ -202,12 +220,14 @@ const techCycle = () => {
     <img src="${item.cover.url}" class="rounded" height="200vh" width="100%">
   <p>
   <h5 class="card-title">
-    <a href="/post.html?id=${item._id}">${item.title.substring(0, 100)}</a>
+    <a href="/post.html?id=${
+      item._id
+    }" style="color:black!important;">${item.title.substring(0, 100)}</a>
   </h5>
   <p>
-   
+
   </p>
-  <span class="date2">${ item.createdAt.substring(0,9)}</span>
+  <span class="date2">${item.createdAt.substring(0, 9)}</span>
     </div>
     `;
         $("#technologySecond").append(tech);
@@ -224,12 +244,14 @@ const sportsCycle = () => {
     item.cover.url
   }" class="rounded"   width="50%" style="float:left; padding-right:15px;">
     <h5 class="card-title">
-      <a href="/post.html?id=${item._id}">${item.title.substring(0, 100)}</a>
+      <a href="/post.html?id=${
+        item._id
+      }" style="color:black!important;">${item.title.substring(0, 100)}</a>
     </h5>
 
     <h5>${converter.makeHtml(item.content).substring(0, 250)}</h5>
     </p>
-    <span class="date2">${ item.createdAt.substring(0,9)}</span>
+    <span class="date2">${item.createdAt.substring(0, 9)}</span>
     </div>
   `;
   $("#sportsFirst").append(sport);
@@ -246,12 +268,14 @@ const sportsCycle = () => {
         }" class="rounded" height="200vh" width="100%">
       <p>
       <h5 class="card-title">
-        <a href="/post.html?id=${item._id}">${item.title.substring(0, 100)}</a>
+        <a href="/post.html?id=${
+          item._id
+        }" style="color:black!important;">${item.title.substring(0, 100)}</a>
       </h5>
       <p>
-       
+
       </p>
-      <span class="date2">${ item.createdAt.substring(0,9)}</span>
+      <span class="date2">${item.createdAt.substring(0, 9)}</span>
     </div>
     `;
         $("#sportsSecond").append(sport);
@@ -262,12 +286,14 @@ const sportsCycle = () => {
     <img src="${item.cover.url}" class="rounded" height="200vh" width="100%">
   <p>
   <h5 class="card-title">
-    <a href="/post.html?id=${item._id}">${item.title.substring(0, 100)}</a>
+    <a href="/post.html?id=${
+      item._id
+    }" style="color:black!important;">${item.title.substring(0, 100)}</a>
   </h5>
   <p>
-   
+
   </p>
-  <span class="date2">${ item.createdAt.substring(0,9)}</span>
+  <span class="date2">${item.createdAt.substring(0, 9)}</span>
     </div>
     `;
         $("#sportsSecond").append(sport);
@@ -284,7 +310,9 @@ const selectedCycle = () => {
       } else if (i === 3) {
         const selected = `
       <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 0px">
-        <a href="/post.html?id=${item._id}"><h5>${item.title.substring(
+        <a href="/post.html?id=${
+          item._id
+        }" style="color:black!important;"><h5>${item.title.substring(
           0,
           100
         )}</h5></a>
@@ -292,7 +320,7 @@ const selectedCycle = () => {
         ${converter.makeHtml(item.content).substring(0, 250)}
         </p>
         </br>
-        <span class="date">${ item.createdAt.substring(0,9)}</span>
+        <span class="date">${item.createdAt.substring(0, 9)}</span>
 
       </div>
       `;
@@ -301,7 +329,9 @@ const selectedCycle = () => {
         const item = selectedPosts[i];
         const selected = `
       <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 2px dotted navY">
-        <a href="/post.html?id=${item._id}"><h5>${item.title.substring(
+        <a href="/post.html?id=${
+          item._id
+        }" style="color:black!important;"><h5>${item.title.substring(
           0,
           100
         )}</h5></a>
@@ -309,7 +339,7 @@ const selectedCycle = () => {
         ${converter.makeHtml(item.content).substring(0, 250)}
         </p>
         </br>
-        <span class="date">${ item.createdAt.substring(0,9)}</span>
+        <span class="date">${item.createdAt.substring(0, 9)}</span>
 
       </div>
       `;
@@ -332,12 +362,14 @@ const randomSixCycle = () => {
         <img src="${item.cover.url}" class="rounded" height="200vh" width="90%">
         <p>
         <h5 class="card-title">
-        <a href="/post.html?id=${item._id}">${item.title.substring(0, 100)} </a>
+        <a href="/post.html?id=${
+          item._id
+        }" style="color:black!important;">${item.title.substring(0, 100)} </a>
         </h5>
         <p>
-         
+
         </p>
-        <span class="date2">${ item.createdAt.substring(0,9)}</span>
+        <span class="date2">${item.createdAt.substring(0, 9)}</span>
       </div>
       `;
         $("#randomSix").append(node);
@@ -347,13 +379,15 @@ const randomSixCycle = () => {
       <img src="${item.cover.url}" class="rounded" height="200vh" width="90%">
       <p>
       <h5 class="card-title">
-      <a href="/post.html?id=${item._id}">${item.title.substring(0, 100)} </a>
+      <a href="/post.html?id=${
+        item._id
+      }"style="color:black!important;">${item.title.substring(0, 100)} </a>
       </h5>
 
       <p>
-       
+
       </p>
-        <span class="date2">${ item.createdAt.substring(0,9)}</span>
+        <span class="date2">${item.createdAt.substring(0, 9)}</span>
       </div>
 
       `;
@@ -373,11 +407,13 @@ const recPostCycle = () => {
         <div style="display: block; padding-left:35px; padding-right:35px;  ">
         <p>
         <h5 class="card-title">
-        <a href="/post.html?id=${item._id}">${item.title.substring(0, 70)}  </a>
+        <a href="/post.html?id=${
+          item._id
+        }" style="color:black!important;">${item.title.substring(0, 70)}  </a>
         </h5>
 
         </p>
-        <span class="date2">${ item.createdAt.substring(0,9)}</span>
+        <span class="date2">${item.createdAt.substring(0, 9)}</span>
       </div>
     </div>
       `;
@@ -453,11 +489,14 @@ $(document).ready(() => {
                       <h5 class="card-title">
                       <a href="/post.html?id=${
                         item._id
-                      }">${item.title.substring(0, 35)}  </a>
+                      }" style="color:black!important;">${item.title.substring(
+            0,
+            35
+          )}  </a>
                       </h5>
                   </span>
                 </td>
-                
+
               </tr>
               </div>
             </table>
