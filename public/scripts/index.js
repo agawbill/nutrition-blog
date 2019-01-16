@@ -22,8 +22,8 @@ const newsCycle = () => {
       }" style="color:black!important;">${first.title.substring(0, 100)}</a>
     </h5>
 
-    <p style="overflow:hidden;">
-    <div style="overflow:hidden; height: 80%;">
+    <p>
+    <div class="bigNews">
     ${converter.makeHtml(first.content)}
     </div>
     </p>
