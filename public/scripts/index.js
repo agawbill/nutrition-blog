@@ -56,7 +56,7 @@ const newsCycle = () => {
                      
                     </p>
                 </span>
-                <span class="date">${item.createdAt}</span>
+                <span class="date">${ item.createdAt.substring(0,9)}</span>
               </td>
             </tr>
             </div>
@@ -86,7 +86,7 @@ const newsCycle = () => {
                      
                     </p>
                 </span>
-                <span class="date">${item.createdAt}</span>
+                <span class="date">${ item.createdAt.substring(0,9)}</span>
               </td>
             </tr>
           </table>
@@ -113,7 +113,7 @@ const entertainmentCycle = () => {
     ${converter.makeHtml(item.content).substring(0, 250)}
     </p>
     </br>
-    <span class="date2">${item.createdAt}</span>
+    <span class="date2">${ item.createdAt.substring(0,9)}</span>
     </div>
   `;
   $("#entertainmentFirst").append(ent);
@@ -133,7 +133,7 @@ const entertainmentCycle = () => {
   <p>
    
   </p>
-  <span class="date2">${item.createdAt}</span>
+  <span class="date2">${ item.createdAt.substring(0,9)}</span>
     </div>
     `;
         $("#entertainmentSecond").append(ent);
@@ -149,7 +149,7 @@ const entertainmentCycle = () => {
   <p>
    
   </p>
-  <span class="date2">${item.createdAt}</span>
+  <span class="date2">${ item.createdAt.substring(0,9)}</span>
     </div>
     `;
         $("#entertainmentSecond").append(ent);
@@ -171,7 +171,7 @@ const techCycle = () => {
     <p>
     ${converter.makeHtml(item.content).substring(0, 250)}
     </p>
-    <span class="date2">${item.createdAt}</span>
+    <span class="date2">${ item.createdAt.substring(0,9)}</span>
     </div>
   `;
   $("#technologyFirst").append(tech);
@@ -191,7 +191,7 @@ const techCycle = () => {
   <p>
    
   </p>
-  <span class="date2">${item.createdAt}</span>
+  <span class="date2">${ item.createdAt.substring(0,9)}</span>
     </div>
     `;
         $("#technologySecond").append(tech);
@@ -207,7 +207,7 @@ const techCycle = () => {
   <p>
    
   </p>
-  <span class="date2">${item.createdAt}</span>
+  <span class="date2">${ item.createdAt.substring(0,9)}</span>
     </div>
     `;
         $("#technologySecond").append(tech);
@@ -229,7 +229,7 @@ const sportsCycle = () => {
 
     <h5>${converter.makeHtml(item.content).substring(0, 250)}</h5>
     </p>
-    <span class="date2">${item.createdAt}</span>
+    <span class="date2">${ item.createdAt.substring(0,9)}</span>
     </div>
   `;
   $("#sportsFirst").append(sport);
@@ -251,7 +251,7 @@ const sportsCycle = () => {
       <p>
        
       </p>
-      <span class="date2">${item.createdAt}</span>
+      <span class="date2">${ item.createdAt.substring(0,9)}</span>
     </div>
     `;
         $("#sportsSecond").append(sport);
@@ -267,7 +267,7 @@ const sportsCycle = () => {
   <p>
    
   </p>
-  <span class="date2">${item.createdAt}</span>
+  <span class="date2">${ item.createdAt.substring(0,9)}</span>
     </div>
     `;
         $("#sportsSecond").append(sport);
@@ -292,7 +292,7 @@ const selectedCycle = () => {
         ${converter.makeHtml(item.content).substring(0, 250)}
         </p>
         </br>
-        <span class="date">${item.createdAt}</span>
+        <span class="date">${ item.createdAt.substring(0,9)}</span>
 
       </div>
       `;
@@ -309,7 +309,7 @@ const selectedCycle = () => {
         ${converter.makeHtml(item.content).substring(0, 250)}
         </p>
         </br>
-        <span class="date">${item.createdAt}</span>
+        <span class="date">${ item.createdAt.substring(0,9)}</span>
 
       </div>
       `;
@@ -337,7 +337,7 @@ const randomSixCycle = () => {
         <p>
          
         </p>
-        <span class="date2">${item.createdAt}</span>
+        <span class="date2">${ item.createdAt.substring(0,9)}</span>
       </div>
       `;
         $("#randomSix").append(node);
@@ -353,7 +353,7 @@ const randomSixCycle = () => {
       <p>
        
       </p>
-        <span class="date2">${item.createdAt}</span>
+        <span class="date2">${ item.createdAt.substring(0,9)}</span>
       </div>
 
       `;
@@ -377,7 +377,7 @@ const recPostCycle = () => {
         </h5>
 
         </p>
-        <span class="date2">${item.createdAt}</span>
+        <span class="date2">${ item.createdAt.substring(0,9)}</span>
       </div>
     </div>
       `;
