@@ -120,7 +120,7 @@ const entertainmentCycle = () => {
       }" style="color:black!important;">${item.title.substring(0, 100)}</a>
     </h5>
 
-   <h5 style="height:20rem;overflow: hidden;">${converter.makeHtml(item.content)}</h5>
+   <h5 class='font800'>${converter.makeHtml(item.content.substring(0, 350))}</h5>
     </p>
     <span class="date2">${item.createdAt.substring(0,10)}</span>
     </div>
@@ -177,11 +177,11 @@ const techCycle = () => {
   <img src="${
     item.cover.url
   }" class="rounded"   width="50%" style="float:left;padding-right:15px;">
-    <h5 class="bigTitle">
+    <p style="font-size:  1.7em; font-weight: 800; " class="card-title">
       <a href="/post.html?id=${
         item._id
       }"style="color:black!important;">${item.title.substring(0, 100)}</a>
-    </h5>
+    </p>
     <p>
     ${converter.makeHtml(item.content).substring(0, 250)}
     </p>
@@ -247,7 +247,7 @@ const sportsCycle = () => {
       }" style="color:black!important;">${item.title.substring(0, 100)}</a>
     </h5>
 
-   <h5 style="height:20rem;overflow: hidden;">${converter.makeHtml(item.content)}</h5>
+   <h5 class='font800'>${converter.makeHtml(item.content).substring(0, 350)}</h5>
     </p>
     <span class="date2">${item.createdAt.substring(0,10)}</span>
     </div>
