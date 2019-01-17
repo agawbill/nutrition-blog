@@ -328,7 +328,7 @@ const selectedCycle = () => {
         const selected = `
           <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 2px dotted navY; ">
             <a href="/post.html?id=${item._id}" style="color:black!important;">
-              <h6>${item.title.substring(0,100)}</h6>
+              <h6 class='font800'>${item.title.substring(0,100)}</h6>
             </a>
             <p style="font-size:16px; height:28vh; overflow:hidden;">
               ${item.content.substring(0, 250)}
@@ -352,7 +352,7 @@ const randomSixCycle = () => {
     if (item !== undefined) {
       if (i === 2 || i === 5) {
         const node = `
-        <div class="col-lg-4 col-md-4 mb-4" style="position:relative;border-right: 0px; padding:4%">
+        <div class="col-lg-4 col-md-4 mb-4" style="position:relative;border-right: 0px; padding:1%">
         <img src="${item.cover.url}" class="rounded" width="100%">
         <p>
         <h5 class="card-title">
@@ -363,14 +363,14 @@ const randomSixCycle = () => {
         <p>
 
         </p>
-        <span class="date2">${item.createdAt.substring(0,10)}</span>
+        <span class="date">${item.createdAt.substring(0,10)}</span>
       </div>
       `;
         $("#randomSix").append(node);
       } else {
         const node = `
-      <div class="col-lg-4 col-md-4 mb-4" style="position:relative;border-right:2px dotted navy; padding:4%">
-      <img src="${item.cover.url}" class="rounded"   width="90%">
+      <div class="col-lg-4 col-md-4 mb-4" style="position:relative;border-right:2px dotted navy; padding:1%">
+      <img src="${item.cover.url}" class="rounded"   width="100%">
       <p>
       <h5 class="card-title">
       <a href="/post.html?id=${
@@ -381,7 +381,7 @@ const randomSixCycle = () => {
       <p>
 
       </p>
-        <span class="date2">${item.createdAt.substring(0,10)}</span>
+        <span class="date">${item.createdAt.substring(0,10)}</span>
       </div>
 
       `;
