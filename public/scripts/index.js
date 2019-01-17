@@ -315,11 +315,10 @@ const selectedCycle = () => {
           100
         )}</h6></a> 
         <p>
-        ${converter.makeHtml(item.content).substring(0, 350)} 
-        <span class="date">${item.createdAt.substring(0,10)}</span>
+        ${converter.makeHtml(item.content).substring(0, 350)}
         </p>
          
-       
+        <span class="date">${item.createdAt.substring(0,10)}</span>
 
       </div>
       `;
@@ -333,8 +332,8 @@ const selectedCycle = () => {
             </a>
             <br>
             <br>
-            <p style="font-size:16px; height:28vh; overflow:hidden;">
-              ${item.content.substring(0, 250)}
+            <p style="font-size:16px;  ">
+              ${item.content.substring(0, 350)}
             </p>
             <span class="date">${item.createdAt.substring(0,10)}</span>
             <br>
@@ -372,7 +371,7 @@ const randomSixCycle = () => {
         $("#randomSix").append(node);
       } else {
         const node = `
-      <div class="col-lg-4 col-md-4 mb-4" style="position:relative;border-right:2px dotted navy; padding:1%">
+      <div class="col-lg-4 col-md-4 mb-4 randomSix" style="position:relative;border-right:2px dotted navy; padding:1%">
       <img src="${item.cover.url}" class="rounded"   width="100%">
       <p>
       <h5 class="card-title">
