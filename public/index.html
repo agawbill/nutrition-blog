@@ -16,46 +16,10 @@
     <link rel="stylesheet" href='./index_page.css' >
     </head>
   <body lang="en">
-    <div id="header_menu_blue">
-        <div class="float-right"> <p style="display:inline; color: white!important;"><a style='color: white!important;' href='/contact.html'>КОНТАКТЫ</a></p>
-            <select style="color:white; margin-left:5px; background-color:rgb(73,86,120); border:none; width:50px; height:100%;">
-            <option>RU</option> <option>AZ</option> <option>ENG</option>
-            </select>
-        </div>
+
+<div id="headerPartial">
+
     </div>
-
-                    <img style="margin-top:10px; width: 30%;" class="mx-auto d-block" src="https://s3.amazonaws.com/andop.org/logo2.png">
-        <br>
-
-      <div style='width:100%;' class="container-fluid">
-
-          <nav style='font-size:16px;' class="navbar navbar-expand-lg">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul style='font-size:19px;' class="navbar-nav">
-                <li class="nav-item active">
-                  <a class="nav-link" href="/about.html">Об Академии <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/management.html">Наше Руководство</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/projects.html">Наши Проекты</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/trainings.html">Наши Тренинги</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/sports.html">Запись на Тренинги</a>
-                </li>
-              </ul>
-            </div>
-        </nav>
-        <hr>
-        <p>
-        </div>
 
 
 
@@ -91,9 +55,8 @@
        <div class="col-lg-3 col-md-3 mb-3">
         <a href='https://subscription-education.herokuapp.com'> <img src="banner_online_course.jpg" width="300px" style="padding-left:5px;"> </a>
        </div>
-       <hr>
        <div id="recPosts">
-        <center><h5 style="color:rgb(73,86,120); font-weight:800;"> РЕКОМЕНДОВАННЫЕ </h5></center>
+        <center><h5 style="color:rgb(73,86,120);"> РЕКОМЕНДОВАННЫЕ </h5></center>
        </div>
 
      </div>
@@ -159,7 +122,7 @@
     <hr>
      <h3>VIDEO</h3>
      <div class="embed-responsive embed-responsive-16by9">
-       <iframe width="560" height="315" src="https://www.youtube.com/embed/YkePNFaIVRo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       <iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=YtY_2hO2DVE" allowfullscreen></iframe>
      </div>
 
    </br>
@@ -174,46 +137,9 @@
 
 </div>
 <!-- footer -->
-         <div style='width:90%; padding:5%;'>
-           <div class='row'>
-             <div class='col-md-3 footer_divider'>
-               <div>
-                 <img width='40px' src='logoPNG.png' class='float-left'>
-                 <h4 class='float-left blueHeading'>ACADEMY OF <br> NUTRITION AND DIET  </h4>
-               </div>
-             </div>
-             <div class='col-md-2 footer_divider'>
-               <h4>МЕНЮ</h4> <br>
-               <ul style='list-style-type: none; margin: 0; padding: 0;'>
-                 <li><a class="nav-link" href="/about.html">Об Академии <span class="sr-only">(current)</span></a></li>
-                 </li><a class="nav-link" href="/management.html">Наше Руководство</a> </li>
-                 </li><a class="nav-link" href="/projects.html">Наши Проекты</a> </li>
-                </li> <a class="nav-link" href="/trainings.html">Наши Тренинги</a></li>
-                </li> <a class="nav-link" href="/sports.html">Запись на Тренинги</a> </li>
-               </ul>
-             </div>
-             <div class='col-md-3 footer_divider'>
-               <h4>ОСТАВАЙСЯ НА СВЯЗИ</h4>
-               <ul style='list-style-type: none; margin: 0; padding: 0;'>
-                 <li><a class="nav-link" href="/about.html">Facebook <span class="sr-only">(current)</span></a></li>
-                 </li><a class="nav-link" href="/management.html">Twitter</a> </li>
-                 </li><a class="nav-link" href="/projects.html">Instagram</a> </li>
-                </li> <a class="nav-link" href="/trainings.html">Youtube</a></li>
-               </ul>
-              </div>
-             <div class='col-md-3'>
-               <h4>КОНТАКТЫ</h4>
-<pre>
-Адрес: Азербайджан,Баку,
-ул Самеда Вургуна, 43.
-World Business Center(20 этаж).
-Teлефон: (+99412) 5974810
-Whatsapp: (+99412) 6610933
-E-mail:  info@andib.az
-</pre>
-             </div>
-           </div>
-         </div>
+    <div id="footerPartial">
+
+       </div>
          <!--end of footer-->
  </body>
  <script
@@ -226,4 +152,6 @@ E-mail:  info@andib.az
  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
  <script src="/scripts/index.js" charset="utf-8"></script>
+ <script src="/scripts/header.js" charset="utf-8"></script>
+ <script src="/scripts/footer.js" charset="utf-8"></script>
 </html>
