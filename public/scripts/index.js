@@ -16,11 +16,11 @@ const newsCycle = () => {
   const first = news[0];
   const news1 = `
     <img src="${first.cover.url}"   width="100%" class="rounded" ></p>
-    <h5 class="card-title">
+    <p style="font-size: 1.5em; font-weight: 800; " class="card-title">
       <a href="/post.html?id=${
         first._id
       }" style="color:black!important;">${first.title.substring(0, 100)}</a>
-    </h5>
+    </p>
 
     <p>
     <div class="bigNews">
@@ -28,7 +28,7 @@ const newsCycle = () => {
     </div>
     </p>
     </br>
-    <span class="date">${first.createdAt.substring(0, 9)}</span>
+    <span class="date">${first.createdAt.substring(0,10)}</span>
     `;
   $("#newsFirst").append(news1);
   for (i = 1; i < news.length; i++) {
@@ -61,7 +61,7 @@ const newsCycle = () => {
 
                     </p>
                 </span>
-                <span class="date">${item.createdAt.substring(0, 9)}</span>
+                <span class="date">${item.createdAt.substring(0,10)}</span>
               </td>
             </tr>
             </div>
@@ -94,7 +94,7 @@ const newsCycle = () => {
 
                     </p>
                 </span>
-                <span class="date">${item.createdAt.substring(0, 9)}</span>
+                <span class="date">${item.createdAt.substring(0,10)}</span>
               </td>
             </tr>
           </table>
@@ -123,7 +123,7 @@ const entertainmentCycle = () => {
     ${converter.makeHtml(item.content).substring(0, 250)}
     </p>
     </br>
-    <span class="date2">${item.createdAt.substring(0, 9)}</span>
+    <span class="date2">${item.createdAt.substring(0,10)}</span>
     </div>
   `;
   $("#entertainmentFirst").append(ent);
@@ -145,7 +145,7 @@ const entertainmentCycle = () => {
   <p>
 
   </p>
-  <span class="date2">${item.createdAt.substring(0, 9)}</span>
+  <span class="date2">${item.createdAt.substring(0,10)}</span>
     </div>
     `;
         $("#entertainmentSecond").append(ent);
@@ -163,7 +163,7 @@ const entertainmentCycle = () => {
   <p>
 
   </p>
-  <span class="date2">${item.createdAt.substring(0, 9)}</span>
+  <span class="date2">${item.createdAt.substring(0,10)}</span>
     </div>
     `;
         $("#entertainmentSecond").append(ent);
@@ -187,7 +187,7 @@ const techCycle = () => {
     <p>
     ${converter.makeHtml(item.content).substring(0, 250)}
     </p>
-    <span class="date2">${item.createdAt.substring(0, 9)}</span>
+    <span class="date2">${item.createdAt.substring(0,10)}</span>
     </div>
   `;
   $("#technologyFirst").append(tech);
@@ -209,7 +209,7 @@ const techCycle = () => {
   <p>
 
   </p>
-  <span class="date2">${item.createdAt.substring(0, 9)}</span>
+  <span class="date2">${item.createdAt.substring(0,10)}</span>
     </div>
     `;
         $("#technologySecond").append(tech);
@@ -227,7 +227,7 @@ const techCycle = () => {
   <p>
 
   </p>
-  <span class="date2">${item.createdAt.substring(0, 9)}</span>
+  <span class="date2">${item.createdAt.substring(0,10)}</span>
     </div>
     `;
         $("#technologySecond").append(tech);
@@ -243,15 +243,15 @@ const sportsCycle = () => {
   <img src="${
     item.cover.url
   }" class="rounded"   width="50%" style="float:left; padding-right:15px;">
-    <h5 class="card-title">
+    <p style="font-size: 1.5em; font-weight: 800; " class="card-title">
       <a href="/post.html?id=${
         item._id
       }" style="color:black!important;">${item.title.substring(0, 100)}</a>
     </h5>
 
-    <h5>${converter.makeHtml(item.content).substring(0, 250)}</h5>
+    <h5 style='height:26vh; overflow: hidden;'>${converter.makeHtml(item.content)}</h5>
     </p>
-    <span class="date2">${item.createdAt.substring(0, 9)}</span>
+    <span class="date2">${item.createdAt.substring(0,10)}</span>
     </div>
   `;
   $("#sportsFirst").append(sport);
@@ -275,7 +275,7 @@ const sportsCycle = () => {
       <p>
 
       </p>
-      <span class="date2">${item.createdAt.substring(0, 9)}</span>
+      <span class="date2">${item.createdAt.substring(0,10)}</span>
     </div>
     `;
         $("#sportsSecond").append(sport);
@@ -293,7 +293,7 @@ const sportsCycle = () => {
   <p>
 
   </p>
-  <span class="date2">${item.createdAt.substring(0, 9)}</span>
+  <span class="date2">${item.createdAt.substring(0,10)}</span>
     </div>
     `;
         $("#sportsSecond").append(sport);
@@ -320,7 +320,7 @@ const selectedCycle = () => {
         ${converter.makeHtml(item.content).substring(0, 250)}
         </p>
         </br>
-        <span class="date">${item.createdAt.substring(0, 9)}</span>
+        <span class="date">${item.createdAt.substring(0,10)}</span>
 
       </div>
       `;
@@ -339,7 +339,7 @@ const selectedCycle = () => {
         ${converter.makeHtml(item.content).substring(0, 250)}
         </p>
         </br>
-        <span class="date">${item.createdAt.substring(0, 9)}</span>
+        <span class="date">${item.createdAt.substring(0,10)}</span>
 
       </div>
       `;
@@ -359,7 +359,7 @@ const randomSixCycle = () => {
       if (i === 2 || i === 5) {
         const node = `
         <div class="col-lg-4 col-md-4 mb-4" style="position:relative;border-right: 0px; padding:4%">
-        <img src="${item.cover.url}" class="rounded" height="200vh" width="90%">
+        <img src="${item.cover.url}" class="rounded" width="100%">
         <p>
         <h5 class="card-title">
         <a href="/post.html?id=${
@@ -369,7 +369,7 @@ const randomSixCycle = () => {
         <p>
 
         </p>
-        <span class="date2">${item.createdAt.substring(0, 9)}</span>
+        <span class="date2">${item.createdAt.substring(0,10)}</span>
       </div>
       `;
         $("#randomSix").append(node);
@@ -387,7 +387,7 @@ const randomSixCycle = () => {
       <p>
 
       </p>
-        <span class="date2">${item.createdAt.substring(0, 9)}</span>
+        <span class="date2">${item.createdAt.substring(0,10)}</span>
       </div>
 
       `;
@@ -413,7 +413,7 @@ const recPostCycle = () => {
         </h5>
 
         </p>
-        <span class="date2">${item.createdAt.substring(0, 9)}</span>
+        <span class="date2">${item.createdAt.substring(0,10)}</span>
       </div>
     </div>
       `;
