@@ -129,6 +129,13 @@ hr {
   height: 28px;
   color: white;
 }
+#footer_menu_blue
+{
+  background-color: rgb(73, 86, 120);
+  height: 42px;
+  color: white;
+  text-align: center;
+}
 
 .bitTitle {
   font-size: 50px;
