@@ -36,17 +36,15 @@
       "default": false,
       "type": "boolean"
     },
+    "recPosts": {
+      "default": false,
+      "type": "boolean"
+    },
     "category": {
       "default": "Наши Беседы",
       "type": "enumeration",
       "required": true,
-      "enum": [
-        "Наши Беседы",
-        "Фитнес",
-        "Здоровье",
-        "Питание",
-        "Анонс"
-      ]
+      "enum": ["Наши Беседы", "Фитнес", "Здоровье", "Питание", "Анонс"]
     }
   }
 }

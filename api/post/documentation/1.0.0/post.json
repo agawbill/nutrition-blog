@@ -565,6 +565,10 @@
             "type": "boolean",
             "default": false
           },
+          "recPosts": {
+            "type": "boolean",
+            "default": false
+          },
           "category": {
             "type": "string",
             "default": "Наши Беседы",
@@ -601,6 +605,10 @@
             "default": ""
           },
           "Избранное": {
+            "type": "boolean",
+            "default": false
+          },
+          "recPosts": {
             "type": "boolean",
             "default": false
           },
