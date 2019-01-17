@@ -28,10 +28,10 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul style='font-size:19px;' class="navbar-nav">
               <li class="nav-item active">
-                <a class="nav-link" href="/about.html">Об Академии <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/about.html"> ANDOP <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/management.html">Наше Руководство</a>
+                <a class="nav-link" href="/management.html">Наша Команда</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="/projects.html">Наши Проекты</a>
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <a class="nav-link" href="/trainings.html">Наши Тренинги</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/sports.html">Запись на Тренинги</a>
+                <a class="nav-link" href="/sports.html">Членство</a>
               </li>
             </ul>
           </div>
