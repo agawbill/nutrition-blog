@@ -26,7 +26,7 @@ const newsCycle = () => {
     <div>
     ${converter.makeHtml(first.content).substring(0, 337)}
       <br>
-    <span class="date">${first.createdAt.substring(0,10)}</span>
+    <span class="date">   ${first.createdAt.substring(0,10)}</span>
     </div>
     </p>
   
@@ -333,8 +333,8 @@ const selectedCycle = () => {
             </a>
             <br>
             <br>
-            <p style="font-size:14px;  ">
-              ${item.content.substring(0, 320)}
+            <p style="font-size:12px;  ">
+              ${item.content.substring(0, 330)}
             </p>
             <span class="date">${item.createdAt.substring(0,10)}</span>
             <br>
