@@ -330,6 +330,8 @@ const selectedCycle = () => {
             <a href="/post.html?id=${item._id}" style="color:black!important;">
               <h6 class='font800'>${item.title.substring(0,100)}</h6>
             </a>
+            <br>
+            <br>
             <p style="font-size:16px; height:28vh; overflow:hidden;">
               ${item.content.substring(0, 250)}
             </p>

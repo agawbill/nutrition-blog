@@ -168,6 +168,10 @@ hr {
   font-weight:800;
 }
 
+#randomSix:nth-child(-n+5) {
+    color: navy;   
+}
+
 @media screen and (min-width: 40em) {
   body {
     font-size: 1.0625em;
