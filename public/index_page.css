@@ -103,7 +103,7 @@ hr {
 .date2 {
   font-weight: bold;
   color: dimgrey;
-  display: none;
+  /*display: none;*/
 }
 
 .newsText {
@@ -168,7 +168,7 @@ hr {
   font-weight:800;
 }
 
-#randomSix:nth-child(-n+5) {
+#randomSix:nth-child(-n+3) {
     color: navy;   
 }
 
