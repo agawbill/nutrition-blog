@@ -28,19 +28,19 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul style='font-size:19px;' class="navbar-nav">
               <li class="nav-item active">
-                <a class="nav-link" href="static_pages/about.html"> ANDOP <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="../static_pages/about.html"> ANDOP <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="static_pages/team.html">Наша Команда</a>
+                <a class="nav-link" href="../static_pages/team.html">Наша Команда</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="static_pages/projects.html">Наши Проекты</a>
+                <a class="nav-link" href="../static_pages/projects.html">Наши Проекты</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="static_pages/trainings.html">Наши Тренинги</a>
+                <a class="nav-link" href="../static_pages/trainings.html">Наши Тренинги</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="static_pages/membership.html">Членство</a>
+                <a class="nav-link" href="../static_pages/membership.html">Членство</a>
               </li>
             </ul>
           </div>
