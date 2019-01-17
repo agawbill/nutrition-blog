@@ -16,7 +16,7 @@ const newsCycle = () => {
   const first = news[0];
   const news1 = `
     <img src="${first.cover.url}"   width="100%" class="rounded" ></p>
-    <p style="font-size: 1.5em; font-weight: 800; " class="card-title">
+    <p style="font-size:  1.7em; font-weight: 800; " class="card-title">
       <a href="/post.html?id=${
         first._id
       }" style="color:black!important;">${first.title.substring(0, 100)}</a>
@@ -114,13 +114,13 @@ const entertainmentCycle = () => {
   <img src="${
     item.cover.url
   }" class="rounded"   width="50%" style="float:left; padding-right:15px;">
-    <p style="font-size: 1.5em; font-weight: 800; " class="card-title">
+    <p style="font-size:  1.7em; font-weight: 800; " class="card-title">
       <a href="/post.html?id=${
         item._id
       }" style="color:black!important;">${item.title.substring(0, 100)}</a>
     </h5>
 
-   <h5 style="height:21rem;overflow: hidden;">${converter.makeHtml(item.content)}</h5>
+   <h5 style="height:20rem;overflow: hidden;">${converter.makeHtml(item.content)}</h5>
     </p>
     <span class="date2">${item.createdAt.substring(0,10)}</span>
     </div>
@@ -199,11 +199,11 @@ const techCycle = () => {
     <div class="col-lg-3 col-md-3 mb-3" style="position:relative;float:center;">
     <img src="${item.cover.url}" class="rounded"   width="100%">
   <p>
-  <h5 class="card-title">
+   <p style="font-size:  1.7em; font-weight: 800; " class="card-title">
     <a href="/post.html?id=${
       item._id
     }" style="color:black!important;">${item.title.substring(0, 100)}</a>
-  </h5>
+  </p>
   <p>
 
   </p>
@@ -241,13 +241,13 @@ const sportsCycle = () => {
   <img src="${
     item.cover.url
   }" class="rounded"   width="50%" style="float:left; padding-right:15px;">
-    <p style="font-size: 1.5em; font-weight: 800; " class="card-title">
+    <p style="font-size:  1.7em; font-weight: 800; " class="card-title">
       <a href="/post.html?id=${
         item._id
       }" style="color:black!important;">${item.title.substring(0, 100)}</a>
     </h5>
 
-   <h5 style="height:21rem;overflow: hidden;">${converter.makeHtml(item.content)}</h5>
+   <h5 style="height:20rem;overflow: hidden;">${converter.makeHtml(item.content)}</h5>
     </p>
     <span class="date2">${item.createdAt.substring(0,10)}</span>
     </div>
