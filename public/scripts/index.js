@@ -24,7 +24,7 @@ const newsCycle = () => {
 
     <p>
     <div class="bigNews">
-    ${converter.makeHtml(first.content)}
+    ${converter.makeHtml(first.content).substring(0, 337)}
     </div>
     </p>
     </br>
@@ -247,7 +247,7 @@ const sportsCycle = () => {
       }" style="color:black!important;">${item.title.substring(0, 100)}</a>
     </h5>
 
-   <h5 class='font800'>${converter.makeHtml(item.content).substring(0, 320)}</h5>
+   <h5 class='font800'>${converter.makeHtml(item.content).substring(0, 310)}</h5>
     </p>
     <span class="date2">${item.createdAt.substring(0,10)}</span>
     </div>
