@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "01/14/2019 10:52:48 PM"
+    "x-generation-date": "01/16/2019 11:48:23 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3144,12 +3144,9 @@
               "Наши Беседы",
               "Фитнес",
               "Здоровье",
-              "Питание"
+              "Питание",
+              "Анонс"
             ]
-          },
-          "recPosts": {
-            "type": "boolean",
-            "default": false
           }
         }
       },
@@ -3186,12 +3183,9 @@
               "Наши Беседы",
               "Фитнес",
               "Здоровье",
-              "Питание"
+              "Питание",
+              "Анонс"
             ]
-          },
-          "recPosts": {
-            "type": "boolean",
-            "default": false
           }
         }
       },

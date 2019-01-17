@@ -457,9 +457,6 @@ $(document).ready(() => {
       for (let i = data.length - 1; i >= 0; i--) {
         const item = data[i];
 
-        if (item.Избранное == true) {
-          selectedPosts.unshift(item);
-        }
         if (item.recPosts == true) {
           recPostings.unshift(item);
         }
@@ -470,6 +467,8 @@ $(document).ready(() => {
           technology.unshift(item);
         } else if (item.category == "Здоровье") {
           entertainment.unshift(item);
+        } else if (item.category == "Анонс") {
+          selectedPosts.unshift(item);
         } else {
           sports.unshift(item);
         }
