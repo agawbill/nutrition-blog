@@ -136,7 +136,7 @@ const entertainmentCycle = () => {
       } else if (i === 4) {
         const ent = `
     <div class="col-lg-3 col-md-3 mb-3" style="position:relative;float:center;">
-    <img src="${item.cover.url}" class="rounded" height="200vh" width="100%">
+    <img src="${item.cover.url}" class="rounded"   width="100%">
   <p>
   <h5 class="card-title">
     <a href="/post.html?id=${
@@ -154,7 +154,7 @@ const entertainmentCycle = () => {
         const item = entertainment[i];
         const ent = `
     <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 2px dotted navY">
-    <img src="${item.cover.url}" class="rounded" height="200vh" width="100%">
+    <img src="${item.cover.url}" class="rounded"   width="100%">
   <p>
   <h5 class="card-title">
     <a href="/post.html?id=${
@@ -200,7 +200,7 @@ const techCycle = () => {
       } else if (i === 4) {
         const tech = `
     <div class="col-lg-3 col-md-3 mb-3" style="position:relative;float:center;">
-    <img src="${item.cover.url}" class="rounded" height="200vh" width="100%">
+    <img src="${item.cover.url}" class="rounded"   width="100%">
   <p>
   <h5 class="card-title">
     <a href="/post.html?id=${
@@ -218,7 +218,7 @@ const techCycle = () => {
         const item = technology[i];
         const tech = `
     <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 2px dotted navY">
-    <img src="${item.cover.url}" class="rounded" height="200vh" width="100%">
+    <img src="${item.cover.url}" class="rounded"   width="100%">
   <p>
   <h5 class="card-title">
     <a href="/post.html?id=${
@@ -266,7 +266,7 @@ const sportsCycle = () => {
     <div class="col-lg-3 col-md-3 mb-3" style="position:relative;">
         <img src="${
           item.cover.url
-        }" class="rounded" height="200vh" width="100%">
+        }" class="rounded"   width="100%">
       <p>
       <h5 class="card-title">
         <a href="/post.html?id=${
@@ -284,7 +284,7 @@ const sportsCycle = () => {
         const item = sports[i];
         const sport = `
     <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 2px dotted navY;">
-    <img src="${item.cover.url}" class="rounded" height="200vh" width="100%">
+    <img src="${item.cover.url}" class="rounded"   width="100%">
   <p>
   <h5 class="card-title">
     <a href="/post.html?id=${
@@ -377,7 +377,7 @@ const randomSixCycle = () => {
       } else {
         const node = `
       <div class="col-lg-4 col-md-4 mb-4" style="position:relative;border-right:2px dotted navy; padding:4%">
-      <img src="${item.cover.url}" class="rounded" height="200vh" width="90%">
+      <img src="${item.cover.url}" class="rounded"   width="90%">
       <p>
       <h5 class="card-title">
       <a href="/post.html?id=${
