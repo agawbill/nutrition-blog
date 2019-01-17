@@ -120,7 +120,7 @@ const entertainmentCycle = () => {
       }" style="color:black!important;">${item.title.substring(0, 100)}</a>
     </h5>
 
-   <h5 class='font800'>${converter.makeHtml(item.content.substring(0, 350))}</h5>
+   <h5 class='font800'>${converter.makeHtml(item.content.substring(0, 320))}</h5>
     </p>
     <span class="date2">${item.createdAt.substring(0,10)}</span>
     </div>
@@ -247,7 +247,7 @@ const sportsCycle = () => {
       }" style="color:black!important;">${item.title.substring(0, 100)}</a>
     </h5>
 
-   <h5 class='font800'>${converter.makeHtml(item.content).substring(0, 350)}</h5>
+   <h5 class='font800'>${converter.makeHtml(item.content).substring(0, 320)}</h5>
     </p>
     <span class="date2">${item.createdAt.substring(0,10)}</span>
     </div>
@@ -315,7 +315,7 @@ const selectedCycle = () => {
           100
         )}</h6></a> 
         <p>
-        ${converter.makeHtml(item.content).substring(0, 350)}
+        ${converter.makeHtml(item.content).substring(0, 320)}
         </p>
          
         <span class="date">${item.createdAt.substring(0,10)}</span>
@@ -333,7 +333,7 @@ const selectedCycle = () => {
             <br>
             <br>
             <p style="font-size:14px;  ">
-              ${item.content.substring(0, 350)}
+              ${item.content.substring(0, 320)}
             </p>
             <span class="date">${item.createdAt.substring(0,10)}</span>
             <br>
