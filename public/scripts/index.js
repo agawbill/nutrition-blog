@@ -332,7 +332,7 @@ const selectedCycle = () => {
             </a>
             <br>
             <br>
-            <p style="font-size:16px;  ">
+            <p style="font-size:14px;  ">
               ${item.content.substring(0, 350)}
             </p>
             <span class="date">${item.createdAt.substring(0,10)}</span>
