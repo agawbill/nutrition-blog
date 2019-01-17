@@ -111,17 +111,18 @@ const entertainmentCycle = () => {
   const item = entertainment[0];
   const ent = `
   <div class="col-lg-16 col-md-16 mb-16" style="width:100%;">
-  <img src="${
-    item.cover.url
-  }" class="rounded"  width="50%" style="float:right;padding-right:15px;">
+  
     <p style='font-size:1.5em; font-weight: 800;' class="bigTitle">
       <a href="/post.html?id=${
         item._id
       }" style="color:black!important;">${item.title.substring(0, 100)}</a>
     </p>
    <p style="height:21rem;overflow: hidden;">
-    ${converter.makeHtml(item.content).substring(0, 250)}
+    ${item.content}
     </p>
+    <img src="${
+    item.cover.url
+  }" class="rounded"  width="50%" style="float:left;padding:20px;">
     </br>
     <span class="date2">${item.createdAt.substring(0,10)}</span>
     </div>
