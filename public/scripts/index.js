@@ -326,20 +326,16 @@ const selectedCycle = () => {
       } else {
         const item = selectedPosts[i];
         const selected = `
-      <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 2px dotted navY">
-        <a href="/post.html?id=${
-          item._id
-        }" style="color:black!important;"><h5>${item.title.substring(
-          0,
-          100
-        )}</h5></a>
-        <p>
-        ${converter.makeHtml(item.content).substring(0, 250)}
-        </p>
-        </br>
-        <span class="date">${item.createdAt.substring(0,10)}</span>
-
-      </div>
+          <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 2px dotted navY; ">
+            <a href="/post.html?id=${item._id}" style="color:black!important;">
+              <h6>${item.title.substring(0,100)}</h6>
+            </a>
+            <p style="font-size:16px; height:28vh; overflow:hidden;">
+              ${item.content.substring(0, 250)}
+            </p>
+            <span class="date">${item.createdAt.substring(0,10)}</span>
+            <br>
+        </div>
       `;
         $("#selected").append(selected);
       }
