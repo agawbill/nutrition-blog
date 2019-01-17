@@ -23,12 +23,13 @@ const newsCycle = () => {
     </p>
 
     <p>
-    <div class="bigNews">
+    <div>
     ${converter.makeHtml(first.content).substring(0, 337)}
+      <br>
+    <span class="date">${first.createdAt.substring(0,10)}</span>
     </div>
     </p>
-    </br>
-    <span class="date">${first.createdAt.substring(0,10)}</span>
+  
     `;
   $("#newsFirst").append(news1);
   for (i = 1; i < news.length; i++) {
