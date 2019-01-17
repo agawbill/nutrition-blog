@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
   </div>
 
-  <img style="margin-top:10px; width: 10vh;" class="mx-auto d-block" src="logo.jpg">
+  <img style="margin-top:10px; width: 40vh;" class="mx-auto d-block" src="https://s3.amazonaws.com/andop.org/logo.jpg">
         <br>
 
     <div style='width:100%;' class="container-fluid">
