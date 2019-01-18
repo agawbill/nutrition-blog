@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <a href='https://www.instagram.com/sstm_baku/'> <img width="22px" src="https://instagram-brand.com/wp-content/uploads/2016/11/app-icon2.png"> </a>
           <p style="display:inline; color: white!important;"><a style='color: white!important;' href='/contact.html'>КОНТАКТЫ</a></p>
           <select id="languageSelect" style="color:white; margin-left:5px; background-color:rgb(73,86,120); border:none; width:50px; height:100%;">
-          <option>RU</option> <option>AZ</option> <option>ENG</option>
+          <option id="ru">RU</option> <option id="az">AZ</option> <option id="eng">ENG</option>
           </select>
       </div>
   </div>
@@ -53,4 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
   } else if (localStorage["myKey"] == "AZ") {
   } else if (localStorage["myKey"] == "ENG") {
   }
+  var ru = document.getElementById("ru");
+  var eng = document.getElementById("eng");
+  var az = document.getElementById("az");
 });
