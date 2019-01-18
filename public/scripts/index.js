@@ -525,7 +525,7 @@ const emptyAll = () => {
   $("#entertainmentFirst").empty();
   $("#entertainmentSecond").empty();
   $("#recPosts").empty();
-  $("#selectedPosts").empty();
+  $("#selected").empty();
 };
 
 const functionCycle = () => {
