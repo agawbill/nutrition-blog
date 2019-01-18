@@ -59,7 +59,6 @@ var converter = new showdown.Converter();
 const newsCycle = () => {
   const item = news[0];
   postLogic(item);
-  console.log(content);
   const news1 = `
     <img src="${item.cover.url}"   width="100%" class="rounded" ></p>
     <p style="font-size:  1.7em; font-weight: 800; " class="card-title">
