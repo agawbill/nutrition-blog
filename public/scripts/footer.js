@@ -22,7 +22,7 @@ const addFooter = contentLanguage => {
   }
 };
 
-document.addEventListener("click", () => {
+document.addEventListener("change", () => {
   if (event.target.value === "RU") {
     $("#footerPartial").empty();
     addFooter(contentLanguage);
