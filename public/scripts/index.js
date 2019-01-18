@@ -39,15 +39,16 @@ const postLogic = item => {
     }
   }
 };
-// window.onload = () => {
-//   if (localStorage["myKey"] === "RU") {
-//     languageSelect.selectedIndex = 0;
-//   } else if (localStorage["myKey"] === "AZ") {
-//     languageSelect.selectedIndex = 1;
-//   } else if (localStorage["myKey"] === "ENG") {
-//     languageSelect.selectedIndex = 2;
-//   }
-// };
+window.onload = () => {
+  if (localStorage["myKey"] === "RU") {
+    console.log("hello");
+    languageSelect.selectedIndex = 0;
+  } else if (localStorage["myKey"] === "AZ") {
+    languageSelect.selectedIndex = 1;
+  } else if (localStorage["myKey"] === "ENG") {
+    languageSelect.selectedIndex = 2;
+  }
+};
 
 // convert rich text
 
@@ -525,6 +526,7 @@ const emptyAll = () => {
   $("#entertainmentFirst").empty();
   $("#entertainmentSecond").empty();
   $("#recPosts").empty();
+  $("#selectedPosts").empty();
 };
 
 const functionCycle = () => {
