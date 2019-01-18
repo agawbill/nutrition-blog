@@ -61,7 +61,9 @@ const newsCycle = () => {
     <div>
     ${converter.makeHtml(content).substring(0, 337)}
       <br>
-    <span class="date">   ${item.createdAt.substring(0, 10).replace('/','.')}</span>
+    <span class="date">   ${item.createdAt
+      .substring(0, 10)
+      .replace("/", ".")}</span>
     </div>
     </p>
 
@@ -98,7 +100,9 @@ const newsCycle = () => {
 
                     </p>
                 </span>
-                <span class="date">${item.createdAt.substring(0, 10).replace('/','.')}</span>
+                <span class="date">${item.createdAt
+                  .substring(0, 10)
+                  .replace("/", ".")}</span>
               </td>
             </tr>
             </div>
@@ -131,7 +135,9 @@ const newsCycle = () => {
 
                     </p>
                 </span>
-                <span class="date">${item.createdAt.substring(0, 10).replace('/','.')}</span>
+                <span class="date">${item.createdAt
+                  .substring(0, 10)
+                  .replace("/", ".")}</span>
               </td>
             </tr>
           </table>
@@ -160,7 +166,9 @@ const entertainmentCycle = () => {
 
    <h5 class='font800'>${converter.makeHtml(content.substring(0, 320))}</h5>
     </p>
-    <span class="date2">${item.createdAt.substring(0, 10).replace('/','.')}</span>
+    <span class="date2">${item.createdAt
+      .substring(0, 10)
+      .replace("/", ".")}</span>
     </div>
 
   `;
@@ -182,7 +190,9 @@ const entertainmentCycle = () => {
           }" style="color:black!important;">${title.substring(0, 100)}</a>
         </h5>
 
-  <span class="date2">${item.createdAt.substring(0, 10).replace('/','.')}</span>
+  <span class="date2">${item.createdAt
+    .substring(0, 10)
+    .replace("/", ".")}</span>
     </div>
     `;
         $("#entertainmentSecond").append(ent);
@@ -201,7 +211,9 @@ const entertainmentCycle = () => {
   <p>
 
   </p>
-  <span class="date2">${item.createdAt.substring(0, 10).replace('/','.')}</span>
+  <span class="date2">${item.createdAt
+    .substring(0, 10)
+    .replace("/", ".")}</span>
     </div>
     `;
         $("#entertainmentSecond").append(ent);
@@ -226,7 +238,9 @@ const techCycle = () => {
     <p>
     ${converter.makeHtml(content).substring(0, 250)}
     </p>
-    <span class="date2">${item.createdAt.substring(0, 10).replace('/','.')}</span>
+    <span class="date2">${item.createdAt
+      .substring(0, 10)
+      .replace("/", ".")}</span>
     </div>
   `;
   $("#technologyFirst").append(tech);
@@ -249,7 +263,9 @@ const techCycle = () => {
   <p>
 
   </p>
-  <span class="date2">${item.createdAt.substring(0, 10).replace('/','.')}</span>
+  <span class="date2">${item.createdAt
+    .substring(0, 10)
+    .replace("/", ".")}</span>
     </div>
     `;
         $("#technologySecond").append(tech);
@@ -268,7 +284,9 @@ const techCycle = () => {
   <p>
 
   </p>
-  <span class="date2">${item.createdAt.substring(0, 10).replace('/','.')}</span>
+  <span class="date2">${item.createdAt
+    .substring(0, 10)
+    .replace("/", ".")}</span>
     </div>
     `;
         $("#technologySecond").append(tech);
@@ -293,7 +311,9 @@ const sportsCycle = () => {
 
    <h5 class='font800'>${converter.makeHtml(content).substring(0, 310)}</h5>
     </p>
-    <span class="date2">${item.createdAt.substring(0, 10).replace('/','.')}</span>
+    <span class="date2">${item.createdAt
+      .substring(0, 10)
+      .replace("/", ".")}</span>
     </div>
   `;
   $("#sportsFirst").append(sport);
@@ -316,7 +336,9 @@ const sportsCycle = () => {
       <p>
 
       </p>
-      <span class="date2">${item.createdAt.substring(0, 10).replace('/','.')}</span>
+      <span class="date2">${item.createdAt
+        .substring(0, 10)
+        .replace("/", ".")}</span>
     </div>
     `;
         $("#sportsSecond").append(sport);
@@ -335,7 +357,9 @@ const sportsCycle = () => {
   <p>
 
   </p>
-  <span class="date2">${item.createdAt.substring(0, 10).replace('/','.')}</span>
+  <span class="date2">${item.createdAt
+    .substring(0, 10)
+    .replace("/", ".")}</span>
     </div>
     `;
         $("#sportsSecond").append(sport);
@@ -363,7 +387,9 @@ const selectedCycle = () => {
         ${converter.makeHtml(content).substring(0, 320)}
         </p>
 
-        <span class="date">${item.createdAt.substring(0, 10).replace('/','.')}</span>
+        <span class="date">${item.createdAt
+          .substring(0, 10)
+          .replace("/", ".")}</span>
 
       </div>
       `;
@@ -381,7 +407,9 @@ const selectedCycle = () => {
             <p style="font-size:12px;  ">
               ${content.substring(0, 330)}
             </p>
-            <span class="date">${item.createdAt.substring(0, 10).replace('/','.')}</span>
+            <span class="date">${item.createdAt
+              .substring(0, 10)
+              .replace("/", ".")}</span>
             <br>
         </div>
       `;
@@ -412,7 +440,9 @@ const randomSixCycle = () => {
         <p>
 
         </p>
-        <span class="date">${item.createdAt.substring(0, 10).replace('-','.')}</span>
+        <span class="date">${item.createdAt
+          .substring(0, 10)
+          .replace("-", ".")}</span>
       </div>
       `;
         $("#randomSix").append(node);
@@ -430,7 +460,9 @@ const randomSixCycle = () => {
       <p>
 
       </p>
-        <span class="date">${item.createdAt.substring(0, 10).replace('/','.')}</span>
+        <span class="date">${item.createdAt
+          .substring(0, 10)
+          .replace("/", ".")}</span>
       </div>
 
       `;
@@ -457,7 +489,9 @@ const recPostCycle = () => {
         </h5>
 
         </p>
-        <span class="date2">${item.createdAt.substring(0, 10).replace('/','.')}</span>
+        <span class="date2">${item.createdAt
+          .substring(0, 10)
+          .replace("/", ".")}</span>
       </div>
     </div>
       `;

@@ -49,11 +49,23 @@ document.addEventListener("DOMContentLoaded", () => {
       <p>
     </div>
   `;
-  if (localStorage["myKey"] == "RU") {
-  } else if (localStorage["myKey"] == "AZ") {
-  } else if (localStorage["myKey"] == "ENG") {
+  // if (localStorage["myKey"] == "RU") {
+  // } else if (localStorage["myKey"] == "AZ") {
+  // } else if (localStorage["myKey"] == "ENG") {
+  // }
+  // var ru = document.getElementById("ru");
+  // var eng = document.getElementById("eng");
+  // var az = document.getElementById("az");
+
+  var languageSelect2 = document.getElementById("languageSelect");
+
+  if (contentLanguage !== undefined) {
+    if (contentLanguage == "RU") {
+      languageSelect2.selectedIndex = 0;
+    } else if (contentLanguage == "ENG") {
+      languageSelect2.selectedIndex = 2;
+    } else if (contentLanguage == "AZ") {
+      languageSelect2.selectedIndex = 1;
+    }
   }
-  var ru = document.getElementById("ru");
-  var eng = document.getElementById("eng");
-  var az = document.getElementById("az");
 });
