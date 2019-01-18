@@ -108,7 +108,7 @@ hr {
 .date2 {
   font-weight: bold;
   color: dimgrey;
-   margin-top: 5px;
+  margin-top: 5px;
   /*display: none;*/
 }
 
@@ -135,8 +135,7 @@ hr {
   height: 28px;
   color: white;
 }
-#footer_menu_blue
-{
+#footer_menu_blue {
   background-color: rgb(73, 86, 120);
   height: 42px;
   color: white;
@@ -171,11 +170,21 @@ hr {
   height: 27vh;
 }
 .font800 {
-  font-weight:800;
+  font-weight: 800;
 }
 
-.randomSix:nth-child(-n+3) {
-    color: navy;   
+.randomSix:nth-child(-n + 3) {
+  color: navy;
+}
+
+#russian {
+  display: none;
+}
+#english {
+  display: none;
+}
+#azerbaijan {
+  display: none;
 }
 
 @media screen and (min-width: 40em) {
