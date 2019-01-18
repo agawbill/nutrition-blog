@@ -19,36 +19,12 @@ document.addEventListener("DOMContentLoaded", () => {
  <a href='../index.html'> <img style="margin-top:10px; width: 40vh;" class="mx-auto d-block" src="https://s3.amazonaws.com/andop.org/logo.jpg"> </a>
         <br>
 
-    <div style='width:100%;' class="container-fluid">
+    <div id="navContainer" style='width:100%;' class="container-fluid">
 
-        <nav style='font-size:16px;' class="navbar navbar-expand-lg">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul style='font-size:19px;' class="navbar-nav">
-              <li class="nav-item active">
-                <a class="nav-link" href="../static_pages/about.html"> ANDOP <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../static_pages/team.html">Наша Команда</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../static_pages/projects.html">Наши Проекты</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../static_pages/trainings.html">Наши Тренинги</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../static_pages/membership.html">Членство</a>
-              </li>
-            </ul>
-          </div>
-      </nav>
-      <hr>
-      <p>
+
     </div>
   `;
+
   // if (localStorage["myKey"] == "RU") {
   // } else if (localStorage["myKey"] == "AZ") {
   // } else if (localStorage["myKey"] == "ENG") {

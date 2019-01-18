@@ -540,7 +540,7 @@ const latestPosts = () => {
 const swapHeaders = contentLanguage => {
   headerArray = ["#talks", "#diet", "#fitness", "#upcoming", "#health"];
   eng = ["Talks", "Diet", "Fitness", "Upcoming", "Health"];
-  azi = ["Intervyular", "Diet", "Fintes", "Gelecekde", "Saglamlig"];
+  azi = ["Intervyular", "Diet", "Fintes", "Anons", "Sağlamlığ"];
   rus = ["Наши беседы", "Питание", "Фитнес", "Анонс", "Здоровье"];
   for (let i = 0; i < headerArray.length; i++) {
     if (contentLanguage === "ENG") {
