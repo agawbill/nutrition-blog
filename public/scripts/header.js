@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
   </div>
 
- <a href='index.html'> <img style="margin-top:10px; width: 40vh;" class="mx-auto d-block" src="https://s3.amazonaws.com/andop.org/logo.jpg"> </a>
+ <a href='../index.html'> <img style="margin-top:10px; width: 40vh;" class="mx-auto d-block" src="https://s3.amazonaws.com/andop.org/logo.jpg"> </a>
         <br>
 
     <div style='width:100%;' class="container-fluid">
