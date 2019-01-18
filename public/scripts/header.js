@@ -49,4 +49,8 @@ document.addEventListener("DOMContentLoaded", () => {
       <p>
     </div>
   `;
+  if (localStorage["myKey"] == "RU") {
+  } else if (localStorage["myKey"] == "AZ") {
+  } else if (localStorage["myKey"] == "ENG") {
+  }
 });

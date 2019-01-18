@@ -501,7 +501,28 @@ const latestPosts = () => {
   }
 };
 
-// language stuff
+// headers in languages
+
+const swapHeaders = contentLanguage => {
+  headerArray = ["#talks", "#diet", "#fitness", "#upcoming", "#health"];
+  eng = ["Talks", "Diet", "Fitness", "Upcoming", "Health"];
+  azi = ["Intervyular", "Diet", "Fintes", "Gelecekde", "Saglamlig"];
+  rus = ["Наши беседы", "Питание", "Фитнес", "Анонс", "Здоровье"];
+  for (let i = 0; i < headerArray.length; i++) {
+    if (contentLanguage === "ENG") {
+      $(headerArray[i]).empty();
+      $(headerArray[i]).append(eng[i]);
+    } else if (contentLanguage === "AZ") {
+      $(headerArray[i]).empty();
+      $(headerArray[i]).append(azi[i]);
+    } else {
+      $(headerArray[i]).empty();
+      $(headerArray[i]).append(rus[i]);
+    }
+  }
+};
+
+swapHeaders(contentLanguage);
 
 const emptyAll = () => {
   $("#latestPosts").empty();
@@ -552,16 +573,19 @@ window.onload = () => {
       contentLanguage = "ENG";
       emptyAll();
       functionCycle();
+      swapHeaders(contentLanguage);
     } else if (languageSelect.value == "RU") {
       localStorage["myKey"] = "RU";
       contentLanguage = "RU";
       emptyAll();
       functionCycle();
+      swapHeaders(contentLanguage);
     } else if (languageSelect.value == "AZ") {
       localStorage["myKey"] = "AZ";
       contentLanguage = "AZ";
       emptyAll();
       functionCycle();
+      swapHeaders(contentLanguage);
     }
   });
 };
