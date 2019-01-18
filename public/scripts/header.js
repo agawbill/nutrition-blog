@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <a href='https://www.linkedin.com/company/andop/'> <img width="22px" src="https://s3.amazonaws.com/andop.org/social/ln-logo.png"> </a>
           <a href='https://www.instagram.com/sstm_baku/'> <img width="22px" src="https://instagram-brand.com/wp-content/uploads/2016/11/app-icon2.png"> </a>
           <p style="display:inline; color: white!important;"><a style='color: white!important;' href='/contact.html'>КОНТАКТЫ</a></p>
-          <select style="color:white; margin-left:5px; background-color:rgb(73,86,120); border:none; width:50px; height:100%;">
+          <select id="languageSelect" style="color:white; margin-left:5px; background-color:rgb(73,86,120); border:none; width:50px; height:100%;">
           <option>RU</option> <option>AZ</option> <option>ENG</option>
           </select>
       </div>

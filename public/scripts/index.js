@@ -7,33 +7,79 @@ var sports = [];
 var recPostings = [];
 var allArray;
 var randomSix = [];
+var firstSix = [];
+
+// language selected presets
+
+window.onload = () => {
+  var languageSelect = document.getElementById("languageSelect");
+};
+
+var contentLanguage = localStorage["myKey"] || "RU";
+var titleLanguage = localStorage["myKey"] || "RU";
+var descriptionLanguage = localStorage["myKey"] || "RU";
+
+const postLogic = item => {
+  if (item !== undefined) {
+    content = contentLanguage;
+    title = titleLanguage;
+    description = descriptionLanguage;
+    if (contentLanguage == "ENG") {
+      content = item.content_eng;
+      title = item.title_eng;
+      description = item.description_eng;
+    } else if (contentLanguage == "RU") {
+      content = item.content;
+      title = item.title;
+      description = item.description;
+    } else {
+      content = item.content_az;
+      title = item.title_az;
+      description = item.description_az;
+    }
+  }
+};
+// window.onload = () => {
+//   if (localStorage["myKey"] === "RU") {
+//     languageSelect.selectedIndex = 0;
+//   } else if (localStorage["myKey"] === "AZ") {
+//     languageSelect.selectedIndex = 1;
+//   } else if (localStorage["myKey"] === "ENG") {
+//     languageSelect.selectedIndex = 2;
+//   }
+// };
+
+// convert rich text
 
 var converter = new showdown.Converter();
 
 // below are the functions to push the data to their corresponding category
 
 const newsCycle = () => {
-  const first = news[0];
+  const item = news[0];
+  postLogic(item);
+  console.log(content);
   const news1 = `
-    <img src="${first.cover.url}"   width="100%" class="rounded" ></p>
+    <img src="${item.cover.url}"   width="100%" class="rounded" ></p>
     <p style="font-size:  1.7em; font-weight: 800; " class="card-title">
       <a href="/post.html?id=${
-        first._id
-      }" style="color:black!important;">${first.title.substring(0, 100)}</a>
+        item._id
+      }" style="color:black!important;">${title.substring(0, 100)}</a>
     </p>
 
     <p>
     <div>
-    ${converter.makeHtml(first.content).substring(0, 337)}
+    ${converter.makeHtml(content).substring(0, 337)}
       <br>
-    <span class="date">   ${first.createdAt.substring(0,10)}</span>
+    <span class="date">   ${item.createdAt.substring(0, 10)}</span>
     </div>
     </p>
-  
+
     `;
   $("#newsFirst").append(news1);
   for (i = 1; i < news.length; i++) {
     const item = news[i];
+    postLogic(item);
     if (item !== undefined) {
       if (i === 4) {
         break;
@@ -53,7 +99,7 @@ const newsCycle = () => {
                     <h4 class="card-title">
                       <a href="/post.html?id=${
                         item._id
-                      }"style="color:black!important;">${item.title.substring(
+                      }"style="color:black!important;">${title.substring(
           0,
           100
         )}</a>
@@ -62,7 +108,7 @@ const newsCycle = () => {
 
                     </p>
                 </span>
-                <span class="date">${item.createdAt.substring(0,10)}</span>
+                <span class="date">${item.createdAt.substring(0, 10)}</span>
               </td>
             </tr>
             </div>
@@ -86,7 +132,7 @@ const newsCycle = () => {
                     <h4 class="card-title">
                       <a href="/post.html?id=${
                         item._id
-                      }" style="color:black!important;">${item.title.substring(
+                      }" style="color:black!important;">${title.substring(
           0,
           100
         )}</a>
@@ -95,7 +141,7 @@ const newsCycle = () => {
 
                     </p>
                 </span>
-                <span class="date">${item.createdAt.substring(0,10)}</span>
+                <span class="date">${item.createdAt.substring(0, 10)}</span>
               </td>
             </tr>
           </table>
@@ -110,6 +156,7 @@ const newsCycle = () => {
 
 const entertainmentCycle = () => {
   const item = entertainment[0];
+  postLogic(item);
   const ent = `
   <div class="col-lg-16 col-md-16 mb-16">
   <img src="${
@@ -118,18 +165,19 @@ const entertainmentCycle = () => {
     <p style="font-size:  1.7em; font-weight: 800; " class="card-title">
       <a href="/post.html?id=${
         item._id
-      }" style="color:black!important;">${item.title.substring(0, 100)}</a>
+      }" style="color:black!important;">${title.substring(0, 100)}</a>
     </h5>
 
-   <h5 class='font800'>${converter.makeHtml(item.content.substring(0, 320))}</h5>
+   <h5 class='font800'>${converter.makeHtml(content.substring(0, 320))}</h5>
     </p>
-    <span class="date2">${item.createdAt.substring(0,10)}</span>
+    <span class="date2">${item.createdAt.substring(0, 10)}</span>
     </div>
- 
+
   `;
   $("#entertainmentFirst").append(ent);
   for (let i = 1; i < entertainment.length; i++) {
     const item = entertainment[i];
+    postLogic(item);
     if (item !== undefined) {
       if (i === 5) {
         break;
@@ -141,15 +189,16 @@ const entertainmentCycle = () => {
         <h5 class="card-title">
           <a href="/post.html?id=${
             item._id
-          }" style="color:black!important;">${item.title.substring(0, 100)}</a>
+          }" style="color:black!important;">${title.substring(0, 100)}</a>
         </h5>
- 
-  <span class="date2">${item.createdAt.substring(0,10)}</span>
+
+  <span class="date2">${item.createdAt.substring(0, 10)}</span>
     </div>
     `;
         $("#entertainmentSecond").append(ent);
       } else {
         const item = entertainment[i];
+        postLogic(item);
         const ent = `
     <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 2px dotted navY">
     <img src="${item.cover.url}" class="rounded"   width="100%">
@@ -157,12 +206,12 @@ const entertainmentCycle = () => {
   <h5 class="card-title">
     <a href="/post.html?id=${
       item._id
-    }" style="color:black!important;">${item.title.substring(0, 100)}</a>
+    }" style="color:black!important;">${title.substring(0, 100)}</a>
   </h5>
   <p>
 
   </p>
-  <span class="date2">${item.createdAt.substring(0,10)}</span>
+  <span class="date2">${item.createdAt.substring(0, 10)}</span>
     </div>
     `;
         $("#entertainmentSecond").append(ent);
@@ -173,6 +222,7 @@ const entertainmentCycle = () => {
 
 const techCycle = () => {
   const item = technology[0];
+  postLogic(item);
   const tech = `
   <div class="col-lg-16 col-md-16 mb-16">
   <img src="${
@@ -181,17 +231,18 @@ const techCycle = () => {
     <p style="font-size:  1.7em; font-weight: 800; " class="card-title">
       <a href="/post.html?id=${
         item._id
-      }"style="color:black!important;">${item.title.substring(0, 100)}</a>
+      }"style="color:black!important;">${title.substring(0, 100)}</a>
     </p>
     <p>
-    ${converter.makeHtml(item.content).substring(0, 250)}
+    ${converter.makeHtml(content).substring(0, 250)}
     </p>
-    <span class="date2">${item.createdAt.substring(0,10)}</span>
+    <span class="date2">${item.createdAt.substring(0, 10)}</span>
     </div>
   `;
   $("#technologyFirst").append(tech);
   for (let i = 1; i < technology.length; i++) {
     const item = technology[i];
+    postLogic(item);
     if (item !== undefined) {
       if (i === 5) {
         break;
@@ -203,17 +254,18 @@ const techCycle = () => {
    <p style="font-size:  1.7em; font-weight: 800; " class="card-title">
     <a href="/post.html?id=${
       item._id
-    }" style="color:black!important;">${item.title.substring(0, 100)}</a>
+    }" style="color:black!important;">${title.substring(0, 100)}</a>
   </p>
   <p>
 
   </p>
-  <span class="date2">${item.createdAt.substring(0,10)}</span>
+  <span class="date2">${item.createdAt.substring(0, 10)}</span>
     </div>
     `;
         $("#technologySecond").append(tech);
       } else {
         const item = technology[i];
+        postLogic(item);
         const tech = `
     <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 2px dotted navY">
     <img src="${item.cover.url}" class="rounded"   width="100%">
@@ -221,12 +273,12 @@ const techCycle = () => {
   <h5 class="card-title">
     <a href="/post.html?id=${
       item._id
-    }" style="color:black!important;">${item.title.substring(0, 100)}</a>
+    }" style="color:black!important;">${title.substring(0, 100)}</a>
   </h5>
   <p>
 
   </p>
-  <span class="date2">${item.createdAt.substring(0,10)}</span>
+  <span class="date2">${item.createdAt.substring(0, 10)}</span>
     </div>
     `;
         $("#technologySecond").append(tech);
@@ -237,6 +289,7 @@ const techCycle = () => {
 
 const sportsCycle = () => {
   const item = sports[0];
+  postLogic(item);
   const sport = `
   <div class="col-lg-16 col-md-16 mb-16">
   <img src="${
@@ -245,41 +298,41 @@ const sportsCycle = () => {
     <p style="font-size:  1.7em; font-weight: 800; " class="card-title">
       <a href="/post.html?id=${
         item._id
-      }" style="color:black!important;">${item.title.substring(0, 100)}</a>
+      }" style="color:black!important;">${title.substring(0, 100)}</a>
     </h5>
 
-   <h5 class='font800'>${converter.makeHtml(item.content).substring(0, 310)}</h5>
+   <h5 class='font800'>${converter.makeHtml(content).substring(0, 310)}</h5>
     </p>
-    <span class="date2">${item.createdAt.substring(0,10)}</span>
+    <span class="date2">${item.createdAt.substring(0, 10)}</span>
     </div>
   `;
   $("#sportsFirst").append(sport);
   for (let i = 1; i < sports.length; i++) {
     const item = sports[i];
+    postLogic(item);
     if (item !== undefined) {
       if (i === 5) {
         break;
       } else if (i === 4) {
         const sport = `
     <div class="col-lg-3 col-md-3 mb-3" style="position:relative;">
-        <img src="${
-          item.cover.url
-        }" class="rounded"   width="100%">
+        <img src="${item.cover.url}" class="rounded"   width="100%">
       <p>
       <h5 class="card-title">
         <a href="/post.html?id=${
           item._id
-        }" style="color:black!important;">${item.title.substring(0, 100)}</a>
+        }" style="color:black!important;">${title.substring(0, 100)}</a>
       </h5>
       <p>
 
       </p>
-      <span class="date2">${item.createdAt.substring(0,10)}</span>
+      <span class="date2">${item.createdAt.substring(0, 10)}</span>
     </div>
     `;
         $("#sportsSecond").append(sport);
       } else {
         const item = sports[i];
+        postLogic(item);
         const sport = `
     <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 2px dotted navY;">
     <img src="${item.cover.url}" class="rounded"   width="100%">
@@ -287,12 +340,12 @@ const sportsCycle = () => {
   <h5 class="card-title">
     <a href="/post.html?id=${
       item._id
-    }" style="color:black!important;">${item.title.substring(0, 100)}</a>
+    }" style="color:black!important;">${title.substring(0, 100)}</a>
   </h5>
   <p>
 
   </p>
-  <span class="date2">${item.createdAt.substring(0,10)}</span>
+  <span class="date2">${item.createdAt.substring(0, 10)}</span>
     </div>
     `;
         $("#sportsSecond").append(sport);
@@ -303,6 +356,7 @@ const sportsCycle = () => {
 const selectedCycle = () => {
   for (let i = 0; i < selectedPosts.length; i++) {
     const item = selectedPosts[i];
+    postLogic(item);
     if (item !== undefined) {
       if (i === 5) {
         break;
@@ -311,32 +365,33 @@ const selectedCycle = () => {
       <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 0px">
         <a href="/post.html?id=${
           item._id
-        }" style="color:black!important;"><h6>${item.title.substring(
+        }" style="color:black!important;"><h6>${title.substring(
           0,
           100
-        )}</h6></a> 
+        )}</h6></a>
         <p>
-        ${converter.makeHtml(item.content).substring(0, 320)}
+        ${converter.makeHtml(content).substring(0, 320)}
         </p>
-         
-        <span class="date">${item.createdAt.substring(0,10)}</span>
+
+        <span class="date">${item.createdAt.substring(0, 10)}</span>
 
       </div>
       `;
         $("#selected").append(selected);
       } else {
         const item = selectedPosts[i];
+        postLogic(item);
         const selected = `
           <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 2px dotted navY; ">
             <a href="/post.html?id=${item._id}" style="color:black!important;">
-              <h6 class='font800'>${item.title.substring(0,100)}</h6>
+              <h6 class='font800'>${title.substring(0, 100)}</h6>
             </a>
             <br>
             <br>
             <p style="font-size:12px;  ">
-              ${item.content.substring(0, 330)}
+              ${content.substring(0, 330)}
             </p>
-            <span class="date">${item.createdAt.substring(0,10)}</span>
+            <span class="date">${item.createdAt.substring(0, 10)}</span>
             <br>
         </div>
       `;
@@ -352,6 +407,7 @@ const randomSixCycle = () => {
       break;
     }
     const item = allArray[i];
+    postLogic(item);
     if (item !== undefined) {
       if (i === 2 || i === 5) {
         const node = `
@@ -361,12 +417,12 @@ const randomSixCycle = () => {
         <h5 class="card-title">
         <a href="/post.html?id=${
           item._id
-        }" style="color:black!important;">${item.title.substring(0, 100)} </a>
+        }" style="color:black!important;">${title.substring(0, 100)} </a>
         </h5>
         <p>
 
         </p>
-        <span class="date">${item.createdAt.substring(0,10)}</span>
+        <span class="date">${item.createdAt.substring(0, 10)}</span>
       </div>
       `;
         $("#randomSix").append(node);
@@ -378,13 +434,13 @@ const randomSixCycle = () => {
       <h5 class="card-title">
       <a href="/post.html?id=${
         item._id
-      }"style="color:black!important;">${item.title.substring(0, 100)} </a>
+      }"style="color:black!important;">${title.substring(0, 100)} </a>
       </h5>
 
       <p>
 
       </p>
-        <span class="date">${item.createdAt.substring(0,10)}</span>
+        <span class="date">${item.createdAt.substring(0, 10)}</span>
       </div>
 
       `;
@@ -399,6 +455,7 @@ const recPostCycle = () => {
       break;
     }
     const item = recPostings[i];
+    postLogic(item);
     const node = `
       <div class="row">
         <div style="display: block; padding-left:35px; padding-right:35px;  ">
@@ -406,16 +463,116 @@ const recPostCycle = () => {
         <h5 style="border-bottom:2px dashed rgb(73,86,120); padding-bottom:10px;" class="card-title">
         <a href="/post.html?id=${
           item._id
-        }" style="color:black!important;">${item.title.substring(0, 70)}  </a>
+        }" style="color:black!important;">${title.substring(0, 70)}  </a>
         </h5>
 
         </p>
-        <span class="date2">${item.createdAt.substring(0,10)}</span>
+        <span class="date2">${item.createdAt.substring(0, 10)}</span>
       </div>
     </div>
       `;
     $("#recPosts").append(node);
   }
+};
+const latestPosts = () => {
+  for (let i = 0; i < firstSix.length; i++) {
+    const item = firstSix[i];
+    postLogic(item);
+    const node = `
+
+      <table style="margin-bottom:10px; display:block">
+        <tr>
+          <td>
+              <img src="${
+                item.cover.url
+              }"  height="60px" width="80px" style="padding-right:5px;">
+          </td>
+          <td style="width:100%;position:relative; clear:both;">
+            <span class="newsText">
+                <h5 class="card-title">
+                <a href="/post.html?id=${
+                  item._id
+                }" style="color:black!important;">${title.substring(
+      0,
+      35
+    )}  </a>
+                </h5>
+            </span>
+          </td>
+
+        </tr>
+        </div>
+      </table>
+      <hr>
+      </br>
+      <div style="clear:both;"></div>
+  `;
+    $("#latestPosts").append(node);
+  }
+};
+
+// language stuff
+
+const emptyAll = () => {
+  $("#latestPosts").empty();
+  $("#randomSix").empty();
+  $("#technologyFirst").empty();
+  $("#technologySecond").empty();
+  $("#sportsFirst").empty();
+  $("#sportsSecond").empty();
+  $("#newsFirst").empty();
+  $("#newsSecond").empty();
+  $("#entertainmentFirst").empty();
+  $("#entertainmentSecond").empty();
+  $("#recPosts").empty();
+};
+
+const functionCycle = () => {
+  if (sports.length !== 0) {
+    sportsCycle();
+  }
+  if (entertainment.length !== 0) {
+    entertainmentCycle();
+  }
+  if (news.length !== 0) {
+    newsCycle();
+  }
+  if (technology.length !== 0) {
+    techCycle();
+  }
+  if (selectedPosts.length !== 0) {
+    selectedCycle();
+  }
+  if (allArray.length !== 0) {
+    randomSixCycle();
+  }
+  if (recPostings.length !== 0) {
+    recPostCycle();
+  }
+  if (firstSix.length !== 0) {
+    latestPosts();
+  }
+};
+
+window.onload = () => {
+  languageSelect.addEventListener("change", () => {
+    if (languageSelect.value == "ENG") {
+      localStorage["myKey"] = "ENG";
+      contentLanguage = "ENG";
+      emptyAll();
+      functionCycle();
+    } else if (languageSelect.value == "RU") {
+      localStorage["myKey"] = "RU";
+      contentLanguage = "RU";
+      emptyAll();
+      functionCycle();
+    } else if (languageSelect.value == "AZ") {
+      localStorage["myKey"] = "AZ";
+      contentLanguage = "AZ";
+      emptyAll();
+      functionCycle();
+    }
+  });
 };
 
 // ajax requests to get the data
@@ -453,8 +610,9 @@ $(document).ready(() => {
     success: data => {
       for (let i = data.length - 1; i >= 0; i--) {
         const item = data[i];
+        postLogic(item);
 
-        if (item.recPosts == true) {
+        if (item.Избранное == true) {
           recPostings.unshift(item);
         }
 
@@ -469,8 +627,8 @@ $(document).ready(() => {
         } else {
           sports.unshift(item);
         }
-
         if (i < 6) {
+          firstSix.unshift(data[i]);
           const node = `
 
             <table style="margin-bottom:10px; display:block">
@@ -485,7 +643,7 @@ $(document).ready(() => {
                       <h5 class="card-title">
                       <a href="/post.html?id=${
                         item._id
-                      }" style="color:black!important;">${item.title.substring(
+                      }" style="color:black!important;">${title.substring(
             0,
             35
           )}  </a>
