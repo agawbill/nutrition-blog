@@ -164,7 +164,7 @@ const entertainmentCycle = () => {
       }" style="color:black!important;">${title.substring(0, 100)}</a>
     </h5>
 
-   <h5 class='font800'>${converter.makeHtml(content.substring(0, 320))}</h5>
+   <p class='font800'>${converter.makeHtml(content.substring(0, 286))}</p>
     </p>
     <span class="date2">${item.createdAt
       .substring(0, 10)
