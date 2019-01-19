@@ -254,13 +254,13 @@ const techCycle = () => {
         const tech = `
         <div class="col-lg-3 col-md-3 mb-3" style="position:relative;float:center;">
           <img src="${item.cover.url}" class="rounded"   width="100%">
-
+          <p>
             <h5 class="card-title">
               <a href="/post.html?id=${
                 item._id
               }" style="color:black!important;">${title.substring(0, 100)}</a>
             </h5>
-
+            </p>
       <span class="date2">${item.createdAt
         .substring(0, 10)
         .replace(/-/g, ".")}</span>
@@ -402,7 +402,7 @@ const selectedCycle = () => {
               <h6 class='font800'>${title.substring(0, 100)}</h6>
             </a>
             <br>
-           
+
             <p style="font-size:12px;  ">
               ${content.substring(0, 330)}
             </p>
