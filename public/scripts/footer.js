@@ -103,7 +103,7 @@ const addFooter = contentLanguage => {
   }
 };
 
-document.addEventListener("change", () => {
+document.addEventListener("change", event => {
   if (event.target.value === "RU") {
     $("#footerPartial").empty();
     $("#navContainer").empty();
