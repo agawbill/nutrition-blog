@@ -52,6 +52,9 @@ const newsCycle = () => {
   const news1 = `
     <img src="${item.cover.url}"   width="100%" class="rounded" ></p>
     <p style="font-size:  1.7em; font-weight: 800; " class="card-title">
+    <span class="date">   ${item.createdAt
+      .substring(0, 10)
+      .replace(/-/g, ".")}</span>
       <a href="/post.html?id=${
         item._id
       }" style="color:black!important;">${title.substring(0, 100)}</a>
@@ -62,9 +65,7 @@ const newsCycle = () => {
     ${converter.makeHtml(content).substring(0, 337)}
       <br>
     </div>
-    <span class="date">   ${item.createdAt
-      .substring(0, 10)
-      .replace(/-/g, ".")}</span>
+    
     </p>
 
     `;

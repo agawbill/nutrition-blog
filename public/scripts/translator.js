@@ -15,7 +15,7 @@ var azerbaijan = document.getElementById("azerbaijan");
 const switchMenu = () => {
   const russianMenu = `
           <ul style='list-style-type: none; margin: 0; padding: 0; font-size:1.1em;'>
-           <li><a class="nav-link" href="about.html">Об Академии <span class="sr-only">(current)</span></a></li>
+           <li><a class="nav-link" href="about.html">ANDOP <span class="sr-only">(current)</span></a></li>
             <hr>
             </li><a class="nav-link" href="team.html">Наша Команда</a> </li>
             <hr>
@@ -28,7 +28,7 @@ const switchMenu = () => {
           </ul>`;
   const englishMenu = `
           <ul style='list-style-type: none; margin: 0; padding: 0; font-size:1.1em;'>
-           <li><a class="nav-link" href="about.html">About <span class="sr-only">(current)</span></a></li>
+           <li><a class="nav-link" href="about.html">ANDOP <span class="sr-only">(current)</span></a></li>
             <hr>
             </li><a class="nav-link" href="team.html">Team</a> </li>
             <hr>
