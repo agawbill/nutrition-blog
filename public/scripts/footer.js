@@ -52,10 +52,10 @@ const addFooter = contentLanguage => {
                     <a class="nav-link" href="../static_pages/team.html">Komandamiz</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="../static_pages/projects.html">Proyektləri̇mi̇z</a>
+                    <a class="nav-link" href="../static_pages/projects.html">Proyektlərimiz</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="../static_pages/trainings.html">Treni̇nglər</a>
+                    <a class="nav-link" href="../static_pages/trainings.html">Treninglər</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="../static_pages/membership.html">Üzvlük</a>

@@ -236,7 +236,7 @@ const techCycle = () => {
       }"style="color:black!important;">${title.substring(0, 100)}</a>
     </p>
     <p>
-    ${converter.makeHtml(content).substring(0, 250)}
+    ${converter.makeHtml(content).substring(0, 351)}
     </p>
     <span class="date2">${item.createdAt
       .substring(0, 10)
@@ -309,7 +309,7 @@ const sportsCycle = () => {
       }" style="color:black!important;">${title.substring(0, 100)}</a>
     </h5>
 
-   <h5 class='font800'>${converter.makeHtml(content).substring(0, 310)}</h5>
+   <p class='font800'>${converter.makeHtml(content).substring(0, 351)}</p>
     </p>
     <span class="date2">${item.createdAt
       .substring(0, 10)
