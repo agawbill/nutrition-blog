@@ -539,19 +539,19 @@ const latestPosts = () => {
 
 const swapHeaders = contentLanguage => {
   headerArray = ["#talks", "#diet", "#fitness", "#upcoming", "#health"];
-  eng = ["Talks", "Diet", "Fitness", "Upcoming", "Health"];
-  azi = ["Intervyular", "Diet", "Fintes", "Anons", "Sağlamlığ"];
-  rus = ["Наши беседы", "Питание", "Фитнес", "Анонс", "Здоровье"];
+  eng = ["Talks", "Diet", "Fitness", "Recommended", "Health"];
+  azi = ["Intervyular", "Diet", "Fintes", "REDAKSİYA SEÇİMİ", "Sağlamlığ"];
+  rus = ["Наши беседы", "Питание", "Фитнес", "РЕКОМЕНДОВАННЫЕ", "Здоровье"];
   for (let i = 0; i < headerArray.length; i++) {
     if (contentLanguage === "ENG") {
       $(headerArray[i]).empty();
-      $(headerArray[i]).append(eng[i]);
+      $(headerArray[i]).append(eng[i].toUpperCase());
     } else if (contentLanguage === "AZ") {
       $(headerArray[i]).empty();
-      $(headerArray[i]).append(azi[i]);
+      $(headerArray[i]).append(azi[i].toUpperCase());
     } else {
       $(headerArray[i]).empty();
-      $(headerArray[i]).append(rus[i]);
+      $(headerArray[i]).append(rus[i].toUpperCase());
     }
   }
 };

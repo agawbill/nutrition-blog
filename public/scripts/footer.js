@@ -103,19 +103,38 @@ const addFooter = contentLanguage => {
   }
 };
 
+const addContact = contentLanguage => {
+  const contactEng = `CONTACT US`;
+  const contactAz = `Elaqə`;
+  const contactRus = `КОНТАКТЫ`;
+  if (contentLanguage === "RU") {
+    $("#contactUs").append(contactRus);
+  } else if (contentLanguage === "ENG") {
+    $("#contactUs").append(contactEng);
+  } else if (contentLanguage === "AZ") {
+    $("#contactUs").append(contactAz.toUpperCase());
+  }
+};
+
 document.addEventListener("change", event => {
   if (event.target.value === "RU") {
     $("#footerPartial").empty();
     $("#navContainer").empty();
+    $("#contactUs").empty();
     addFooter(contentLanguage);
+    addContact(contentLanguage);
   } else if (event.target.value === "ENG") {
     $("#footerPartial").empty();
     $("#navContainer").empty();
+    $("#contactUs").empty();
     addFooter(contentLanguage);
+    addContact(contentLanguage);
   } else if (event.target.value === "AZ") {
     $("#footerPartial").empty();
     $("#navContainer").empty();
+    $("#contactUs").empty();
     addFooter(contentLanguage);
+    addContact(contentLanguage);
   }
 });
 
@@ -206,6 +225,7 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
     `;
     $("#navContainer").append(menuRus);
+    $("#contactUs").append("КОНТАКТЫ");
   } else if (contentLanguage === "ENG") {
     footerPartial.innerHTML = `
     <div id="footer_menu_blue">
@@ -213,6 +233,7 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
     `;
     $("#navContainer").append(menuEng);
+    $("#contactUs").append("CONTACT US");
   } else if (contentLanguage === "AZ") {
     footerPartial.innerHTML = `
     <div id="footer_menu_blue">
@@ -220,5 +241,6 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
     `;
     $("#navContainer").append(menuAz);
+    $("#contactUs").append("Elaqə".toUpperCase());
   }
 });
