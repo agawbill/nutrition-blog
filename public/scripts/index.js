@@ -63,7 +63,7 @@ const newsCycle = () => {
       <br>
     <span class="date">   ${item.createdAt
       .substring(0, 10)
-      .replace("/", ".")}</span>
+      .replace("-", ".")}</span>
     </div>
     </p>
 
@@ -102,7 +102,7 @@ const newsCycle = () => {
                 </span>
                 <span class="date">${item.createdAt
                   .substring(0, 10)
-                  .replace("/", ".")}</span>
+                  .replace("-", ".")}</span>
               </td>
             </tr>
             </div>
@@ -137,7 +137,7 @@ const newsCycle = () => {
                 </span>
                 <span class="date">${item.createdAt
                   .substring(0, 10)
-                  .replace("/", ".")}</span>
+                  .replace("-", ".")}</span>
               </td>
             </tr>
           </table>
@@ -168,7 +168,7 @@ const entertainmentCycle = () => {
     </p>
     <span class="date2">${item.createdAt
       .substring(0, 10)
-      .replace("/", ".")}</span>
+      .replace("-", ".")}</span>
     </div>
 
   `;
@@ -192,7 +192,7 @@ const entertainmentCycle = () => {
 
   <span class="date2">${item.createdAt
     .substring(0, 10)
-    .replace("/", ".")}</span>
+    .replace("-", ".")}</span>
     </div>
     `;
         $("#entertainmentSecond").append(ent);
@@ -213,7 +213,7 @@ const entertainmentCycle = () => {
   </p>
   <span class="date2">${item.createdAt
     .substring(0, 10)
-    .replace("/", ".")}</span>
+    .replace("-", ".")}</span>
     </div>
     `;
         $("#entertainmentSecond").append(ent);
@@ -240,7 +240,7 @@ const techCycle = () => {
     </p>
     <span class="date2">${item.createdAt
       .substring(0, 10)
-      .replace("/", ".")}</span>
+      .replace("-", ".")}</span>
     </div>
   `;
   $("#technologyFirst").append(tech);
@@ -265,7 +265,7 @@ const techCycle = () => {
   </p>
   <span class="date2">${item.createdAt
     .substring(0, 10)
-    .replace("/", ".")}</span>
+    .replace("-", ".")}</span>
     </div>
     `;
         $("#technologySecond").append(tech);
@@ -286,7 +286,7 @@ const techCycle = () => {
   </p>
   <span class="date2">${item.createdAt
     .substring(0, 10)
-    .replace("/", ".")}</span>
+    .replace("-", ".")}</span>
     </div>
     `;
         $("#technologySecond").append(tech);
@@ -313,7 +313,7 @@ const sportsCycle = () => {
     </p>
     <span class="date2">${item.createdAt
       .substring(0, 10)
-      .replace("/", ".")}</span>
+      .replace("-", ".")}</span>
     </div>
   `;
   $("#sportsFirst").append(sport);
@@ -338,7 +338,7 @@ const sportsCycle = () => {
       </p>
       <span class="date2">${item.createdAt
         .substring(0, 10)
-        .replace("/", ".")}</span>
+        .replace("-", ".")}</span>
     </div>
     `;
         $("#sportsSecond").append(sport);
@@ -359,7 +359,7 @@ const sportsCycle = () => {
   </p>
   <span class="date2">${item.createdAt
     .substring(0, 10)
-    .replace("/", ".")}</span>
+    .replace("-", ".")}</span>
     </div>
     `;
         $("#sportsSecond").append(sport);
@@ -389,7 +389,7 @@ const selectedCycle = () => {
 
         <span class="date">${item.createdAt
           .substring(0, 10)
-          .replace("/", ".")}</span>
+          .replace("-", ".")}</span>
 
       </div>
       `;
@@ -409,7 +409,7 @@ const selectedCycle = () => {
             </p>
             <span class="date">${item.createdAt
               .substring(0, 10)
-              .replace("/", ".")}</span>
+              .replace("-", ".")}</span>
             <br>
         </div>
       `;
@@ -462,7 +462,7 @@ const randomSixCycle = () => {
       </p>
         <span class="date">${item.createdAt
           .substring(0, 10)
-          .replace("/", ".")}</span>
+          .replace("-", ".")}</span>
       </div>
 
       `;
@@ -491,7 +491,7 @@ const recPostCycle = () => {
         </p>
         <span class="date2">${item.createdAt
           .substring(0, 10)
-          .replace("/", ".")}</span>
+          .replace("-", ".")}</span>
       </div>
     </div>
       `;
