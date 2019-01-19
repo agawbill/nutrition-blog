@@ -58,7 +58,7 @@ const newsCycle = () => {
     </p>
 
     <p>
-    <div>
+    <div style="margin-bottom:15px;">
     ${converter.makeHtml(content).substring(0, 337)}
       <br>
     <span class="date">   ${item.createdAt
@@ -367,6 +367,8 @@ const sportsCycle = () => {
     }
   }
 };
+
+
 const selectedCycle = () => {
   for (let i = 0; i < selectedPosts.length; i++) {
     const item = selectedPosts[i];
@@ -384,7 +386,7 @@ const selectedCycle = () => {
           100
         )}</h6></a>
         <p>
-        ${converter.makeHtml(content).substring(0, 320)}
+          ${converter.makeHtml(content).substring(0, 320)}
         </p>
 
         <span class="date">${item.createdAt
@@ -403,7 +405,7 @@ const selectedCycle = () => {
               <h6 class='font800'>${title.substring(0, 100)}</h6>
             </a>
             <br>
-            <br>
+           
             <p style="font-size:12px;  ">
               ${content.substring(0, 330)}
             </p>
