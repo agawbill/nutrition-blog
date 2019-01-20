@@ -83,10 +83,9 @@ const contentCycle = () => {
     <li class="media" style="border-bottom: 2px dotted gray; margin-bottom: 10px; padding-bottom: 10px;">
     <img src="${
       item.cover.url
-    }" height="300vh" width="30%" class="rounded" align="left" style="padding-right:5px;" >
+    }"  width="30%" class="rounded" align="left" style="padding-right:5px;" >
       <div class="media-body">
             <span class="date3">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
-
       <h4 class="card-title">
         <a href="/post.html?id=${item._id}"> ${title}: «${description}»  </a>
       </h4>
@@ -116,8 +115,9 @@ $(document).ready(() => {
           <li class="media" style="border-bottom: 2px dotted gray; margin-bottom: 10px; padding-bottom: 10px;">
           <img src="${
             item.cover.url
-          }" height="300vh" width="30%" class="rounded" align="left" style="padding-right:5px;" >
+          }" width="30%" class="rounded" align="left" style="padding-right:5px;" >
             <div class="media-body">
+            <span class="date3">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
             <h4 class="card-title">
               <a href="/post.html?id=${
                 item._id
@@ -126,7 +126,6 @@ $(document).ready(() => {
             <p>
             ${converter.makeHtml(content).substring(0, 200)}
             </p>
-            <span class="date2">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
           </li>
           </div>
           `;
