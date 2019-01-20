@@ -65,7 +65,7 @@ const newsCycle = () => {
     ${converter.makeHtml(content).substring(0, 337)}
       <br>
     </div>
-    
+
     </p>
 
     `;
@@ -104,7 +104,7 @@ const newsCycle = () => {
 
                     </p>
                 </span>
-                
+
               </td>
             </tr>
             </div>
@@ -540,9 +540,9 @@ const latestPosts = () => {
 
 const swapHeaders = contentLanguage => {
   headerArray = ["#talks", "#diet", "#fitness", "#upcoming", "#health"];
-  eng = ["Talks", "Diet", "Fitness", "Recommended", "Health"];
-  azi = ["Intervyular", "Diet", "Fintes", "REDAKSİYA SEÇİMİ", "Sağlamlığ"];
-  rus = ["Наши беседы", "Питание", "Фитнес", "РЕКОМЕНДОВАННЫЕ", "Здоровье"];
+  eng = ["Main News", "Diet", "Fitness", "Recommended", "Health"];
+  azi = ["Əsas Xəbərlər", "Diet", "Fintes", "REDAKSİYA SEÇİMİ", "Sağlamlığ"];
+  rus = ["Главные Новости", "Питание", "Фитнес", "РЕКОМЕНДОВАННЫЕ", "Здоровье"];
   for (let i = 0; i < headerArray.length; i++) {
     if (contentLanguage === "ENG") {
       $(headerArray[i]).empty();
