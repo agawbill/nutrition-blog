@@ -37,12 +37,11 @@ const postCycle = () => {
   postLogic(item);
   const node = `
   <div class="col-lg-12 col-md-12 mb-12">
+    <span class="date3">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
     <h4 class="card-title">
       <a href="/post.html?id=${item._id}">${title}:  «${description}»  </a>
     </h4>
-    <p>
-    <span class="date2">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
-    </p>
+  
     <p>
       <img src="${item.cover.url}" class="rounded" width="100%"><br>
     </p>
