@@ -149,9 +149,7 @@ const entertainmentCycle = () => {
   <img src="${
     item.cover.url
   }" class="rounded"   width="50%" style="float:left; padding-right:15px;">
-  <span class="date2">${item.createdAt
-    .substring(0, 10)
-    .replace(/-/g, ".")}</span>
+  <span class="date3">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
   </div>
     <p style="font-size:  1.7em; font-weight: 800; " class="card-title">
       <a href="/post.html?id=${
@@ -182,7 +180,7 @@ const entertainmentCycle = () => {
           }" style="color:black!important;">${title.substring(0, 100)}</a>
         </h5>
         </p>
-  <span class="date2">${item.createdAt
+  <span class="date3">${item.createdAt
     .substring(0, 10)
     .replace(/-/g, ".")}</span>
     </div>
@@ -203,7 +201,7 @@ const entertainmentCycle = () => {
   <p>
 
   </p>
-  <span class="date2">${item.createdAt
+  <span class="date3">${item.createdAt
     .substring(0, 10)
     .replace(/-/g, ".")}</span>
     </div>
@@ -247,37 +245,26 @@ const techCycle = () => {
         const tech = `
         <div class="col-lg-3 col-md-3 mb-3" style="position:relative;float:center;">
           <img src="${item.cover.url}" class="rounded"   width="100%">
-          <p>
-            <h5 class="card-title">
+             <h5 class="card-title">
               <a href="/post.html?id=${
                 item._id
               }" style="color:black!important;">${title.substring(0, 100)}</a>
             </h5>
-            </p>
-      <span class="date2">${item.createdAt
-        .substring(0, 10)
-        .replace(/-/g, ".")}</span>
-        </div>
-    `;
+       <span class="date3">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
+        </div>`;
         $("#technologySecond").append(tech);
       } else {
         const item = technology[i];
         postLogic(item);
         const tech = `
     <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 2px dotted navY">
-    <img src="${item.cover.url}" class="rounded"   width="100%">
-  <p>
-  <h5 class="card-title">
-    <a href="/post.html?id=${
-      item._id
-    }" style="color:black!important;">${title.substring(0, 100)}</a>
-  </h5>
-  <p>
-
-  </p>
-  <span class="date2">${item.createdAt
-    .substring(0, 10)
-    .replace(/-/g, ".")}</span>
+      <img src="${item.cover.url}" class="rounded"   width="100%">
+        <span class="date3">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
+        <h5 class="card-title">
+          <a href="/post.html?id=${
+            item._id
+          }" style="color:black!important;">${title.substring(0, 100)}</a>
+        </h5>
     </div>
     `;
         $("#technologySecond").append(tech);
@@ -294,19 +281,11 @@ const sportsCycle = () => {
   <img src="${
     item.cover.url
   }" class="rounded"   width="50%" style="float:left; padding-right:15px;">
-  <span class="date2">${item.createdAt
-    .substring(0, 10)
-    .replace(/-/g, ".")}</span>
+  <span class="date3">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
     <p style="font-size:  1.7em; font-weight: 800; " class="card-title">
-      <a href="/post.html?id=${
-        item._id
-      }" style="color:black!important;">${title.substring(0, 100)}</a>
-    </h5>
-
-   <p class='font800'>${converter.makeHtml(content).substring(0, 351)}</p>
-    </p>
-
-    </div>
+      <a href="/post.html?id=${ item._id}" style="color:black!important;">${title.substring(0, 100)}</a>
+    <p class='font800'>${converter.makeHtml(content).substring(0, 351)}</p>
+    </p> </div>
   `;
   $("#sportsFirst").append(sport);
   for (let i = 1; i < sports.length; i++) {
@@ -318,21 +297,14 @@ const sportsCycle = () => {
       } else if (i === 4) {
         const sport = `
     <div class="col-lg-3 col-md-3 mb-3" style="position:relative;">
-        <img src="${item.cover.url}" class="rounded"   width="100%">
-      <p>
-      <h5 class="card-title">
-        <a href="/post.html?id=${
-          item._id
-        }" style="color:black!important;">${title.substring(0, 100)}</a>
-      </h5>
-      <p>
-
-      </p>
-      <span class="date2">${item.createdAt
-        .substring(0, 10)
-        .replace(/-/g, ".")}</span>
-    </div>
-    `;
+      <img src="${item.cover.url}" class="rounded"   width="100%">
+        <span class="date3">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
+        <h5 class="card-title">
+          <a href="/post.html?id=${
+            item._id
+          }" style="color:black!important;">${title.substring(0, 100)}</a>
+        </h5>
+    </div>`;
         $("#sportsSecond").append(sport);
       } else {
         const item = sports[i];
@@ -340,20 +312,11 @@ const sportsCycle = () => {
         const sport = `
     <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 2px dotted navY;">
     <img src="${item.cover.url}" class="rounded"   width="100%">
-  <p>
-  <h5 class="card-title">
-    <a href="/post.html?id=${
-      item._id
-    }" style="color:black!important;">${title.substring(0, 100)}</a>
-  </h5>
-  <p>
-
-  </p>
-  <span class="date2">${item.createdAt
-    .substring(0, 10)
-    .replace(/-/g, ".")}</span>
-    </div>
-    `;
+    <span class="date3">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
+      <h5 class="card-title">
+        <a href="/post.html?id=${item.id}" style="color:black!important;">${title.substring(0, 100)}</a>
+      </h5>
+    </div>`;
         $("#sportsSecond").append(sport);
       }
     }
@@ -383,6 +346,7 @@ const selectedCycle = () => {
         postLogic(item);
         const selected = `
           <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 2px dotted navY; ">
+           <span class="date3">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
             <a href="/post.html?id=${item._id}" style="color:black!important;">
               <h6 class='font800'>${title.substring(0, 100)}</h6>
             </a>
@@ -390,7 +354,6 @@ const selectedCycle = () => {
             <p style="font-size:12px;  ">
               ${content.substring(0, 330)}
             </p>
-            <span class="date3">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
             <br>
         </div>
       `;
@@ -446,20 +409,13 @@ const recPostCycle = () => {
     const item = recPostings[i];
     postLogic(item);
     const node = `
-      <div class="row">
+    <div class="row">
         <div style="display: block; padding-left:35px; padding-right:35px;  ">
-        <p>
-        <h5 style="border-bottom:2px dashed rgb(73,86,120); padding-bottom:10px;" class="card-title">
-        <a href="/post.html?id=${
-          item._id
-        }" style="color:black!important;">${title.substring(0, 70)}  </a>
-        </h5>
-
-        </p>
-        <span class="date2">${item.createdAt
-          .substring(0, 10)
-          .replace(/-/g, ".")}</span>
-      </div>
+          <span class="date3">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
+          <h5 style="border-bottom:2px dashed rgb(73,86,120); padding-bottom:10px;" class="card-title">
+            <a href="/post.html?id=${item._id}" style="color:black!important;">${title.substring(0, 70)}  </a>
+          </h5>
+        </div>
     </div>
       `;
     $("#recPosts").append(node);
