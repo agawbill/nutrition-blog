@@ -33,9 +33,9 @@ const postLogic = item => {
 
 const swapHeaders = contentLanguage => {
   headerArray = ["#talks", "#diet", "#fitness", "#upcoming", "#health"];
-  eng = ["Talks", "Diet", "Fitness", "Upcoming", "Health"];
-  azi = ["Intervyular", "Diet", "Fintes", "Gelecekde", "Saglamlig"];
-  rus = ["Наши беседы", "Питание", "Фитнес", "Анонс", "Здоровье"];
+  eng = ["Main News", "Diet", "Fitness", "Upcoming", "Health"];
+  azi = ["Əsas Xəbərlər", "Diet", "Fintes", "Gelecekde", "Saglamlig"];
+  rus = ["Главные Новости", "Питание", "Фитнес", "Анонс", "Здоровье"];
   for (let i = 0; i < headerArray.length; i++) {
     if (contentLanguage === "ENG") {
       $(headerArray[i]).empty();
@@ -83,7 +83,7 @@ const contentCycle = () => {
     <li class="media" style="border-bottom: 2px dotted gray; margin-bottom: 10px; padding-bottom: 10px;">
     <img src="${
       item.cover.url
-    }" height="300vh" width="30%" class="rounded" align="left" style="padding-right:5px;" >
+    }"width="30%" class="rounded" align="left" style="padding-right:5px;" >
       <div class="media-body">
       <h4 class="card-title">
         <a href="/post.html?id=${item._id}"> ${title}: «${description}»  </a>
@@ -115,7 +115,7 @@ $(document).ready(() => {
           <li class="media" style="border-bottom: 2px dotted gray; margin-bottom: 10px; padding-bottom: 10px;">
           <img src="${
             item.cover.url
-          }" height="300vh" width="30%" class="rounded" align="left" style="padding-right:5px;" >
+          }"width="30%" class="rounded" align="left" style="padding-right:5px;" >
             <div class="media-body">
             <h4 class="card-title">
               <a href="/post.html?id=${

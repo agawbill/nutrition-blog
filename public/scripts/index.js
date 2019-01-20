@@ -695,10 +695,7 @@ $(document).ready(() => {
                       <p style="font-size:12px" class="card-title">
                       <a href="/post.html?id=${
                         item._id
-                      }" style="color:black!important;">${title.substring(
-            0,
-            55
-          ) + ' ...'}  </a>
+                      }" style="color:black!important;">${title}  </a>
                       </p>
                   </span>
                 </td>
