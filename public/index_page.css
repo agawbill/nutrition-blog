@@ -111,6 +111,11 @@ hr {
   margin-top: 5px;
   /*display: none;*/
 }
+.date3 {
+  font-weight: bold;
+  color: dimgrey;
+  /*display: none;*/
+}
 
 .newsText {
   position: absolute;

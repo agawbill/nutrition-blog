@@ -79,7 +79,7 @@ const newsCycle = () => {
       } else if (i === 2) {
         const news2 = `
         <div id="blocks">
-        <div style="border-top:2px dotted navy;border-bottom:2px dotted navy;width:100%;padding-top:10px;padding-bottom:10px;">
+          <div style="border-top:2px dotted navy;border-bottom:2px dotted navy;width:100%;padding-top:10px;padding-bottom:10px;">
           <table>
             <tr>
               <td>
@@ -89,13 +89,10 @@ const newsCycle = () => {
               </td>
               <td style="width:100%;position:relative; clear:both;">
                 <span class="newsText">
-                <span class="date">${item.createdAt
-                  .substring(0, 10)
-                  .replace(/-/g, ".")}</span>
                     <h4 class="card-title">
                       <a href="/post.html?id=${
                         item._id
-                      }"style="color:black!important;">${title.substring(
+                      }" style="color:black!important;">${title.substring(
           0,
           100
         )}</a>
@@ -104,10 +101,11 @@ const newsCycle = () => {
 
                     </p>
                 </span>
-
+                <span class="date">${item.createdAt
+                  .substring(0, 10)
+                  .replace(/-/g, ".")}</span>
               </td>
             </tr>
-            </div>
           </table>
         </div>
         <p>
@@ -160,6 +158,10 @@ const entertainmentCycle = () => {
   <img src="${
     item.cover.url
   }" class="rounded"   width="50%" style="float:left; padding-right:15px;">
+  <span class="date2">${item.createdAt
+    .substring(0, 10)
+    .replace(/-/g, ".")}</span>
+  </div>
     <p style="font-size:  1.7em; font-weight: 800; " class="card-title">
       <a href="/post.html?id=${
         item._id
@@ -168,10 +170,7 @@ const entertainmentCycle = () => {
 
    <p class='font800'>${converter.makeHtml(content.substring(0, 286))}</p>
     </p>
-    <span class="date2">${item.createdAt
-      .substring(0, 10)
-      .replace(/-/g, ".")}</span>
-    </div>
+
 
   `;
   $("#entertainmentFirst").append(ent);
@@ -232,6 +231,9 @@ const techCycle = () => {
   <img src="${
     item.cover.url
   }" class="rounded"   width="50%" style="float:left;padding-right:15px;">
+  <span class="date3">${item.createdAt
+    .substring(0, 10)
+    .replace(/-/g, ".")}</span>
     <p style="font-size:  1.7em; font-weight: 800; " class="card-title">
       <a href="/post.html?id=${
         item._id
@@ -240,9 +242,7 @@ const techCycle = () => {
     <p>
     ${converter.makeHtml(content).substring(0, 351)}
     </p>
-    <span class="date2">${item.createdAt
-      .substring(0, 10)
-      .replace(/-/g, ".")}</span>
+
     </div>
   `;
   $("#technologyFirst").append(tech);
@@ -303,6 +303,9 @@ const sportsCycle = () => {
   <img src="${
     item.cover.url
   }" class="rounded"   width="50%" style="float:left; padding-right:15px;">
+  <span class="date2">${item.createdAt
+    .substring(0, 10)
+    .replace(/-/g, ".")}</span>
     <p style="font-size:  1.7em; font-weight: 800; " class="card-title">
       <a href="/post.html?id=${
         item._id
@@ -311,9 +314,7 @@ const sportsCycle = () => {
 
    <p class='font800'>${converter.makeHtml(content).substring(0, 351)}</p>
     </p>
-    <span class="date2">${item.createdAt
-      .substring(0, 10)
-      .replace(/-/g, ".")}</span>
+
     </div>
   `;
   $("#sportsFirst").append(sport);
