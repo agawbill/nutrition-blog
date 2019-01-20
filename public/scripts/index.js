@@ -52,7 +52,7 @@ const newsCycle = () => {
   const news1 = `
     <img src="${item.cover.url}"   width="100%" class="rounded" ></p>
     <p style="font-size:  1.7em; font-weight: 800; " class="card-title">
-    <span class="date">   ${item.createdAt
+    <span class="date3">   ${item.createdAt
       .substring(0, 10)
       .replace(/-/g, ".")}</span>
       <a href="/post.html?id=${
