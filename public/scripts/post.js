@@ -41,7 +41,7 @@ const postCycle = () => {
       <a href="/post.html?id=${item._id}">${title}:  «${description}»  </a>
     </h4>
     <p>
-    <span class="date2">${item.createdAt}</span>
+    <span class="date2">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
     </p>
     <p>
       <img src="${item.cover.url}" class="rounded" width="100%"><br>
@@ -97,7 +97,7 @@ $(document).ready(() => {
             }">${title}:  «${description}»  </a>
           </h4>
           <p>
-          <span class="date2">${item.createdAt}</span>
+          <span class="date2">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
           </p>
           <p>
             <img src="${item.cover.url}" class="rounded" width="100%"><br>

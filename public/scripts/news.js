@@ -91,7 +91,7 @@ const contentCycle = () => {
       <p>
       ${converter.makeHtml(content).substring(0, 200)}
       </p>
-      <span class="date2">${item.createdAt}</span>
+      <span class="date2">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
     </li>
     </div>
       `;
@@ -125,7 +125,7 @@ $(document).ready(() => {
             <p>
             ${converter.makeHtml(content).substring(0, 200)}
             </p>
-            <span class="date2">${item.createdAt}</span>
+            <span class="date2">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
           </li>
           </div>
           `;
