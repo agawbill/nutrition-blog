@@ -124,6 +124,9 @@ const newsCycle = () => {
               </td>
               <td style="width:100%;position:relative; clear:both;">
                 <span class="newsText">
+                <span class="date3">${item.createdAt
+                  .substring(0, 10)
+                  .replace(/-/g, ".")}</span>
                     <h4 class="card-title">
                       <a href="/post.html?id=${
                         item._id
@@ -136,9 +139,7 @@ const newsCycle = () => {
 
                     </p>
                 </span>
-                <span class="date">${item.createdAt
-                  .substring(0, 10)
-                  .replace(/-/g, ".")}</span>
+                
               </td>
             </tr>
           </table>
