@@ -155,11 +155,9 @@ const entertainmentCycle = () => {
       <a href="/post.html?id=${
         item._id
       }" style="color:black!important;">${title.substring(0, 100)}</a>
-    </h5>
-
-   <p class='font800'>${converter.makeHtml(content.substring(0, 286))}</p>
     </p>
-
+    <p class='font800'>${converter.makeHtml(content.substring(0, 286))}</p>
+ 
 
   `;
   $("#entertainmentFirst").append(ent);
@@ -173,18 +171,13 @@ const entertainmentCycle = () => {
         const ent = `
     <div class="col-lg-3 col-md-3 mb-3" style="position:relative;float:center;">
       <img src="${item.cover.url}" class="rounded"   width="100%">
-      <p>
+      <span class="date3">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
         <h5 class="card-title">
           <a href="/post.html?id=${
             item._id
           }" style="color:black!important;">${title.substring(0, 100)}</a>
         </h5>
-        </p>
-  <span class="date3">${item.createdAt
-    .substring(0, 10)
-    .replace(/-/g, ".")}</span>
-    </div>
-    `;
+    </div>`;
         $("#entertainmentSecond").append(ent);
       } else {
         const item = entertainment[i];
@@ -192,18 +185,12 @@ const entertainmentCycle = () => {
         const ent = `
     <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 2px dotted navY">
     <img src="${item.cover.url}" class="rounded"   width="100%">
-  <p>
+  <span class="date3">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
   <h5 class="card-title">
     <a href="/post.html?id=${
       item._id
     }" style="color:black!important;">${title.substring(0, 100)}</a>
   </h5>
-  <p>
-
-  </p>
-  <span class="date3">${item.createdAt
-    .substring(0, 10)
-    .replace(/-/g, ".")}</span>
     </div>
     `;
         $("#entertainmentSecond").append(ent);
@@ -220,13 +207,9 @@ const techCycle = () => {
   <img src="${
     item.cover.url
   }" class="rounded"   width="50%" style="float:left;padding-right:15px;">
-  <span class="date3">${item.createdAt
-    .substring(0, 10)
-    .replace(/-/g, ".")}</span>
+  <span class="date3">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
     <p style="font-size:  1.7em; font-weight: 800; " class="card-title">
-      <a href="/post.html?id=${
-        item._id
-      }"style="color:black!important;">${title.substring(0, 100)}</a>
+      <a href="/post.html?id=${item._id}"style="color:black!important;">${title.substring(0, 100)}</a>
     </p>
     <p>
     ${converter.makeHtml(content).substring(0, 351)}
@@ -245,12 +228,12 @@ const techCycle = () => {
         const tech = `
         <div class="col-lg-3 col-md-3 mb-3" style="position:relative;float:center;">
           <img src="${item.cover.url}" class="rounded"   width="100%">
+             <span class="date3">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
              <h5 class="card-title">
               <a href="/post.html?id=${
                 item._id
               }" style="color:black!important;">${title.substring(0, 100)}</a>
             </h5>
-       <span class="date3">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
         </div>`;
         $("#technologySecond").append(tech);
       } else {
