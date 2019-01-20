@@ -90,21 +90,17 @@ const newsCycle = () => {
               </td>
               <td style="width:100%;position:relative; clear:both;">
                 <span class="newsText">
+                <span class="date3">${item.createdAt
+                  .substring(0, 10)
+                  .replace(/-/g, ".")}
+                </span>
                     <h4 class="card-title">
                       <a href="/post.html?id=${
                         item._id
-                      }" style="color:black!important;">${title.substring(
-          0,
-          100
-        )}</a>
+                      }" style="color:black!important;">${title.substring(0,100)}</a>
                     </h4>
-                    <p>
-
-                    </p>
                 </span>
-                <span class="date">${item.createdAt
-                  .substring(0, 10)
-                  .replace(/-/g, ".")}</span>
+                
               </td>
             </tr>
           </table>
@@ -124,16 +120,9 @@ const newsCycle = () => {
               </td>
               <td style="width:100%;position:relative; clear:both;">
                 <span class="newsText">
-                <span class="date3">${item.createdAt
-                  .substring(0, 10)
-                  .replace(/-/g, ".")}</span>
+                  <span class="date3">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
                     <h4 class="card-title">
-                      <a href="/post.html?id=${
-                        item._id
-                      }" style="color:black!important;">${title.substring(
-          0,
-          100
-        )}</a>
+                      <a href="/post.html?id=${item._id}" style="color:black!important;">${title.substring(0,100)}</a>
                     </h4>
                     <p>
 
@@ -381,20 +370,11 @@ const selectedCycle = () => {
       } else if (i === 4) {
         const selected = `
       <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 0px">
-        <a href="/post.html?id=${
-          item._id
-        }" style="color:black!important;"><h6>${title.substring(
-          0,
-          100
-        )}</h6></a>
+          <span class="date3">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
+        <a href="/post.html?id=${item._id}" style="color:black!important;"><h6>${title.substring(0,100)}</h6></a>
         <p>
           ${converter.makeHtml(content).substring(0, 320)}
         </p>
-
-        <span class="date">${item.createdAt
-          .substring(0, 10)
-          .replace(/-/g, ".")}</span>
-
       </div>
       `;
         $("#selected").append(selected);
@@ -407,13 +387,10 @@ const selectedCycle = () => {
               <h6 class='font800'>${title.substring(0, 100)}</h6>
             </a>
             <br>
-
             <p style="font-size:12px;  ">
               ${content.substring(0, 330)}
             </p>
-            <span class="date">${item.createdAt
-              .substring(0, 10)
-              .replace(/-/g, ".")}</span>
+            <span class="date3">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
             <br>
         </div>
       `;
@@ -436,18 +413,13 @@ const randomSixCycle = () => {
         <div class="col-lg-4 col-md-4 mb-4" style="position:relative;border-right: 0px; padding:1%">
         <img src="${item.cover.url}" class="rounded" width="100%">
         <p>
+        <span class="date3">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
         <h5 class="card-title">
         <a href="/post.html?id=${
           item._id
         }" style="color:black!important;">${title.substring(0, 100)} </a>
         </h5>
-        <p>
-
-        </p>
-        <span class="date">${item.createdAt
-          .substring(0, 10)
-          .replace(/-/g, ".")}</span>
-      </div>
+       </div>
       `;
         $("#randomSix").append(node);
       } else {
@@ -455,20 +427,11 @@ const randomSixCycle = () => {
       <div class="col-lg-4 col-md-4 mb-4 randomSix" style="position:relative;border-right:2px dotted navy; padding:1%">
       <img src="${item.cover.url}" class="rounded"   width="100%">
       <p>
+       <span class="date3">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
       <h5 class="card-title">
-      <a href="/post.html?id=${
-        item._id
-      }"style="color:black!important;">${title.substring(0, 100)} </a>
+        <a href="/post.html?id=${item._id}"style="color:black!important;">${title.substring(0, 100)} </a>
       </h5>
-
-      <p>
-
-      </p>
-        <span class="date">${item.createdAt
-          .substring(0, 10)
-          .replace(/-/g, ".")}</span>
       </div>
-
       `;
         $("#randomSix").append(node);
       }
