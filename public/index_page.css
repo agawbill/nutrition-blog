@@ -256,3 +256,8 @@ hr {
     max-width: 160em;
   }
 }
+
+
+.randomSix2a .randomSix1 .randomSix2{
+  border-bottom: 2px dashed navy ;
+}
