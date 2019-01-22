@@ -258,6 +258,12 @@ hr {
 }
 
 
-.randomSix2a .randomSix1 .randomSix2{
+.randomSix2a {
+  border-bottom: 2px dashed navy ;
+}
+.randomSix0 {
+  border-bottom: 2px dashed navy ;
+}
+.randomSix1{
   border-bottom: 2px dashed navy ;
 }
