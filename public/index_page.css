@@ -258,12 +258,15 @@ hr {
 }
 
 
-.randomSix2a {
-  border-bottom: 2px dashed navy ;
+div.randomSix2a {
+  border-bottom: 2px dotted navy ;
+  margin-bottom: 0 !important;
 }
-.randomSix0 {
-  border-bottom: 2px dashed navy ;
+div.randomSix0 {
+  border-bottom: 2px dotted navy ;
+  margin-bottom: 0 !important;
 }
 .randomSix1{
-  border-bottom: 2px dashed navy ;
+  border-bottom: 2px dotted navy ;
+  margin-bottom: 0 !important;
 }
