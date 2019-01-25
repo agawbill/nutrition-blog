@@ -484,6 +484,9 @@ const recPostCycle = () => {
     const node = `
       <div class="row">
         <div style="display: block; padding-left:35px; padding-right:35px;  ">
+        <span class="date2">${item.createdAt
+          .substring(0, 10)
+          .replace(/-/g, ".")}</span>
         <p>
         <h5 style="border-bottom:2px dashed rgb(73,86,120); padding-bottom:10px;" class="card-title">
         <a href="/post.html?id=${
@@ -492,9 +495,7 @@ const recPostCycle = () => {
         </h5>
 
         </p>
-        <span class="date2">${item.createdAt
-          .substring(0, 10)
-          .replace(/-/g, ".")}</span>
+
       </div>
     </div>
       `;
