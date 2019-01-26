@@ -23,19 +23,16 @@ const postLogic = item => {
   if (item !== undefined) {
     content = contentLanguage;
     title = titleLanguage;
-    description = descriptionLanguage;
+
     if (contentLanguage == "ENG") {
       content = item.content_eng;
       title = item.title_eng;
-      description = item.description_eng;
     } else if (contentLanguage == "RU") {
       content = item.content;
       title = item.title;
-      description = item.description;
     } else {
       content = item.content_az;
       title = item.title_az;
-      description = item.description_az;
     }
   }
 };

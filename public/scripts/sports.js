@@ -14,19 +14,16 @@ const postLogic = item => {
   if (item !== undefined) {
     content = contentLanguage;
     title = titleLanguage;
-    description = descriptionLanguage;
+
     if (contentLanguage == "ENG") {
       content = item.content_eng;
       title = item.title_eng;
-      description = item.description_eng;
     } else if (contentLanguage == "RU") {
       content = item.content;
       title = item.title;
-      description = item.description;
     } else {
       content = item.content_az;
       title = item.title_az;
-      description = item.description_az;
     }
   }
 };
@@ -41,7 +38,9 @@ const contentCycle = () => {
       item.cover.url
     }"width="30%" class="rounded" align="left" style="padding-right:5px;" >
       <div class="media-body">
-            <span class="date3">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
+            <span class="date3">${item.createdAt
+              .substring(0, 10)
+              .replace(/-/g, ".")}</span>
 
       <h4 class="card-title">
         <a href="/post.html?id=${item._id}"> ${title}</a>
@@ -117,12 +116,12 @@ $(document).ready(() => {
             item.cover.url
           }"width="30%" class="rounded" align="left" style="padding-right:5px;" >
             <div class="media-body">
-                        <span class="date3">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
+                        <span class="date3">${item.createdAt
+                          .substring(0, 10)
+                          .replace(/-/g, ".")}</span>
 
             <h4 class="card-title">
-              <a href="/post.html?id=${
-                item._id
-              }"> ${title}</a>
+              <a href="/post.html?id=${item._id}"> ${title}</a>
             </h4>
             <p>
             ${converter.makeHtml(content).substring(0, 200)}
