@@ -27,24 +27,6 @@
       "maxLength": 300,
       "required": true
     },
-    "description_eng": {
-      "default": "",
-      "type": "string",
-      "maxLength": 500,
-      "required": true
-    },
-    "description": {
-      "default": "",
-      "type": "string",
-      "maxLength": 500,
-      "required": true
-    },
-    "description_az": {
-      "default": "",
-      "type": "string",
-      "maxLength": 500,
-      "required": true
-    },
     "content_eng": {
       "default": "",
       "type": "text",

@@ -44,7 +44,7 @@ const contentCycle = () => {
             <span class="date3">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
 
       <h4 class="card-title">
-        <a href="/post.html?id=${item._id}"> ${title}: «${description}»  </a>
+        <a href="/post.html?id=${item._id}"> ${title}</a>
       </h4>
       <p>
       ${converter.makeHtml(content).substring(0, 200)}
@@ -122,7 +122,7 @@ $(document).ready(() => {
             <h4 class="card-title">
               <a href="/post.html?id=${
                 item._id
-              }"> ${title}: «${description}»  </a>
+              }"> ${title}</a>
             </h4>
             <p>
             ${converter.makeHtml(content).substring(0, 200)}

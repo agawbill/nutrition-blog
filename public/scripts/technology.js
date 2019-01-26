@@ -86,7 +86,7 @@ const contentCycle = () => {
     }"width="30%" class="rounded" align="left" style="padding-right:5px;" >
       <div class="media-body">
       <h4 class="card-title">
-        <a href="/post.html?id=${item._id}"> ${title}: «${description}»  </a>
+        <a href="/post.html?id=${item._id}"> ${title}</a>
       </h4>
       <p>
       ${converter.makeHtml(content).substring(0, 200)}
@@ -121,7 +121,7 @@ $(document).ready(() => {
             <h4 class="card-title">
               <a href="/post.html?id=${
                 item._id
-              }"> ${title}: «${description}»  </a>
+              }"> ${title}</a>
             </h4>
             <p>
             ${converter.makeHtml(content).substring(0, 200)}
