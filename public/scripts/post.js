@@ -15,19 +15,16 @@ const postLogic = item => {
   if (item !== undefined) {
     content = contentLanguage;
     title = titleLanguage;
-    description = descriptionLanguage;
+
     if (contentLanguage == "ENG") {
       content = item.content_eng;
       title = item.title_eng;
-      description = item.description_eng;
     } else if (contentLanguage == "RU") {
       content = item.content;
       title = item.title;
-      description = item.description;
     } else {
       content = item.content_az;
       title = item.title_az;
-      description = item.description_az;
     }
   }
 };
@@ -37,11 +34,13 @@ const postCycle = () => {
   postLogic(item);
   const node = `
   <div class="col-lg-12 col-md-12 mb-12">
-    <span class="date3">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
+    <span class="date3">${item.createdAt
+      .substring(0, 10)
+      .replace(/-/g, ".")}</span>
     <h4 class="card-title">
-      <a href="/post.html?id=${item._id}">${title}:  «${description}»  </a>
+      <a href="/post.html?id=${item._id}">${title}</a>
     </h4>
-  
+
     <p>
       <img src="${item.cover.url}" class="rounded" width="100%"><br>
     </p>
@@ -91,12 +90,12 @@ $(document).ready(() => {
       $("#postContainer").append(`
         <div class="col-lg-12 col-md-12 mb-12">
           <h4 class="card-title">
-            <a href="/post.html?id=${
-              item._id
-            }">${title}:  «${description}»  </a>
+            <a href="/post.html?id=${item._id}">${title}</a>
           </h4>
           <p>
-          <span class="date2">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
+          <span class="date2">${item.createdAt
+            .substring(0, 10)
+            .replace(/-/g, ".")}</span>
           </p>
           <p>
             <img src="${item.cover.url}" class="rounded" width="100%"><br>
