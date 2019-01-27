@@ -87,21 +87,13 @@ const newsCycle = () => {
               </td>
               <td style="width:100%;position:relative; clear:both;">
                 <span class="newsText">
+                          <span class="date3">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
                     <h4 class="card-title">
                       <a href="/post.html?id=${
                         item._id
-                      }" style="color:black!important;">${title.substring(
-          0,
-          100
-        )}</a>
+                      }" style="color:black!important;">${title.substring( 0, 100 )}</a>
                     </h4>
-                    <p>
-
-                    </p>
                 </span>
-                <span class="date">${item.createdAt
-                  .substring(0, 10)
-                  .replace(/-/g, ".")}</span>
               </td>
             </tr>
           </table>
@@ -121,21 +113,11 @@ const newsCycle = () => {
               </td>
               <td style="width:100%;position:relative; clear:both;">
                 <span class="newsText">
+                    <span class="date3">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
                     <h4 class="card-title">
-                      <a href="/post.html?id=${
-                        item._id
-                      }" style="color:black!important;">${title.substring(
-          0,
-          100
-        )}</a>
+                      <a href="/post.html?id=${  item._id }" style="color:black!important;">${title.substring(  0,  100  )}</a>
                     </h4>
-                    <p>
-
-                    </p>
                 </span>
-                <span class="date">${item.createdAt
-                  .substring(0, 10)
-                  .replace(/-/g, ".")}</span>
               </td>
             </tr>
           </table>
@@ -156,7 +138,7 @@ const entertainmentCycle = () => {
   <img src="${
     item.cover.url
   }" class="rounded"   width="50%" style="float:left; padding-right:15px;">
-  <span class="date2">${item.createdAt
+  <span class="date3">${item.createdAt
     .substring(0, 10)
     .replace(/-/g, ".")}</span>
   </div>
@@ -165,11 +147,8 @@ const entertainmentCycle = () => {
         item._id
       }" style="color:black!important;">${title.substring(0, 100)}</a>
     </h5>
-
    <p class='font800'>${converter.makeHtml(content.substring(0, 286))}</p>
     </p>
-
-
   `;
   $("#entertainmentFirst").append(ent);
   for (let i = 1; i < entertainment.length; i++) {
@@ -183,15 +162,13 @@ const entertainmentCycle = () => {
     <div class="col-lg-3 col-md-3 mb-3" style="position:relative;float:center;">
       <img src="${item.cover.url}" class="rounded"   width="100%">
       <p>
+      <span class="date3">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
         <h5 class="card-title">
           <a href="/post.html?id=${
             item._id
           }" style="color:black!important;">${title.substring(0, 100)}</a>
         </h5>
         </p>
-  <span class="date2">${item.createdAt
-    .substring(0, 10)
-    .replace(/-/g, ".")}</span>
     </div>
     `;
         $("#entertainmentSecond").append(ent);
@@ -202,17 +179,12 @@ const entertainmentCycle = () => {
     <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 2px dotted navY">
     <img src="${item.cover.url}" class="rounded"   width="100%">
   <p>
+  <span class="date3">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
   <h5 class="card-title">
     <a href="/post.html?id=${
       item._id
     }" style="color:black!important;">${title.substring(0, 100)}</a>
   </h5>
-  <p>
-
-  </p>
-  <span class="date2">${item.createdAt
-    .substring(0, 10)
-    .replace(/-/g, ".")}</span>
     </div>
     `;
         $("#entertainmentSecond").append(ent);
@@ -240,7 +212,6 @@ const techCycle = () => {
     <p>
     ${converter.makeHtml(content).substring(0, 351)}
     </p>
-
     </div>
   `;
   $("#technologyFirst").append(tech);
@@ -255,15 +226,13 @@ const techCycle = () => {
         <div class="col-lg-3 col-md-3 mb-3" style="position:relative;float:center;">
           <img src="${item.cover.url}" class="rounded"   width="100%">
           <p>
+          <span class="date3">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
             <h5 class="card-title">
               <a href="/post.html?id=${
                 item._id
               }" style="color:black!important;">${title.substring(0, 100)}</a>
             </h5>
             </p>
-      <span class="date2">${item.createdAt
-        .substring(0, 10)
-        .replace(/-/g, ".")}</span>
         </div>
     `;
         $("#technologySecond").append(tech);
@@ -274,17 +243,12 @@ const techCycle = () => {
     <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 2px dotted navY">
     <img src="${item.cover.url}" class="rounded"   width="100%">
   <p>
+  <span class="date3">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
   <h5 class="card-title">
     <a href="/post.html?id=${
       item._id
     }" style="color:black!important;">${title.substring(0, 100)}</a>
   </h5>
-  <p>
-
-  </p>
-  <span class="date2">${item.createdAt
-    .substring(0, 10)
-    .replace(/-/g, ".")}</span>
     </div>
     `;
         $("#technologySecond").append(tech);
@@ -301,7 +265,7 @@ const sportsCycle = () => {
   <img src="${
     item.cover.url
   }" class="rounded"   width="50%" style="float:left; padding-right:15px;">
-  <span class="date2">${item.createdAt
+  <span class="date3">${item.createdAt
     .substring(0, 10)
     .replace(/-/g, ".")}</span>
     <p style="font-size:  1.7em; font-weight: 800; " class="card-title">
@@ -309,10 +273,8 @@ const sportsCycle = () => {
         item._id
       }" style="color:black!important;">${title.substring(0, 100)}</a>
     </h5>
-
    <p class='font800'>${converter.makeHtml(content).substring(0, 351)}</p>
     </p>
-
     </div>
   `;
   $("#sportsFirst").append(sport);
@@ -327,40 +289,29 @@ const sportsCycle = () => {
     <div class="col-lg-3 col-md-3 mb-3" style="position:relative;">
         <img src="${item.cover.url}" class="rounded"   width="100%">
       <p>
+      <span class="date3">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
       <h5 class="card-title">
         <a href="/post.html?id=${
           item._id
         }" style="color:black!important;">${title.substring(0, 100)}</a>
       </h5>
-      <p>
-
-      </p>
-      <span class="date2">${item.createdAt
-        .substring(0, 10)
-        .replace(/-/g, ".")}</span>
-    </div>
-    `;
-        $("#sportsSecond").append(sport);
-      } else {
+    </div> `;
+    
+  $("#sportsSecond").append(sport);
+  } else {
         const item = sports[i];
         postLogic(item);
         const sport = `
     <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 2px dotted navY;">
     <img src="${item.cover.url}" class="rounded"   width="100%">
   <p>
+  <span class="date3">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
   <h5 class="card-title">
     <a href="/post.html?id=${
       item._id
     }" style="color:black!important;">${title.substring(0, 100)}</a>
   </h5>
-  <p>
-
-  </p>
-  <span class="date2">${item.createdAt
-    .substring(0, 10)
-    .replace(/-/g, ".")}</span>
-    </div>
-    `;
+    </div>`;
         $("#sportsSecond").append(sport);
       }
     }
@@ -377,6 +328,7 @@ const selectedCycle = () => {
       } else if (i === 4) {
         const selected = `
       <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 0px">
+         <span class="date3">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
         <a href="/post.html?id=${
           item._id
         }" style="color:black!important;"><h6>${title.substring(
@@ -386,11 +338,6 @@ const selectedCycle = () => {
         <p>
           ${converter.makeHtml(content).substring(0, 320)}
         </p>
-
-        <span class="date">${item.createdAt
-          .substring(0, 10)
-          .replace(/-/g, ".")}</span>
-
       </div>
       `;
         $("#selected").append(selected);
@@ -400,16 +347,14 @@ const selectedCycle = () => {
         const selected = `
           <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 2px dotted navY; ">
             <a href="/post.html?id=${item._id}" style="color:black!important;">
+              <span class="date3">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
               <h6 class='font800'>${title.substring(0, 100)}</h6>
             </a>
             <br>
-
             <p style="font-size:12px;  ">
               ${content.substring(0, 330)}
             </p>
-            <span class="date">${item.createdAt
-              .substring(0, 10)
-              .replace(/-/g, ".")}</span>
+
             <br>
         </div>
       `;
@@ -432,17 +377,12 @@ const randomSixCycle = () => {
         <div class="col-lg-4 col-md-4 mb-4" style="position:relative;border-right: 0px; padding:1%">
         <img src="${item.cover.url}" class="rounded" width="100%">
         <p>
+        <span class="date3">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
         <h5 class="card-title">
         <a href="/post.html?id=${
           item._id
         }" style="color:black!important;">${title.substring(0, 100)} </a>
         </h5>
-        <p>
-
-        </p>
-        <span class="date">${item.createdAt
-          .substring(0, 10)
-          .replace(/-/g, ".")}</span>
       </div>
       `;
         $("#randomSix").append(node);
@@ -451,20 +391,13 @@ const randomSixCycle = () => {
       <div class="col-lg-4 col-md-4 mb-4 randomSix" style="position:relative;border-right:2px dotted navy; padding:1%">
       <img src="${item.cover.url}" class="rounded"   width="100%">
       <p>
+      <span class="date3">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
       <h5 class="card-title">
       <a href="/post.html?id=${
         item._id
       }"style="color:black!important;">${title.substring(0, 100)} </a>
       </h5>
-
-      <p>
-
-      </p>
-        <span class="date">${item.createdAt
-          .substring(0, 10)
-          .replace(/-/g, ".")}</span>
       </div>
-
       `;
         $("#randomSix").append(node);
       }
@@ -481,7 +414,7 @@ const recPostCycle = () => {
     const node = `
       <div class="row">
         <div style="display: block; padding-left:35px; padding-right:35px;  ">
-        <span class="date2">${item.createdAt
+        <span class="date3">${item.createdAt
           .substring(0, 10)
           .replace(/-/g, ".")}</span>
         <p>
@@ -490,9 +423,7 @@ const recPostCycle = () => {
           item._id
         }" style="color:black!important;">${title.substring(0, 70)}  </a>
         </h5>
-
         </p>
-
       </div>
     </div>
       `;
