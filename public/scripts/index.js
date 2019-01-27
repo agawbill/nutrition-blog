@@ -374,7 +374,7 @@ const randomSixCycle = () => {
     if (item !== undefined) {
       if (i === 2 || i === 5) {
         const node = `
-        <div class="col-lg-4 col-md-4 mb-4" style="position:relative;border-right: 0px; padding:1%">
+        <div class="col-lg-4 col-md-4 mb-4 randomSix${i}a " style="position:relative;border-right: 0px; padding:1%">
         <img src="${item.cover.url}" class="rounded" width="100%">
         <p>
         <span class="date3">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
@@ -388,7 +388,7 @@ const randomSixCycle = () => {
         $("#randomSix").append(node);
       } else {
         const node = `
-      <div class="col-lg-4 col-md-4 mb-4 randomSix" style="position:relative;border-right:2px dotted navy; padding:1%">
+      <div class="col-lg-4 col-md-4 mb-4 randomSix${i} " style="position:relative;border-right:2px dotted navy; padding:1%">
       <img src="${item.cover.url}" class="rounded"   width="100%">
       <p>
       <span class="date3">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
