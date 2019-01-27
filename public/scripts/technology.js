@@ -31,7 +31,7 @@ const postLogic = item => {
 
 const swapHeaders = contentLanguage => {
   headerArray = ["#talks", "#diet", "#fitness", "#upcoming", "#health"];
-  eng = ["Main News", "Diet", "Fitness", "Upcoming", "Health"];
+  eng = ["Main News", "Diet", "Fitness", "RECOMMENDED", "Health"];
   azi = ["Əsas Xəbərlər", "Diet", "Fintes", "Gelecekde", "Saglamlig"];
   rus = ["Главные Новости", "Питание", "Фитнес", "Анонс", "Здоровье"];
   for (let i = 0; i < headerArray.length; i++) {
