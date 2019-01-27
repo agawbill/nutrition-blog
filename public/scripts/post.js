@@ -1,5 +1,6 @@
 var converter = new showdown.Converter();
 var post = [];
+var recPostings = [];
 
 // language controls and
 
@@ -53,23 +54,77 @@ const postCycle = () => {
   $("#postContainer").append(node);
 };
 
+const recommendedCycle = () => {
+  for (var i = 0; i < recPostings.length; i++) {
+    if (i === 5) {
+      break;
+    }
+    const item = recPostings[i];
+    postLogic(item);
+    const node = `
+      <div class="row">
+        <div style="display: block; padding-left:35px; padding-right:35px;  ">
+        <span class="date2">${item.createdAt
+          .substring(0, 10)
+          .replace(/-/g, ".")}</span>
+        <p>
+        <h5 style="border-bottom:2px dashed rgb(73,86,120); padding-bottom:10px;" class="card-title">
+        <a href="/post.html?id=${
+          item._id
+        }" style="color:black!important;">${title.substring(0, 70)}  </a>
+        </h5>
+
+        </p>
+
+      </div>
+    </div>
+      `;
+    $("#recPosts").append(node);
+  }
+};
+
+const headingSwap = contentLanguage => {
+  if (contentLanguage === "ENG") {
+    $("#upcoming").empty();
+    $("#upcoming").append("RECOMMENDED");
+  } else if (contentLanguage === "AZ") {
+    $("#upcoming").empty();
+    $("#upcoming").append("REDAKSİYA SEÇİMİ");
+  } else {
+    $("#upcoming").empty();
+    $("#upcoming").append("РЕКОМЕНДОВАННЫЕ");
+  }
+};
+
 window.onload = () => {
   languageSelect.addEventListener("change", () => {
     if (languageSelect.value == "ENG") {
       localStorage["myKey"] = "ENG";
       contentLanguage = "ENG";
       $("#postContainer").empty();
-      postCycle();
+      $("#upcoming").empty();
+      $("#recPosts").empty();
+      postCycle(contentLanguage);
+      recommendedCycle(contentLanguage);
+      headingSwap(contentLanguage);
     } else if (languageSelect.value == "RU") {
       localStorage["myKey"] = "RU";
       contentLanguage = "RU";
       $("#postContainer").empty();
-      postCycle();
+      $("#upcoming").empty();
+      $("#recPosts").empty();
+      postCycle(contentLanguage);
+      recommendedCycle(contentLanguage);
+      headingSwap(contentLanguage);
     } else if (languageSelect.value == "AZ") {
       localStorage["myKey"] = "AZ";
       contentLanguage = "AZ";
       $("#postContainer").empty();
-      postCycle();
+      $("#upcoming").empty();
+      $("#recPosts").empty();
+      postCycle(contentLanguage);
+      recommendedCycle(contentLanguage);
+      headingSwap(contentLanguage);
     }
   });
 };
@@ -80,7 +135,51 @@ $(document).ready(() => {
   const url = new URL(window.location.href);
   const id = url.searchParams.get("id");
 
+  // get recommended posts
+
+  $.ajax({
+    url: `/posts`,
+    method: "GET",
+    success: data => {
+      // console.log(data);
+      for (let i = data.length - 1; i >= 0; i--) {
+        const item = data[i];
+        if (item.recPosts == true) {
+          postLogic(item);
+          console.log(item);
+          recPostings.unshift(item);
+          if (i === 5) {
+            break;
+          }
+          const node = `
+            <div class="row">
+              <div style="display: block; padding-left:35px; padding-right:35px;  ">
+              <span class="date2">${item.createdAt
+                .substring(0, 10)
+                .replace(/-/g, ".")}</span>
+              <p>
+              <h5 style="border-bottom:2px dashed rgb(73,86,120); padding-bottom:10px;" class="card-title">
+              <a href="/post.html?id=${
+                item._id
+              }" style="color:black!important;">${title.substring(0, 70)}  </a>
+              </h5>
+
+              </p>
+
+            </div>
+          </div>
+            `;
+          $("#recPosts").append(node);
+        }
+      }
+    },
+    catch: err => {
+      console.log(err);
+    }
+  });
+
   // Get single cake data and template product.html file.
+
   $.ajax({
     url: `/posts/${id}`,
     method: "GET",

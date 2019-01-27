@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "01/17/2019 10:28:10 PM"
+    "x-generation-date": "01/27/2019 4:50:10 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3066,9 +3066,6 @@
           "title_eng",
           "title",
           "title_az",
-          "description_eng",
-          "description",
-          "description_az",
           "content_eng",
           "content",
           "content_az",
@@ -3093,21 +3090,6 @@
             "type": "string",
             "default": "",
             "maxLength": 300
-          },
-          "description_eng": {
-            "type": "string",
-            "default": "",
-            "maxLength": 500
-          },
-          "description": {
-            "type": "string",
-            "default": "",
-            "maxLength": 500
-          },
-          "description_az": {
-            "type": "string",
-            "default": "",
-            "maxLength": 500
           },
           "content_eng": {
             "type": "string",
@@ -3193,9 +3175,6 @@
           "title_eng",
           "title",
           "title_az",
-          "description_eng",
-          "description",
-          "description_az",
           "content_eng",
           "content",
           "content_az",
@@ -3216,21 +3195,6 @@
             "type": "string",
             "default": "",
             "maxLength": 300
-          },
-          "description_eng": {
-            "type": "string",
-            "default": "",
-            "maxLength": 500
-          },
-          "description": {
-            "type": "string",
-            "default": "",
-            "maxLength": 500
-          },
-          "description_az": {
-            "type": "string",
-            "default": "",
-            "maxLength": 500
           },
           "content_eng": {
             "type": "string",
