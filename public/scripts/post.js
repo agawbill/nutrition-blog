@@ -46,10 +46,8 @@ const postCycle = () => {
       <img src="${item.cover.url}" class="rounded" width="100%"><br>
     </p>
     <p>
-    <h5>${converter.makeHtml(content)}
-        <div width="200px" class="fb-share-button" data-href="http://andop.az/post.html?id=${item._id}" data-layout="button_count" data-size="large" data-mobile-iframe="true">
-          <a  href="https://www.facebook.com/sharer/sharer.php?u=http://andop.az/post.html?id=${item._id}&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
-        </div>
+    <h5>${converter.makeHtml(content)} 
+      
     </h5>
     </p>
        
@@ -204,7 +202,9 @@ $(document).ready(() => {
             <img src="${item.cover.url}" class="rounded" width="100%"><br>
           </p>
           <p>
-          <h5>${converter.makeHtml(content)}</h5>
+          <h5>${converter.makeHtml(content)}
+                    <a class='btn btn-info'  href="https://www.facebook.com/sharer/sharer.php?u=http://andop.az/post.html?id=${item._id}&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
+          </h5>
           </p>
 
         </div>
