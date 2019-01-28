@@ -34,6 +34,10 @@ const postCycle = () => {
   item = post[0];
   postLogic(item);
   const node = `
+  <div class="fb-share-button" data-href="https://nutrition-blog2.herokuapp.com/post.html?id=${item._id}" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fnutrition-blog2.herokuapp.com%2Fpost.html%3Fid%3D5c3d1331eb430d0017c2e217&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+  
+  
+  
   <div class="col-lg-12 col-md-12 mb-12">
     <span class="date3">${item.createdAt
       .substring(0, 10)
