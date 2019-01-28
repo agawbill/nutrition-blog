@@ -159,9 +159,9 @@ $(document).ready(() => {
               <span class="date2">${item.createdAt
                 .substring(0, 10)
                 .replace(/-/g, ".")}</span>
+                <a class="btn btn-info" href="https://www.facebook.com/sharer.php?u=http://andop.az/post.html?id=${item._id}">Share</a>
               <p>
-                                  <a class='btn btn-info'  href="https://www.facebook.com/sharer/sharer.php?u=http://andop.az/post.html?id=${item._id}&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
-
+<a class="btn btn-info" href="https://www.facebook.com/sharer.php?u=http://andop.az/post.html?id=${item._id}">Share</a>
               <h5 style="border-bottom:2px dashed rgb(73,86,120); padding-bottom:10px;" class="card-title">
               <a href="/post.html?id=${
                 item._id
@@ -195,7 +195,8 @@ $(document).ready(() => {
           <h4 class="card-title">
             <a href="/post.html?id=${item._id}">${title}</a>
           </h4>
-           <a class='btn btn-info'  href="https://www.facebook.com/sharer/sharer.php?u=http://andop.az/post.html?id=${item._id}&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
+<a class="btn btn-info" href="https://www.facebook.com/sharer.php?u=http://andop.az/post.html?id=${item._id}">Share</a>
+
 
           <p>
           <span class="date2">${item.createdAt
@@ -204,10 +205,12 @@ $(document).ready(() => {
           </p>
           <p>
             <img src="${item.cover.url}" class="rounded" width="100%"><br>
+            <a class="btn btn-info" href="https://www.facebook.com/sharer.php?u=http://andop.az/post.html?id=${item._id}">Share</a>
+
           </p>
           <p>
           <h5>${converter.makeHtml(content)}
-                    <a class='btn btn-info'  href="https://www.facebook.com/sharer/sharer.php?u=http://andop.az/post.html?id=${item._id}&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
+<a class="btn btn-info" href="https://www.facebook.com/sharer.php?u=http://andop.az/post.html?id=${item._id}">Share</a>
           </h5>
           </p>
 
