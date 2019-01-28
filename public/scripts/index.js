@@ -467,7 +467,7 @@ const latestPosts = () => {
   }
 };
 
-// headers in languages
+// headers in differnt languages
 
 const swapHeaders = contentLanguage => {
   headerArray = ["#talks", "#diet", "#fitness", "#upcoming", "#health"];
@@ -489,6 +489,8 @@ const swapHeaders = contentLanguage => {
 };
 
 swapHeaders(contentLanguage);
+
+// wipe clear sections for new languages to load, and cycle through languages to be appended to emptied divs upon language change
 
 const emptyAll = () => {
   $("#latestPosts").empty();
@@ -531,6 +533,8 @@ const functionCycle = () => {
     latestPosts();
   }
 };
+
+// language change logic
 
 window.onload = () => {
   languageSelect.addEventListener("change", () => {

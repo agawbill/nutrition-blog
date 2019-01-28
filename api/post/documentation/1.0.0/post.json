@@ -494,9 +494,6 @@
           "title_eng",
           "title",
           "title_az",
-          "description_eng",
-          "description",
-          "description_az",
           "content_eng",
           "content",
           "content_az",
@@ -521,21 +518,6 @@
             "type": "string",
             "default": "",
             "maxLength": 300
-          },
-          "description_eng": {
-            "type": "string",
-            "default": "",
-            "maxLength": 500
-          },
-          "description": {
-            "type": "string",
-            "default": "",
-            "maxLength": 500
-          },
-          "description_az": {
-            "type": "string",
-            "default": "",
-            "maxLength": 500
           },
           "content_eng": {
             "type": "string",
@@ -621,9 +603,6 @@
           "title_eng",
           "title",
           "title_az",
-          "description_eng",
-          "description",
-          "description_az",
           "content_eng",
           "content",
           "content_az",
@@ -644,21 +623,6 @@
             "type": "string",
             "default": "",
             "maxLength": 300
-          },
-          "description_eng": {
-            "type": "string",
-            "default": "",
-            "maxLength": 500
-          },
-          "description": {
-            "type": "string",
-            "default": "",
-            "maxLength": 500
-          },
-          "description_az": {
-            "type": "string",
-            "default": "",
-            "maxLength": 500
           },
           "content_eng": {
             "type": "string",
