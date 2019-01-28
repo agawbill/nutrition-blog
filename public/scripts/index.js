@@ -633,7 +633,7 @@ $(document).ready(() => {
                         item._id
                       }" style="color:black!important;">${title.substring(
             0,
-            35
+            70
           )}  </a>
                       </p>
                   </span>
