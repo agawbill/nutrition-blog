@@ -14,7 +14,7 @@ var azerbaijan = document.getElementById("azerbaijan");
 
 const switchMenu = () => {
   const russianMenu = `
-          <ul style='list-style-type: none; margin-left: 10rem; padding: 0; font-size:1.1em;'>
+          <ul style='list-style-type: none; margin: 0; padding: 0; font-size:1.1em;'>
            <li><a class="nav-link" href="about.html">ANDOP <span class="sr-only">(current)</span></a></li>
             <hr>
             </li><a class="nav-link" href="team.html">Наша Команда</a> </li>
