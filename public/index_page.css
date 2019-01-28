@@ -114,6 +114,7 @@ hr {
 .date3 {
   font-weight: bold;
   color: dimgrey;
+  padding-top: 5px;
   /*display: none;*/
 }
 
@@ -142,7 +143,8 @@ hr {
 }
 #footer_menu_blue {
   background-color: rgb(73, 86, 120);
-  height: 42px;
+  height: 60px;
+  padding-top: 18px;
   color: white;
   text-align: center;
 }
