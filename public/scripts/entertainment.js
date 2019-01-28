@@ -98,6 +98,7 @@ const contentCycle = () => {
       <span class="date2">${item.createdAt
         .substring(0, 10)
         .replace(/-/g, ".")}</span>
+        <a class='btn btn-info'  href="https://www.facebook.com/sharer/sharer.php?u=http://andop.az/post.html?id=${item._id}&amp;src=sdkpreparse" >Share</a>
     </li>
     </div>
       `;

@@ -160,6 +160,8 @@ $(document).ready(() => {
                 .substring(0, 10)
                 .replace(/-/g, ".")}</span>
               <p>
+                                  <a class='btn btn-info'  href="https://www.facebook.com/sharer/sharer.php?u=http://andop.az/post.html?id=${item._id}&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
+
               <h5 style="border-bottom:2px dashed rgb(73,86,120); padding-bottom:10px;" class="card-title">
               <a href="/post.html?id=${
                 item._id
@@ -193,6 +195,8 @@ $(document).ready(() => {
           <h4 class="card-title">
             <a href="/post.html?id=${item._id}">${title}</a>
           </h4>
+           <a class='btn btn-info'  href="https://www.facebook.com/sharer/sharer.php?u=http://andop.az/post.html?id=${item._id}&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
+
           <p>
           <span class="date2">${item.createdAt
             .substring(0, 10)
