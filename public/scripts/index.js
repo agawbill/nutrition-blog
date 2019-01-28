@@ -441,7 +441,7 @@ const latestPosts = () => {
           <td>
               <img src="${
                 item.cover.url
-              }"   width="80px" style="padding-right:5px;">
+              }"   width="90px" style="padding-right:5px;">
           </td>
           <td style="width:100%;position:relative; clear:both;">
             <span class="newsText">
@@ -624,18 +624,18 @@ $(document).ready(() => {
                 <td>
                     <img src="${
                       item.cover.url
-                    }"  height="60px" width="80px" style="padding-right:5px;">
+                    }"   width="90px" style="padding-right:5px;">
                 </td>
                 <td style="width:100%;position:relative; clear:both;">
                   <span class="newsText">
-                      <h5 class="card-title">
+                      <p style="font-size:12px!important;" class="card-title font800">
                       <a href="/post.html?id=${
                         item._id
                       }" style="color:black!important;">${title.substring(
             0,
             35
           )}  </a>
-                      </h5>
+                      </p>
                   </span>
                 </td>
 
