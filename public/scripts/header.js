@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     </div>
-       <div class='container-fluid'>
+      
   `;
 
   var languageSelect2 = document.getElementById("languageSelect");
