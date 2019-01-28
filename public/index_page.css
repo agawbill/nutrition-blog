@@ -256,7 +256,10 @@ hr {
     max-width: 160em;
   }
 }
-
+div.container-fluid {
+  padding-left: 5em!important;
+  padding-right: 5em!important
+}
 
 div.randomSix2a {
   border-bottom: 2px dotted navy ;
