@@ -38,7 +38,7 @@ const newsCycle = () => {
   news.sort(function compare(a, b) {
     var dateA = new Date(a.createdAt);
     var dateB = new Date(b.createdAt);
-    return dateA - dateB;
+    return dateB - dateA;
   });
 
   const item = news[0];
@@ -142,7 +142,7 @@ const entertainmentCycle = () => {
   entertainment.sort(function compare(a, b) {
     var dateA = new Date(a.createdAt);
     var dateB = new Date(b.createdAt);
-    return dateA - dateB;
+    return dateB - dateA;
   });
 
   const item = entertainment[0];
@@ -214,7 +214,7 @@ const techCycle = () => {
   technology.sort(function compare(a, b) {
     var dateA = new Date(a.createdAt);
     var dateB = new Date(b.createdAt);
-    return dateA - dateB;
+    return dateB - dateA;
   });
 
   const item = technology[0];
@@ -287,7 +287,7 @@ const sportsCycle = () => {
   sports.sort(function compare(a, b) {
     var dateA = new Date(a.createdAt);
     var dateB = new Date(b.createdAt);
-    return dateA - dateB;
+    return dateB - dateA;
   });
 
   const item = sports[0];
