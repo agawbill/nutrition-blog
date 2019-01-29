@@ -1,6 +1,7 @@
 var converter = new showdown.Converter();
 var post = [];
 var recPostings = [];
+var firstSix = [];
 
 // language controls and
 
@@ -35,25 +36,77 @@ const postCycle = () => {
   postLogic(item);
   const node = `
   <div class="col-lg-12 col-md-12 mb-12">
-    <span class="date3">${item.createdAt
-      .substring(0, 10)
-      .replace(/-/g, ".")}</span>
     <h4 class="card-title">
       <a href="/post.html?id=${item._id}">${title}</a>
     </h4>
-
+    <p>
+    <span class="date2">${item.createdAt
+      .substring(0, 10)
+      .replace(/-/g, ".")}</span>
+    </p>
     <p>
       <img src="${item.cover.url}" class="rounded" width="100%"><br>
+<div class="fb-share-button pull-right" data-href="https://www.facebook.com/sharer.php?u=http://andop.az/post.html?id=${
+    item._id
+  }" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a href="https://www.facebook.com/sharer.php?u=http://andop.az/post.html?id=${
+    item._id
+  }&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
+</div>
     </p>
     <p>
-    <h5>${converter.makeHtml(content)} 
-      
+    <h5>${converter.makeHtml(content)}
+
+<div class="fb-share-button" data-href="https://www.facebook.com/sharer.php?u=http://andop.az/post.html?id=${
+    item._id
+  }" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a href="https://www.facebook.com/sharer.php?u=http://andop.az/post.html?id=${
+    item._id
+  }&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
+</div>
+
+
     </h5>
     </p>
-       
+
   </div>
     `;
   $("#postContainer").append(node);
+};
+
+const latestCycle = () => {
+  for (let i = 0; i < firstSix.length; i++) {
+    const item = firstSix[i];
+    postLogic(item);
+    const node = `
+
+      <table style="margin-bottom:10px; display:block">
+        <tr>
+          <td>
+              <img src="${
+                item.cover.url
+              }"   width="90px" style="padding-right:5px;">
+          </td>
+          <td style="width:100%;position:relative; clear:both;">
+            <span class="newsText">
+                <p style="font-size:12px!important;" class="card-title font800">
+                <a href="/post.html?id=${
+                  item._id
+                }" style="color:black!important;">${title.substring(
+      0,
+      60
+    )}  </a>
+                </p>
+            </span>
+          </td>
+
+        </tr>
+        </div>
+      </table>
+      <hr>
+      </br>
+      <div style="clear:both;"></div>
+  `;
+    $("#latestPosts").append(node);
+  }
 };
 
 const recommendedCycle = () => {
@@ -88,15 +141,23 @@ const recommendedCycle = () => {
 const headingSwap = contentLanguage => {
   if (contentLanguage === "ENG") {
     $("#upcoming").empty();
+    $("#latest").empty();
     $("#upcoming").append("RECOMMENDED");
+    $("#latest").append("LATEST POSTS");
   } else if (contentLanguage === "AZ") {
     $("#upcoming").empty();
+    $("#latest").empty();
     $("#upcoming").append("REDAKSİYA SEÇİMİ");
+    $("#latest").append("SON PUBLİKASİYALAR");
   } else {
     $("#upcoming").empty();
+    $("#latest").empty();
     $("#upcoming").append("РЕКОМЕНДОВАННЫЕ");
+    $("#latest").append("ПОСЛЕДНИИ ПУБЛИКАЦИИ");
   }
 };
+
+headingSwap(contentLanguage);
 
 window.onload = () => {
   languageSelect.addEventListener("change", () => {
@@ -106,8 +167,10 @@ window.onload = () => {
       $("#postContainer").empty();
       $("#upcoming").empty();
       $("#recPosts").empty();
+      $("#latestPosts").empty();
       postCycle(contentLanguage);
       recommendedCycle(contentLanguage);
+      latestCycle(contentLanguage);
       headingSwap(contentLanguage);
     } else if (languageSelect.value == "RU") {
       localStorage["myKey"] = "RU";
@@ -115,8 +178,10 @@ window.onload = () => {
       $("#postContainer").empty();
       $("#upcoming").empty();
       $("#recPosts").empty();
+      $("#latestPosts").empty();
       postCycle(contentLanguage);
       recommendedCycle(contentLanguage);
+      latestCycle(contentLanguage);
       headingSwap(contentLanguage);
     } else if (languageSelect.value == "AZ") {
       localStorage["myKey"] = "AZ";
@@ -124,8 +189,10 @@ window.onload = () => {
       $("#postContainer").empty();
       $("#upcoming").empty();
       $("#recPosts").empty();
+      $("#latestPosts").empty();
       postCycle(contentLanguage);
       recommendedCycle(contentLanguage);
+      latestCycle(contentLanguage);
       headingSwap(contentLanguage);
     }
   });
@@ -150,33 +217,19 @@ $(document).ready(() => {
           postLogic(item);
           console.log(item);
           recPostings.unshift(item);
-          if (i === 5) {
-            break;
-          }
-          const node = `
-            <div class="row">
-              <div style="display: block; padding-left:35px; padding-right:35px;  ">
-              <span class="date2">${item.createdAt
-                .substring(0, 10)
-                .replace(/-/g, ".")}</span>
-              <p>
-              <h5 style="border-bottom:2px dashed rgb(73,86,120); padding-bottom:10px;" class="card-title">
-              <a href="/post.html?id=${
-                item._id
-              }" style="color:black!important;">${title.substring(0, 70)}  </a>
-              </h5>
-
-              </p>
-
-            </div>
-          </div>
-            `;
-          $("#recPosts").append(node);
+          firstSix.unshift(item);
         }
       }
     },
     catch: err => {
       console.log(err);
+    }
+  }).then(() => {
+    if (recPostings.length !== 0) {
+      recommendedCycle();
+    }
+    if (firstSix.length !== 0) {
+      latestCycle();
     }
   });
 
@@ -188,36 +241,13 @@ $(document).ready(() => {
     success: item => {
       post.unshift(item);
       postLogic(item);
-      $("#postContainer").append(`
-        <div class="col-lg-12 col-md-12 mb-12">
-          <h4 class="card-title">
-            <a href="/post.html?id=${item._id}">${title}</a>
-          </h4>
-          <p>
-          <span class="date2">${item.createdAt
-            .substring(0, 10)
-            .replace(/-/g, ".")}</span>
-          </p>
-          <p>
-            <img src="${item.cover.url}" class="rounded" width="100%"><br>
-<div class="fb-share-button pull-right" data-href="https://www.facebook.com/sharer.php?u=http://andop.az/post.html?id=${item._id}" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a href="https://www.facebook.com/sharer.php?u=http://andop.az/post.html?id=${item._id}&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
-    </div>
-          </p>
-          <p>
-          <h5>${converter.makeHtml(content)}
-
-    <div class="fb-share-button" data-href="https://www.facebook.com/sharer.php?u=http://andop.az/post.html?id=${item._id}" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a href="https://www.facebook.com/sharer.php?u=http://andop.az/post.html?id=${item._id}&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
-    </div>
-
-
-          </h5>
-          </p>
-
-        </div>
-        `);
     },
     catch: err => {
       console.log(err);
+    }
+  }).then(() => {
+    if (post.length !== 0) {
+      postCycle();
     }
   });
 });
