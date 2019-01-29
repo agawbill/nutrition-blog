@@ -39,7 +39,9 @@ const postCycle = () => {
   }" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a href="https://www.facebook.com/sharer.php?u=http://andop.az/post.html?id=${
     item._id
   }&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
-  </div>`;
+  </div>
+
+  `;
 
   const node = `
   <div class="col-lg-12 col-md-12 mb-12">

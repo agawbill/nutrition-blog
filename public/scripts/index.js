@@ -35,6 +35,12 @@ const postLogic = item => {
 var converter = new showdown.Converter();
 // below are the functions to push the data to their corresponding category
 const newsCycle = () => {
+  news.sort(function compare(a, b) {
+    var dateA = new Date(a.createdAt);
+    var dateB = new Date(b.createdAt);
+    return dateA - dateB;
+  });
+
   const item = news[0];
   postLogic(item);
   const news1 = `
@@ -133,6 +139,12 @@ const newsCycle = () => {
   }
 };
 const entertainmentCycle = () => {
+  entertainment.sort(function compare(a, b) {
+    var dateA = new Date(a.createdAt);
+    var dateB = new Date(b.createdAt);
+    return dateA - dateB;
+  });
+
   const item = entertainment[0];
   postLogic(item);
   const ent = `
@@ -199,6 +211,12 @@ const entertainmentCycle = () => {
   }
 };
 const techCycle = () => {
+  technology.sort(function compare(a, b) {
+    var dateA = new Date(a.createdAt);
+    var dateB = new Date(b.createdAt);
+    return dateA - dateB;
+  });
+
   const item = technology[0];
   postLogic(item);
   const tech = `
@@ -266,6 +284,12 @@ const techCycle = () => {
   }
 };
 const sportsCycle = () => {
+  sports.sort(function compare(a, b) {
+    var dateA = new Date(a.createdAt);
+    var dateB = new Date(b.createdAt);
+    return dateA - dateB;
+  });
+
   const item = sports[0];
   postLogic(item);
   const sport = `
