@@ -157,10 +157,7 @@ hr {
   padding: 0 !important;
 }
 .right-column {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  
+  display: table-column;
   height: auto;
   float: right;
   width: 20%;
@@ -284,6 +281,3 @@ img.rounded {
 }
 
 
-div.right-column {
-  
-}
