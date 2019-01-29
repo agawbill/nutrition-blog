@@ -157,7 +157,10 @@ hr {
   padding: 0 !important;
 }
 .right-column {
-  display: table-column;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  
   height: auto;
   float: right;
   width: 20%;
@@ -278,4 +281,9 @@ div.randomSix0 {
 
 img.rounded {
   margin-bottom: 10px !important;
+}
+
+
+div.right-column {
+  
 }
