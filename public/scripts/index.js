@@ -77,10 +77,10 @@ const newsCycle = () => {
           <div style="border-top:1px dotted navy;border-bottom:1px dotted navy;width:100%;padding-top:10px;padding-bottom:10px;">
           <table>
             <tr>
-              <td>
+              <td width="60%">
                   <img src="${
                     item.cover.url
-                  }"  class="rounded" float="left"   width="310vh" style="padding-right:10px;">
+                  }"  class="rounded" float="left"    width="100%" style="padding-right:10px;">
               </td>
               <td style="width:100%;position:relative; clear:both;">
                 <span class="newsText">

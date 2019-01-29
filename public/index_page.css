@@ -19,7 +19,7 @@ h1 {
   margin-top: 0;
 }
 .footer_divider {
-  border-right: dashed !important;
+  border-right: 1px dashed !important;
   padding-right: 5px;
 }
 
