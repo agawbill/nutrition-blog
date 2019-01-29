@@ -74,7 +74,7 @@ const newsCycle = () => {
       } else if (i === 2) {
         const news2 = `
         <div id="blocks">
-          <div style="border-top:2px dotted navy;border-bottom:2px dotted navy;width:100%;padding-top:10px;padding-bottom:10px;">
+          <div style="border-top:1px dotted navy;border-bottom:1px dotted navy;width:100%;padding-top:10px;padding-bottom:10px;">
           <table>
             <tr>
               <td>
@@ -192,7 +192,7 @@ const entertainmentCycle = () => {
         const item = entertainment[i];
         postLogic(item);
         const ent = `
-    <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 2px dotted navY">
+    <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 1px dotted navY">
     <img src="${item.cover.url}" class="rounded"   width="100%">
   <p>
   <span class="date3">${item.createdAt
@@ -265,7 +265,7 @@ const techCycle = () => {
         const item = technology[i];
         postLogic(item);
         const tech = `
-    <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 2px dotted navY">
+    <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 1px dotted navY">
     <img src="${item.cover.url}" class="rounded"   width="100%">
   <p>
   <span class="date3">${item.createdAt
@@ -335,7 +335,7 @@ const sportsCycle = () => {
         const item = sports[i];
         postLogic(item);
         const sport = `
-    <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 2px dotted navY;">
+    <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 1px dotted navY;">
     <img src="${item.cover.url}" class="rounded"   width="100%">
   <p>
   <span class="date3">${item.createdAt
@@ -381,7 +381,7 @@ const selectedCycle = () => {
         const item = selectedPosts[i];
         postLogic(item);
         const selected = `
-          <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 2px dotted navY; ">
+          <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 1px dotted navY; ">
             <a href="/post.html?id=${item._id}" style="color:black!important;">
               <span class="date3">${item.createdAt
                 .substring(0, 10)
@@ -427,7 +427,7 @@ const randomSixCycle = () => {
         $("#randomSix").append(node);
       } else {
         const node = `
-      <div class="col-lg-4 col-md-4 mb-4 randomSix${i} " style="position:relative;border-right:2px dotted navy; padding:1%">
+      <div class="col-lg-4 col-md-4 mb-4 randomSix${i} " style="position:relative;border-right:1px dotted navy; padding:1%">
       <img src="${item.cover.url}" class="rounded"   width="100%">
       <p>
       <span class="date3">${item.createdAt
@@ -459,7 +459,7 @@ const recPostCycle = () => {
           .substring(0, 10)
           .replace(/-/g, ".")}</span>
         <p>
-        <h5 style="border-bottom:2px dashed rgb(73,86,120); padding-bottom:10px;" class="card-title">
+        <h5 style="border-bottom:1px dashed rgb(73,86,120); padding-bottom:10px;" class="card-title">
         <a href="/post.html?id=${
           item._id
         }" style="color:black!important;">${title.substring(0, 70)}  </a>
