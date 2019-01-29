@@ -58,7 +58,7 @@ const postCycle = () => {
 
     </p>
     <p>
-    <h5>${converter.makeHtml(content + fbookButton)}
+    <h5>${converter.makeHtml(content)}
 
 
 
@@ -68,7 +68,7 @@ const postCycle = () => {
 
   </div>
     `;
-  $("#postContainer").append(node);
+  $("#postContainer").append(node + fbookButton);
 };
 
 const latestCycle = () => {
