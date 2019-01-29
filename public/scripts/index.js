@@ -647,7 +647,7 @@ $(document).ready(() => {
         } else {
           sports.unshift(item);
         }
-        if (i < 6) {
+        if (i > data.length - 6) {
           firstSix.unshift(data[i]);
           const node = `
 

@@ -2,6 +2,7 @@ var $ = jQuery;
 var converter = new showdown.Converter();
 var contentArray = [];
 var recPostings = [];
+var firstSix = [];
 
 window.onload = () => {
   var languageSelect = document.getElementById("languageSelect");
@@ -30,20 +31,48 @@ const postLogic = item => {
 };
 
 const swapHeaders = contentLanguage => {
-  headerArray = ["#talks", "#diet", "#fitness", "#upcoming", "#health"];
-  eng = ["Main News", "Diet", "Fitness", "RECOMMENDED", "Health"];
-  azi = ["Əsas Xəbərlər", "Diet", "Fintes", "Gelecekde", "Saglamlig"];
-  rus = ["Главные Новости", "Питание", "Фитнес", "Анонс", "Здоровье"];
+  headerArray = [
+    "#talks",
+    "#diet",
+    "#fitness",
+    "#upcoming",
+    "#health",
+    "#latest"
+  ];
+  eng = [
+    "Main News",
+    "Diet",
+    "Fitness",
+    "Recommended",
+    "Health",
+    "LATEST POSTS"
+  ];
+  azi = [
+    "Əsas Xəbərlər",
+    "Diet",
+    "Fintes",
+    "REDAKSİYA SEÇİMİ",
+    "Sağlamlığ",
+    "SON PUBLİKASİYALAR"
+  ];
+  rus = [
+    "Главные Новости",
+    "Питание",
+    "Фитнес",
+    "РЕКОМЕНДОВАННЫЕ",
+    "Здоровье",
+    "ПОСЛЕДНИИ ПУБЛИКАЦИИ "
+  ];
   for (let i = 0; i < headerArray.length; i++) {
     if (contentLanguage === "ENG") {
       $(headerArray[i]).empty();
-      $(headerArray[i]).append(eng[i]);
+      $(headerArray[i]).append(eng[i].toUpperCase());
     } else if (contentLanguage === "AZ") {
       $(headerArray[i]).empty();
-      $(headerArray[i]).append(azi[i]);
+      $(headerArray[i]).append(azi[i].toUpperCase());
     } else {
       $(headerArray[i]).empty();
-      $(headerArray[i]).append(rus[i]);
+      $(headerArray[i]).append(rus[i].toUpperCase());
     }
   }
 };
@@ -56,27 +85,70 @@ window.onload = () => {
       contentLanguage = "ENG";
       $("#contentContainer").empty();
       $("#recPosts").empty();
+      $("#latestPosts").empty();
       contentCycle(contentLanguage);
       recommendedCycle(contentLanguage);
+      latestCycle(contentLanguage);
       swapHeaders(contentLanguage);
     } else if (languageSelect.value == "RU") {
       localStorage["myKey"] = "RU";
       contentLanguage = "RU";
       $("#contentContainer").empty();
       $("#recPosts").empty();
+      $("#latestPosts").empty();
       contentCycle(contentLanguage);
       recommendedCycle(contentLanguage);
+      latestCycle(contentLanguage);
       swapHeaders(contentLanguage);
     } else if (languageSelect.value == "AZ") {
       localStorage["myKey"] = "AZ";
       contentLanguage = "AZ";
       $("#contentContainer").empty();
       $("#recPosts").empty();
+      $("#latestPosts").empty();
       contentCycle(contentLanguage);
       recommendedCycle(contentLanguage);
+      latestCycle(contentLanguage);
       swapHeaders(contentLanguage);
     }
   });
+};
+
+const latestCycle = () => {
+  for (let i = 0; i < firstSix.length; i++) {
+    const item = firstSix[i];
+    postLogic(item);
+    const node = `
+
+      <table style="margin-bottom:10px; display:block">
+        <tr>
+          <td>
+              <img src="${
+                item.cover.url
+              }"   width="90px" style="padding-right:5px;">
+          </td>
+          <td style="width:100%;position:relative; clear:both;">
+            <span class="newsText">
+                <p style="font-size:12px!important;" class="card-title font800">
+                <a href="/post.html?id=${
+                  item._id
+                }" style="color:black!important;">${title.substring(
+      0,
+      60
+    )}  </a>
+                </p>
+            </span>
+          </td>
+
+        </tr>
+        </div>
+      </table>
+      <hr>
+      </br>
+      <div style="clear:both;"></div>
+  `;
+    $("#latestPosts").append(node);
+  }
 };
 
 const contentCycle = () => {
@@ -148,6 +220,9 @@ $(document).ready(() => {
         if (item.recPosts == true) {
           recPostings.unshift(item);
         }
+        if (i > data.length - 6) {
+          firstSix.unshift(item);
+        }
         if (item.category == "Фитнес") {
           contentArray.unshift(item);
           const node = `
@@ -180,6 +255,10 @@ $(document).ready(() => {
   }).then(() => {
     if (recPostings.length !== 0) {
       recommendedCycle();
+    }
+
+    if (firstSix.length !== 0) {
+      latestCycle();
     }
   });
 });

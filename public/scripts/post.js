@@ -34,6 +34,13 @@ const postLogic = item => {
 const postCycle = () => {
   item = post[0];
   postLogic(item);
+  const fbookButton = `<div class="fb-share-button" data-href="https://www.facebook.com/sharer.php?u=http://andop.az/post.html?id=${
+    item._id
+  }" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a href="https://www.facebook.com/sharer.php?u=http://andop.az/post.html?id=${
+    item._id
+  }&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
+  </div>`;
+
   const node = `
   <div class="col-lg-12 col-md-12 mb-12">
     <h4 class="card-title">
@@ -46,22 +53,12 @@ const postCycle = () => {
     </p>
     <p>
       <img src="${item.cover.url}" class="rounded" width="100%"><br>
-<div class="fb-share-button pull-right" data-href="https://www.facebook.com/sharer.php?u=http://andop.az/post.html?id=${
-    item._id
-  }" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a href="https://www.facebook.com/sharer.php?u=http://andop.az/post.html?id=${
-    item._id
-  }&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
-</div>
+
     </p>
     <p>
-    <h5>${converter.makeHtml(content)}
+    <h5>${converter.makeHtml(content + fbookButton)}
 
-<div class="fb-share-button" data-href="https://www.facebook.com/sharer.php?u=http://andop.az/post.html?id=${
-    item._id
-  }" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a href="https://www.facebook.com/sharer.php?u=http://andop.az/post.html?id=${
-    item._id
-  }&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
-</div>
+
 
 
     </h5>
