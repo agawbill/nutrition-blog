@@ -25,10 +25,13 @@ $(document).ready(() => {
       if (contentLanguage == "ENG") {
         content = item.content_eng;
         title = item.title_eng;
+        	$('#big_banner').attr("src","https://s3-eu-west-1.amazonaws.com/andop.online/images/BANNER+EN.jpg");
       } else if (contentLanguage == "RU") {
+        	$('#big_banner').attr("src","https://s3-eu-west-1.amazonaws.com/andop.online/images/BANNER+RU.jpg");
         content = item.content;
         title = item.title;
       } else {
+        	$('#big_banner').attr("src","https://s3-eu-west-1.amazonaws.com/andop.online/images/BANNER+AZ.jpg");
         content = item.content_az;
         title = item.title_az;
       }

@@ -118,18 +118,21 @@ const addContact = contentLanguage => {
 
 document.addEventListener("change", event => {
   if (event.target.value === "RU") {
+    	$('#big_banner').attr("src","https://s3-eu-west-1.amazonaws.com/andop.online/images/BANNER+RU.jpg");
     $("#footerPartial").empty();
     $("#navContainer").empty();
     $("#contactUs").empty();
     addFooter(contentLanguage);
     addContact(contentLanguage);
   } else if (event.target.value === "ENG") {
+    	$('#big_banner').attr("src","https://s3-eu-west-1.amazonaws.com/andop.online/images/BANNER+EN.jpg");
     $("#footerPartial").empty();
     $("#navContainer").empty();
     $("#contactUs").empty();
     addFooter(contentLanguage);
     addContact(contentLanguage);
   } else if (event.target.value === "AZ") {
+    	$('#big_banner').attr("src","https://s3-eu-west-1.amazonaws.com/andop.online/images/BANNER+AZ.jpg");
     $("#footerPartial").empty();
     $("#navContainer").empty();
     $("#contactUs").empty();
