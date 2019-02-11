@@ -137,7 +137,8 @@ hr {
 }
 #header_menu_blue {
   background-color: rgb(73, 86, 120);
-  height: 28px;
+  height: 60px;
+  padding-top: 18px;
   color: white;
 }
 #footer_menu_blue {
