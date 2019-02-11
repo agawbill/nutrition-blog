@@ -55,7 +55,7 @@ $(document).ready(() => {
 
       <a href="/post.html?id=${
         item._id
-      }" style="color:black!important;">${title.substring(0, 100)}</a>
+      }" style="color:rgb(73, 86, 120)!important;">${title.substring(0, 100)}</a>
     </p>
 
     <p>
@@ -93,7 +93,7 @@ $(document).ready(() => {
                     <h4 class="card-title">
                       <a href="/post.html?id=${
                         item._id
-                      }" style="color:black!important;">${title.substring(
+                      }" style="color:rgb(73, 86, 120)!important;">${title.substring(
             0,
             100
           )}</a>
@@ -124,7 +124,7 @@ $(document).ready(() => {
                     <h4 class="card-title">
                       <a href="/post.html?id=${
                         item._id
-                      }" style="color:black!important;">${title.substring(
+                      }" style="color:rgb(73, 86, 120)!important;">${title.substring(
             0,
             100
           )}</a>
@@ -162,7 +162,7 @@ $(document).ready(() => {
     <p style="font-size:  1.7em; font-weight: 800; " class="card-title">
       <a href="/post.html?id=${
         item._id
-      }" style="color:black!important;">${title.substring(0, 100)}</a>
+      }" style="color:rgb(73, 86, 120)!important;">${title.substring(0, 100)}</a>
     </h5>
    <p class='font800'>${converter.makeHtml(content.substring(0, 286))}</p>
     </p>
@@ -185,7 +185,7 @@ $(document).ready(() => {
         <h5 class="card-title">
           <a href="/post.html?id=${
             item._id
-          }" style="color:black!important;">${title.substring(0, 100)}</a>
+          }" style="color:rgb(73, 86, 120)!important;">${title.substring(0, 100)}</a>
         </h5>
         </p>
     </div>
@@ -204,7 +204,7 @@ $(document).ready(() => {
   <h5 class="card-title">
     <a href="/post.html?id=${
       item._id
-    }" style="color:black!important;">${title.substring(0, 100)}</a>
+    }" style="color:rgb(73, 86, 120)!important;">${title.substring(0, 100)}</a>
   </h5>
     </div>
     `;
@@ -233,7 +233,7 @@ $(document).ready(() => {
     <p style="font-size:  1.7em; font-weight: 800; " class="card-title">
       <a href="/post.html?id=${
         item._id
-      }"style="color:black!important;">${title.substring(0, 100)}</a>
+      }"style="color:rgb(73, 86, 120)!important;">${title.substring(0, 100)}</a>
     </p>
     <p>
     ${converter.makeHtml(content).substring(0, 351)}
@@ -258,7 +258,7 @@ $(document).ready(() => {
             <h5 class="card-title">
               <a href="/post.html?id=${
                 item._id
-              }" style="color:black!important;">${title.substring(0, 100)}</a>
+              }" style="color:rgb(73, 86, 120)!important;">${title.substring(0, 100)}</a>
             </h5>
             </p>
         </div>
@@ -277,7 +277,7 @@ $(document).ready(() => {
   <h5 class="card-title">
     <a href="/post.html?id=${
       item._id
-    }" style="color:black!important;">${title.substring(0, 100)}</a>
+    }" style="color:rgb(73, 86, 120)!important;">${title.substring(0, 100)}</a>
   </h5>
     </div>
     `;
@@ -306,7 +306,7 @@ $(document).ready(() => {
     <p style="font-size:  1.7em; font-weight: 800; " class="card-title">
       <a href="/post.html?id=${
         item._id
-      }" style="color:black!important;">${title.substring(0, 100)}</a>
+      }" style="color:rgb(73, 86, 120)!important;">${title.substring(0, 100)}</a>
     </h5>
    <p class='font800'>${converter.makeHtml(content).substring(0, 351)}</p>
     </p>
@@ -330,7 +330,7 @@ $(document).ready(() => {
       <h5 class="card-title">
         <a href="/post.html?id=${
           item._id
-        }" style="color:black!important;">${title.substring(0, 100)}</a>
+        }" style="color:rgb(73, 86, 120)!important;">${title.substring(0, 100)}</a>
       </h5>
     </div> `;
           $("#sportsSecond").append(sport);
@@ -347,7 +347,7 @@ $(document).ready(() => {
   <h5 class="card-title">
     <a href="/post.html?id=${
       item._id
-    }" style="color:black!important;">${title.substring(0, 100)}</a>
+    }" style="color:rgb(73, 86, 120)!important;">${title.substring(0, 100)}</a>
   </h5>
     </div>`;
           $("#sportsSecond").append(sport);
@@ -370,7 +370,7 @@ $(document).ready(() => {
            .replace(/-/g, ".")}</span>
         <a href="/post.html?id=${
           item._id
-        }" style="color:black!important;"><h6>${title.substring(
+        }" style="color:rgb(73, 86, 120)!important;"><h6>${title.substring(
             0,
             100
           )}</h6></a>
@@ -385,7 +385,7 @@ $(document).ready(() => {
           postLogic(item);
           const selected = `
           <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 1px dotted navY; ">
-            <a href="/post.html?id=${item._id}" style="color:black!important;">
+            <a href="/post.html?id=${item._id}" style="color:rgb(73, 86, 120)!important;">
               <span class="date3">${item.createdAt
                 .substring(0, 10)
                 .replace(/-/g, ".")}</span>
@@ -423,7 +423,7 @@ $(document).ready(() => {
         <h5 class="card-title">
         <a href="/post.html?id=${
           item._id
-        }" style="color:black!important;">${title.substring(0, 100)} </a>
+        }" style="color:rgb(73, 86, 120)!important;">${title.substring(0, 100)} </a>
         </h5>
       </div>
       `;
@@ -439,7 +439,7 @@ $(document).ready(() => {
       <h5 class="card-title">
       <a href="/post.html?id=${
         item._id
-      }"style="color:black!important;">${title.substring(0, 100)} </a>
+      }"style="color:rgb(73, 86, 120)!important;">${title.substring(0, 100)} </a>
       </h5>
       </div>
       `;
@@ -465,7 +465,7 @@ $(document).ready(() => {
         <h6 style="border-bottom:1px dashed rgb(73,86,120); padding-bottom:10px;" class="card-title">
         <a href="/post.html?id=${
           item._id
-        }" style="color:black!important;">${title.substring(0, 70)}  </a>
+        }" style="color:rgb(73, 86, 120)!important;">${title.substring(0, 70)}  </a>
         </h6>
         </p>
       </div>
@@ -492,7 +492,7 @@ $(document).ready(() => {
                 <p style="font-size:12px!important;" class="card-title font800">
                 <a href="/post.html?id=${
                   item._id
-                }" style="color:black!important;">${title.substring(
+                }" style="color:rgb(73, 86, 120)!important;">${title.substring(
         0,
         60
       )}  </a>
@@ -690,7 +690,7 @@ $(document).ready(() => {
                       <p style="font-size:12px!important;" class="card-title font800">
                       <a href="/post.html?id=${
                         item._id
-                      }" style="color:black!important;">${title.substring(
+                      }" style="color:rgb(73, 86, 120)!important;">${title.substring(
             0,
             70
           )}  </a>
