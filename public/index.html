@@ -42,7 +42,7 @@
 					<div id="recPosts"></div>
 				</div>
 			</div><!-- end of  top part of the screen  -->
-			<div><img src="banner3.jpg" width="100%"></div>
+			<div><img  id='big_banner' src="banner3.jpg" width="100%"></div>
 			<hr>
 			<div class='nomargin left-column'>
 				<a href="sports.html">
@@ -102,5 +102,18 @@
 	</script>
 	<script charset="utf-8" src="/scripts/footer.js">
 	</script>
+	<script>
+		$('#languageSelect').change(function(){
+			if	($('#languageSelect').val() == 'RU') {
+				$('#big_banner').attr("src","https://s3-eu-west-1.amazonaws.com/andop.online/images/BANNER+RU.jpg");
+			} else if ( $('#languageSelect').val() == 'AZ') {
+				$('#big_banner').attr("src","https://s3-eu-west-1.amazonaws.com/andop.online/images/BANNER+AZ.jpg");
+			} else {
+				$('#big_banner').attr("src","https://s3-eu-west-1.amazonaws.com/andop.online/images/BANNER+ENG.jpg");
+			}
+		});
+				
+	</script>
+	
 </body>
 </html>
