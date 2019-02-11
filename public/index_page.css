@@ -285,3 +285,7 @@ img.rounded {
 .card-title {
   font-weight: 600!important;
 }
+
+div.right-margin {
+  margin-right: 11vh;
+}
