@@ -54,12 +54,15 @@ const switchMenu = () => {
           </ul>`;
 
   if (contentLanguage === "ENG") {
+    $('#big_banner').attr("src","https://s3-eu-west-1.amazonaws.com/andop.online/images/BANNER+EN.jpg");
     $("#sideMenu").empty();
     $("#sideMenu").append(englishMenu);
   } else if (contentLanguage === "RU") {
+    $('#big_banner').attr("src","https://s3-eu-west-1.amazonaws.com/andop.online/images/BANNER+RU.jpg");
     $("#sideMenu").empty();
     $("#sideMenu").append(russianMenu);
   } else {
+    $('#big_banner').attr("src","https://s3-eu-west-1.amazonaws.com/andop.online/images/BANNER+AZ.jpg");
     $("#sideMenu").empty();
     $("#sideMenu").append(azerbaijanMenu);
   }

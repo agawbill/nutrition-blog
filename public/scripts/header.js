@@ -31,10 +31,14 @@ document.addEventListener("DOMContentLoaded", () => {
   if (contentLanguage !== undefined) {
     if (contentLanguage == "RU") {
       languageSelect2.selectedIndex = 0;
+      $('#big_banner').attr("src","https://s3-eu-west-1.amazonaws.com/andop.online/images/BANNER+RU.jpg");
     } else if (contentLanguage == "ENG") {
       languageSelect2.selectedIndex = 2;
+      				$('#big_banner').attr("src","https://s3-eu-west-1.amazonaws.com/andop.online/images/BANNER+EN.jpg");
     } else if (contentLanguage == "AZ") {
       languageSelect2.selectedIndex = 1;
+				$('#big_banner').attr("src","https://s3-eu-west-1.amazonaws.com/andop.online/images/BANNER+AZ.jpg");
+
     }
   }
 });
