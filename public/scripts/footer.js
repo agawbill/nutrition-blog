@@ -13,7 +13,7 @@ const addFooter = contentLanguage => {
     WWW.ANDOP.ORG © 2019, Bütün hüquqlar qorunur
     </div>`;
 
-  const menuEng = `<nav style='font-size:16px; background:rgb(73, 86, 120); color:white!important;' class="navbar navbar-expand-lg">
+  const menuEng = `<nav style='font-size:16px;' class="navbar navbar-expand-lg">
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -39,7 +39,7 @@ const addFooter = contentLanguage => {
           </nav>
           <hr>
           <p>`;
-  const menuAz = `<nav style='font-size:16px;'  background:rgb(73, 86, 120); color:white!important; class="navbar navbar-expand-lg">
+  const menuAz = `<nav style='font-size:16px;' class="navbar navbar-expand-lg">
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -65,12 +65,12 @@ const addFooter = contentLanguage => {
           </nav>
           <hr>
           <p>`;
-  const menuRus = `<nav style='font-size:16px;'  background:rgb(73, 86, 120); color:white!important; class="navbar navbar-expand-lg">
+  const menuRus = `<nav style='font-size:16px;' class="navbar navbar-expand-lg">
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarNav">
-                <ul style='font-size:19px; color:white;' class="navbar-nav">
+                <ul style='font-size:19px;' class="navbar-nav">
                   <li class="nav-item active">
                     <a class="nav-link" href="../static_pages/about.html"> ANDOP <span class="sr-only">(current)</span></a>
                   </li>
