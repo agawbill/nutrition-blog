@@ -78,6 +78,27 @@ pre {
   box-sizing: border-box;
 }
 
+.wrapperTop {
+  /* width: 90%; */
+  /* margin: 0 auto; */
+  /* border: 2px solid orange; */
+  display: grid;
+  grid-template-columns: 8fr 2fr;
+  grid-auto-rows: auto;
+  /* grid-gap: 6px; */
+}
+
+.leftColumn {
+  /* grid-column-start: 1;
+  grid-column-end: 3; */
+  width: 100%;
+}
+.rightColumn {
+  /* grid-column-start: 1;
+  grid-column-end: 6; */
+  width: 100%;
+}
+
 .banner {
   text-align: right;
   color: rgb(84, 129, 184) !important;
@@ -114,7 +135,7 @@ hr {
 .date3 {
   font-weight: bold;
   color: dimgrey;
-   /*display: none;*/
+  /*display: none;*/
 }
 
 .newsText {
@@ -157,6 +178,12 @@ hr {
   margin: 0 !important;
   padding: 0 !important;
 }
+.nomargin2 {
+  position: sticky;
+  top: 0;
+  margin: 0 !important;
+  padding: 0 !important;
+}
 .right-column {
   display: table-column;
   height: auto;
@@ -167,7 +194,7 @@ hr {
   display: table-column;
   height: auto;
   float: left;
-  width: 79%;
+  width: 99%;
 }
 .hundredWidth {
   width: 100%;
@@ -259,31 +286,29 @@ hr {
   }
 }
 div.container-fluid {
-  padding-left: 5em!important;
-  padding-right: 5em!important
+  padding-left: 5em !important;
+  padding-right: 5em !important;
 }
 
 div.randomSix2a {
-  border-bottom: 1px dotted navy ;
+  border-bottom: 1px dotted navy;
   margin-bottom: 0 !important;
 }
 div.randomSix0 {
-  border-bottom: 1px dotted navy ;
+  border-bottom: 1px dotted navy;
   margin-bottom: 0 !important;
 }
-.randomSix1{
-  border-bottom: 1px dotted navy ;
+.randomSix1 {
+  border-bottom: 1px dotted navy;
   margin-bottom: 0 !important;
 }
-
 
 img.rounded {
   margin-bottom: 10px !important;
 }
 
-
 .card-title {
-  font-weight: 600!important;
+  font-weight: 600 !important;
 }
 
 div.right-margin {
