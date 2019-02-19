@@ -1,5 +1,6 @@
 var $ = jQuery;
 
+// arrays for different post categories
 var technology = [];
 var news = [];
 var entertainment = [];
@@ -9,10 +10,12 @@ var recPostings = [];
 var allArray;
 var randomSix = [];
 var firstSix = [];
+
 // language selected presets
 window.onload = () => {
   var languageSelect = document.getElementById("languageSelect");
 };
+
 var contentLanguage = localStorage["myKey"] || "RU";
 var titleLanguage = localStorage["myKey"] || "RU";
 var descriptionLanguage = localStorage["myKey"] || "RU";
@@ -25,13 +28,22 @@ $(document).ready(() => {
       if (contentLanguage == "ENG") {
         content = item.content_eng;
         title = item.title_eng;
-        	$('#big_banner').attr("src","https://s3-eu-west-1.amazonaws.com/andop.online/images/BANNER+EN.jpg");
+        $("#big_banner").attr(
+          "src",
+          "https://s3-eu-west-1.amazonaws.com/andop.online/images/BANNER+EN.jpg"
+        );
       } else if (contentLanguage == "RU") {
-        	$('#big_banner').attr("src","https://s3-eu-west-1.amazonaws.com/andop.online/images/BANNER+RU.jpg");
+        $("#big_banner").attr(
+          "src",
+          "https://s3-eu-west-1.amazonaws.com/andop.online/images/BANNER+RU.jpg"
+        );
         content = item.content;
         title = item.title;
       } else {
-        	$('#big_banner').attr("src","https://s3-eu-west-1.amazonaws.com/andop.online/images/BANNER+AZ.jpg");
+        $("#big_banner").attr(
+          "src",
+          "https://s3-eu-west-1.amazonaws.com/andop.online/images/BANNER+AZ.jpg"
+        );
         content = item.content_az;
         title = item.title_az;
       }
@@ -39,7 +51,7 @@ $(document).ready(() => {
   };
   // convert rich text
   var converter = new showdown.Converter();
-  // below are the functions to push the data to their corresponding category
+  // below are the functions to list the posts, html and styling for each corresponding category
   const newsCycle = () => {
     news.sort(function compare(a, b) {
       var dateA = new Date(a.createdAt);
@@ -58,7 +70,10 @@ $(document).ready(() => {
 
       <a href="/post.html?id=${
         item._id
-      }" style="color:rgb(73, 86, 120)!important;">${title.substring(0, 100)}</a>
+      }" style="color:rgb(73, 86, 120)!important;">${title.substring(
+      0,
+      100
+    )}</a>
     </p>
 
     <p>
@@ -154,22 +169,25 @@ $(document).ready(() => {
     const item = entertainment[0];
     postLogic(item);
     const ent = `
-  <div class="col-lg-16 col-md-16 mb-16">
-  <img src="${
-    item.cover.url
-  }" class="rounded"   width="50%" style="float:left; padding-right:15px;">
-  <span class="date3">${item.createdAt
-    .substring(0, 10)
-    .replace(/-/g, ".")}</span>
-  </div>
-    <p style="font-size:  1.7em; font-weight: 800; " class="card-title">
-      <a href="/post.html?id=${
-        item._id
-      }" style="color:rgb(73, 86, 120)!important;">${title.substring(0, 100)}</a>
-    </h5>
-   <p class='font800'>${converter.makeHtml(content.substring(0, 286))}</p>
-    </p>
-  `;
+      <div class="col-lg-16 col-md-16 mb-16">
+      <img src="${
+        item.cover.url
+      }" class="rounded"   width="50%" style="float:left; padding-right:15px;">
+      <span class="date3">${item.createdAt
+        .substring(0, 10)
+        .replace(/-/g, ".")}</span>
+      </div>
+        <p style="font-size:  1.7em; font-weight: 800; " class="card-title">
+          <a href="/post.html?id=${
+            item._id
+          }" style="color:rgb(73, 86, 120)!important;">${title.substring(
+      0,
+      100
+    )}</a>
+        </h5>
+       <p class='font800'>${converter.makeHtml(content.substring(0, 286))}</p>
+        </p>
+      `;
     $("#entertainmentFirst").append(ent);
     for (let i = 1; i < entertainment.length; i++) {
       const item = entertainment[i];
@@ -188,7 +206,10 @@ $(document).ready(() => {
         <h5 class="card-title">
           <a href="/post.html?id=${
             item._id
-          }" style="color:rgb(73, 86, 120)!important;">${title.substring(0, 100)}</a>
+          }" style="color:rgb(73, 86, 120)!important;">${title.substring(
+            0,
+            100
+          )}</a>
         </h5>
         </p>
     </div>
@@ -261,7 +282,10 @@ $(document).ready(() => {
             <h5 class="card-title">
               <a href="/post.html?id=${
                 item._id
-              }" style="color:rgb(73, 86, 120)!important;">${title.substring(0, 100)}</a>
+              }" style="color:rgb(73, 86, 120)!important;">${title.substring(
+            0,
+            100
+          )}</a>
             </h5>
             </p>
         </div>
@@ -309,7 +333,10 @@ $(document).ready(() => {
     <p style="font-size:  1.7em; font-weight: 800; " class="card-title">
       <a href="/post.html?id=${
         item._id
-      }" style="color:rgb(73, 86, 120)!important;">${title.substring(0, 100)}</a>
+      }" style="color:rgb(73, 86, 120)!important;">${title.substring(
+      0,
+      100
+    )}</a>
     </h5>
    <p class='font800'>${converter.makeHtml(content).substring(0, 351)}</p>
     </p>
@@ -333,7 +360,10 @@ $(document).ready(() => {
       <h5 class="card-title">
         <a href="/post.html?id=${
           item._id
-        }" style="color:rgb(73, 86, 120)!important;">${title.substring(0, 100)}</a>
+        }" style="color:rgb(73, 86, 120)!important;">${title.substring(
+            0,
+            100
+          )}</a>
       </h5>
     </div> `;
           $("#sportsSecond").append(sport);
@@ -388,7 +418,9 @@ $(document).ready(() => {
           postLogic(item);
           const selected = `
           <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 1px dotted navY; ">
-            <a href="/post.html?id=${item._id}" style="color:rgb(73, 86, 120)!important;">
+            <a href="/post.html?id=${
+              item._id
+            }" style="color:rgb(73, 86, 120)!important;">
               <span class="date3">${item.createdAt
                 .substring(0, 10)
                 .replace(/-/g, ".")}</span>
@@ -426,7 +458,10 @@ $(document).ready(() => {
         <h5 class="card-title">
         <a href="/post.html?id=${
           item._id
-        }" style="color:rgb(73, 86, 120)!important;">${title.substring(0, 100)} </a>
+        }" style="color:rgb(73, 86, 120)!important;">${title.substring(
+            0,
+            100
+          )} </a>
         </h5>
       </div>
       `;
@@ -442,7 +477,10 @@ $(document).ready(() => {
       <h5 class="card-title">
       <a href="/post.html?id=${
         item._id
-      }"style="color:rgb(73, 86, 120)!important;">${title.substring(0, 100)} </a>
+      }"style="color:rgb(73, 86, 120)!important;">${title.substring(
+            0,
+            100
+          )} </a>
       </h5>
       </div>
       `;
@@ -468,7 +506,10 @@ $(document).ready(() => {
         <h6 style="border-bottom:1px dashed rgb(73,86,120); padding-bottom:10px;" class="card-title">
         <a href="/post.html?id=${
           item._id
-        }" style="color:rgb(73, 86, 120)!important;">${title.substring(0, 70)}  </a>
+        }" style="color:rgb(73, 86, 120)!important;">${title.substring(
+        0,
+        70
+      )}  </a>
         </h6>
         </p>
       </div>
@@ -513,7 +554,7 @@ $(document).ready(() => {
       $("#latestPosts").append(node);
     }
   };
-  // headers in differnt languages
+  // headers in differnt languages for when language preset is changed
   const swapHeaders = contentLanguage => {
     headerArray = [
       "#talks",

@@ -221,6 +221,20 @@ hr {
   display: none;
 }
 
+@media screen and (max-width: 768px) {
+  .rightColumn {
+    display: none;
+  }
+  .wrapperTop {
+    /* width: 90%; */
+    /* margin: 0 auto; */
+    /* border: 2px solid orange; */
+    display: grid;
+    grid-template-columns: 10fr;
+    grid-auto-rows: auto;
+    /* grid-gap: 6px; */
+  }
+}
 @media screen and (min-width: 40em) {
   body {
     font-size: 1.0625em;
