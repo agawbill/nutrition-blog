@@ -299,6 +299,13 @@ hr {
     max-width: 160em;
   }
 }
+
+
+@media all and (max-width: 599px) and (min-width: 320px) {
+    h4{
+        font-size: 3vw;
+    }
+}
 div.container-fluid {
   padding-left: 5em !important;
   padding-right: 5em !important;
