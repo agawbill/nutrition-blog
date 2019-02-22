@@ -330,14 +330,14 @@ $(document).ready(() => {
   <span class="date3">${item.createdAt
     .substring(0, 10)
     .replace(/-/g, ".")}</span>
-    <p style="font-size:  1.7em; font-weight: 800; " class="card-title">
+    <h6 font-weight: 800; " class="card-title">
       <a href="/post.html?id=${
         item._id
       }" style="color:rgb(73, 86, 120)!important;">${title.substring(
       0,
       100
     )}</a>
-    </h5>
+    </h6>
    <p class='font800'>${converter.makeHtml(content).substring(0, 351)}</p>
     </p>
     </div>
@@ -548,7 +548,7 @@ $(document).ready(() => {
         </div>
       </table>
       <hr>
-      </br>
+      
       <div style="clear:both;"></div>
   `;
       $("#latestPosts").append(node);
