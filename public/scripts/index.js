@@ -477,7 +477,7 @@ $(document).ready(() => {
       <h5 class="card-title">
       <a href="/post.html?id=${
         item._id
-      }"style="color:rgb(73, 86, 120)!important;">${title.substring(
+      }"style="color:rgb(73, 86, 120)!important;">${item.title.substring(
             0,
             100
           )} </a>
@@ -506,7 +506,7 @@ $(document).ready(() => {
         <h6 style="border-bottom:1px dashed rgb(73,86,120); padding-bottom:10px;" class="card-title">
         <a href="/post.html?id=${
           item._id
-        }" style="color:rgb(73, 86, 120)!important;">${title.substring(
+        }" style="color:rgb(73, 86, 120)!important;">${item.title.substring(
         0,
         70
       )}  </a>
@@ -536,10 +536,7 @@ $(document).ready(() => {
                 <p style="font-size:12px!important;" class="card-title font800">
                 <a href="/post.html?id=${
                   item._id
-                }" style="color:rgb(73, 86, 120)!important;">${title.substring(
-        0,
-        60
-      )}  </a>
+                }" style="color:rgb(73, 86, 120)!important;">${item.title.substring(0,60)}  </a>
                 </p>
             </span>
           </td>
@@ -734,7 +731,7 @@ $(document).ready(() => {
                       <p style="font-size:12px!important;" class="card-title font800">
                       <a href="/post.html?id=${
                         item._id
-                      }" style="color:rgb(73, 86, 120)!important;">${title.substring(
+                      }" style="color:rgb(73, 86, 120)!important;">${item.title.substring(
             0,
             70
           )}  </a>
@@ -746,7 +743,6 @@ $(document).ready(() => {
               </div>
             </table>
             <hr>
-            </br>
             <div style="clear:both;"></div>
         `;
           $("#latestPosts").append(node);
