@@ -35,6 +35,23 @@ const addFooter = contentLanguage => {
                     <a class="nav-link" href="../static_pages/membership.html">Membership</a>
                   </li>
                 </ul>
+                <ul style='font-size:19px;' class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a href='https://www.facebook.com/andib.aze/'> <img width='22px' src='https://s3.amazonaws.com/andop.org/icons/facebook.png'> </a>
+                </li>
+                <li class="nav-item active">
+                    <a href='https://twitter.com/ANDOP12'> <img width='22px' src='https://s3.amazonaws.com/andop.org/icons/tviter.png'> </a>
+                </li>
+                <li class="nav-item">
+                  <a href='https://www.youtube.com/channel/UC40q4m7-uv9pxDbP4qMpDsg?view_as=subscriber'> <img width='22px' src='https://s3.amazonaws.com/andop.org/icons/youyube.png'> </a>
+                </li>
+                <li class="nav-item">
+                  <a href='https://www.linkedin.com/company/andop/'> <img width='22px' src='https://s3.amazonaws.com/andop.org/icons/linki.png'> </a>
+                </li>
+                <li class="nav-item">
+                  <a href='https://www.instagram.com/sstm_baku/'> <img width='22px' src='https://s3.amazonaws.com/andop.org/icons/infta.png'> </a>
+                </li>
+              </ul>
               </div>
           </nav>
           <hr>
@@ -61,6 +78,23 @@ const addFooter = contentLanguage => {
                     <a class="nav-link" href="../static_pages/membership.html">Üzvlük</a>
                   </li>
                 </ul>
+                <ul style='font-size:19px;' class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a href='https://www.facebook.com/andib.aze/'> <img width='22px' src='https://s3.amazonaws.com/andop.org/icons/facebook.png'> </a>
+                </li>
+                <li class="nav-item active">
+                    <a href='https://twitter.com/ANDOP12'> <img width='22px' src='https://s3.amazonaws.com/andop.org/icons/tviter.png'> </a>
+                </li>
+                <li class="nav-item">
+                  <a href='https://www.youtube.com/channel/UC40q4m7-uv9pxDbP4qMpDsg?view_as=subscriber'> <img width='22px' src='https://s3.amazonaws.com/andop.org/icons/youyube.png'> </a>
+                </li>
+                <li class="nav-item">
+                  <a href='https://www.linkedin.com/company/andop/'> <img width='22px' src='https://s3.amazonaws.com/andop.org/icons/linki.png'> </a>
+                </li>
+                <li class="nav-item">
+                  <a href='https://www.instagram.com/sstm_baku/'> <img width='22px' src='https://s3.amazonaws.com/andop.org/icons/infta.png'> </a>
+                </li>
+              </ul>
               </div>
           </nav>
           <hr>
@@ -87,6 +121,23 @@ const addFooter = contentLanguage => {
                     <a class="nav-link" href="../static_pages/membership.html">Членство</a>
                   </li>
                 </ul>
+                <ul style='font-size:19px;' class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a href='https://www.facebook.com/andib.aze/'> <img width='22px' src='https://s3.amazonaws.com/andop.org/icons/facebook.png'> </a>
+                </li>
+                <li class="nav-item active">
+                    <a href='https://twitter.com/ANDOP12'> <img width='22px' src='https://s3.amazonaws.com/andop.org/icons/tviter.png'> </a>
+                </li>
+                <li class="nav-item">
+                  <a href='https://www.youtube.com/channel/UC40q4m7-uv9pxDbP4qMpDsg?view_as=subscriber'> <img width='22px' src='https://s3.amazonaws.com/andop.org/icons/youyube.png'> </a>
+                </li>
+                <li class="nav-item">
+                  <a href='https://www.linkedin.com/company/andop/'> <img width='22px' src='https://s3.amazonaws.com/andop.org/icons/linki.png'> </a>
+                </li>
+                <li class="nav-item">
+                  <a href='https://www.instagram.com/sstm_baku/'> <img width='22px' src='https://s3.amazonaws.com/andop.org/icons/infta.png'> </a>
+                </li>
+              </ul>
               </div>
           </nav>
           <hr>
@@ -165,11 +216,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 </li>
               </ul>
               <ul style='font-size:19px;' class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a href='https://twitter.com/ANDOP12'> <img width='22px' src='https://s3.amazonaws.com/andop.org/icons/tviter.png'> </a>
-                </li>
                 <li class="nav-item">
                   <a href='https://www.facebook.com/andib.aze/'> <img width='22px' src='https://s3.amazonaws.com/andop.org/icons/facebook.png'> </a>
+                </li>
+                <li class="nav-item active">
+                    <a href='https://twitter.com/ANDOP12'> <img width='22px' src='https://s3.amazonaws.com/andop.org/icons/tviter.png'> </a>
                 </li>
                 <li class="nav-item">
                   <a href='https://www.youtube.com/channel/UC40q4m7-uv9pxDbP4qMpDsg?view_as=subscriber'> <img width='22px' src='https://s3.amazonaws.com/andop.org/icons/youyube.png'> </a>
@@ -208,11 +259,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 </li>
               </ul>
                <ul style='font-size:19px;' class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a href='https://twitter.com/ANDOP12'> <img width='22px' src='https://s3.amazonaws.com/andop.org/icons/tviter.png'> </a>
-                </li>
                 <li class="nav-item">
                   <a href='https://www.facebook.com/andib.aze/'> <img width='22px' src='https://s3.amazonaws.com/andop.org/icons/facebook.png'> </a>
+                </li>
+                <li class="nav-item active">
+                    <a href='https://twitter.com/ANDOP12'> <img width='22px' src='https://s3.amazonaws.com/andop.org/icons/tviter.png'> </a>
                 </li>
                 <li class="nav-item">
                   <a href='https://www.youtube.com/channel/UC40q4m7-uv9pxDbP4qMpDsg?view_as=subscriber'> <img width='22px' src='https://s3.amazonaws.com/andop.org/icons/youyube.png'> </a>
@@ -251,11 +302,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 </li>
               </ul>
               <ul style='font-size:19px;' class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a href='https://twitter.com/ANDOP12'> <img width='22px' src='https://s3.amazonaws.com/andop.org/icons/tviter.png'> </a>
-                </li>
                 <li class="nav-item">
                   <a href='https://www.facebook.com/andib.aze/'> <img width='22px' src='https://s3.amazonaws.com/andop.org/icons/facebook.png'> </a>
+                </li>
+                <li class="nav-item active">
+                    <a href='https://twitter.com/ANDOP12'> <img width='22px' src='https://s3.amazonaws.com/andop.org/icons/tviter.png'> </a>
                 </li>
                 <li class="nav-item">
                   <a href='https://www.youtube.com/channel/UC40q4m7-uv9pxDbP4qMpDsg?view_as=subscriber'> <img width='22px' src='https://s3.amazonaws.com/andop.org/icons/youyube.png'> </a>
