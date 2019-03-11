@@ -502,7 +502,7 @@ $(document).ready(() => {
         <span class="date3">${item.createdAt
           .substring(0, 10)
           .replace(/-/g, ".")}</span>
-        <p>
+        
         <h6 style="border-bottom:1px dashed rgb(73,86,120); padding-bottom:10px;" class="card-title">
         <a href="/post.html?id=${
           item._id
@@ -511,7 +511,6 @@ $(document).ready(() => {
         70
       )}  </a>
         </h6>
-        </p>
       </div>
     </div>
       `;
