@@ -70,7 +70,7 @@ $(document).ready(() => {
 
       <a href="/post.html?id=${
         item._id
-      }" style="color:rgb(73, 86, 120)!important;">${title.substring(
+      }" style="color:rgb(73, 86, 120)">${title.substring(
       0,
       100
     )}</a>
@@ -111,7 +111,7 @@ $(document).ready(() => {
                     <h4 class="card-title">
                       <a href="/post.html?id=${
                         item._id
-                      }" style="color:rgb(73, 86, 120)!important;">${title.substring(
+                      }" style="color:rgb(73, 86, 120)">${title.substring(
             0,
             100
           )}</a>
@@ -403,7 +403,7 @@ $(document).ready(() => {
            .replace(/-/g, ".")}</span>
         <a href="/post.html?id=${
           item._id
-        }" style="color:rgb(73, 86, 120)!important;"><h6>${title.substring(
+        }" style="color:rgb(73, 86, 120)"><h6>${title.substring(
             0,
             100
           )}</h6></a>
@@ -420,7 +420,7 @@ $(document).ready(() => {
           <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 1px dotted navY; ">
             <a href="/post.html?id=${
               item._id
-            }" style="color:rgb(73, 86, 120)!important;">
+            }" style="color:rgb(73, 86, 120)">
               <span class="date3">${item.createdAt
                 .substring(0, 10)
                 .replace(/-/g, ".")}</span>
