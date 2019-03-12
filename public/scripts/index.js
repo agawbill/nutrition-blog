@@ -86,7 +86,7 @@ $(document).ready(() => {
 
     `;
     $("#newsFirst").append(news1);
-    for (i = 1; i < news.length; i++) {
+    for (let i = 1; i < news.length; i++) {
       const item = news[i];
       postLogic(item);
       if (item !== undefined) {
@@ -197,7 +197,7 @@ $(document).ready(() => {
           break;
         } else if (i === 4) {
           const ent = `
-    <div class="col-lg-3 col-md-3 mb-3" style="position:relative;float:center;">
+    <div class="col-lg-3 col-md-3  " style="position:relative;float:center;">
       <img src="${item.cover.url}" class="rounded"   width="100%">
       <p>
       <span class="date3">${item.createdAt
@@ -219,7 +219,7 @@ $(document).ready(() => {
           const item = entertainment[i];
           postLogic(item);
           const ent = `
-    <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 1px dotted navY">
+    <div class="col-lg-3 col-md-3  " style="position:relative;border-right: 1px dotted navY">
     <img src="${item.cover.url}" class="rounded"   width="100%">
   <p>
   <span class="date3">${item.createdAt
@@ -273,7 +273,7 @@ $(document).ready(() => {
           break;
         } else if (i === 4) {
           const tech = `
-        <div class="col-lg-3 col-md-3 mb-3" style="position:relative;float:center;">
+        <div class="col-lg-3 col-md-3  " style="position:relative;float:center;">
           <img src="${item.cover.url}" class="rounded"   width="100%">
           <p>
           <span class="date3">${item.createdAt
@@ -295,7 +295,7 @@ $(document).ready(() => {
           const item = technology[i];
           postLogic(item);
           const tech = `
-    <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 1px dotted navY">
+    <div class="col-lg-3 col-md-3  " style="position:relative;border-right: 1px dotted navY">
     <img src="${item.cover.url}" class="rounded"   width="100%">
   <p>
   <span class="date3">${item.createdAt
@@ -351,7 +351,7 @@ $(document).ready(() => {
           break;
         } else if (i === 4) {
           const sport = `
-    <div class="col-lg-3 col-md-3 mb-3" style="position:relative;">
+    <div class="col-lg-3 col-md-3  " style="position:relative;">
         <img src="${item.cover.url}" class="rounded"   width="100%">
       <p>
       <span class="date3">${item.createdAt
@@ -371,7 +371,7 @@ $(document).ready(() => {
           const item = sports[i];
           postLogic(item);
           const sport = `
-    <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 1px dotted navY;">
+    <div class="col-lg-3 col-md-3  " style="position:relative;border-right: 1px dotted navY;">
     <img src="${item.cover.url}" class="rounded"   width="100%">
   <p>
   <span class="date3">${item.createdAt
@@ -397,7 +397,7 @@ $(document).ready(() => {
           break;
         } else if (i === 4) {
           const selected = `
-      <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 0px">
+      <div class="col-lg-3 col-md-3  " style="position:relative;border-right: 0px">
          <span class="date3">${item.createdAt
            .substring(0, 10)
            .replace(/-/g, ".")}</span>
@@ -417,7 +417,7 @@ $(document).ready(() => {
           const item = selectedPosts[i];
           postLogic(item);
           const selected = `
-          <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 1px dotted navY; ">
+          <div class="col-lg-3 col-md-3  " style="position:relative;border-right: 1px dotted navY; ">
             <a href="/post.html?id=${
               item._id
             }" style="color:rgb(73, 86, 120)">
