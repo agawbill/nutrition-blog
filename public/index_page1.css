@@ -169,7 +169,11 @@ hr {
   color: white;
   text-align: center;
 }
-
+	a.nav-link.static_link{
+	  background-color: #495678;
+	}
+	
+	
 .bitTitle {
   font-size: 50px;
 }
@@ -256,6 +260,11 @@ hr {
 	}
 	p.topic_header:hover{
 	 	background-color:rgb(15,132,138);
+	}
+		
+	div#dotted3{
+	  position:relative;
+	  border-right: none!important;
 	}
 	
 @media screen and (max-width: 768px) {
