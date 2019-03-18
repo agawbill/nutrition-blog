@@ -258,6 +258,11 @@ hr {
 	 	background-color:rgb(15,132,138);
 	}
 	
+	div.dottedBorder{
+	  position:relative;
+	  border-right: 1px dotted navY;
+	}
+	
 @media screen and (max-width: 768px) {
   .rightColumn {
     display: none;
