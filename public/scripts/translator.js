@@ -15,41 +15,41 @@ var azerbaijan = document.getElementById("azerbaijan");
 const switchMenu = () => {
   const russianMenu = `
           <ul style='list-style-type: none; margin: 0; padding: 0; font-size:1.1em;'>
-           <li><a class="nav-link" href="about.html">ANDOP <span class="sr-only">(current)</span></a></li>
+           <li><a class="nav-link static_link" href="about.html">ANDOP <span class="sr-only">(current)</span></a></li>
             <hr>
-            </li><a class="nav-link" href="team.html">Наша Команда</a> </li>
+            </li><a class="nav-link static_link" href="team.html">Наша Команда</a> </li>
             <hr>
-            </li><a class="nav-link" href="projects.html">Наши Проекты</a> </li>
+            </li><a class="nav-link static_link" href="projects.html">Наши Проекты</a> </li>
             <hr>
-            </li> <a class="nav-link" href="trainings.html">Наши Тренинги</a></li>
+            </li> <a class="nav-link static_link" href="trainings.html">Наши Тренинги</a></li>
             <hr>
-            </li> <a class="nav-link" href="membership.html">Членство</a> </li>
+            </li> <a class="nav-link static_link" href="membership.html">Членство</a> </li>
             <hr>
           </ul>`;
   const englishMenu = `
           <ul style='list-style-type: none; margin: 0; padding: 0; font-size:1.1em;'>
-           <li><a class="nav-link" href="about.html">ANDOP <span class="sr-only">(current)</span></a></li>
+           <li><a class="nav-link static_link" href="about.html">ANDOP <span class="sr-only">(current)</span></a></li>
             <hr>
-            </li><a class="nav-link" href="team.html">Team</a> </li>
+            </li><a class="nav-link static_link" href="team.html">Team</a> </li>
             <hr>
-            </li><a class="nav-link" href="projects.html">Projects</a> </li>
+            </li><a class="nav-link static_link" href="projects.html">Projects</a> </li>
             <hr>
-            </li> <a class="nav-link" href="trainings.html">Trainings</a></li>
+            </li> <a class="nav-link static_link" href="trainings.html">Trainings</a></li>
             <hr>
-            </li> <a class="nav-link" href="membership.html">Membership</a> </li>
+            </li> <a class="nav-link static_link" href="membership.html">Membership</a> </li>
             <hr>
           </ul>`;
   const azerbaijanMenu = `
           <ul style='list-style-type: none; margin: 0; padding: 0; font-size:1.1em;'>
-           <li><a class="nav-link" href="about.html">ANDOP<span class="sr-only">(current)</span></a></li>
+           <li><a class="nav-link static_link" href="about.html">ANDOP<span class="sr-only">(current)</span></a></li>
             <hr>
-            </li><a class="nav-link" href="team.html">Komandamiz</a> </li>
+            </li><a class="nav-link static_link" href="team.html">Komandamiz</a> </li>
             <hr>
-            </li><a class="nav-link" href="projects.html">Proyektləri̇mi̇z</a> </li>
+            </li><a class="nav-link static_link" href="projects.html">Proyektləri̇mi̇z</a> </li>
             <hr>
-            </li> <a class="nav-link" href="trainings.html">Treni̇nglər</a></li>
+            </li> <a class="nav-link static_link" href="trainings.html">Treni̇nglər</a></li>
             <hr>
-            </li> <a class="nav-link" href="membership.html">Üzvlük</a> </li>
+            </li> <a class="nav-link static_link" href="membership.html">Üzvlük</a> </li>
             <hr>
           </ul>`;
 
