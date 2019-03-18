@@ -144,7 +144,6 @@ const latestCycle = () => {
         </div>
       </table>
       <hr>
-      </br>
       <div style="clear:both;"></div>
   `;
     $("#latestPosts").append(node);
@@ -167,7 +166,7 @@ const contentCycle = () => {
       <p>
       ${converter.makeHtml(content).substring(0, 200)}
       </p>
-      <span class="date2">${item.createdAt
+      <span class="date3">${item.createdAt
         .substring(0, 10)
         .replace(/-/g, ".")}</span>
     </li>
@@ -187,7 +186,7 @@ const recommendedCycle = () => {
     const node = `
       <div class="row">
         <div style="display: block; padding-left:35px; padding-right:35px;  ">
-        <span class="date2">${item.createdAt
+        <span class="date3">${item.createdAt
           .substring(0, 10)
           .replace(/-/g, ".")}</span>
         <p>

@@ -5,7 +5,7 @@ var recPostings = [];
 var firstSix = [];
 
 window.onload = () => {
-  var languageSelect = document.getElementById("languageSelect");
+var languageSelect = document.getElementById("languageSelect");
 };
 
 var contentLanguage = localStorage["myKey"] || "RU";
@@ -118,39 +118,26 @@ const latestCycle = () => {
   for (let i = 0; i < firstSix.length; i++) {
     const item = firstSix[i];
     postLogic(item);
-    const node = `
-
-      <table style="margin-bottom:10px; display:block">
+    const node = `<table style="margin-bottom:10px; display:block">
         <tr>
           <td>
-              <img src="${
-                item.cover.url
-              }"   width="90px" style="padding-right:5px;">
+              <img src="${item.cover.url}"   width="90px" style="padding-right:5px;">
           </td>
           <td style="width:100%;position:relative; clear:both;">
             <span class="newsText">
                 <p style="font-size:12px!important;" class="card-title font800">
-                <a href="/post.html?id=${
-                  item._id
-                }" style="color:black!important;">${title.substring(
-      0,
-      60
-    )}  </a>
+                <a href="/post.html?id=${item._id}" style="color:black!important;">${title.substring(0,60)}  </a>
                 </p>
             </span>
           </td>
-
         </tr>
         </div>
       </table>
       <hr>
-      </br>
-      <div style="clear:both;"></div>
-  `;
+       <div style="clear:both;"></div>`;
     $("#latestPosts").append(node);
   }
 };
-
 const contentCycle = () => {
   for (let i = contentArray.length - 1; i >= 0; i--) {
     const item = contentArray[i];
@@ -167,12 +154,9 @@ const contentCycle = () => {
       <p>
       ${converter.makeHtml(content).substring(0, 200)}
       </p>
-      <span class="date2">${item.createdAt
-        .substring(0, 10)
-        .replace(/-/g, ".")}</span>
+      <span class="date3">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
     </li>
-    </div>
-      `;
+    </div>`;
     $("#contentContainer").append(node);
   }
 };
@@ -187,7 +171,7 @@ const recommendedCycle = () => {
     const node = `
       <div class="row">
         <div style="display: block; padding-left:35px; padding-right:35px;  ">
-        <span class="date2">${item.createdAt
+        <span class="date3">${item.createdAt
           .substring(0, 10)
           .replace(/-/g, ".")}</span>
         <h6 style="border-bottom:2px dashed rgb(73,86,120); padding-bottom:10px;" class="card-title">
@@ -230,7 +214,6 @@ $(document).ready(() => {
                         <span class="date3">${item.createdAt
                           .substring(0, 10)
                           .replace(/-/g, ".")}</span>
-
             <h4 class="card-title">
               <a href="/post.html?id=${item._id}"> ${title}</a>
             </h4>

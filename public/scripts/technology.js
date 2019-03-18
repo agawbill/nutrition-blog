@@ -123,30 +123,21 @@ const latestCycle = () => {
       <table style="margin-bottom:10px; display:block">
         <tr>
           <td>
-              <img src="${
-                item.cover.url
-              }"   width="90px" style="padding-right:5px;">
+              <img src="${item.cover.url}" width="90px" style="padding-right:5px;">
           </td>
           <td style="width:100%;position:relative; clear:both;">
             <span class="newsText">
                 <p style="font-size:12px!important;" class="card-title font800">
-                <a href="/post.html?id=${
-                  item._id
-                }" style="color:black!important;">${title.substring(
-      0,
-      60
-    )}  </a>
+                <a href="/post.html?id=${item._id}" style="color:black!important;">${title.substring(0,60)}  </a>
                 </p>
             </span>
           </td>
-
         </tr>
         </div>
       </table>
       <hr>
       </br>
-      <div style="clear:both;"></div>
-  `;
+      <div style="clear:both;"></div>`;
     $("#latestPosts").append(node);
   }
 };
@@ -167,7 +158,7 @@ const contentCycle = () => {
       <p>
       ${converter.makeHtml(content).substring(0, 200)}
       </p>
-      <span class="date2">${item.createdAt
+      <span class="date3">${item.createdAt
         .substring(0, 10)
         .replace(/-/g, ".")}</span>
     </li>
@@ -187,7 +178,7 @@ const recommendedCycle = () => {
     const node = `
       <div class="row">
         <div style="display: block; padding-left:35px; padding-right:35px;  ">
-        <span class="date2">${item.createdAt
+        <span class="date3">${item.createdAt
           .substring(0, 10)
           .replace(/-/g, ".")}</span>
         <h6 style="border-bottom:2px dashed rgb(73,86,120); padding-bottom:10px;" class="card-title">
