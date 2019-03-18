@@ -366,7 +366,7 @@ $(document).ready(() => {
           const item = sports[i];
           postLogic(item);
           const sport = `
-    <div  class="col-lg-3 col-md-3" style="position:relative;border-right: 1px dotted navY;">
+    <div class="col-lg-3 col-md-3" style="position:relative;border-right: 1px dotted navY;">
     <img src="${item.cover.url}" class="rounded"   width="100%">
   <p>
   <span class="date3">${item.createdAt
@@ -392,7 +392,7 @@ $(document).ready(() => {
           break;
         } else if (i === 4) {
           const selected = `
-      <div class="col-lg-3 col-md-3" style="position:relative;border-right: 0px">
+      <div class="col-lg-3 col-md-3  " style="position:relative;border-right: 0px">
          <span class="date3">${item.createdAt
            .substring(0, 10)
            .replace(/-/g, ".")}</span>
@@ -412,7 +412,7 @@ $(document).ready(() => {
           const item = selectedPosts[i];
           postLogic(item);
           const selected = `
-          <div id=${'dotted'+i} class="col-lg-3 col-md-3 dottedBorder">
+          <div id=${'dotted'+i} class="col-lg-3 col-md-3" style="position:relative;border-right: 1px dotted navY; ">
             <a href="/post.html?id=${
               item._id
             }" style="color:rgb(73, 86, 120)">

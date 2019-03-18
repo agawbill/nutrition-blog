@@ -258,9 +258,9 @@ hr {
 	 	background-color:rgb(15,132,138);
 	}
 	
-	div.dottedBorder{
+	div#dotted3{
 	  position:relative;
-	  border-right: 1px dotted navY;
+	  border-right: none;
 	}
 	
 @media screen and (max-width: 768px) {
