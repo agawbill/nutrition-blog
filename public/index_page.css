@@ -260,7 +260,11 @@ hr {
 	
 	div#dotted3{
 	  position:relative;
-	  border-right: none;
+	  border-right: none!important;
+	}
+	
+	a.nav-link.static_link{
+	  background-color: #495678;
 	}
 	
 @media screen and (max-width: 768px) {
