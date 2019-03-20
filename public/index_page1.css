@@ -171,6 +171,7 @@ hr {
 }
 	a.nav-link.static_link{
 	  color: #495678;
+	  	padding:1rem!important;
 	}
 	
 	
@@ -237,10 +238,7 @@ hr {
 	li.nav-item {
 		color:white!important;
 	}
-	a.nav-link {
-		color:white!important;
-		padding:1rem!important;
-	}
+ 
 	a.nav-link:hover {
 		color:white!important;
 			 	background-color:rgb(15,132,138);
