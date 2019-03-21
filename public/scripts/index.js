@@ -58,32 +58,23 @@ $(document).ready(() => {
       var dateB = new Date(b.createdAt);
       return dateB - dateA;
     });
-
     const item = news[0];
     postLogic(item);
     const news1 = `
-    <img src="${item.cover.url}"   width="100%" class="rounded" ></p>
-    <span class="date3">   ${item.createdAt
-      .substring(0, 10)
-      .replace(/-/g, ".")}</span>
+    <img src="${item.cover.url}"   width="100%" class="rounded" >
+    <span class="date3">   ${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
     <p style="font-size:  2vw; font-weight: 600; " class="card-title">
-
       <a href="/post.html?id=${
         item._id
       }" style="color:rgb(73, 86, 120)">${title.substring(
       0,
       100
     )}</a>
-    </p>
-
-    <p>
     <div style="margin-bottom:5px;">
     ${converter.makeHtml(content).substring(0, 337)}
       <br>
     </div>
-
     </p>
-
     `;
     $("#newsFirst").append(news1);
     for (let i = 1; i < news.length; i++) {

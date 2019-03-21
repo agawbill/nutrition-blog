@@ -175,11 +175,11 @@ hr {
 		padding:1rem!important;
 	}
 	a.nav-link:hover {
- 			 	background-color:rgb(15,132,138);
-
+ 		background-color:rgb(15,132,138);
 	}
 	a.static_link{
 	  color: #495678!important;
+	  background-color:white!important;
 	  	/*padding:1rem!important;*/
 	}
 	
