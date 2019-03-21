@@ -20,19 +20,19 @@ const addFooter = contentLanguage => {
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul style='font-size:19px;' class="navbar-nav">
                   <li class="nav-item active">
-                    <a class="nav-link static_link" href="../static_pages/about.html"> ANDOP <span class="sr-only">(current)</span></a>
+                    <a class="nav-link " href="../static_pages/about.html"> ANDOP <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link static_link" href="../static_pages/team.html">Team</a>
+                    <a class="nav-link  " href="../static_pages/team.html">Team</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link static_link" href="../static_pages/projects.html">Projects</a>
+                    <a class="nav-link  " href="../static_pages/projects.html">Projects</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link static_link" href="../static_pages/trainings.html">Trainings</a>
+                    <a class="nav-link  " href="../static_pages/trainings.html">Trainings</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link static_link" href="../static_pages/membership.html">Membership</a>
+                    <a class="nav-link  " href="../static_pages/membership.html">Membership</a>
                   </li>
                 </ul>
               </div>
@@ -46,19 +46,19 @@ const addFooter = contentLanguage => {
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul style='font-size:19px;' class="navbar-nav">
                   <li class="nav-item active">
-                    <a class="nav-link static_link" href="../static_pages/about.html"> ANDOP <span class="sr-only">(current)</span></a>
+                    <a class="nav-link  " href="../static_pages/about.html"> ANDOP <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link static_link" href="../static_pages/team.html">Komandamiz</a>
+                    <a class="nav-link  " href="../static_pages/team.html">Komandamiz</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link static_link" href="../static_pages/projects.html">Proyektlərimiz</a>
+                    <a class="nav-link  " href="../static_pages/projects.html">Proyektlərimiz</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link static_link" href="../static_pages/trainings.html">Treninglər</a>
+                    <a class="nav-link  " href="../static_pages/trainings.html">Treninglər</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link static_link" href="../static_pages/membership.html">Üzvlük</a>
+                    <a class="nav-link  " href="../static_pages/membership.html">Üzvlük</a>
                   </li>
                 </ul>
               </div>
@@ -72,19 +72,19 @@ const addFooter = contentLanguage => {
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul style='font-size:19px;' class="navbar-nav">
                   <li class="nav-item active">
-                    <a class="nav-link static_link" href="../static_pages/about.html"> ANDOP <span class="sr-only">(current)</span></a>
+                    <a class="nav-link  " href="../static_pages/about.html"> ANDOP <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link static_link" href="../static_pages/team.html">Наша Команда</a>
+                    <a class="nav-link  " href="../static_pages/team.html">Наша Команда</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link static_link" href="../static_pages/projects.html">Наши Проекты</a>
+                    <a class="nav-link  " href="../static_pages/projects.html">Наши Проекты</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link static_link" href="../static_pages/trainings.html">Наши Тренинги</a>
+                    <a class="nav-link  " href="../static_pages/trainings.html">Наши Тренинги</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link static_link" href="../static_pages/membership.html">Членство</a>
+                    <a class="nav-link  " href="../static_pages/membership.html">Членство</a>
                   </li>
                 </ul>
               </div>
@@ -149,19 +149,19 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul style='font-size:19px;' class="navbar-nav">
                 <li class="nav-item active">
-                  <a class="nav-link static_link" href="../static_pages/about.html"> ANDOP <span class="sr-only">(current)</span></a>
+                  <a class="nav-link  " href="../static_pages/about.html"> ANDOP <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link static_link" href="../static_pages/team.html">Team</a>
+                  <a class="nav-link  " href="../static_pages/team.html">Team</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link static_link" href="../static_pages/projects.html">Projects</a>
+                  <a class="nav-link  " href="../static_pages/projects.html">Projects</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link static_link" href="../static_pages/trainings.html">Trainings</a>
+                  <a class="nav-link  " href="../static_pages/trainings.html">Trainings</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link static_link" href="../static_pages/membership.html">Membership</a>
+                  <a class="nav-link  " href="../static_pages/membership.html">Membership</a>
                 </li>
               </ul>
               <ul style='font-size:19px;' class="navbar-nav ml-auto">
@@ -192,19 +192,19 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul style='font-size:19px;' class="navbar-nav">
                 <li class="nav-item active">
-                  <a class="nav-link static_link" href="../static_pages/about.html"> ANDOP <span class="sr-only">(current)</span></a>
+                  <a class="nav-link  " href="../static_pages/about.html"> ANDOP <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link static_link" href="../static_pages/team.html">Komandamiz</a>
+                  <a class="nav-link  " href="../static_pages/team.html">Komandamiz</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link static_link" href="../static_pages/projects.html">Proyektləri̇mi̇z</a>
+                  <a class="nav-link  " href="../static_pages/projects.html">Proyektləri̇mi̇z</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link static_link" href="../static_pages/trainings.html">Treni̇nglər</a>
+                  <a class="nav-link  " href="../static_pages/trainings.html">Treni̇nglər</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link static_link" href="../static_pages/membership.html">Üzvlük</a>
+                  <a class="nav-link  " href="../static_pages/membership.html">Üzvlük</a>
                 </li>
               </ul>
                 <ul style='font-size:19px;' class="navbar-nav ml-auto">
@@ -235,19 +235,19 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul style='font-size:19px;' class="navbar-nav">
                 <li class="nav-item active">
-                  <a class="nav-link static_link" href="../static_pages/about.html"> ANDOP <span class="sr-only">(current)</span></a>
+                  <a class="nav-link  " href="../static_pages/about.html"> ANDOP <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link static_link" href="../static_pages/team.html">Наша Команда</a>
+                  <a class="nav-link  " href="../static_pages/team.html">Наша Команда</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link static_link" href="../static_pages/projects.html">Наши Проекты</a>
+                  <a class="nav-link  " href="../static_pages/projects.html">Наши Проекты</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link static_link" href="../static_pages/trainings.html">Наши Тренинги</a>
+                  <a class="nav-link  " href="../static_pages/trainings.html">Наши Тренинги</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link static_link" href="../static_pages/membership.html">Членство</a>
+                  <a class="nav-link  " href="../static_pages/membership.html">Членство</a>
                 </li>
               </ul>
                <ul style='font-size:19px;' class="navbar-nav ml-auto">
