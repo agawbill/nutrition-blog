@@ -101,11 +101,11 @@ const recommendedCycle = () => {
         <span class="date3">${item.createdAt
           .substring(0, 10)
           .replace(/-/g, ".")}</span>
-        <h5 style="border-bottom:2px dashed rgb(73,86,120); padding-bottom:10px;" class="card-title">
+        <h6 style="border-bottom:1px dashed rgb(73,86,120); padding-bottom:10px;" class="card-title">
         <a href="/post.html?id=${
           item._id
-        }" style="color:black!important;">${title.substring(0, 70)}  </a>
-        </h5>
+        }" style="color:rgb(73, 86, 120)">${title.substring(0, 70)}  </a>
+        </h6>
       </div>
     </div>
       `;
