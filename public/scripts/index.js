@@ -66,11 +66,24 @@ $(document).ready(() => {
     <span class="date3">   ${item.createdAt
       .substring(0, 10)
       .replace(/-/g, ".")}</span>
-      <a class="card-title sectionHeading" href="/post.html?id=${item._id}">${title.substring(0,100)}</a>
+    <p style="font-size:  2vw; font-weight: 600; " class="card-title">
+
+      <a href="/post.html?id=${
+        item._id
+      }" style="color:rgb(73, 86, 120)">${title.substring(
+      0,
+      100
+    )}</a>
+    </p>
+
+    <p>
     <div style="margin-bottom:5px;">
     ${converter.makeHtml(content).substring(0, 337)}
       <br>
     </div>
+
+    </p>
+
     `;
     $("#newsFirst").append(news1);
     for (let i = 1; i < news.length; i++) {
@@ -92,21 +105,34 @@ $(document).ready(() => {
               </td>
               <td style="width:100%;position:relative; clear:both;">
                 <span class="newsText">
-                          <span class="date3">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
+                          <span class="date3">${item.createdAt
+                            .substring(0, 10)
+                            .replace(/-/g, ".")}</span>
                     <h4 class="card-title">
-                      <a href="/post.html?id=${item._id}" style="color:rgb(73, 86, 120)">${title.substring(0,100)}</a>
+                      <a href="/post.html?id=${
+                        item._id
+                      }" style="color:rgb(73, 86, 120)">${title.substring(
+            0,
+            100
+          )}</a>
                     </h4>
                 </span>
               </td>
             </tr>
           </table>
-        </div>`;
+        </div>
+        <p>
+          `;
           $("#newsSecond").append(news2);
-        } else {const news2 = `<div id="blocks">
+        } else {
+          const news2 = `
+        <div id="blocks">
           <table>
             <tr>
               <td width='60%'>
-                  <img src="${item.cover.url}"  class="rounded" float="left"   width="100%" style="padding-right:10px;">
+                  <img src="${
+                    item.cover.url
+                  }"  class="rounded" float="left"   width="100%" style="padding-right:10px;">
               </td>
               <td style="width:100%;position:relative; clear:both;">
                 <span class="newsText">
@@ -114,13 +140,20 @@ $(document).ready(() => {
                       .substring(0, 10)
                       .replace(/-/g, ".")}</span>
                     <h4 class="card-title">
-                      <a href="/post.html?id=${item._id}"style="color:rgb(73, 86, 120)">${title.substring(0,100)}</a>
+                      <a href="/post.html?id=${
+                        item._id
+                      }"style="color:rgb(73, 86, 120)">${title.substring(
+            0,
+            100
+          )}</a>
                     </h4>
                 </span>
               </td>
             </tr>
           </table>
-        </div>`;
+        </div>
+        <p>
+          `;
           $("#newsSecond").append(news2);
         }
       }
@@ -132,6 +165,7 @@ $(document).ready(() => {
       var dateB = new Date(b.createdAt);
       return dateB - dateA;
     });
+
     const item = entertainment[0];
     postLogic(item);
     const ent = `
@@ -139,11 +173,21 @@ $(document).ready(() => {
       <img src="${
         item.cover.url
       }" class="rounded"   width="50%" style="float:left; padding-right:15px;">
-      <span class="date3">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
+      <span class="date3">${item.createdAt
+        .substring(0, 10)
+        .replace(/-/g, ".")}</span>
       </div>
-          <a class="card-title sectionHeading" href="/post.html?id=${item._id}" style="color:rgb(73, 86, 120)">${title.substring(0,100)}</a>
+        <p style="font-size:  2vw; font-weight: 600; " class="card-title">
+          <a href="/post.html?id=${
+            item._id
+          }" style="color:rgb(73, 86, 120)">${title.substring(
+      0,
+      100
+    )}</a>
+        </h5>
        <p class='font800'>${converter.makeHtml(content.substring(0, 286))}</p>
-        </p>`;
+        </p>
+      `;
     $("#entertainmentFirst").append(ent);
     for (let i = 1; i < entertainment.length; i++) {
       const item = entertainment[i];
@@ -210,7 +254,11 @@ $(document).ready(() => {
   <span class="date3">${item.createdAt
     .substring(0, 10)
     .replace(/-/g, ".")}</span>
-      <a class="card-title sectionHeading" href="/post.html?id=${item._id }>${title.substring(0, 100)}</a>
+    <p style="font-size:  2vw; font-weight: 600;" class="card-title">
+      <a href="/post.html?id=${
+        item._id
+      }"style="color:rgb(73, 86, 120)">${title.substring(0, 100)}</a>
+    </p>
     <p>
     ${converter.makeHtml(content).substring(0, 351)}
     </p>
@@ -282,7 +330,7 @@ $(document).ready(() => {
   <span class="date3">${item.createdAt
     .substring(0, 10)
     .replace(/-/g, ".")}</span>
-    <p class="card-title sectionHeading">
+    <p style="font-size:  2vw; font-weight: 600; " class="card-title">
       <a href="/post.html?id=${item._id}" style="color:rgb(73, 86, 120)">${title.substring(0,100)}</a>
     </p>
    <p class='font800'>${converter.makeHtml(content).substring(0, 351)}</p>
