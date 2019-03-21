@@ -185,7 +185,7 @@ $(document).ready(() => {
       100
     )}</a>
         </h5>
-       <p class='font800'>${converter.makeHtml(content.substring(0, 286))}</p>
+       <p class='font800'>${converter.makeHtml(content.substring(0, 209))}</p>
         </p>
       `;
     $("#entertainmentFirst").append(ent);
