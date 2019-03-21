@@ -171,14 +171,14 @@ hr {
 }
 	
 	a.nav-link {
-		color:white;
+		color:white!important;
 		padding:1rem!important;
 	}
 	a.nav-link:hover {
  			 	background-color:rgb(15,132,138);
 
 	}
-	.static_link{
+	a.static_link{
 	  color: #495678!important;
 	  	/*padding:1rem!important;*/
 	}
