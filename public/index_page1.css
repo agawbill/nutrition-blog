@@ -169,9 +169,18 @@ hr {
   color: white;
   text-align: center;
 }
-	a.nav-link.static_link{
-	  color: #495678;
-	  	padding:1rem!important;
+	
+	a.nav-link {
+		color:white;
+		padding:1rem!important;
+	}
+	a.nav-link:hover {
+ 			 	background-color:rgb(15,132,138);
+
+	}
+	.static_link{
+	  color: #495678!important;
+	  	/*padding:1rem!important;*/
 	}
 	
 	
@@ -239,11 +248,6 @@ hr {
 		color:white!important;
 	}
  
-	a.nav-link:hover {
-		color:white!important;
-			 	background-color:rgb(15,132,138);
-
-	}
 	
 	nav.navbar {padding: 0!important;}
 	
