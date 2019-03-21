@@ -71,7 +71,7 @@ $(document).ready(() => {
       100
     )}</a>
     <div style="margin-bottom:5px;">
-    ${converter.makeHtml(content).substring(0, 337)}
+    ${converter.makeHtml(content).substring(0, 301)+' ...'}
       <br>
     </div>
     </p>
