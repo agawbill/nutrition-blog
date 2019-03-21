@@ -183,7 +183,9 @@ hr {
 	  	/*padding:1rem!important;*/
 	}
 	
-	
+	p.card-title.sectionHeadings{
+	  font-size:  2vw; font-weight: 600; 
+	}
 .bitTitle {
   font-size: 50px;
 }

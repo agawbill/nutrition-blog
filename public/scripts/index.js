@@ -66,16 +66,9 @@ $(document).ready(() => {
     <span class="date3">   ${item.createdAt
       .substring(0, 10)
       .replace(/-/g, ".")}</span>
-    <p style="font-size:  2vw; font-weight: 600; " class="card-title">
-
-      <a href="/post.html?id=${
-        item._id
-      }" style="color:rgb(73, 86, 120)">${title.substring(
-      0,
-      100
-    )}</a>
+    <p   class="card-title sectionHeading">
+      <a href="/post.html?id=${item._id}" style="color:rgb(73, 86, 120)">${title.substring(0,100)}</a>
     </p>
-
     <p>
     <div style="margin-bottom:5px;">
     ${converter.makeHtml(content).substring(0, 337)}
@@ -177,7 +170,7 @@ $(document).ready(() => {
         .substring(0, 10)
         .replace(/-/g, ".")}</span>
       </div>
-        <p style="font-size:  2vw; font-weight: 600; " class="card-title">
+        <p  class="card-title sectionHeading">
           <a href="/post.html?id=${
             item._id
           }" style="color:rgb(73, 86, 120)">${title.substring(
@@ -254,7 +247,7 @@ $(document).ready(() => {
   <span class="date3">${item.createdAt
     .substring(0, 10)
     .replace(/-/g, ".")}</span>
-    <p style="font-size:  2vw; font-weight: 600;" class="card-title">
+    <p   class="card-title sectionHeading">
       <a href="/post.html?id=${
         item._id
       }"style="color:rgb(73, 86, 120)">${title.substring(0, 100)}</a>
@@ -330,7 +323,7 @@ $(document).ready(() => {
   <span class="date3">${item.createdAt
     .substring(0, 10)
     .replace(/-/g, ".")}</span>
-    <p style="font-size:  2vw; font-weight: 600; " class="card-title">
+    <p class="card-title sectionHeading">
       <a href="/post.html?id=${item._id}" style="color:rgb(73, 86, 120)">${title.substring(0,100)}</a>
     </p>
    <p class='font800'>${converter.makeHtml(content).substring(0, 351)}</p>
