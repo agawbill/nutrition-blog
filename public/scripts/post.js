@@ -39,6 +39,7 @@ const postCycle = async () => {
                 					    <a href="https://www.facebook.com/sharer.php?u=http://andop.az/post.html?id=${item._id}" class="btn-facebook" data-id="fb"><i class="fab fa-facebook-square"></i> Facebook</a>
                 					    <a class="btn-twitter" data-id="tw"><i class="fab fa-twitter"></i> Twitter</a>
                 					    <a class="btn-telegram" data-id="tg"><i class="fab fa-telegram"></i> Telegram</a>
+                					    <a class="btn-linkedin" data-id="in"><i class="fab fa-linkedin"></i> Linkedin</a>
                 					    <a class="btn-mail" data-id="mail"><i class="fas fa-at"></i> EMail</a>
 				                	</div>
 				                	<script src="/scripts/share-buttons.js"></script>`;
