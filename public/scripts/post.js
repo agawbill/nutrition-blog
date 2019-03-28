@@ -56,10 +56,7 @@ const postCycle = async () => {
     <p>
     <h5>${converter.makeHtml(content)} </h5>
     </p>
-     <p>
-    ${fbookButton}
-    </p>
-  </div>
+   </div>
     `;
   $("#postContainer").append(node + fbookButton);
 };
