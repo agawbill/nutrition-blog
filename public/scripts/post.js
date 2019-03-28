@@ -36,7 +36,7 @@ const postCycle = async () => {
   postLogic(item);
   var fbookButton = await `<div class="share-btn" data-url="/post.html?id=${item._id}" data-title="${title}" data-desc="${title}">
                 					    <a class="btn-vk" data-id="vk"><i class="fab fa-vk"></i> VK</a>
-                					    <a class="btn-facebook" data-id="fb"><i class="fab fa-facebook-square"></i> Facebook</a>
+                					    <a href="https://www.facebook.com/sharer.php?u=http://andop.az/post.html?id=${item._id}" class="btn-facebook" data-id="fb"><i class="fab fa-facebook-square"></i> Facebook</a>
                 					    <a class="btn-twitter" data-id="tw"><i class="fab fa-twitter"></i> Twitter</a>
                 					    <a class="btn-telegram" data-id="tg"><i class="fab fa-telegram"></i> Telegram</a>
                 					    <a class="btn-mail" data-id="mail"><i class="fas fa-at"></i> EMail</a>
