@@ -13,20 +13,23 @@
 	<link href='./index_page.css' rel="stylesheet">
 </head>
 <body lang="en">
-	<div id="fb-root"></div>
-	<script>
-	  (function(d, s, id) {
-	     var js, fjs = d.getElementsByTagName(s)[0];
-	     if (d.getElementById(id)) return;
-	     js = d.createElement(s); js.id = id;
-	     js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2&appId=354502904694316&autoLogAppEvents=1';
-	     fjs.parentNode.insertBefore(js, fjs);
-	   }(document, 'script', 'facebook-jssdk'));
-	</script>
+ 
 	<div id="headerPartial"></div>
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-9 col-lg-9 mb-9" id="postContainer"></div>
+			<div class="col-md-9 col-lg-9 mb-9" id="postContainer">
+				
+				
+			</div>
+				<div>
+					<div class="share-btn" data-url="https://..." data-title="..." data-desc="...">
+					    <a class="btn-vk" data-id="vk"><i class="fab fa-vk"></i> VK</a>
+					    <a class="btn-facebook" data-id="fb"><i class="fab fa-facebook-square"></i> Facebook</a>
+					    <a class="btn-twitter" data-id="tw"><i class="fab fa-twitter"></i> Twitter</a>
+					    <a class="btn-telegram" data-id="tg"><i class="fab fa-telegram"></i> Telegram</a>
+					    <a class="btn-mail" data-id="mail"><i class="fas fa-at"></i> EMail</a>
+				</div>
+				</div>
 			<div class='nomargin right-column'>
 				<a href='#'><img src="banner_online_course.jpg" width="100%"></a>
 				<center>
@@ -62,5 +65,7 @@
 	</script> 
 	<script charset="utf-8" src="/scripts/footer.js">
 	</script> <!--end of facebook script-->
+		<script src="../node_modules/share-buttons/src/share-buttons.js"></script>
+
 </body>
 </html>
