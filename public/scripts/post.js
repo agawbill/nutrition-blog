@@ -40,7 +40,8 @@ const postCycle = async () => {
                 					    <a class="btn-twitter" data-id="tw"><i class="fab fa-twitter"></i> Twitter</a>
                 					    <a class="btn-telegram" data-id="tg"><i class="fab fa-telegram"></i> Telegram</a>
                 					    <a class="btn-mail" data-id="mail"><i class="fas fa-at"></i> EMail</a>
-				                	</div>`;
+				                	</div>
+				                	<script src="/scripts/share-buttons.js"></script>`;
 
   const node = await`
   <div class="col-lg-12 col-md-12 mb-12">
