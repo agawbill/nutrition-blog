@@ -34,9 +34,13 @@ const postLogic = item => {
 const postCycle = async () => {
   item = post[0];
   postLogic(item);
-  var fbookButton = await `<div class="share-btn" data-url="/post.html?id=${item._id}" data-title="${title}" data-desc="${title}">
+  var fbookButton = await `<div class="share-btn" data-url="/post.html?id=${
+    item._id
+  }" data-title="${title}" data-desc="${title}">
                 					    <a class="btn-vk" data-id="vk"><i class="fab fa-vk"></i> VK</a>
-                					    <a href="https://www.facebook.com/sharer.php?u=http://andop.az/post.html?id=${item._id}" class="btn-facebook" data-id="fb"><i class="fab fa-facebook-square"></i> Facebook</a>
+                					    <a href="https://www.facebook.com/sharer.php?u=http://andop.az/post.html?id=${
+                                item._id
+                              }" class="btn-facebook" data-id="fb"><i class="fab fa-facebook-square"></i> Facebook</a>
                 					    <a class="btn-twitter" data-id="tw"><i class="fab fa-twitter"></i> Twitter</a>
                 					    <a class="btn-telegram" data-id="tg"><i class="fab fa-telegram"></i> Telegram</a>
                 					    <a class="btn-linkedin" data-id="in"><i class="fab fa-linkedin"></i> Linkedin</a>
@@ -44,16 +48,18 @@ const postCycle = async () => {
 				                	</div>
 				                	<script src="/scripts/share-buttons.js"></script>`;
 
-  const node = await`
+  const node = await `
   <div class="col-lg-12 col-md-12 mb-12">
     <h4 class="card-title">
       <a href="/post.html?id=${item._id}">${title}</a>
     </h4>
     <p>
-    <span class="date3">${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
+    <span class="date3">${item.createdAt
+      .substring(0, 10)
+      .replace(/-/g, ".")}</span>
     </p>
     <p>
-      <img src="${item.cover.url}" class="rounded" width="100%"> 
+      <img src="${item.cover.url}" class="rounded" width="100%">
     </p>
     <p>
     <h5>${converter.makeHtml(content)} </h5>
@@ -69,12 +75,19 @@ const latestCycle = () => {
     const node = `<table style="margin-bottom:10px; display:block">
         <tr>
           <td>
-              <img src="${item.cover.url}" width="90px" style="padding-right:5px;">
+              <img src="${
+                item.cover.url
+              }" width="90px" style="padding-right:5px;">
           </td>
           <td style="width:100%;position:relative; clear:both;">
             <span class="newsText">
                 <p style="font-size:12px!important;" class="card-title font800">
-                <a href="/post.html?id=${item._id}" style="color:black!important;">${title.substring(0,60)}  </a>
+                <a href="/post.html?id=${
+                  item._id
+                }" style="color:black!important;">${title.substring(
+      0,
+      60
+    )}  </a>
                 </p>
             </span>
           </td>
@@ -138,6 +151,7 @@ window.onload = () => {
     if (languageSelect.value == "ENG") {
       localStorage["myKey"] = "ENG";
       contentLanguage = "ENG";
+      titleLanguage = "ENG";
       $("#postContainer").empty();
       $("#upcoming").empty();
       $("#recPosts").empty();
@@ -149,6 +163,7 @@ window.onload = () => {
     } else if (languageSelect.value == "RU") {
       localStorage["myKey"] = "RU";
       contentLanguage = "RU";
+      titleLanguage = "RU";
       $("#postContainer").empty();
       $("#upcoming").empty();
       $("#recPosts").empty();
@@ -160,6 +175,7 @@ window.onload = () => {
     } else if (languageSelect.value == "AZ") {
       localStorage["myKey"] = "AZ";
       contentLanguage = "AZ";
+      titleLanguage = "AZ";
       $("#postContainer").empty();
       $("#upcoming").empty();
       $("#recPosts").empty();

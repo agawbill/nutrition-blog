@@ -62,16 +62,15 @@ $(document).ready(() => {
     postLogic(item);
     const news1 = `
     <img src="${item.cover.url}"   width="100%" class="rounded" >
-    <span class="date3">   ${item.createdAt.substring(0, 10).replace(/-/g, ".")}</span>
+    <span class="date3">   ${item.createdAt
+      .substring(0, 10)
+      .replace(/-/g, ".")}</span>
     <p style="font-size:  2vw; font-weight: 600; " class="card-title">
       <a href="/post.html?id=${
         item._id
-      }" style="color:rgb(73, 86, 120)">${title.substring(
-      0,
-      100
-    )}</a>
+      }" style="color:rgb(73, 86, 120)">${title.substring(0, 100)}</a>
     <div style="margin-bottom:5px;">
-    ${converter.makeHtml(content).substring(0, 301)+' ...'}
+    ${converter.makeHtml(content).substring(0, 301) + " ..."}
       <br>
     </div>
     </p>
@@ -171,10 +170,7 @@ $(document).ready(() => {
         <p style="font-size:  2vw; font-weight: 600; " class="card-title">
           <a href="/post.html?id=${
             item._id
-          }" style="color:rgb(73, 86, 120)">${title.substring(
-      0,
-      100
-    )}</a>
+          }" style="color:rgb(73, 86, 120)">${title.substring(0, 100)}</a>
         </h5>
        <p class='font800'>${converter.makeHtml(content.substring(0, 209))}</p>
         </p>
@@ -197,10 +193,7 @@ $(document).ready(() => {
         <h5 class="card-title">
           <a href="/post.html?id=${
             item._id
-          }" style="color:rgb(73, 86, 120)">${title.substring(
-            0,
-            100
-          )}</a>
+          }" style="color:rgb(73, 86, 120)">${title.substring(0, 100)}</a>
         </h5>
         </p>
     </div>
@@ -273,10 +266,7 @@ $(document).ready(() => {
             <h5 class="card-title">
               <a href="/post.html?id=${
                 item._id
-              }" style="color:rgb(73, 86, 120)">${title.substring(
-            0,
-            100
-          )}</a>
+              }" style="color:rgb(73, 86, 120)">${title.substring(0, 100)}</a>
             </h5>
             </p>
         </div>
@@ -322,7 +312,9 @@ $(document).ready(() => {
     .substring(0, 10)
     .replace(/-/g, ".")}</span>
     <p style="font-size:  2vw; font-weight: 600; " class="card-title">
-      <a href="/post.html?id=${item._id}" style="color:rgb(73, 86, 120)">${title.substring(0,100)}</a>
+      <a href="/post.html?id=${
+        item._id
+      }" style="color:rgb(73, 86, 120)">${title.substring(0, 100)}</a>
     </p>
    <p class='font800'>${converter.makeHtml(content).substring(0, 351)}</p>
     </p>
@@ -346,10 +338,7 @@ $(document).ready(() => {
       <h5 class="card-title">
         <a href="/post.html?id=${
           item._id
-        }" style="color:rgb(73, 86, 120)">${title.substring(
-            0,
-            100
-          )}</a>
+        }" style="color:rgb(73, 86, 120)">${title.substring(0, 100)}</a>
       </h5>
     </div> `;
           $("#sportsSecond").append(sport);
@@ -403,10 +392,9 @@ $(document).ready(() => {
           const item = selectedPosts[i];
           postLogic(item);
           const selected = `
-          <div id=${'dotted'+i} class="col-lg-3 col-md-3" style="position:relative;border-right: 1px dotted navY; ">
-            <a href="/post.html?id=${
-              item._id
-            }" style="color:rgb(73, 86, 120)">
+          <div id=${"dotted" +
+            i} class="col-lg-3 col-md-3" style="position:relative;border-right: 1px dotted navY; ">
+            <a href="/post.html?id=${item._id}" style="color:rgb(73, 86, 120)">
               <span class="date3">${item.createdAt
                 .substring(0, 10)
                 .replace(/-/g, ".")}</span>
@@ -444,10 +432,7 @@ $(document).ready(() => {
         <h5 class="card-title">
         <a href="/post.html?id=${
           item._id
-        }" style="color:rgb(73, 86, 120)">${title.substring(
-            0,
-            100
-          )} </a>
+        }" style="color:rgb(73, 86, 120)">${title.substring(0, 100)} </a>
         </h5>
       </div>
       `;
@@ -463,10 +448,7 @@ $(document).ready(() => {
       <h5 class="card-title">
       <a href="/post.html?id=${
         item._id
-      }"style="color:rgb(73, 86, 120)">${item.title.substring(
-            0,
-            100
-          )} </a>
+      }"style="color:rgb(73, 86, 120)">${title.substring(0, 100)} </a>
       </h5>
       </div>
       `;
@@ -488,14 +470,11 @@ $(document).ready(() => {
         <span class="date3">${item.createdAt
           .substring(0, 10)
           .replace(/-/g, ".")}</span>
-        
+
         <h6 style="border-bottom:1px dashed rgb(73,86,120); padding-bottom:10px;" class="card-title">
         <a href="/post.html?id=${
           item._id
-        }" style="color:rgb(73, 86, 120)">${item.title.substring(
-        0,
-        70
-      )}  </a>
+        }" style="color:rgb(73, 86, 120)">${title.substring(0, 70)}  </a>
         </h6>
       </div>
     </div>
@@ -503,10 +482,11 @@ $(document).ready(() => {
       $("#recPosts").append(node);
     }
   };
-  const latestPosts = () => {
+  const latestPosts = postLogic => {
     for (let i = 0; i < firstSix.length; i++) {
       const item = firstSix[i];
       postLogic(item);
+      console.log(title);
       const node = `
 
       <table style="margin-bottom:10px; display:block">
@@ -521,7 +501,10 @@ $(document).ready(() => {
                 <p style="font-size:12px!important;" class="card-title font800">
                 <a href="/post.html?id=${
                   item._id
-                }" style="color:rgb(73, 86, 120)">${item.title.substring(0,60)}  </a>
+                }" style="color:rgb(73, 86, 120)">${title.substring(
+        0,
+        60
+      )}  </a>
                 </p>
             </span>
           </td>
@@ -530,7 +513,7 @@ $(document).ready(() => {
         </div>
       </table>
       <hr>
-      
+
       <div style="clear:both;"></div>
   `;
       $("#latestPosts").append(node);
@@ -631,6 +614,8 @@ $(document).ready(() => {
       if (languageSelect.value == "ENG") {
         localStorage["myKey"] = "ENG";
         contentLanguage = "ENG";
+        contentLanguage = "ENG";
+        contentLanguage = "ENG";
         emptyAll();
         functionCycle();
         swapHeaders(contentLanguage);
@@ -716,7 +701,7 @@ $(document).ready(() => {
                       <p style="font-size:12px!important;" class="card-title font800">
                       <a href="/post.html?id=${
                         item._id
-                      }" style="color:rgb(73, 86, 120)">${item.title.substring(
+                      }" style="color:rgb(73, 86, 120)">${title.substring(
             0,
             70
           )}  </a>
