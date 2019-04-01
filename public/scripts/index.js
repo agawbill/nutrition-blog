@@ -610,29 +610,29 @@ $(document).ready(() => {
     }
   };
   // language change logic
-  window.onload = () => {
-    languageSelect.addEventListener("change", () => {
-      if (languageSelect.value == "ENG") {
-        localStorage["myKey"] = "ENG";
-        contentLanguage = "ENG";
-        emptyAll();
-        functionCycle();
-        swapHeaders(contentLanguage);
-      } else if (languageSelect.value == "RU") {
-        localStorage["myKey"] = "RU";
-        contentLanguage = "RU";
-        emptyAll();
-        functionCycle();
-        swapHeaders(contentLanguage);
-      } else if (languageSelect.value == "AZ") {
-        localStorage["myKey"] = "AZ";
-        contentLanguage = "AZ";
-        emptyAll();
-        functionCycle();
-        swapHeaders(contentLanguage);
-      }
-    });
-  };
+  // window.onload = () => {
+  languageSelect.addEventListener("change", () => {
+    if (languageSelect.value == "ENG") {
+      localStorage["myKey"] = "ENG";
+      contentLanguage = "ENG";
+      emptyAll();
+      functionCycle();
+      swapHeaders(contentLanguage);
+    } else if (languageSelect.value == "RU") {
+      localStorage["myKey"] = "RU";
+      contentLanguage = "RU";
+      emptyAll();
+      functionCycle();
+      swapHeaders(contentLanguage);
+    } else if (languageSelect.value == "AZ") {
+      localStorage["myKey"] = "AZ";
+      contentLanguage = "AZ";
+      emptyAll();
+      functionCycle();
+      swapHeaders(contentLanguage);
+    }
+  });
+  // };
   // ajax requests to get the data
 
   $.ajax({
