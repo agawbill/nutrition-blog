@@ -12,15 +12,16 @@ var randomSix = [];
 var firstSix = [];
 
 // language selected presets
-window.onload = () => {
-  var languageSelect = document.getElementById("languageSelect");
-};
+// window.onload = () => {
+// };
 
 var contentLanguage = localStorage["myKey"] || "RU";
 var titleLanguage = localStorage["myKey"] || "RU";
 var descriptionLanguage = localStorage["myKey"] || "RU";
 
 $(document).ready(() => {
+  var languageSelect = document.getElementById("languageSelect");
+
   const postLogic = item => {
     if (item !== undefined) {
       content = contentLanguage;
