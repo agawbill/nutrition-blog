@@ -482,11 +482,11 @@ $(document).ready(() => {
       $("#recPosts").append(node);
     }
   };
-  const latestPosts = postLogic => {
+  const latestPosts = () => {
     for (let i = 0; i < firstSix.length; i++) {
       const item = firstSix[i];
       postLogic(item);
-      console.log(title);
+
       const node = `
 
       <table style="margin-bottom:10px; display:block">
@@ -582,9 +582,9 @@ $(document).ready(() => {
     $("#recPosts").empty();
     $("#selected").empty();
   };
-  const functionCycle = () => {
+  const functionCycle = postLogic => {
     if (sports.length !== 0) {
-      sportsCycle();
+      sportsCycle(postLogic);
     }
     if (entertainment.length !== 0) {
       entertainmentCycle();
@@ -613,8 +613,6 @@ $(document).ready(() => {
     languageSelect.addEventListener("change", () => {
       if (languageSelect.value == "ENG") {
         localStorage["myKey"] = "ENG";
-        contentLanguage = "ENG";
-        contentLanguage = "ENG";
         contentLanguage = "ENG";
         emptyAll();
         functionCycle();
