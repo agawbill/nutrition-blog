@@ -19,28 +19,34 @@
       "default": "",
       "type": "string",
       "maxLength": 300,
-      "required": true
+      "required": false
     },
     "title_az": {
       "default": "",
       "type": "string",
       "maxLength": 300,
-      "required": true
+      "required": false
+    },
+    "title_eng": {
+      "default": "",
+      "type": "string",
+      "maxLength": 300,
+      "required": false
     },
     "content_eng": {
       "default": "",
       "type": "text",
-      "required": true
+      "required": false
     },
     "content": {
       "default": "",
       "type": "text",
-      "required": true
+      "required": false
     },
     "content_az": {
       "default": "",
       "type": "text",
-      "required": true
+      "required": false
     },
     "cover": {
       "model": "file",
@@ -61,6 +67,11 @@
       "type": "enumeration",
       "required": true,
       "enum": ["Наши Беседы", "Фитнес", "Здоровье", "Питание", "Анонс"]
+    },
+    "count": {
+      "default": 0,
+      "min": 0,
+      "type": "integer"
     }
   }
 }

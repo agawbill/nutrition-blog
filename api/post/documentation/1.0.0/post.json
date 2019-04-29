@@ -491,12 +491,6 @@
       "Post": {
         "required": [
           "id",
-          "title_eng",
-          "title",
-          "title_az",
-          "content_eng",
-          "content",
-          "content_az",
           "cover",
           "category"
         ],
@@ -595,17 +589,15 @@
               "Питание",
               "Анонс"
             ]
+          },
+          "count": {
+            "type": "integer",
+            "default": 0
           }
         }
       },
       "NewPost": {
         "required": [
-          "title_eng",
-          "title",
-          "title_az",
-          "content_eng",
-          "content",
-          "content_az",
           "category"
         ],
         "properties": {
@@ -654,6 +646,10 @@
               "Питание",
               "Анонс"
             ]
+          },
+          "count": {
+            "type": "integer",
+            "default": 0
           }
         }
       }

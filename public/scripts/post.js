@@ -13,6 +13,8 @@ var contentLanguage = localStorage["myKey"] || "RU";
 var titleLanguage = localStorage["myKey"] || "RU";
 var descriptionLanguage = localStorage["myKey"] || "RU";
 
+let count;
+
 const postLogic = item => {
   if (item !== undefined) {
     content = contentLanguage;
@@ -51,7 +53,7 @@ const postCycle = async () => {
   const node = await `
   <div class="col-lg-12 col-md-12 mb-12">
     <h4 class="card-title">
-      <a href="/post.html?id=${item._id}">${title}</a>
+      <a href="/post.html?id=${item._id}">${title} ${item.count + 1}</a>
     </h4>
     <p>
     <span class="date3">${item.createdAt
@@ -235,7 +237,23 @@ $(document).ready(() => {
     catch: err => {
       console.log(err);
     }
-  }).then(() => {
+  }).then(item => {
+    let count = item.count + 1;
+    $.ajax({
+      url: `/posts/${id}`,
+      type: "PUT",
+      async: true,
+      data: { count: count },
+      dataType: "json",
+
+      success: function(data) {
+        if (data) {
+          console.log("it worked" + data);
+        } else {
+          console.log("not so much");
+        }
+      }
+    });
     if (post.length !== 0) {
       postCycle();
     }

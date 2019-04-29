@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "01/27/2019 4:50:10 PM"
+    "x-generation-date": "04/29/2019 7:20:18 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3063,12 +3063,6 @@
       "Post": {
         "required": [
           "id",
-          "title_eng",
-          "title",
-          "title_az",
-          "content_eng",
-          "content",
-          "content_az",
           "cover",
           "category"
         ],
@@ -3167,17 +3161,15 @@
               "Питание",
               "Анонс"
             ]
+          },
+          "count": {
+            "type": "integer",
+            "default": 0
           }
         }
       },
       "NewPost": {
         "required": [
-          "title_eng",
-          "title",
-          "title_az",
-          "content_eng",
-          "content",
-          "content_az",
           "category"
         ],
         "properties": {
@@ -3226,6 +3218,10 @@
               "Питание",
               "Анонс"
             ]
+          },
+          "count": {
+            "type": "integer",
+            "default": 0
           }
         }
       },
