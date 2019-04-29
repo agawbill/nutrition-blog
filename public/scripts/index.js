@@ -116,7 +116,7 @@ $(document).ready(() => {
           `;
           $("#newsSecond").append(news2);
         } else {
-          const news2 = `
+          const news2 = ` 
         <div id="blocks">
           <table>
             <tr>
