@@ -53,18 +53,18 @@ const postCycle = async () => {
   const node = await `
   <div class="col-lg-12 col-md-12 mb-12">
     <h4 class="card-title">
-      <a href="/post.html?id=${item._id}">${title} ${item.count + 1}</a>
+      <a href="/post.html?id=${item._id}">${title}</a>
     </h4>
     
     <p>
       <img src="${item.cover.url}" class="rounded" width="100%">
     </p>
     <div class='glazData'>
-      <span class="date3">${item.createdAt
-        .substring(0, 10)
-        .replace(/-/g, ".")}
-      </span>
-        <button class="btn btn-outline-warning">
+        <span class="date3">${item.createdAt
+          .substring(0, 10)
+          .replace(/-/g, ".")}
+        </span>
+        <button class="btn btn-outline-warning float-right">
         <i  class="fas fa-eye ">  
           <span class="badge">${item.count + 1}</span>
         </i>
