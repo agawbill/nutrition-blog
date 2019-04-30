@@ -249,7 +249,19 @@ hr {
 	li.nav-item {
 		color:white!important;
 	}
+ i.fa-eye {
+  font-size:2em;
+  color:orange;
  
+}
+span.badge {
+ font-size : 1em!important;
+}
+div.glazData{
+  display: flex;
+  direction: row;
+  justify-content: space-around;
+}
 	
 	nav.navbar {padding: 0!important;}
 	

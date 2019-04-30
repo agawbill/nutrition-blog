@@ -55,14 +55,21 @@ const postCycle = async () => {
     <h4 class="card-title">
       <a href="/post.html?id=${item._id}">${title} ${item.count + 1}</a>
     </h4>
-    <p>
-    <span class="date3">${item.createdAt
-      .substring(0, 10)
-      .replace(/-/g, ".")}</span>
-    </p>
+    
     <p>
       <img src="${item.cover.url}" class="rounded" width="100%">
     </p>
+    <div class='glazData'>
+      <span class="date3">${item.createdAt
+        .substring(0, 10)
+        .replace(/-/g, ".")}
+      </span>
+        <button class="btn btn-outline-warning">
+        <i  class="fas fa-eye ">  
+          <span class="badge">${item.count + 1}</span>
+        </i>
+        </button>
+    </div>
     <p>
     <h5>${converter.makeHtml(content)} </h5>
     </p>
