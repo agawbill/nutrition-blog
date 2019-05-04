@@ -2,6 +2,7 @@ var converter = new showdown.Converter();
 var post = [];
 var recPostings = [];
 var firstSix = [];
+var randomSix = [];
 
 // language controls and
 
@@ -55,7 +56,7 @@ const postCycle = async () => {
     <h4 class="card-title">
       <a href="/post.html?id=${item._id}">${title}</a>
     </h4>
-    
+
     <p>
       <img src="${item.cover.url}" class="rounded" width="100%">
     </p>
@@ -65,7 +66,7 @@ const postCycle = async () => {
           .replace(/-/g, ".")}
         </span>
         <button class="btn btn-outline-warning float-right">
-        <i  class="fas fa-eye ">  
+        <i  class="fas fa-eye ">
           <span class="badge">${item.count + 1}</span>
         </i>
         </button>
@@ -131,6 +132,51 @@ const recommendedCycle = () => {
     </div>
       `;
     $("#recPosts").append(node);
+  }
+};
+
+const randomSixCycle = () => {
+  for (let i = 0; i < randomSix.length; i++) {
+    if (i == 6) {
+      break;
+    }
+    const item = randomSix[i];
+    postLogic(item);
+    if (item !== undefined) {
+      if (i === 2 || i === 5) {
+        const node = `
+      <div class="col-lg-4 col-md-4 mb-4 randomSix${i}a " style="position:relative;border-right: 0px; padding:1%">
+      <img src="${item.cover.url}" class="rounded" width="100%">
+      <p>
+      <span class="date3">${item.createdAt
+        .substring(0, 10)
+        .replace(/-/g, ".")}</span>
+      <h5 class="card-title">
+      <a href="/post.html?id=${
+        item._id
+      }" style="color:rgb(73, 86, 120)">${title.substring(0, 100)} </a>
+      </h5>
+    </div>
+    `;
+        $("#randomSix").append(node);
+      } else {
+        const node = `
+    <div class="col-lg-4 col-md-4 mb-4 randomSix${i} " style="position:relative;border-right:1px dotted navy; padding:1%">
+    <img src="${item.cover.url}" class="rounded"   width="100%">
+    <p>
+    <span class="date3">${item.createdAt
+      .substring(0, 10)
+      .replace(/-/g, ".")}</span>
+    <h5 class="card-title">
+    <a href="/post.html?id=${
+      item._id
+    }"style="color:rgb(73, 86, 120)">${title.substring(0, 100)} </a>
+    </h5>
+    </div>
+    `;
+        $("#randomSix").append(node);
+      }
+    }
   }
 };
 
@@ -214,9 +260,12 @@ $(document).ready(() => {
         const item = data[i];
         if (item.recPosts == true) {
           postLogic(item);
-          console.log(item);
           recPostings.unshift(item);
           firstSix.unshift(item);
+        }
+        if (item.Избранное == true) {
+          console.log("random six" + item);
+          randomSix.unshift(item);
         }
       }
     },
@@ -229,6 +278,9 @@ $(document).ready(() => {
     }
     if (firstSix.length !== 0) {
       latestCycle();
+    }
+    if (randomSix.length !== 0) {
+      randomSixCycle();
     }
   });
 
