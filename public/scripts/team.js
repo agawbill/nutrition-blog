@@ -3,7 +3,7 @@ const teamDivRus = document.getElementById('teamDivRus');
 const teamDivAz  = document.getElementById('teamDivAz');
 const srcs = ["https://s3.amazonaws.com/andop.org/andop_komanda/2.Emil.jpg","https://s3.amazonaws.com/andop.org/andop_komanda/3.Elmira.jpg","https://s3.amazonaws.com/andop.org/andop_komanda/4.Ilgara.jpg", "https://s3.amazonaws.com/andop.org/andop_komanda/8.Lala.jpg", "https://s3.amazonaws.com/andop.org/andop_komanda/7.Esmer.jpg","https://s3.amazonaws.com/andop.org/andop_komanda/5.Shumara.jpg", "https://s3.amazonaws.com/andop.org/andop_komanda/6.Nigar.jpg"];
 const names = ['DR. ЭМИЛЬ ХИДАЯТЛИ','DR. ЭЛЬМИРА МАХМУДОВА','DR. ИЛЬГАМА МАМЕДОВА','DR. ЛАЛА ГУСЕЙНОВА ','DR. ЭСМЕР КЕРИМЛИ','DR. ШУМАРА ГАРАДЖАЕВА','DR. НИГЯР АЛИЕВА']
-const modals = ['#modalA','#modalB','#modalC','#modalD','#modalE','#modalF','#modalG'];
+const modals = ['modalA','modalB','modalC','modalD','modalE','modalF','modalG'];
 const allPosts =[]; 
 const allPostsAz =[];
 const allPostsRus =[];
@@ -14,15 +14,15 @@ const allPostsRus =[];
 			          <h5 class="card-title">`+name+`</h5>
 			          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 			            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=`+ modal +`>
-                          Launch demo modal
+                          Подробнее
                         </button>
 			        </div>
 			    </div>
-			    <div class="modal fade" id=`+modal+` tabindex="-1" role="dialog" aria-labelledby=`+modal+` aria-hidden="true">
+			    <div class="modal fade" id=`+`#`+modal+` tabindex="-1" role="dialog" aria-labelledby=`+ modal + `label` + ` aria-hidden="true">
                   <div class="modal-dialog" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title" id=`+modal+`>Modal title</h5>
+                        <h5 class="modal-title" id=`+`#`+modal+`label`+`>Modal title</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                         </button>
