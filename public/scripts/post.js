@@ -282,39 +282,36 @@ $(document).ready(() => {
     if (randomSix.length !== 0) {
       randomSixCycle();
     }
-  });
-
-  // Get single cake data and template product.html file.
-
-  $.ajax({
-    url: `/posts/${id}`,
-    method: "GET",
-    success: item => {
-      post.unshift(item);
-      postLogic(item);
-    },
-    catch: err => {
-      console.log(err);
-    }
-  }).then(item => {
-    let count = item.count + 1;
-    $.ajax({
-      url: `/posts/${id}`,
-      type: "PUT",
-      async: true,
-      data: { count: count },
-      dataType: "json",
-
-      success: function(data) {
-        if (data) {
-          console.log("it worked" + data);
-        } else {
-          console.log("not so much");
+      $.ajax({
+        url: `/posts/${id}`,
+        method: "GET",
+        success: item => {
+          post.unshift(item);
+          postLogic(item);
+        },
+        catch: err => {
+          console.log(err);
         }
-      }
+      }).then(item => {
+          let count = item.count + 1;
+          $.ajax({
+            url: `/posts/${id}`,
+            type: "PUT",
+            async: true,
+            data: { count: count },
+            dataType: "json",
+      
+            success: function(data) {
+              if (data) {
+                console.log("it worked" + data);
+              } else {
+                console.log("not so much");
+              }
+            }
+          });
+        if (post.length !== 0) {
+          postCycle();
+        }
     });
-    if (post.length !== 0) {
-      postCycle();
-    }
-  });
+  })
 });
