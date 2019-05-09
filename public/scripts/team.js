@@ -100,18 +100,18 @@ const detailsRus = [`Нутрициолог, диетолог, специали�
                         «Основы нутрициологии и диетологии»
                         `];
 
-    const card1 = (name,url,modal)=>{
+    const card1 = (name,url,modal,titlesRus)=>{
 		return `<div class="card" style="width: 26%;">
 				        <img src=`+ url +` class="card-img-top" alt="...">
 				        <div class="card-body">
 			          <h5 class="card-title">`+name+` </h5>
-			          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-			            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=`+`#`+ modal +` >
+			          <p class="card-text">`+ titlesRus.slice(0,130) +`... </p>
+			            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=#` + modal +` >
                           Подробнее
                         </button>
 			        </div>
 			    </div>
-			    <div class="modal fade" id=`+modal+` tabindex="-1" role="dialog" aria-labelledby=label`+ modal + ` aria-hidden="true">
+			    <div class="modal fade" id=` + modal + ` tabindex="-1" role="dialog" aria-labelledby=label`+ modal + ` aria-hidden="true">
                   <div class="modal-dialog" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
@@ -134,16 +134,16 @@ const detailsRus = [`Нутрициолог, диетолог, специали�
 		
 	for(let i=0;i<7;i++){
 // 		allPosts.push(card1(names[i],srcs[i],modals[i]))
-	    teamDivEng.innerHTML+=card1(names[i],srcs[i],modals[i])
+	    teamDivEng.innerHTML+=card1(names[i],srcs[i],modals[i],titlesRus[i])
 
 	}
 	for(let i=0;i<7;i++){
 	   // allPostsRus.push(card1(names[i],srcs[i],modals[i]))
-	    teamDivRus.innerHTML+=card1(names[i],srcs[i],modals[i])
+	    teamDivRus.innerHTML+=card1(names[i],srcs[i],modals[i],titlesRus[i])
 	}
 	for(let i=0;i<7;i++){
 	   // allPostsAz.push(card1(names[i],srcs[i],modals[i]))
-	    teamDivAz.innerHTML+=card1(names[i],srcs[i],modals[i])
+	    teamDivAz.innerHTML+=card1(names[i],srcs[i],modals[i],titlesRus[i])
 	}
 			 // teamDivRus.innerHTML=allPostsRus	  
 			 // teamDivEng.innerHTML=allPosts
