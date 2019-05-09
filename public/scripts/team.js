@@ -4,6 +4,8 @@ const teamDivAz  = document.getElementById('teamDivAz');
 const srcs = ["https://s3.amazonaws.com/andop.org/andop_komanda/2.Emil.jpg","https://s3.amazonaws.com/andop.org/andop_komanda/3.Elmira.jpg","https://s3.amazonaws.com/andop.org/andop_komanda/4.Ilgara.jpg", "https://s3.amazonaws.com/andop.org/andop_komanda/8.Lala.jpg", "https://s3.amazonaws.com/andop.org/andop_komanda/7.Esmer.jpg","https://s3.amazonaws.com/andop.org/andop_komanda/5.Shumara.jpg", "https://s3.amazonaws.com/andop.org/andop_komanda/6.Nigar.jpg"];
 const names = ['DR. ЭМИЛЬ ХИДАЯТЛИ','DR. ЭЛЬМИРА МАХМУДОВА','DR. ИЛЬГАМА МАМЕДОВА','DR. ЛАЛА ГУСЕЙНОВА ','DR. ЭСМЕР КЕРИМЛИ','DR. ШУМАРА ГАРАДЖАЕВА','DR. НИГЯР АЛИЕВА']
 const modals = ['modalA','modalB','modalC','modalD','modalE','modalF','modalG'];
+const modalsRus = ['modala','modalb','modalc','modald','modale','modalf','modalg'];
+const modalsAz = ['modalH','modalJ','modalK','modalL','modalM','modalN','modalV'];
 const allPosts =[]; 
 const allPostsAz =[];
 const allPostsRus =[];
@@ -139,7 +141,7 @@ const detailsRus = [`Нутрициолог, диетолог, специали�
 	}
 	for(let i=0;i<7;i++){
 	   // allPostsRus.push(card1(names[i],srcs[i],modals[i]))
-	    teamDivRus.innerHTML+=card1(names[i],srcs[i],modals[i],titlesRus[i])
+	    teamDivRus.innerHTML+=card1(names[i],srcs[i],modalsRus[i],titlesRus[i])
 	}
 	for(let i=0;i<7;i++){
 	   // allPostsAz.push(card1(names[i],srcs[i],modals[i]))
