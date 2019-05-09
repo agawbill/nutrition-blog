@@ -102,19 +102,19 @@ const detailsRus = [`Нутрициолог, диетолог, специали�
                         «Основы нутрициологии и диетологии»
                         `];
 
-    const card1 = (name,url,modal,titlesRus)=>{
+    const card1 = (name,url,modal,titlesRus,detailsRus)=>{
 		return `<div class="card" style="width: 26%;">
 				        <img src=`+ url +` class="card-img-top" alt="...">
 				        <div class="card-body">
 			          <h5 class="card-title">`+name+` </h5>
-			          <p class="card-text">`+ titlesRus.slice(0,130) +`... </p>
+			          <p class="card-text">`+ titlesRus.slice(0,120) +`... </p>
 			            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=#` + modal +` >
                           Подробнее
                         </button>
 			        </div>
 			    </div>
 			    <div class="modal fade" id=` + modal + ` tabindex="-1" role="dialog" aria-labelledby=label`+ modal + ` aria-hidden="true">
-                  <div class="modal-dialog" role="document">
+                  <div class="modal-dialog modal-dialog-scrollable" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
                         <h5 class="modal-title" id=label` + modal + `> Modal title </h5>
@@ -123,7 +123,7 @@ const detailsRus = [`Нутрициолог, диетолог, специали�
                         </button>
                       </div>
                       <div class="modal-body">
-                        ...
+                        `+detailsRus+`
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
