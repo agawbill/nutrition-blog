@@ -302,7 +302,7 @@ $(document).ready(() => {
     if (firstSix.length !== 0) {
       latestCycle();
     }
-    if (randomSix.length !== 0) {
+    if (allArray.length !== 0) {
       randomSixCycle();
     }
 
