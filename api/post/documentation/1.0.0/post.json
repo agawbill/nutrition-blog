@@ -491,8 +491,7 @@
       "Post": {
         "required": [
           "id",
-          "cover",
-          "category"
+          "cover"
         ],
         "properties": {
           "id": {
@@ -597,9 +596,6 @@
         }
       },
       "NewPost": {
-        "required": [
-          "category"
-        ],
         "properties": {
           "title_eng": {
             "type": "string",

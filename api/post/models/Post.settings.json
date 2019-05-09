@@ -12,41 +12,29 @@
     "title_eng": {
       "default": "",
       "type": "string",
-      "maxLength": 300,
-      "required": true
+      "maxLength": 300
     },
     "title": {
       "default": "",
       "type": "string",
-      "maxLength": 300,
-      "required": false
+      "maxLength": 300
     },
     "title_az": {
       "default": "",
       "type": "string",
-      "maxLength": 300,
-      "required": false
-    },
-    "title_eng": {
-      "default": "",
-      "type": "string",
-      "maxLength": 300,
-      "required": false
+      "maxLength": 300
     },
     "content_eng": {
       "default": "",
-      "type": "text",
-      "required": false
+      "type": "text"
     },
     "content": {
       "default": "",
-      "type": "text",
-      "required": false
+      "type": "text"
     },
     "content_az": {
       "default": "",
-      "type": "text",
-      "required": false
+      "type": "text"
     },
     "cover": {
       "model": "file",
@@ -65,12 +53,16 @@
     "category": {
       "default": "Наши Беседы",
       "type": "enumeration",
-      "required": true,
-      "enum": ["Наши Беседы", "Фитнес", "Здоровье", "Питание", "Анонс"]
+      "enum": [
+        "Наши Беседы",
+        "Фитнес",
+        "Здоровье",
+        "Питание",
+        "Анонс"
+      ]
     },
     "count": {
       "default": 0,
-      "min": 0,
       "type": "integer"
     }
   }
