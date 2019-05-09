@@ -387,3 +387,8 @@ img.rounded {
 div.right-margin {
   margin-right: 11vh;
 }
+.the_team {
+  display: flex;
+  direction: row;
+  
+}

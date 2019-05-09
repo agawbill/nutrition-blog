@@ -11,24 +11,32 @@
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
 	<link href='../index_page1.css' rel="stylesheet">
 </head>
+<style>
+.card {
+  margin-left:4%;
+}
+</style>
 <body lang="en">
 	<div id="headerPartial"></div>
 	<div class='row container-fluid'>
 		<div class='col-md-3' id="sideMenu"></div>
 		<div class='col-md-9'>
 			<div id="english">
-			<center>
+				<center>
 				<h1>OUR TEAM</h1>
-			</center><br>
-			<img src='https://s3.amazonaws.com/andop.org/team_en.jpg' style="width:100%; margin-top: 25px;"></div>
+				</center><br>
+				<div id='teamDivEng' class='row'> </div>
+			</div>
 			<div id="russian">
-			<center>
+				<center>
 				<h1>НАШA КОМАНДА</h1>
-			</center><img src='https://s3.amazonaws.com/andop.org/team_ru.jpg' style="width:100%; margin-top: 25px;"></div>
+				<div id='teamDivRus' class='row'> </div>
+			</div>
 			<div id="azerbaijan">
-			<center>
-				<h2>KOMANDAMIZ</h2>
-			</center><img src='https://s3.amazonaws.com/andop.org/team_az.jpg' style="width:100%; margin-top: 25px;"></div><br>
+				<center><h2>KOMANDAMIZ</h2></center>
+				<div id='teamDivAz' class='row'> </div>
+				</div>
+			</div><br>
 		</div>
 	</div><!-- footer -->
 	<div id="footerPartial"></div><!--end of footer-->
@@ -44,5 +52,11 @@
 	</script> 
 	<script charset="utf-8" src="/scripts/footer.js">
 	</script> 
-</body>
+	<script src="/scripts/team.js" type="text/javascript">
+	</script>
+	 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+ </body>
 </html>
