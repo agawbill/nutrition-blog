@@ -136,16 +136,16 @@ const detailsRus = [`Нутрициолог, диетолог, специали�
 		
 	for(let i=0;i<7;i++){
 // 		allPosts.push(card1(names[i],srcs[i],modals[i]))
-	    teamDivEng.innerHTML+=card1(names[i],srcs[i],modals[i],titlesRus[i])
+	    teamDivEng.innerHTML+=card1(names[i],srcs[i],modals[i],titlesRus[i],detailsRus[i])
 
 	}
 	for(let i=0;i<7;i++){
 	   // allPostsRus.push(card1(names[i],srcs[i],modals[i]))
-	    teamDivRus.innerHTML+=card1(names[i],srcs[i],modalsRus[i],titlesRus[i])
+	    teamDivRus.innerHTML+=card1(names[i],srcs[i],modalsRus[i],titlesRus[i],detailsRus[i])
 	}
 	for(let i=0;i<7;i++){
 	   // allPostsAz.push(card1(names[i],srcs[i],modals[i]))
-	    teamDivAz.innerHTML+=card1(names[i],srcs[i],modals[i],titlesRus[i])
+	    teamDivAz.innerHTML+=card1(names[i],srcs[i],modals[i],titlesRus[i],detailsRus[i])
 	}
 			 // teamDivRus.innerHTML=allPostsRus	  
 			 // teamDivEng.innerHTML=allPosts
