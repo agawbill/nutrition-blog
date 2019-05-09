@@ -1,8 +1,14 @@
 var converter = new showdown.Converter();
 var post = [];
+var technology = [];
+var news = [];
+var entertainment = [];
+var selectedPosts = [];
+var sports = [];
 var recPostings = [];
-var firstSix = [];
+var allArray;
 var randomSix = [];
+var firstSix = [];
 
 // language controls and
 
@@ -136,11 +142,11 @@ const recommendedCycle = () => {
 };
 
 const randomSixCycle = () => {
-  for (let i = 0; i < randomSix.length; i++) {
+  for (let i = 0; i < allArray.length; i++) {
     if (i == 6) {
       break;
     }
-    const item = randomSix[i];
+    const item = allArray[i];
     postLogic(item);
     if (item !== undefined) {
       if (i === 2 || i === 5) {
@@ -258,16 +264,33 @@ $(document).ready(() => {
       // console.log(data);
       for (let i = data.length - 1; i >= 0; i--) {
         const item = data[i];
-        if (item.recPosts == true) {
-          postLogic(item);
-          recPostings.unshift(item);
-          firstSix.unshift(item);
-        }
+        postLogic(item);
         if (item.Избранное == true) {
-          console.log("random six" + item);
           randomSix.unshift(item);
         }
+        if (item.recPosts == true) {
+          recPostings.unshift(item);
+        }
+        if (item.category == "Наши Беседы") {
+          news.unshift(item);
+        } else if (item.category == "Питание") {
+          technology.unshift(item);
+        } else if (item.category == "Здоровье") {
+          entertainment.unshift(item);
+        } else if (item.category == "Анонс") {
+          selectedPosts.unshift(item);
+        } else {
+          sports.unshift(item);
+        }
       }
+      allArray = [
+        sports[sports.length - 1],
+        sports[sports.length - 2],
+        technology[technology.length - 1],
+        technology[technology.length - 2],
+        entertainment[entertainment.length - 1],
+        entertainment[entertainment.length - 2]
+      ];
     },
     catch: err => {
       console.log(err);
@@ -283,8 +306,6 @@ $(document).ready(() => {
       randomSixCycle();
     }
   });
-
-  // Get single cake data and template product.html file.
 
   $.ajax({
     url: `/posts/${id}`,
