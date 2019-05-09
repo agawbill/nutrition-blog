@@ -217,8 +217,10 @@ window.onload = () => {
       $("#upcoming").empty();
       $("#recPosts").empty();
       $("#latestPosts").empty();
+      $("#randomSix").empty();
       postCycle(contentLanguage);
       recommendedCycle(contentLanguage);
+      randomSixCycle(contentLanguage);
       latestCycle(contentLanguage);
       headingSwap(contentLanguage);
     } else if (languageSelect.value == "RU") {
@@ -229,6 +231,8 @@ window.onload = () => {
       $("#upcoming").empty();
       $("#recPosts").empty();
       $("#latestPosts").empty();
+      $("#randomSix").empty();
+      randomSixCycle(contentLanguage);
       postCycle(contentLanguage);
       recommendedCycle(contentLanguage);
       latestCycle(contentLanguage);
@@ -241,6 +245,8 @@ window.onload = () => {
       $("#upcoming").empty();
       $("#recPosts").empty();
       $("#latestPosts").empty();
+      $("#randomSix").empty();
+      randomSixCycle(contentLanguage);
       postCycle(contentLanguage);
       recommendedCycle(contentLanguage);
       latestCycle(contentLanguage);
