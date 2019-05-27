@@ -47,7 +47,7 @@ const swapHeaders = contentLanguage => {
     "Recommended",
     "Health",
     "LATEST POSTS",
-    "PROJECTS"
+    "Projects"
   ];
   azi = [
     "Əsas Xəbərlər",
@@ -56,7 +56,7 @@ const swapHeaders = contentLanguage => {
     "REDAKSİYA SEÇİMİ",
     "Sağlamlığ",
     "SON PUBLİKASİYALAR",
-    "Наши Проекты"
+    "Proektlərimiz"
   ];
   rus = [
     "Главные Новости",

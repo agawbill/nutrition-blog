@@ -46,8 +46,8 @@ const swapHeaders = contentLanguage => {
     "Fitness",
     "Recommended",
     "Health",
-    "LATEST POSTS",
-    "TRAININGS"
+    "Latest Posts",
+    "Trainings"
   ];
   azi = [
     "Əsas Xəbərlər",
@@ -55,17 +55,17 @@ const swapHeaders = contentLanguage => {
     "Fintes",
     "REDAKSİYA SEÇİMİ",
     "Sağlamlığ",
-    "SON PUBLİKASİYALAR",
-    "Наши Тренинги"
+    "Son Publikasiyalar",
+    "Treninglər"
   ];
   rus = [
     "Главные Новости",
     "Питание",
     "Фитнес",
-    "РЕКОМЕНДОВАННЫЕ",
+    "Рекомендованные",
     "Здоровье",
-    "ПОСЛЕДНИИ ПУБЛИКАЦИИ ",
-    "Наши Тренинги"
+    "Последнии Публикации ",
+    "Наши Тренинги",
   ];
   for (let i = 0; i < headerArray.length; i++) {
     if (contentLanguage === "ENG") {
