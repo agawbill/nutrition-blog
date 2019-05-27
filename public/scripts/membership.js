@@ -10,50 +10,35 @@ const allPosts =[];
 const allPostsAz =[];
 const allPostsRus =[];
   
-    const card1 = (name,url,modal,reg)=>{
-		return `<div class="card" style="width: 26%;">
-				        <img src=`+ url +` class="card-img-top" alt="...">
-				        <div class="card-body">
-				            <div id='buttonsInCard'
-         			            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=#` + modal +` >
-                                  Подробнее
-                                </button>
-                                <a href='/' class="btn btn-danger"  >
-                                  `+reg+` 
-                                </a>
-                            </div>    
-			        </div>
-			    </div>
-			    <div class="modal fade" id=` + modal + ` tabindex="-1" role="dialog" aria-labelledby=label`+ modal + ` aria-hidden="true">
-                  <div class="modal-dialog modal-dialog-scrollable" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id=label` + modal + `> Modal title </h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
   
-                      <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>`  
+
+    
+  </div>
+</div>
+  
+  
+    const card1 = (name,url,reg)=>{
+		return `<div class="card" style="width: 26%">
+				    <img src=`+ url +` class="card-img-top" alt="...">
+				    <div class="card-body">
+          			    <a href="/" class="card-link btn btn-sm btn-primary"> Подробнее </button>
+                        <a href="/" class="card-link btn btn-sm btn-danger">`+reg+` </a>
+			        </div>
+			    </div>`
 		}
 		
 	for(let i=0;i<7;i++){
 // 		allPosts.push(card1(names[i],srcs[i],modals[i]))
-	    teamDivEng.innerHTML+=card1(names[i],srcs[i],modals[i],'Registration')
+	    teamDivEng.innerHTML+=card1(names[i],srcs[i],'Registration')
 
 	}
 	for(let i=0;i<7;i++){
 	   // allPostsRus.push(card1(names[i],srcs[i],modals[i]))
-	    teamDivRus.innerHTML+=card1(names[i],srcs[i],modalsRus[i],'Регистрация')
+	    teamDivRus.innerHTML+=card1(names[i],srcs[i],'Регистрация')
 	}
 	for(let i=0;i<7;i++){
 	   // allPostsAz.push(card1(names[i],srcs[i],modals[i]))
-	    teamDivAz.innerHTML+=card1(names[i],srcs[i],modals[i],'Registrasia')
+	    teamDivAz.innerHTML+=card1(names[i],srcs[i],'Registrasia')
 	}
 			 // teamDivRus.innerHTML=allPostsRus	  
 			 // teamDivEng.innerHTML=allPosts
