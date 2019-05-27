@@ -9,14 +9,19 @@ const modalsAz = ['modalH','modalJ','modalK','modalL','modalM','modalN','modalV'
 const allPosts =[]; 
 const allPostsAz =[];
 const allPostsRus =[];
- 
-    const card1 = (name,url,modal)=>{
+  
+    const card1 = (name,url,modal,reg)=>{
 		return `<div class="card" style="width: 26%;">
 				        <img src=`+ url +` class="card-img-top" alt="...">
 				        <div class="card-body">
- 			            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=#` + modal +` >
-                          Подробнее
-                        </button>
+				            <div id='buttonsInCard'
+         			            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=#` + modal +` >
+                                  Подробнее
+                                </button>
+                                <a href='/' class="btn btn-danger"  >
+                                  `+reg+` 
+                                </a>
+                            </div>    
 			        </div>
 			    </div>
 			    <div class="modal fade" id=` + modal + ` tabindex="-1" role="dialog" aria-labelledby=label`+ modal + ` aria-hidden="true">
@@ -31,7 +36,6 @@ const allPostsRus =[];
   
                       <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-                            <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
                       </div>
                     </div>
                   </div>
@@ -40,16 +44,16 @@ const allPostsRus =[];
 		
 	for(let i=0;i<7;i++){
 // 		allPosts.push(card1(names[i],srcs[i],modals[i]))
-	    teamDivEng.innerHTML+=card1(names[i],srcs[i],modals[i])
+	    teamDivEng.innerHTML+=card1(names[i],srcs[i],modals[i],'Registration')
 
 	}
 	for(let i=0;i<7;i++){
 	   // allPostsRus.push(card1(names[i],srcs[i],modals[i]))
-	    teamDivRus.innerHTML+=card1(names[i],srcs[i],modalsRus[i])
+	    teamDivRus.innerHTML+=card1(names[i],srcs[i],modalsRus[i],'Регистрация')
 	}
 	for(let i=0;i<7;i++){
 	   // allPostsAz.push(card1(names[i],srcs[i],modals[i]))
-	    teamDivAz.innerHTML+=card1(names[i],srcs[i],modals[i])
+	    teamDivAz.innerHTML+=card1(names[i],srcs[i],modals[i],'Registrasia')
 	}
 			 // teamDivRus.innerHTML=allPostsRus	  
 			 // teamDivEng.innerHTML=allPosts
