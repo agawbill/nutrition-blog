@@ -46,13 +46,13 @@ const addFooter = contentLanguage => {
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul style='font-size:19px;' class="navbar-nav">
                   <li class="nav-item active">
-                    <a class="nav-link  " href="../static_pages/about.html"> ANDOP <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="../static_pages/about.html"> ANDOP <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link  " href="../static_pages/team.html">Komandamiz</a>
+                    <a class="nav-link" href="../static_pages/team.html">Komandamiz</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link  " href="projects.html">Proyektlərimiz</a>
+                    <a class="nav-link" href="projects.html">Proyektlərimiz</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link  " href="trainings.html">Treninglər</a>
@@ -155,10 +155,10 @@ document.addEventListener("DOMContentLoaded", () => {
                   <a class="nav-link  " href="../static_pages/team.html">Team</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link  " href="../static_pages/projects.html">Projects</a>
+                  <a class="nav-link  " href="projects.html">Projects</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link  " href="../static_pages/trainings.html">Trainings</a>
+                  <a class="nav-link  " href="trainings.html">Trainings</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link  " href="../static_pages/membership.html">Membership</a>
@@ -198,10 +198,10 @@ document.addEventListener("DOMContentLoaded", () => {
                   <a class="nav-link  " href="../static_pages/team.html">Komandamiz</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link  " href="../static_pages/projects.html">Proyektləri̇mi̇z</a>
+                  <a class="nav-link  " href="projects.html">Proyektləri̇mi̇z</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link  " href="../static_pages/trainings.html">Treni̇nglər</a>
+                  <a class="nav-link  " href="trainings.html">Treni̇nglər</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link  " href="../static_pages/membership.html">Üzvlük</a>
@@ -241,10 +241,10 @@ document.addEventListener("DOMContentLoaded", () => {
                   <a class="nav-link  " href="../static_pages/team.html">Наша Команда</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link  " href="../static_pages/projects.html">Наши Проекты</a>
+                  <a class="nav-link  " href="projects.html">Наши Проекты</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link  " href="../static_pages/trainings.html">Наши Тренинги</a>
+                  <a class="nav-link  " href="trainings.html">Наши Тренинги</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link  " href="../static_pages/membership.html">Членство</a>
