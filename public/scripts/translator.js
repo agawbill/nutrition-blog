@@ -19,9 +19,9 @@ const switchMenu = () => {
             <hr>
             </li><a class="nav-link static_link" href="team.html">Наша Команда</a> </li>
             <hr>
-            </li><a class="nav-link static_link" href="projects.html">Наши Проекты</a> </li>
+            </li><a class="nav-link static_link" href="../projects.html">Наши Проекты</a> </li>
             <hr>
-            </li> <a class="nav-link static_link" href="trainings.html">Наши Тренинги</a></li>
+            </li> <a class="nav-link static_link" href="../trainings.html">Наши Тренинги</a></li>
             <hr>
             </li> <a class="nav-link static_link" href="membership.html">Членство</a> </li>
             <hr>
@@ -32,9 +32,9 @@ const switchMenu = () => {
             <hr>
             </li><a class="nav-link static_link" href="team.html">Team</a> </li>
             <hr>
-            </li><a class="nav-link static_link" href="projects.html">Projects</a> </li>
+            </li><a class="nav-link static_link" href="../projects.html">Projects</a> </li>
             <hr>
-            </li> <a class="nav-link static_link" href="trainings.html">Trainings</a></li>
+            </li> <a class="nav-link static_link" href="../trainings.html">Trainings</a></li>
             <hr>
             </li> <a class="nav-link static_link" href="membership.html">Membership</a> </li>
             <hr>
@@ -45,9 +45,9 @@ const switchMenu = () => {
             <hr>
             </li><a class="nav-link static_link" href="team.html">Komandamiz</a> </li>
             <hr>
-            </li><a class="nav-link static_link" href="projects.html">Proyektləri̇mi̇z</a> </li>
+            </li><a class="nav-link static_link" href="../projects.html">Proyektləri̇mi̇z</a> </li>
             <hr>
-            </li> <a class="nav-link static_link" href="trainings.html">Treni̇nglər</a></li>
+            </li> <a class="nav-link static_link" href="../trainings.html">Treni̇nglər</a></li>
             <hr>
             </li> <a class="nav-link static_link" href="membership.html">Üzvlük</a> </li>
             <hr>
