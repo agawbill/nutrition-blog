@@ -13,11 +13,9 @@ var item ;
     const card1 = (name,url,reg,more)=>{
 		return `<div class="card" style="width: 26%">
 				    <img src=`+ url +` class="card-img-top" alt="...">
-				    <div class="card-body">
-          			    <div class='buttons_membership text-center'>
+				    <div class="card-body justify-content-center align-items-center">
               			    <a href="/" class="card-link btn btn-sm btn-primary"> ` + more + ` </a>
                             <a href="/" class="card-link btn btn-sm btn-danger"> ` + reg + ` </a>
-                        </div>    
 			        </div>
 			    </div>`
 		}
