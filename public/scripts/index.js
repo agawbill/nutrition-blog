@@ -116,7 +116,7 @@ $(document).ready(() => {
           `;
           $("#newsSecond").append(news2);
         } else {
-          const news2 = ` 
+          const news2 = `
         <div id="blocks">
           <table>
             <tr>
@@ -681,7 +681,7 @@ $(document).ready(() => {
           entertainment.unshift(item);
         } else if (item.category == "Анонс") {
           selectedPosts.unshift(item);
-        } else {
+        } else if (item.category == "Фитнес") {
           sports.unshift(item);
         }
         if (i > data.length - 6) {
