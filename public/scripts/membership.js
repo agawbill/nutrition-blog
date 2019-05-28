@@ -7,7 +7,7 @@ const modals = ['modalA','modalB','modalC','modalD','modalE','modalF','modalG'];
 const allPosts =[]; 
 const allPostsAz =[];
 const allPostsRus =[];
-  
+var item ;
   
   
     const card1 = (name,url,reg,more)=>{
@@ -40,3 +40,54 @@ const allPostsRus =[];
 			  
 			  
 			  
+
+$(document).ready(() => {
+  // get news
+  $.ajax({
+    url: "posts",
+    method: "GET",
+    dataType: "JSON",
+    contentType: "JSON",
+    success: data => {
+      for (let i = data.length - 1; i >= 0; i--) {
+        item = data[i];
+        postLogic(item);
+        if (item.category == "Членство") {
+          contentArray.unshift(item);
+          const node = `
+          <li class="media" style="border-bottom: 2px dotted gray; margin-bottom: 10px; padding-bottom: 10px;">
+          <img src="${
+            item.cover.url
+          }"width="30%" class="rounded" align="left" style="padding-right:5px;" >
+            <div class="media-body">
+                        <span class="date3">${item.createdAt
+                          .substring(0, 10)
+                          .replace(/-/g, ".")}</span>
+
+            <h4 class="card-title">
+              <a href="/post.html?id=${item._id}"> ${title}</a>
+            </h4>
+            <p>
+            ${converter.makeHtml(content).substring(0, 200)}
+            </p>
+          </li>
+          </div>
+          `;
+          $("#contentContainer").append(node);
+        } else {
+        }
+      }
+    },
+    catch: err => {
+      console.log(err);
+    }
+  }).then(() => {
+    if (recPostings.length !== 0) {
+      recommendedCycle();
+    }
+
+    if (firstSix.length !== 0) {
+      latestCycle();
+    }
+  });
+});
