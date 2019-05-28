@@ -39,9 +39,12 @@ var item ;
 			  
 			  
 			  
-			  
+	 // ANTHONY. So , all I need is to be able to see  item.cover.url and   <a href="/post.html?id=${item._id}"> ${title}</a>
+	 // inside of the contentContainer on the membership.html
+	 // Do not worry about design or anything else. Ii will style everything once i get acces to those 2.
+	 
 
-$(document).ready(() => {
+document.ready(() => {
   // get news
   $.ajax({
     url: "posts",
@@ -56,24 +59,13 @@ $(document).ready(() => {
           contentArray.unshift(item);
           const node = `
           <li class="media" style="border-bottom: 2px dotted gray; margin-bottom: 10px; padding-bottom: 10px;">
-          <img src="${
-            item.cover.url
-          }"width="30%" class="rounded" align="left" style="padding-right:5px;" >
-            <div class="media-body">
-                        <span class="date3">${item.createdAt
-                          .substring(0, 10)
-                          .replace(/-/g, ".")}</span>
-
-            <h4 class="card-title">
-              <a href="/post.html?id=${item._id}"> ${title}</a>
-            </h4>
-            <p>
-            ${converter.makeHtml(content).substring(0, 200)}
-            </p>
+	          <img src="${  item.cover.url }"width="30%" class="rounded" align="left" style="padding-right:5px;" >
+	            <h4 class="card-title">
+	              <a href="/post.html?id=${item._id}"> ${title}</a>
+	            </h4>
           </li>
-          </div>
           `;
-          $("#contentContainer").append(node);
+          document.getElementById("contentContainer").append(node);
         } else {
         }
       }
@@ -81,13 +73,6 @@ $(document).ready(() => {
     catch: err => {
       console.log(err);
     }
-  }).then(() => {
-    if (recPostings.length !== 0) {
-      recommendedCycle();
-    }
+  })
 
-    if (firstSix.length !== 0) {
-      latestCycle();
-    }
-  });
 });
