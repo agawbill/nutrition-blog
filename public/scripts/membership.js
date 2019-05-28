@@ -44,7 +44,7 @@ var item ;
 	 // Do not worry about design or anything else. Ii will style everything once i get acces to those 2.
 	 
 
-document.ready(() => {
+$(document).ready(() => {
   // get news
   $.ajax({
     url: "posts",
