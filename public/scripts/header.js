@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   headerPartial.innerHTML = `
   <div id="header_menu_blue">
       <div class="float-right right-margin">
-          <p style="display:inline; color: white!important;"><a style='color: white!important;' href='../static_pages/contact.html'><span id="contactUs"></span></a></p>
+          <p style="display:inline; color: white!important;"><a style='color: white!important;' href='/contact.html'><span id="contactUs"></span></a></p>
           <select id="languageSelect" style="color:white; margin-left:10px; background-color:rgb(73,86,120); border:none; width:50px; height:100%;">
           <option id="ru">RU</option> <option id="az">AZ</option> <option id="eng">ENG</option>
           </select>

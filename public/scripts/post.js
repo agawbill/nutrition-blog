@@ -13,8 +13,8 @@ var firstSix = [];
 // language controls and
 
 window.onload = () => {
-  var header = document.getElementsByTagName('header');
-  header.append(
+  var head = document.getElementsByTagName('head');
+  head.append(
     `<meta property="og:url"          content=${ 'http://andop.org/post.html?id='+item._id } />
 	  <meta property="og:type"          content="website" />
 	  <meta property="og:title"         content="${item.title}" />
@@ -59,6 +59,7 @@ const postCycle = async () => {
   <div class="share-btn" data-url="/post.html?id=${item._id}" data-title="${title}" data-desc="${title}">
                 					    <div class="fb-share-button" 
                                 data-href="http://andop.org/post.html?id=${item._id}">
+                                data-layout="button_count">
                               </div>
                 					    <a class="btn-vk" data-id="vk"><i class="fab fa-vk"></i> VK</a>
                  					    <a class="btn-twitter" data-id="tw"><i class="fab fa-twitter"></i> Twitter</a>
