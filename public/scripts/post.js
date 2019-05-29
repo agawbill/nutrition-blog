@@ -58,7 +58,7 @@ const postCycle = async () => {
   <div id="fb-root"></div>
   <div class="share-btn" data-url="/post.html?id=${item._id}" data-title="${title}" data-desc="${title}">
                 					    <div class="fb-share-button" 
-                                data-href="http://andop.org/post.html?id=${item._id}">
+                                data-href="http://andop.org/post.html?id=${item._id}"
                                 data-layout="button_count">
                               </div>
                 					    <a class="btn-vk" data-id="vk"><i class="fab fa-vk"></i> VK</a>
