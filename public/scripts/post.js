@@ -15,7 +15,7 @@ var firstSix = [];
 window.onload = () => {
   var header = document.getElementsByTagName('header');
   header.append(
-    `<meta property="og:url"          content=${ 'http://andop.az/post.html?id='+item._id } />
+    `<meta property="og:url"          content=${ 'http://andop.org/post.html?id='+item._id } />
 	  <meta property="og:type"          content="website" />
 	  <meta property="og:title"         content="${item.title}" />
 	  <meta property="og:description"   content="${item.content}" />
@@ -54,10 +54,12 @@ const postLogic = item => {
 const postCycle = async () => {
   item = post[0];
   postLogic(item);
-  var fbookButton = await `<div class="share-btn" data-url="/post.html?id=${item._id}" data-title="${title}" data-desc="${title}">
+  var fbookButton = await `
+  <div id="fb-root"></div>
+  <div class="share-btn" data-url="/post.html?id=${item._id}" data-title="${title}" data-desc="${title}">
                 					    <a class="btn-vk" data-id="vk"><i class="fab fa-vk"></i> VK</a>
-                					    <div class="fb-share-button" 
-                                data-href="${item.title}">
+                					    <div class="btn-fb" 
+                                data-href="http://andop.org/post.html?id=${item._id}">
                               </div>
                  					    <a class="btn-twitter" data-id="tw"><i class="fab fa-twitter"></i> Twitter</a>
                 					    <a class="btn-telegram" data-id="tg"><i class="fab fa-telegram"></i> Telegram</a>
