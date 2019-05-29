@@ -56,15 +56,12 @@ const postCycle = async () => {
   postLogic(item);
   var fbookButton = await `<div class="share-btn" data-url="/post.html?id=${item._id}" data-title="${title}" data-desc="${title}">
                 					    <a class="btn-vk" data-id="vk"><i class="fab fa-vk"></i> VK</a>
-                					    
-                					    
-                					    <div class="fb-share-button" 
-                                data-href="${item.cover.url}" 
+                					    <div class="btn-facebook"
+                					      <i class="fab fa-facebook-square"></i> 
+                                data-href="${item.title}" 
                                 data-layout="button_count">
                               </div>
-                					    
-                					    <a href="https://www.facebook.com/sharer.php?u=http://andop.az/post.html?id=${item._id}" class="btn-facebook"><i class="fab fa-facebook-square"></i> Facebook</a>
-                					    <a class="btn-twitter" data-id="tw"><i class="fab fa-twitter"></i> Twitter</a>
+                 					    <a class="btn-twitter" data-id="tw"><i class="fab fa-twitter"></i> Twitter</a>
                 					    <a class="btn-telegram" data-id="tg"><i class="fab fa-telegram"></i> Telegram</a>
                 					    <a class="btn-linkedin" data-id="in"><i class="fab fa-linkedin"></i> Linkedin</a>
                 					    <a class="btn-mail" data-id="mail"><i class="fas fa-at"></i> EMail</a>
