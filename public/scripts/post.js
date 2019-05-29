@@ -57,10 +57,10 @@ const postCycle = async () => {
   var fbookButton = await `
   <div id="fb-root"></div>
   <div class="share-btn" data-url="/post.html?id=${item._id}" data-title="${title}" data-desc="${title}">
-                					    <a class="btn-vk" data-id="vk"><i class="fab fa-vk"></i> VK</a>
-                					    <div class="btn-fb" 
+                					    <div class="fb-share-button" 
                                 data-href="http://andop.org/post.html?id=${item._id}">
                               </div>
+                					    <a class="btn-vk" data-id="vk"><i class="fab fa-vk"></i> VK</a>
                  					    <a class="btn-twitter" data-id="tw"><i class="fab fa-twitter"></i> Twitter</a>
                 					    <a class="btn-telegram" data-id="tg"><i class="fab fa-telegram"></i> Telegram</a>
                 					    <a class="btn-linkedin" data-id="in"><i class="fab fa-linkedin"></i> Linkedin</a>
