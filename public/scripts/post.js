@@ -13,6 +13,17 @@ var firstSix = [];
 // language controls and
 
 window.onload = () => {
+  var header = document.getElementsByTagName('header');
+  header.append(
+    `<meta property="og:url"          content=${ 'http://andop.az/post.html?id='+item._id } />
+	  <meta property="og:type"          content="website" />
+	  <meta property="og:title"         content="${item.title}" />
+	  <meta property="og:description"   content="${item.content}" />
+	  <meta property="og:image"         content="${item.cover.url}" />
+	  `
+	  )
+  
+  
   var languageSelect = document.getElementById("languageSelect");
 };
 
@@ -45,6 +56,13 @@ const postCycle = async () => {
   postLogic(item);
   var fbookButton = await `<div class="share-btn" data-url="/post.html?id=${item._id}" data-title="${title}" data-desc="${title}">
                 					    <a class="btn-vk" data-id="vk"><i class="fab fa-vk"></i> VK</a>
+                					    
+                					    
+                					    <div class="fb-share-button" 
+                                data-href="${item.cover.url}" 
+                                data-layout="button_count">
+                              </div>
+                					    
                 					    <a href="https://www.facebook.com/sharer.php?u=http://andop.az/post.html?id=${item._id}" class="btn-facebook"><i class="fab fa-facebook-square"></i> Facebook</a>
                 					    <a class="btn-twitter" data-id="tw"><i class="fab fa-twitter"></i> Twitter</a>
                 					    <a class="btn-telegram" data-id="tg"><i class="fab fa-telegram"></i> Telegram</a>
@@ -341,3 +359,5 @@ $(document).ready(() => {
     });
   });
 });
+
+
