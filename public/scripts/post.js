@@ -14,14 +14,13 @@ var firstSix = [];
 
 window.onload = () => {
   var head = document.getElementsByTagName('head');
-  head[0].append(
-    `<meta property="og:url"          content=${ 'http://andop.org/post.html?id='+item._id } />
+  const metas=`<meta property="og:url" content=${ 'http://andop.org/post.html?id='+item._id } />
 	  <meta property="og:type"          content="website" />
 	  <meta property="og:title"         content="${item.title}" />
-	  <meta property="og:description"   content="${item.content}" />
+	  <meta property="og:description"   content="${item.title}" />
 	  <meta property="og:image"         content="${item.cover.url}" />
 	  `
-	  )
+	   head[0].innerHTML = metas + head[0].innerHTML 
   
   
   var languageSelect = document.getElementById("languageSelect");
