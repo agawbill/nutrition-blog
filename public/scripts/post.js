@@ -9,18 +9,18 @@ var recPostings = [];
 var allArray;
 var randomSix = [];
 var firstSix = [];
-
+var head = document.getElementsByTagName('head');
+var metas;
 // language controls and
 
 window.onload = () => {
-  var head = document.getElementsByTagName('head');
-  const metas=`<meta property="og:url" content=${ 'http://andop.org/post.html?id='+item._id } />
+   metas=`<meta property="og:url" content=${ 'http://andop.org/post.html?id='+item._id } />
 	  <meta property="og:type"          content="website" />
 	  <meta property="og:title"         content="${item.title}" />
 	  <meta property="og:description"   content="${item.title}" />
 	  <meta property="og:image"         content="${item.cover.url}" />
 	  `
-	   head[0].innerHTML = metas + head[0].innerHTML 
+	  
   
   
   var languageSelect = document.getElementById("languageSelect");
@@ -92,6 +92,9 @@ const postCycle = async () => {
     <h5>${converter.makeHtml(content)} </h5>
     </p>
      </div>`;
+     
+            head[0].innerHTML = metas + head[0].innerHTML 
+
   $("#postContainer").append(node + fbookButton);
 };
 
