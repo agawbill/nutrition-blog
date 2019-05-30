@@ -14,7 +14,7 @@ var firstSix = [];
 
 window.onload = () => {
   var head = document.getElementsByTagName('head');
-  head.append(
+  head[0].append(
     `<meta property="og:url"          content=${ 'http://andop.org/post.html?id='+item._id } />
 	  <meta property="og:type"          content="website" />
 	  <meta property="og:title"         content="${item.title}" />
