@@ -66,14 +66,11 @@ const postCycle = async () => {
     <h4 class="card-title">
       <a href="/post.html?id=${item._id}">${title}</a>
     </h4>
-
     <p>
       <img src="${item.cover.url}" class="rounded" width="100%">
     </p>
     <div class='glazData'>
-        <span class="date3">${item.createdAt
-          .substring(0, 10)
-          .replace(/-/g, ".")}
+        <span class="date3">${item.createdAt.substring(0, 10).replace(/-/g, ".")}
         </span>
         <button class="btn btn-outline-warning float-right">
         <i  class="fas fa-eye ">
@@ -85,7 +82,6 @@ const postCycle = async () => {
     <h5>${converter.makeHtml(content)} </h5>
     </p>
      </div>`;
-     
 
   $("#postContainer").append(node + fbookButton);
 };
@@ -114,10 +110,8 @@ const latestCycle = () => {
                 <p style="font-size:12px!important;" class="card-title font800">
                 <a href="/post.html?id=${
                   item._id
-                }" style="color:black!important;">${title.substring(
-      0,
-      60
-    )}  </a>
+                }" style="color:black!important;">${title.substring( 0, 60 )}  
+                </a>
                 </p>
             </span>
           </td>
