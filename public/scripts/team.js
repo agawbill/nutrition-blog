@@ -182,9 +182,7 @@ const recommendedCycle = () => {
           .substring(0, 10)
           .replace(/-/g, ".")}</span>
          <h6 style="border-bottom:1px dashed rgb(73,86,120); padding-bottom:10px;" class="card-title">
-        <a href="/post.html?id=${
-          item._id
-        }" style="color:rgb(73, 86, 120)">${title.substring(0, 70)}  </a>
+        <a href="/post.html?id=${item._id}" style="color:rgb(73, 86, 120)">${title.substring(0, 70)}  </a>
         </h6>
       </div>
     </div>
@@ -217,7 +215,7 @@ $(document).ready(() => {
 				    <img src="${item.cover.url}" class="card-img-top" alt="...">
 				    <div class="card-body justify-content-center align-items-center">
 				       <h5 class="card-title">${title}</h5>
-                <a href="/post.html?id=${item._id}"> ${title} class="card-link btn btn-sm btn-primary"> Подробнее </a>
+                <a href="/post.html?id=${item._id}"  class="card-link btn btn-sm btn-primary" > Подробнее </a>
 			        </div>
 			    </div> 
         `;
