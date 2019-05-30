@@ -215,10 +215,10 @@ $(document).ready(() => {
 				    <img src="${item.cover.url}" class="card-img-top" alt="...">
 				    <div class="card-body justify-content-center align-items-center">
 				       <h5 class="card-title">${title}</h5>
-                <a href="/post.html?id=${item._id}"  class="card-link btn btn-sm btn-primary" > Подробнее </a>
+                <a href="/post.html?id=${item._id}"  class="btn btn-sm btn-primary" > Подробнее </a>
 			        </div>
 			    </div> 
-        `;
+         `;
           $("#contentContainer").append(node);
         } else {
         }
