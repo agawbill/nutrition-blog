@@ -3,6 +3,8 @@ var converter = new showdown.Converter();
 var contentArray = [];
 var recPostings = [];
 var firstSix = [];
+var buttonText = 'Подробнее'
+var button2Text = 'Регистрация'
 
 window.onload = () => {
   var languageSelect = document.getElementById("languageSelect");
@@ -211,6 +213,9 @@ $(document).ready(() => {
           firstSix.unshift(item);
         }
         if (item.category == "Членство") {
+          if(contentLanguage=='ENG'){buttonText='Read more', button2Text='Registration'}
+          else if(contentLanguage=='RU'){buttonText='Подробнее', button2Text='Регистрация'}
+          else {buttonText='Ətraflı', button2Text='Registrasiya'}
           contentArray.unshift(item);
           const node = `
           <div class="card" style="width: 26%">
@@ -219,10 +224,10 @@ $(document).ready(() => {
 				       <h5 class="card-title">${title}</h5>
                 		<a href="/post.html?id=${
                       item._id
-                    }"  class="btn btn-sm btn-primary" > Подробнее </a>
+                    }"  class="btn btn-sm btn-primary" >  ${buttonText} </a>
                 		<a href="/post.html?id=${
                       item._id
-                    }"  class="card-link btn btn-sm btn-danger"> Регистрация </a>
+                    }"  class="card-link btn btn-sm btn-danger">  ${button2Text} </a>
 			        </div>
 			    </div> `;
           $("#contentContainer").append(node);
