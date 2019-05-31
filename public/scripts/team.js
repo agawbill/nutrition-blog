@@ -37,31 +37,24 @@ const swapHeaders = contentLanguage => {
     "#fitness",
     "#upcoming",
     "#health",
-    "#latest"
+    "#team"
   ];
-  eng = [
-    "Main News",
-    "Diet",
-    "Fitness",
-    "Recommended",
-    "Health",
-    "Latest Posts"
-  ];
+  eng = ["Main News", "Diet", "Fitness", "Recommended", "Health", "Team"];
   azi = [
     "Əsas Xəbərlər",
     "Diet",
     "Fintes",
     "REDAKSİYA SEÇİMİ",
     "Sağlamlığ",
-    "SON PUBLİKASİYALAR"
-   ];
+    "KOMANDAMIZ"
+  ];
   rus = [
     "Главные Новости",
     "Питание",
     "Фитнес",
     "РЕКОМЕНДОВАННЫЕ",
     "Здоровье",
-    "ПОСЛЕДНИИ ПУБЛИКАЦИИ "
+    "Наша Команда< "
   ];
   for (let i = 0; i < headerArray.length; i++) {
     if (contentLanguage === "ENG") {
@@ -123,12 +116,19 @@ const latestCycle = () => {
       <table style="margin-bottom:10px; display:block">
         <tr>
           <td>
-              <img src="${item.cover.url}" width="90px" style="padding-right:5px;">
+              <img src="${
+                item.cover.url
+              }" width="90px" style="padding-right:5px;">
           </td>
           <td style="width:100%;position:relative; clear:both;">
             <span class="newsText">
                 <p style="font-size:12px!important;" class="card-title font800">
-                <a href="/post.html?id=${item._id}" style="color:black!important;">${title.substring(0,60)}  </a>
+                <a href="/post.html?id=${
+                  item._id
+                }" style="color:black!important;">${title.substring(
+      0,
+      60
+    )}  </a>
                 </p>
             </span>
           </td>
@@ -182,7 +182,9 @@ const recommendedCycle = () => {
           .substring(0, 10)
           .replace(/-/g, ".")}</span>
          <h6 style="border-bottom:1px dashed rgb(73,86,120); padding-bottom:10px;" class="card-title">
-        <a href="/post.html?id=${item._id}" style="color:rgb(73, 86, 120)">${title.substring(0, 70)}  </a>
+        <a href="/post.html?id=${
+          item._id
+        }" style="color:rgb(73, 86, 120)">${title.substring(0, 70)}  </a>
         </h6>
       </div>
     </div>
@@ -215,9 +217,11 @@ $(document).ready(() => {
 				    <img src="${item.cover.url}" class="card-img-top" alt="...">
 				    <div class="card-body justify-content-center align-items-center">
 				       <h5 class="card-title">${title}</h5>
-                <a href="/post.html?id=${item._id}"  class="btn btn-sm btn-primary" > Подробнее </a>
+                <a href="/post.html?id=${
+                  item._id
+                }"  class="btn btn-sm btn-primary" > Подробнее </a>
 			        </div>
-			    </div> 
+			    </div>
          `;
           $("#contentContainer").append(node);
         } else {
