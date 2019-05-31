@@ -3,7 +3,7 @@ var converter = new showdown.Converter();
 var contentArray = [];
 var recPostings = [];
 var firstSix = [];
-
+var buttonText = 'Подробнее'
 window.onload = () => {
   var languageSelect = document.getElementById("languageSelect");
 };
@@ -212,16 +212,17 @@ $(document).ready(() => {
         }
         if (item.category == "Команда") {
           contentArray.unshift(item);
+          if(contentLanguage=='ENG'){buttonText='Read more'}
+          else if(contentLanguage=='RU'){buttonText='Подробнее'}
+          else {buttonText='Ətraflı'}
           const node = `
           <div class="card" style="width: 26%">
 				    <img src="${item.cover.url}" class="card-img-top" alt="...">
 				    <div class="card-body justify-content-center align-items-center">
 				       <h5 class="card-title">${title}</h5>
-                <a href="/post.html?id=${
-                  item._id
-                }"  class="btn btn-sm btn-primary" > Подробнее </a>
+                <a href="/post.html?id=${item._id}"  class="btn btn-sm btn-primary" > ${buttonText} </a>
 			        </div>
-			    </div>
+			    </div> 
          `;
           $("#contentContainer").append(node);
         } else {
