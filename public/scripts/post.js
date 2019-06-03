@@ -86,13 +86,7 @@ const postCycle = async () => {
 };
 
 const latestCycle = () => {
-  var metas=`<meta property="og:url" content=${ 'http://andop.org/post.html?id='+item._id } />
-	  <meta property="og:type"          content="website" />
-	  <meta property="og:title"         content="${item.title}" />
-	  <meta property="og:description"   content="${item.title}" />
-	  <meta property="og:image"         content="${item.cover.url}" />
-	  `
-    $('#head').append(metas) 
+ 
 
   for (let i = 0; i < firstSix.length; i++) {
     const item = firstSix[i];
@@ -215,6 +209,14 @@ const headingSwap = contentLanguage => {
 headingSwap(contentLanguage);
 
 window.onload = () => {
+   var metas=`<meta property="og:url" content=${ 'http://andop.org/post.html?id='+item._id } />
+	  <meta property="og:type"          content="website" />
+	  <meta property="og:title"         content="${item.title}" />
+	  <meta property="og:description"   content="${item.title}" />
+	  <meta property="og:image"         content="${item.cover.url}" />
+	  `
+    $('#head')[0].append(metas) 
+  
   languageSelect.addEventListener("change", () => {
     if (languageSelect.value == "ENG") {
       localStorage["myKey"] = "ENG";
