@@ -50,8 +50,8 @@ const postCycle = async () => {
   <div id="fb-root"></div>
   <div class="share-btn" data-url="https://andop.org/post.html?id=${item._id}" data-title="${title}" data-desc="${title}">
                 					    <a class="share-btn btn-fb" 
-                					      href="https://www.facebook.com/sharer/sharer.php?sdk=joey&amp;u=/post.html?id=${item._id}?fbclid=IwAR0IDggCOos3YEHAEQe4qPKUs6qkIc_p5WImR5hW7w4SUHMYZJtuCuB6E90&amp;display=popup&amp;ref=plugin&amp;src=share_button" 
-                					      onclick="return !window.open(this.href, 'Facebook', 'width=640,height=580')">поделиться</a>
+                					      href="https://www.facebook.com/sharer/sharer.php?sdk=joey&amp;u=http://andop.org/post.html?id=${item._id}?fbclid=IwAR0IDggCOos3YEHAEQe4qPKUs6qkIc_p5WImR5hW7w4SUHMYZJtuCuB6E90&amp;display=popup&amp;ref=plugin&amp;src=share_button" 
+                					      onclick="return !window.open(this.href, 'Facebook', 'width=640,height=580')">Поделиться</a>
                 					    <a class="btn-vk" data-id="vk"><i class="fab fa-vk"></i> VK</a>
                  					    <a class="btn-twitter" data-id="tw"><i class="fab fa-twitter"></i> Twitter</a>
                 					    <a class="btn-telegram" data-id="tg"><i class="fab fa-telegram"></i> Telegram</a>
@@ -59,7 +59,6 @@ const postCycle = async () => {
                 					    <a class="btn-mail" data-id="mail"><i class="fas fa-at"></i> EMail</a>
 				                	</div>
 				                	<script src="/scripts/share-buttons.js"></script>`;
-
   const node = await `
   <div class="col-lg-12 col-md-12 mb-12">
     <h4 class="card-title">
@@ -208,7 +207,7 @@ const headingSwap = contentLanguage => {
 
 headingSwap(contentLanguage);
 
-window.onload = () => {
+window.onload = async() => {
  
   //   $('#head')[0].append(`<meta property='og:url' content=${ 'http://andop.org/post.html?id='+item._id } />
 	 // <meta property='og:type'          content='website' />
@@ -216,9 +215,9 @@ window.onload = () => {
 	 // <meta property='og:description'   content='${item.title}' />
 	 // <meta property='og:image'         content='${item.cover.url}' />
 	 // `) 
-  $("meta[property='og\\:title']").attr("content", item.title);
-  $("meta[property='og\\:description']").attr("content", item.title);
-    $("meta[property='og\\:image']").attr("content", item.cover.url);
+  await $("meta[property='og\\:title']").attr("content", item.title);
+  await $("meta[property='og\\:description']").attr("content", item.title);
+  await   $("meta[property='og\\:image']").attr("content", item.cover.url);
 
   
   languageSelect.addEventListener("change", () => {
