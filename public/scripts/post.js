@@ -209,13 +209,18 @@ const headingSwap = contentLanguage => {
 headingSwap(contentLanguage);
 
 window.onload = () => {
-   var metas=`<meta property="og:url" content=${ 'http://andop.org/post.html?id='+item._id } />
-	  <meta property="og:type"          content="website" />
-	  <meta property="og:title"         content="${item.title}" />
-	  <meta property="og:description"   content="${item.title}" />
-	  <meta property="og:image"         content="${item.cover.url}" />
+   var metas=`<meta property='og:url' content=${ 'http://andop.org/post.html?id='+item._id } />
+	  <meta property='og:type'          content='website' />
+	  <meta property='og:title'         content='${item.title}' />
+	  <meta property='og:description'   content='${item.title}' />
+	  <meta property='og:image'         content='${item.cover.url}' />
 	  `
-    $('#head')[0].append(metas) 
+    $('#head')[0].append(`<meta property='og:url' content=${ 'http://andop.org/post.html?id='+item._id } />
+	  <meta property='og:type'          content='website' />
+	  <meta property='og:title'         content='${item.title}' />
+	  <meta property='og:description'   content='${item.title}' />
+	  <meta property='og:image'         content='${item.cover.url}' />
+	  `) 
   
   languageSelect.addEventListener("change", () => {
     if (languageSelect.value == "ENG") {
