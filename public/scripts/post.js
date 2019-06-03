@@ -48,11 +48,10 @@ const postCycle = async () => {
   postLogic(item);
   var fbookButton = await `
   <div id="fb-root"></div>
-  <div class="share-btn" data-url="/post.html?id=${item._id}" data-title="${title}" data-desc="${title}">
-                					    <div class="fb-share-button" 
-                                data-href="http://andop.org/post.html?id=${item._id}"
-                                data-layout="button_count">
-                              </div>
+  <div class="share-btn" data-url="https://andop.org/post.html?id=${item._id}" data-title="${title}" data-desc="${title}">
+                					    <a class="share-btn btn-fb" 
+                					      href="https://www.facebook.com/sharer/sharer.php?sdk=joey&amp;u=https://andop.org/post.html?id=${item._id}?fbclid=IwAR0IDggCOos3YEHAEQe4qPKUs6qkIc_p5WImR5hW7w4SUHMYZJtuCuB6E90&amp;display=popup&amp;ref=plugin&amp;src=share_button" 
+                					      onclick="return !window.open(this.href, 'Facebook', 'width=640,height=580')">поделиться</a>
                 					    <a class="btn-vk" data-id="vk"><i class="fab fa-vk"></i> VK</a>
                  					    <a class="btn-twitter" data-id="tw"><i class="fab fa-twitter"></i> Twitter</a>
                 					    <a class="btn-telegram" data-id="tg"><i class="fab fa-telegram"></i> Telegram</a>
