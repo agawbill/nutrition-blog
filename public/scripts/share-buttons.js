@@ -1,6 +1,6 @@
 (function (w, d) {
     'use strict';
-
+    var url = window.location.href
     /**
      * Class to display the buttons of social networks.
      *
@@ -9,7 +9,7 @@
      * @license MIT
      */
     function ShareButtons() {
-
+        
         var FB_LINK_FORMAT = 'https://www.facebook.com/sharer/sharer.php?u={0}',
             VK_LINK_FORMAT = 'https://vk.com/share.php?url={0}&title={1}',
             TW_LINK_FORMAT = 'https://twitter.com/intent/tweet?url={0}&text={1}',

@@ -48,17 +48,16 @@ const postCycle = async () => {
   postLogic(item);
   var fbookButton = await `
   <div id="fb-root"></div>
+
   <div class="share-btn" data-url="https://andop.org/post.html?id=${item._id}" data-title="${title}" data-desc="${title}">
-                					    <a class="share-btn btn-fb" 
-                					      href='https://www.facebook.com/plugins/share_button.php?href=${document.URL}&layout=button_count&size=large&mobile_iframe=true&width=83&height=28&appId' 
-                					      onclick="return !window.open(this.href, 'Facebook', 'width=640,height=580')">Поделиться</a>
-                					    <a class="btn-vk" data-id="vk"><i class="fab fa-vk"></i> VK</a>
-                 					    <a class="btn-twitter" data-id="tw"><i class="fab fa-twitter"></i> Twitter</a>
-                					    <a class="btn-telegram" data-id="tg"><i class="fab fa-telegram"></i> Telegram</a>
-                					    <a class="btn-linkedin" data-id="in"><i class="fab fa-linkedin"></i> Linkedin</a>
-                					    <a class="btn-mail" data-id="mail"><i class="fas fa-at"></i> EMail</a>
-				                	</div>
-				                	<script src="/scripts/share-buttons.js"></script>`;
+    <a class="btn-fb" href="javascript:fbshareCurrentPage()" target="_blank" alt="Share on Facebook"><i class="fab fa-fb"></i>FB</a>
+    <a class="btn-vk" data-id="vk"><i class="fab fa-vk"></i> VK</a>
+    <a class="btn-twitter" data-id="tw"><i class="fab fa-twitter"></i> Twitter</a>
+    <a class="btn-telegram" data-id="tg"><i class="fab fa-telegram"></i> Telegram</a>
+    <a class="btn-linkedin" data-id="in"><i class="fab fa-linkedin"></i> Linkedin</a>
+    <a class="btn-mail" data-id="mail"><i class="fas fa-at"></i> EMail</a>
+	</div>
+	`;
   const node = await `
   <div class="col-lg-12 col-md-12 mb-12">
     <h4 class="card-title">
@@ -208,14 +207,6 @@ const headingSwap = contentLanguage => {
 headingSwap(contentLanguage);
 
 window.onload = async() => {
- 
- 
-  await $("meta[property='og\\:url']").attr("content",  document.URL);
-  await $("meta[property='og\\:title']").attr("content", item.title);
-  await $("meta[property='og\\:description']").attr("content", item.title);
-  await   $("meta[property='og\\:image']").attr("content", item.cover.url);
-
-  
   languageSelect.addEventListener("change", () => {
     if (languageSelect.value == "ENG") {
       localStorage["myKey"] = "ENG";
