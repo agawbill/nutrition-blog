@@ -54,7 +54,7 @@ const swapHeaders = contentLanguage => {
     "Фитнес",
     "РЕКОМЕНДОВАННЫЕ",
     "Здоровье",
-    "Наша Команда< "
+    "Наша Команда"
   ];
   for (let i = 0; i < headerArray.length; i++) {
     if (contentLanguage === "ENG") {
