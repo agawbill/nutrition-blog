@@ -215,6 +215,7 @@ window.onload = async() => {
 	 // <meta property='og:description'   content='${item.title}' />
 	 // <meta property='og:image'         content='${item.cover.url}' />
 	 // `) 
+  await $("meta[property='og\\:url']").attr("content",  document.URL);
   await $("meta[property='og\\:title']").attr("content", item.title);
   await $("meta[property='og\\:description']").attr("content", item.title);
   await   $("meta[property='og\\:image']").attr("content", item.cover.url);
