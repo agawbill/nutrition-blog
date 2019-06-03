@@ -50,7 +50,7 @@ const postCycle = async () => {
   <div id="fb-root"></div>
 
   <div class="share-btn" data-url="https://andop.org/post.html?id=${item._id}" data-title="${title}" data-desc="${title}">
-    <a class="btn-fb" href="javascript:fbshareCurrentPage()" target="_blank" alt="Share on Facebook"><i class="fab fa-fb"></i>FB</a>
+    <a class="btn-fb" href="javascript:fbshareCurrentPage()" target="_blank" alt="Share on Facebook"><i class="fab fa-facebook"></i>Facebook</a>
     <a class="btn-vk" data-id="vk"><i class="fab fa-vk"></i> VK</a>
     <a class="btn-twitter" data-id="tw"><i class="fab fa-twitter"></i> Twitter</a>
     <a class="btn-telegram" data-id="tg"><i class="fab fa-telegram"></i> Telegram</a>
