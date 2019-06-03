@@ -3,9 +3,16 @@
 <head id='head'>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.js">
+		
 	</script>
 	<meta charset="utf-8">
 	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+	  <meta property='og:url'			content='' />
+	  <meta property='og:type'          content='website' />
+	  <meta property='og:title'         content='' />
+	  <meta property='og:description'   content='' />
+	  <meta property='og:image'         content='' />
+	  
 	<script>
 	   function myFunction() {
 	   var x = document.URL;
@@ -14,7 +21,7 @@
 	    $("meta[property='og\\:url']").attr("content",  document.URL);
 	    $("meta[property='og\\:title']").attr("content", item.title);
 	    $("meta[property='og\\:description']").attr("content", item.title);
-	     $("meta[property='og\\:image']").attr("content", item.cover.url);
+	    $("meta[property='og\\:image']").attr("content", item.cover.url);
 	  </script>
 	
 	<title>WELCOME TO ACADEMY OF NUTRITION AND DIETETICS</title>

@@ -50,7 +50,7 @@ const postCycle = async () => {
   <div id="fb-root"></div>
   <div class="share-btn" data-url="https://andop.org/post.html?id=${item._id}" data-title="${title}" data-desc="${title}">
                 					    <a class="share-btn btn-fb" 
-                					      href="https://www.facebook.com/sharer/sharer.php?sdk=joey&amp;u=http://andop.org/post.html?id=${item._id}?fbclid=IwAR0IDggCOos3YEHAEQe4qPKUs6qkIc_p5WImR5hW7w4SUHMYZJtuCuB6E90&amp;display=popup&amp;ref=plugin&amp;src=share_button" 
+                					      href='https://www.facebook.com/plugins/share_button.php?href=${document.URL}&layout=button_count&size=large&mobile_iframe=true&width=83&height=28&appId' 
                 					      onclick="return !window.open(this.href, 'Facebook', 'width=640,height=580')">Поделиться</a>
                 					    <a class="btn-vk" data-id="vk"><i class="fab fa-vk"></i> VK</a>
                  					    <a class="btn-twitter" data-id="tw"><i class="fab fa-twitter"></i> Twitter</a>
@@ -209,12 +209,7 @@ headingSwap(contentLanguage);
 
 window.onload = async() => {
  
-  //   $('#head')[0].append(`<meta property='og:url' content=${ 'http://andop.org/post.html?id='+item._id } />
-	 // <meta property='og:type'          content='website' />
-	 // <meta property='og:title'         content='${item.title}' />
-	 // <meta property='og:description'   content='${item.title}' />
-	 // <meta property='og:image'         content='${item.cover.url}' />
-	 // `) 
+ 
   await $("meta[property='og\\:url']").attr("content",  document.URL);
   await $("meta[property='og\\:title']").attr("content", item.title);
   await $("meta[property='og\\:description']").attr("content", item.title);
