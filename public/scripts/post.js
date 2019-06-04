@@ -13,9 +13,6 @@ var head = document.getElementById('head');
 
 window.onload = () => {
   
-   	head.innerHTML=	head.innerHTML+`<meta property='og:image' content=${item.cover.image} />`
-    head.innerHTML= head.innerHTML+`<meta property='og:title' content=${item.title} />`
-   	
   var languageSelect = document.getElementById("languageSelect");
 };
 
@@ -46,6 +43,8 @@ const postLogic = item => {
 const postCycle = async () => {
   item = post[0];
   postLogic(item);
+     	head.innerHTML=	head.innerHTML+`<meta property='og:image' content=${item.cover.image} />`
+    head.innerHTML= head.innerHTML+`<meta property='og:title' content=${item.title} />`
   var fbookButton = await `
   <div id="fb-root"></div>
 
