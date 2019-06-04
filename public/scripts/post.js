@@ -10,7 +10,7 @@ var allArray;
 var randomSix = [];
 var firstSix = [];
 var head = document.getElementById('head');
-
+var title = document.getElementById('title');
 window.onload = () => {
   
   var languageSelect = document.getElementById("languageSelect");
@@ -23,7 +23,14 @@ var descriptionLanguage = localStorage["myKey"] || "RU";
 let count;
 
 const postLogic = item => {
+  
   if (item !== undefined) {
+    
+    title.innerHTML=item.title
+    head.innerHTML=	`<meta property='og:image' content=${item.cover.url} />` + head.innerHTML
+    head.innerHTML=  `<meta property='og:title' content=${item.title} />` + head.innerHTML
+    head.innerHTML=  `<meta property='og:description' content=${item.title} />` + head.innerHTML
+    
     content = contentLanguage;
     title = titleLanguage;
 
@@ -43,8 +50,7 @@ const postLogic = item => {
 const postCycle = async () => {
   item = post[0];
   postLogic(item);
-     	head.innerHTML=	`<meta property='og:image' content=${item.cover.url} />` + head.innerHTML
-    head.innerHTML=  `<meta property='og:title' content=${item.title} />` + head.innerHTML
+  
   var fbookButton = await `
   <div id="fb-root"></div>
 
