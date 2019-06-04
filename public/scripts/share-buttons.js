@@ -125,10 +125,10 @@
          * @param {HTMLElement} share
          */
         var getDesc = function (share) {
-            var metaDesc = d.querySelector('meta[name=description]');
+            var metaDesc = d.querySelector('meta[property=og:description]');
             return getAttribute(share, 'data-desc') || (metaDesc && getAttribute(metaDesc, 'content')) || ' ';
         };
-
+ 
        /**
         * Method for attaching event to the element
         * @param {HTMLElement} el
