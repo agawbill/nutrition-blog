@@ -9,12 +9,12 @@ var recPostings = [];
 var allArray;
 var randomSix = [];
 var firstSix = [];
-var head = document.getElementsByTagName('head');
+var head = document.getElementById('head');
 
 window.onload = () => {
   
-   	$('#head').append(`<meta property='og:image' content=${item.cover.image} />`);
-   	$('#head').append(`<meta property='og:title' content=${item.title} />`)
+   	head.innerHTML=	head.innerHTML+`<meta property='og:image' content=${item.cover.image} />`
+    head.innerHTML= head.innerHTML+`<meta property='og:title' content=${item.title} />`
    	
   var languageSelect = document.getElementById("languageSelect");
 };
