@@ -54,60 +54,44 @@ display: inline;
 }
  
 </style>
-<!-- I got these buttons from simplesharebuttons.com -->
-<div id="share-buttons">
-    
-   
-    
-   
- 
-    <!-- Facebook -->
-    <a href="http://www.facebook.com/sharer.php?u=https://simplesharebuttons.com" target="_blank">
+ <div id="share-buttons">
+     <a href="http://www.facebook.com/sharer.php?u=${window.location.href}" target="_blank">
         <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
     </a>
     
-    <!-- Google+ -->
-    <a href="https://plus.google.com/share?url=https://simplesharebuttons.com" target="_blank">
+     <a href="https://plus.google.com/share?url=${window.location.href}" target="_blank">
         <img src="https://simplesharebuttons.com/images/somacro/google.png" alt="Google" />
     </a>
     
-    <!-- LinkedIn -->
-    <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://simplesharebuttons.com" target="_blank">
+     <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=${window.location.href}" target="_blank">
         <img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
     </a>
     
-    <!-- Pinterest -->
-    <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());">
+     <a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());">
         <img src="https://simplesharebuttons.com/images/somacro/pinterest.png" alt="Pinterest" />
     </a>
     
-    <!-- Print -->
     <a href="javascript:;" onclick="window.print()">
         <img src="https://simplesharebuttons.com/images/somacro/print.png" alt="Print" />
     </a>
     
-    <!-- Reddit -->
-    <a href="http://reddit.com/submit?url=https://simplesharebuttons.com&amp;title=Simple Share Buttons" target="_blank">
+    <a href="http://reddit.com/submit?url=${window.location.href}&amp;title=Simple Share Buttons" target="_blank">
         <img src="https://simplesharebuttons.com/images/somacro/reddit.png" alt="Reddit" />
     </a>
     
-    <!-- StumbleUpon-->
     <a href="http://www.stumbleupon.com/submit?url=https://simplesharebuttons.com&amp;title=Simple Share Buttons" target="_blank">
         <img src="https://simplesharebuttons.com/images/somacro/stumbleupon.png" alt="StumbleUpon" />
     </a>
    
      
-    <!-- Twitter -->
     <a href="https://twitter.com/share?url=https://simplesharebuttons.com&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" target="_blank">
         <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
     </a>
     
-    <!-- VK -->
     <a href="http://vkontakte.ru/share.php?url=https://simplesharebuttons.com" target="_blank">
         <img src="https://simplesharebuttons.com/images/somacro/vk.png" alt="VK" />
     </a>
-    
-     <!-- Email -->
+
     <a href="mailto:?Subject=Simple Share Buttons&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 https://simplesharebuttons.com">
         <img src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email" />
     </a>
@@ -137,8 +121,8 @@ display: inline;
     </p>
      </div>`;
   
-   	$('#head').append(`<meta property='og:image' content=${item.cover.image} />`);
-   	$('#head').append(`<meta property='og:title' content=${item.title} />`)
+   	$('#head').append(`<meta property='og:image' content=${item.cover.url} />`);
+   	$('#head').append(`<meta property='og:title' content=${document.title} />`)
    	$('title').html(item.title)
   $("#postContainer").append(node + fbookButton);
 };
