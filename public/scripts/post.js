@@ -12,9 +12,6 @@ var firstSix = [];
 var head = document.getElementsByTagName('head');
 
 window.onload = () => {
-  
-   	$('#head').append(`<meta property='og:image' content=${item.cover.image} />`);
-   	$('#head').append(`<meta property='og:title' content=${item.title} />`)
   var languageSelect = document.getElementById("languageSelect");
 };
 
@@ -79,7 +76,10 @@ const postCycle = async () => {
     <h5>${converter.makeHtml(content)} </h5>
     </p>
      </div>`;
-
+  
+   	$('#head').append(`<meta property='og:image' content=${item.cover.image} />`);
+   	$('#head').append(`<meta property='og:title' content=${item.title} />`)
+   	$('title').html(item.title)
   $("#postContainer").append(node + fbookButton);
 };
 
