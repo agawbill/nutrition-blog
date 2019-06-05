@@ -84,7 +84,7 @@ display: inline;
     </a>
    
      
-    <a href="https://twitter.com/share?url=https://simplesharebuttons.com&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" target="_blank">
+    <a href="https://twitter.com/share?url=${window.location.href}&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" target="_blank">
         <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
     </a>
     
@@ -92,7 +92,7 @@ display: inline;
         <img src="https://simplesharebuttons.com/images/somacro/vk.png" alt="VK" />
     </a>
 
-    <a href="mailto:?Subject=Simple Share Buttons&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 https://simplesharebuttons.com">
+    <a href="mailto:?Subject=Simple Share Buttons&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 ${window.location.href}">
         <img src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email" />
     </a>
 
@@ -121,9 +121,12 @@ display: inline;
     </p>
      </div>`;
   
-   	$('#head').append(`<meta property='og:image' content=${item.cover.url} />`);
-   	$('#head').append(`<meta property='og:title' content=${document.title} />`)
+   	 
    	$('title').html(item.title)
+   	$('#ogTitle').attr('content', item.title);
+   		$('#ogImage').attr('content', item.cover.url);
+   		 	$('#ogDescription').attr('content', item.description);
+   	
   $("#postContainer").append(node + fbookButton);
 };
 
