@@ -43,17 +43,13 @@ const postCycle = async () => {
   item = post[0];
   postLogic(item);
   var fbookButton = await `
-  <div id="fb-root"></div>
-
-  <div class="share-btn" data-url="https://andop.org/post.html?id=${item._id}" data-title="${item.title}" data-desc="${item.title}">
-    <a class="btn-fb" href="javascript:fbshareCurrentPage()" target="_blank" alt="Share on Facebook"><i class="fab fa-facebook"></i>Facebook</a>
-    <a class="btn-vk" data-id="vk"><i class="fab fa-vk"></i> VK</a>
-    <a class="btn-twitter" data-id="tw"><i class="fab fa-twitter"></i> Twitter</a>
-    <a class="btn-telegram" data-id="tg"><i class="fab fa-telegram"></i> Telegram</a>
-    <a class="btn-linkedin" data-id="in"><i class="fab fa-linkedin"></i> Linkedin</a>
-    <a class="btn-mail" data-id="mail"><i class="fas fa-at"></i> EMail</a>
-	</div>
-	<script src="/scripts/share-buttons.js"></script>
+ <div class="ssk-sm ssk-group ssk-count">
+    <a href="" class="ssk ssk-facebook"></a>
+    <a href="" class="ssk ssk-twitter"></a>
+    <a href="" class="ssk ssk-google-plus"></a>
+    <a href="" class="ssk ssk-pinterest"></a>
+    <a href="" class="ssk ssk-linkedin"></a>
+</div>
 	`;
   const node = await `
   <div class="col-lg-12 col-md-12 mb-12">
