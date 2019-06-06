@@ -9,7 +9,6 @@ var recPostings = [];
 var allArray;
 var randomSix = [];
 var firstSix = [];
-var head = document.getElementsByTagName('head');
 
 window.onload = () => {
   var languageSelect = document.getElementById("languageSelect");
@@ -88,7 +87,7 @@ display: inline;
         <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
     </a>
     
-    <a href="http://vkontakte.ru/share.php?url=https://simplesharebuttons.com" target="_blank">
+    <a href="http://vkontakte.ru/share.php?url=${window.location.href}" target="_blank">
         <img src="https://simplesharebuttons.com/images/somacro/vk.png" alt="VK" />
     </a>
 
