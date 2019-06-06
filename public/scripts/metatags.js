@@ -1,4 +1,3 @@
-var converter = new showdown.Converter();
 var post = [];
 var technology = [];
 var news = [];

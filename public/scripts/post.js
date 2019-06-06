@@ -121,12 +121,6 @@ display: inline;
     </p>
      </div>`;
   
-   	 
-   	$('title').html(item.title)
-   	$('#ogTitle').attr('content', item.title);
-   		$('#ogImage').attr('content', item.cover.url);
-   		 	$('#ogDescription').attr('content', item.description);
-   	
   $("#postContainer").append(node + fbookButton);
 };
 
