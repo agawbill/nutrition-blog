@@ -12,25 +12,21 @@
     "title_eng": {
       "default": "",
       "type": "string",
-      "maxLength": 300,
-      "required": true
+      "maxLength": 300
     },
     "title": {
       "default": "",
       "type": "string",
-      "maxLength": 300,
-      "required": true
+      "maxLength": 300
     },
     "title_az": {
       "default": "",
       "type": "string",
-      "maxLength": 300,
-      "required": true
+      "maxLength": 300
     },
     "content_eng": {
       "default": "",
-      "type": "text",
-      "required": true
+      "type": "text"
     },
     "description": {
       "default": "",
@@ -38,13 +34,11 @@
     },
     "content": {
       "default": "",
-      "type": "text",
-      "required": true
+      "type": "text"
     },
     "content_az": {
       "default": "",
-      "type": "text",
-      "required": true
+      "type": "text"
     },
     "cover": {
       "model": "file",
@@ -63,6 +57,7 @@
     "category": {
       "default": "Наши Беседы",
       "type": "enumeration",
+<<<<<<< HEAD
       "required": true,
       "enum": [
         "Наши Беседы",
@@ -73,6 +68,11 @@
       ]
     },
     "Count": {
+=======
+      "enum": ["Наши Беседы", "Фитнес", "Здоровье", "Питание", "Анонс", "Наши Проекты", "Наши Тренинги","Членство","Команда"]
+    },
+    "count": {
+>>>>>>> fa9ea18785daa45b6ca899f7d41daf8b8a2afbb9
       "default": 0,
       "type": "integer"
     }

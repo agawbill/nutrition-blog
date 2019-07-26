@@ -3,6 +3,8 @@ var converter = new showdown.Converter();
 var contentArray = [];
 var recPostings = [];
 var firstSix = [];
+var buttonText = 'Подробнее'
+var button2Text = 'Регистрация'
 
 window.onload = () => {
   var languageSelect = document.getElementById("languageSelect");
@@ -37,31 +39,24 @@ const swapHeaders = contentLanguage => {
     "#fitness",
     "#upcoming",
     "#health",
-    "#latest"
+    "#team"
   ];
-  eng = [
-    "Main News",
-    "Diet",
-    "Fitness",
-    "Recommended",
-    "Health",
-    "Latest Posts"
-  ];
+  eng = ["Main News", "Diet", "Fitness", "Recommended", "Health", "Membership"];
   azi = [
     "Əsas Xəbərlər",
     "Diet",
     "Fintes",
     "REDAKSİYA SEÇİMİ",
     "Sağlamlığ",
-    "SON PUBLİKASİYALAR"
-   ];
+    "ÜZVLÜK"
+  ];
   rus = [
     "Главные Новости",
     "Питание",
     "Фитнес",
     "РЕКОМЕНДОВАННЫЕ",
     "Здоровье",
-    "ПОСЛЕДНИИ ПУБЛИКАЦИИ "
+    "Членство"
   ];
   for (let i = 0; i < headerArray.length; i++) {
     if (contentLanguage === "ENG") {
@@ -154,23 +149,18 @@ const contentCycle = () => {
     const item = contentArray[i];
     postLogic(item);
     const node = `
-    <li class="media" style="border-bottom: 2px dotted gray; margin-bottom: 10px; padding-bottom: 10px;">
-    <img src="${
-      item.cover.url
-    }"width="30%" class="rounded" align="left" style="padding-right:5px;" >
-      <div class="media-body">
-      <h4 class="card-title">
-        <a href="/post.html?id=${item._id}"> ${title}</a>
-      </h4>
-      <p>
-      ${converter.makeHtml(content).substring(0, 200)}
-      </p>
-      <span class="date3">${item.createdAt
-        .substring(0, 10)
-        .replace(/-/g, ".")}</span>
-    </li>
-    </div>
-      `;
+     <div class="card" style="width: 26%">
+				    <img src="${item.cover.url}" class="card-img-top" alt="...">
+				    <div class="card-body justify-content-center align-items-center">
+				       <h5 class="card-title">${title}</h5>
+                		<a href="/post.html?id=${
+                      item._id
+                    }"  class="btn btn-sm btn-primary" >  ${buttonText} </a>
+                		<a href="/post.html?id=${
+                      item._id
+                    }"  class="card-link btn btn-sm btn-danger">  ${button2Text} </a>
+			        </div>
+			    </div> `;
     $("#contentContainer").append(node);
   }
 };
@@ -217,27 +207,24 @@ $(document).ready(() => {
         if (i > data.length - 6) {
           firstSix.unshift(item);
         }
-        if (item.category == "Питание") {
+        if (item.category == "Членство") {
+          if(contentLanguage=='ENG'){buttonText='Read more', button2Text='Registration'}
+          else if(contentLanguage=='RU'){buttonText='Подробнее', button2Text='Регистрация'}
+          else {buttonText='Ətraflı', button2Text='Registrasiya'}
           contentArray.unshift(item);
           const node = `
-          <li class="media" style="border-bottom: 2px dotted gray; margin-bottom: 10px; padding-bottom: 10px;">
-          <img src="${
-            item.cover.url
-          }"width="30%" class="rounded" align="left" style="padding-right:5px;" >
-            <div class="media-body">
-                        <span class="date3">${item.createdAt
-                          .substring(0, 10)
-                          .replace(/-/g, ".")}</span>
-
-            <h4 class="card-title">
-              <a href="/post.html?id=${item._id}"> ${title}</a>
-            </h4>
-            <p>
-            ${converter.makeHtml(content).substring(0, 200)}
-            </p>
-          </li>
-          </div>
-          `;
+          <div class="card" style="width: 26%">
+				    <img src="${item.cover.url}" class="card-img-top" alt="...">
+				    <div class="card-body justify-content-center align-items-center">
+				       <h5 class="card-title">${title}</h5>
+                		<a href="/post.html?id=${
+                      item._id
+                    }"  class="btn btn-sm btn-primary" >  ${buttonText} </a>
+                		<a href="/post.html?id=${
+                      item._id
+                    }"  class="card-link btn btn-sm btn-danger">  ${button2Text} </a>
+			        </div>
+			    </div> `;
           $("#contentContainer").append(node);
         } else {
         }

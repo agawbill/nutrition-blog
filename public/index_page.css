@@ -19,24 +19,17 @@ h1 {
   margin-top: 0;
 }
 .footer_divider {
-<<<<<<< HEAD
-  border-right: dashed !important;
-=======
   border-right: 1px dashed !important;
->>>>>>> 37bb518bd53e9e93138922d4a3b57da81f4d0c99
   padding-right: 5px;
 }
 
 a {
-<<<<<<< HEAD
-  color: navy !important;
-=======
+
   color: rgb(73, 86, 120) !important;
   text-decoration: none !important;
 }
 a:hover {
   color: rgb(15,132,138)!important;
->>>>>>> 37bb518bd53e9e93138922d4a3b57da81f4d0c99
 }
 
 h2 {
@@ -411,4 +404,9 @@ img.rounded {
 
 div.right-margin {
   margin-right: 11vh;
+}
+.the_team {
+  display: flex;
+  direction: row;
+
 }

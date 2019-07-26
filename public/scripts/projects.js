@@ -37,7 +37,8 @@ const swapHeaders = contentLanguage => {
     "#fitness",
     "#upcoming",
     "#health",
-    "#latest"
+    "#latest",
+    "#projects"
   ];
   eng = [
     "Main News",
@@ -45,7 +46,8 @@ const swapHeaders = contentLanguage => {
     "Fitness",
     "Recommended",
     "Health",
-    "Latest Posts"
+    "LATEST POSTS",
+    "Projects"
   ];
   azi = [
     "Əsas Xəbərlər",
@@ -53,15 +55,17 @@ const swapHeaders = contentLanguage => {
     "Fintes",
     "REDAKSİYA SEÇİMİ",
     "Sağlamlığ",
-    "SON PUBLİKASİYALAR"
-   ];
+    "SON PUBLİKASİYALAR",
+    "Proektlərimiz"
+  ];
   rus = [
     "Главные Новости",
     "Питание",
     "Фитнес",
     "РЕКОМЕНДОВАННЫЕ",
     "Здоровье",
-    "ПОСЛЕДНИИ ПУБЛИКАЦИИ "
+    "ПОСЛЕДНИИ ПУБЛИКАЦИИ ",
+    "Наши Проекты"
   ];
   for (let i = 0; i < headerArray.length; i++) {
     if (contentLanguage === "ENG") {
@@ -217,7 +221,7 @@ $(document).ready(() => {
         if (i > data.length - 6) {
           firstSix.unshift(item);
         }
-        if (item.category == "Питание") {
+        if (item.category == "Наши Проекты") {
           contentArray.unshift(item);
           const node = `
           <li class="media" style="border-bottom: 2px dotted gray; margin-bottom: 10px; padding-bottom: 10px;">

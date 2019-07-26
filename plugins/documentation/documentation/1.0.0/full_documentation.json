@@ -14,7 +14,11 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
+<<<<<<< HEAD
     "x-generation-date": "04/15/2019 11:12:06 PM"
+=======
+    "x-generation-date": "05/31/2019 12:04:42 AM"
+>>>>>>> fa9ea18785daa45b6ca899f7d41daf8b8a2afbb9
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3093,14 +3097,7 @@
       "Post": {
         "required": [
           "id",
-          "title_eng",
-          "title",
-          "title_az",
-          "content_eng",
-          "content",
-          "content_az",
-          "cover",
-          "category"
+          "cover"
         ],
         "properties": {
           "id": {
@@ -3199,25 +3196,24 @@
               "Фитнес",
               "Здоровье",
               "Питание",
-              "Анонс"
+              "Анонс",
+              "Наши Проекты",
+              "Наши Тренинги",
+              "Членство",
+              "Команда"
             ]
           },
+<<<<<<< HEAD
           "Count": {
+=======
+          "count": {
+>>>>>>> fa9ea18785daa45b6ca899f7d41daf8b8a2afbb9
             "type": "integer",
             "default": 0
           }
         }
       },
       "NewPost": {
-        "required": [
-          "title_eng",
-          "title",
-          "title_az",
-          "content_eng",
-          "content",
-          "content_az",
-          "category"
-        ],
         "properties": {
           "title_eng": {
             "type": "string",
@@ -3266,10 +3262,18 @@
               "Фитнес",
               "Здоровье",
               "Питание",
-              "Анонс"
+              "Анонс",
+              "Наши Проекты",
+              "Наши Тренинги",
+              "Членство",
+              "Команда"
             ]
           },
+<<<<<<< HEAD
           "Count": {
+=======
+          "count": {
+>>>>>>> fa9ea18785daa45b6ca899f7d41daf8b8a2afbb9
             "type": "integer",
             "default": 0
           }

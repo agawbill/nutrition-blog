@@ -1,6 +1,6 @@
 (function (w, d) {
     'use strict';
-
+    var url = window.location.href
     /**
      * Class to display the buttons of social networks.
      *
@@ -9,7 +9,7 @@
      * @license MIT
      */
     function ShareButtons() {
-
+        
         var FB_LINK_FORMAT = 'https://www.facebook.com/sharer/sharer.php?u={0}',
             VK_LINK_FORMAT = 'https://vk.com/share.php?url={0}&title={1}',
             TW_LINK_FORMAT = 'https://twitter.com/intent/tweet?url={0}&text={1}',
@@ -125,10 +125,10 @@
          * @param {HTMLElement} share
          */
         var getDesc = function (share) {
-            var metaDesc = d.querySelector('meta[name=description]');
+            var metaDesc = d.querySelector('meta[property=og:description]');
             return getAttribute(share, 'data-desc') || (metaDesc && getAttribute(metaDesc, 'content')) || ' ';
         };
-
+ 
        /**
         * Method for attaching event to the element
         * @param {HTMLElement} el

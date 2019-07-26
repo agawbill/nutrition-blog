@@ -491,14 +491,7 @@
       "Post": {
         "required": [
           "id",
-          "title_eng",
-          "title",
-          "title_az",
-          "content_eng",
-          "content",
-          "content_az",
-          "cover",
-          "category"
+          "cover"
         ],
         "properties": {
           "id": {
@@ -597,25 +590,24 @@
               "Фитнес",
               "Здоровье",
               "Питание",
-              "Анонс"
+              "Анонс",
+              "Наши Проекты",
+              "Наши Тренинги",
+              "Членство",
+              "Команда"
             ]
           },
+<<<<<<< HEAD
           "Count": {
+=======
+          "count": {
+>>>>>>> fa9ea18785daa45b6ca899f7d41daf8b8a2afbb9
             "type": "integer",
             "default": 0
           }
         }
       },
       "NewPost": {
-        "required": [
-          "title_eng",
-          "title",
-          "title_az",
-          "content_eng",
-          "content",
-          "content_az",
-          "category"
-        ],
         "properties": {
           "title_eng": {
             "type": "string",
@@ -664,10 +656,18 @@
               "Фитнес",
               "Здоровье",
               "Питание",
-              "Анонс"
+              "Анонс",
+              "Наши Проекты",
+              "Наши Тренинги",
+              "Членство",
+              "Команда"
             ]
           },
+<<<<<<< HEAD
           "Count": {
+=======
+          "count": {
+>>>>>>> fa9ea18785daa45b6ca899f7d41daf8b8a2afbb9
             "type": "integer",
             "default": 0
           }
