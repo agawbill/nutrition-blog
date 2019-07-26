@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/posts": {
+    "/banners": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Post"
+                    "$ref": "#/components/schemas/Banner"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Post"
+          "Banner"
         ],
         "parameters": [
           {
@@ -175,7 +175,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Post"
+                  "$ref": "#/components/schemas/Banner"
                 }
               }
             }
@@ -213,7 +213,7 @@
         },
         "summary": "",
         "tags": [
-          "Post"
+          "Banner"
         ],
         "requestBody": {
           "description": "",
@@ -221,14 +221,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewPost"
+                "$ref": "#/components/schemas/NewBanner"
               }
             }
           }
         }
       }
     },
-    "/posts/count": {
+    "/banners/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -280,12 +280,12 @@
         },
         "summary": "",
         "tags": [
-          "Post"
+          "Banner"
         ],
         "parameters": []
       }
     },
-    "/posts/{_id}": {
+    "/banners/{_id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -295,7 +295,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Post"
+                  "$ref": "#/components/schemas/Banner"
                 }
               }
             }
@@ -333,7 +333,7 @@
         },
         "summary": "",
         "tags": [
-          "Post"
+          "Banner"
         ],
         "parameters": [
           {
@@ -357,7 +357,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Post"
+                  "$ref": "#/components/schemas/Banner"
                 }
               }
             }
@@ -395,7 +395,7 @@
         },
         "summary": "",
         "tags": [
-          "Post"
+          "Banner"
         ],
         "requestBody": {
           "description": "",
@@ -403,7 +403,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewPost"
+                "$ref": "#/components/schemas/NewBanner"
               }
             }
           }
@@ -469,7 +469,7 @@
         },
         "summary": "",
         "tags": [
-          "Post"
+          "Banner"
         ],
         "parameters": [
           {
@@ -488,188 +488,33 @@
   },
   "components": {
     "schemas": {
-      "Post": {
+      "Banner": {
         "required": [
-          "id",
-          "title_eng",
-          "title",
-          "title_az",
-          "content_eng",
-          "content",
-          "content_az",
-          "cover",
-          "category"
+          "id"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "title_eng": {
-            "type": "string",
-            "default": "",
-            "maxLength": 300
-          },
           "title": {
             "type": "string",
-            "default": "",
-            "maxLength": 300
-          },
-          "title_az": {
-            "type": "string",
-            "default": "",
-            "maxLength": 300
-          },
-          "content_eng": {
-            "type": "string",
             "default": ""
           },
-          "description": {
+          "url": {
             "type": "string",
             "default": ""
-          },
-          "content": {
-            "type": "string",
-            "default": ""
-          },
-          "content_az": {
-            "type": "string",
-            "default": ""
-          },
-          "cover": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "sha256": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "string"
-              },
-              "url": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "public_id": {
-                "type": "string"
-              },
-              "related": {
-                "type": "string"
-              }
-            }
-          },
-          "Избранное": {
-            "type": "boolean",
-            "default": false
-          },
-          "recPosts": {
-            "type": "boolean",
-            "default": false
-          },
-          "category": {
-            "type": "string",
-            "default": "Наши Беседы",
-            "enum": [
-              "Наши Беседы",
-              "Фитнес",
-              "Здоровье",
-              "Питание",
-              "Анонс"
-            ]
-          },
-          "Count": {
-            "type": "integer",
-            "default": 0
           }
         }
       },
-      "NewPost": {
-        "required": [
-          "title_eng",
-          "title",
-          "title_az",
-          "content_eng",
-          "content",
-          "content_az",
-          "category"
-        ],
+      "NewBanner": {
         "properties": {
-          "title_eng": {
-            "type": "string",
-            "default": "",
-            "maxLength": 300
-          },
           "title": {
             "type": "string",
-            "default": "",
-            "maxLength": 300
-          },
-          "title_az": {
-            "type": "string",
-            "default": "",
-            "maxLength": 300
-          },
-          "content_eng": {
-            "type": "string",
             "default": ""
           },
-          "description": {
+          "url": {
             "type": "string",
             "default": ""
-          },
-          "content": {
-            "type": "string",
-            "default": ""
-          },
-          "content_az": {
-            "type": "string",
-            "default": ""
-          },
-          "Избранное": {
-            "type": "boolean",
-            "default": false
-          },
-          "recPosts": {
-            "type": "boolean",
-            "default": false
-          },
-          "category": {
-            "type": "string",
-            "default": "Наши Беседы",
-            "enum": [
-              "Наши Беседы",
-              "Фитнес",
-              "Здоровье",
-              "Питание",
-              "Анонс"
-            ]
-          },
-          "Count": {
-            "type": "integer",
-            "default": 0
           }
         }
       }
@@ -677,7 +522,7 @@
   },
   "tags": [
     {
-      "name": "Post"
+      "name": "Banner"
     }
   ]
 }

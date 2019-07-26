@@ -1,212 +1,126 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html>
-
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>WELCOME TO ACADEMY OF NUTRITION AND DIETETICS</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Abel|Montserrat" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
-    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href='./index_page.css' >
-    </head>
-  <body lang="en">
-    <div id='header_menu_blue'> <h5 class='float-right'>КОНТАКТЫ</h5> </div>
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+	<title>WELCOME TO ACADEMY OF NUTRITION AND DIETETICS</title>
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Abel|Montserrat" rel="stylesheet">
+	<link href="index.css" rel="stylesheet">
+	<link href="/favicon.png" rel="shortcut icon" type="image/png">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+	<link href='./index_page1.css' rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
 
-                 <img class="mx-auto d-block" src='logo.png'>
+</head>
+<style type="text/css">
 
+</style>
+<body lang="en">
+	<div id="headerPartial"></div>
+	<div class="container-fluid">
+		<div class='nomargin'>
+			<!--  top part of the screen  -->
+			<div class='nomargin hundredWidth'>
+				<div class="wrapperTop">
+					<div class="leftColumn">
+				<div class='nomargin left-column'>
+					<a href="news.html">
+					<p id="talks">Главные Новости</p></a>
+					<div class="row">
+						<div class="col-lg-6 col-md-6 mb-6" id="newsFirst"></div>
+						<div class="col-lg-6 col-md-6 mb-6" id="newsSecond"></div>
+					</div>
+					<p></p>
+					<hr>
+					<div class="row" id="selected"></div>
+					<hr>
+					<div class="row randomSix" id="randomSix"></div>
+				</div>
+				</div>
+				<div class="rightColumn">
+				<div class='nomargin2'>
 
-        <br>
+						<a width=100% href='#'><img src="banner_online_course.jpg"   width="100%"></a>
 
-      <div style='width:100%;' class="container-fluid">
+					<center>
+						<hr>
+						<h5 id="upcoming" style="color:rgb(73,86,120); margin-top: 10px;">РЕКОМЕНДОВАННЫЕ</h5>
+					</center>
+					<div id="recPosts"></div>
+				</div>
+				</div>
+			</div><!-- end of  top part of the screen  -->
+			<div><img  id='big_banner' src="https://s3-eu-west-1.amazonaws.com/andop.online/images/BANNER+RU.jpg" width="100%"></div>
+			<hr>
+			<div class="wrapperTop">
+				<div class="leftColumn">
+			<div class='nomargin left-column'>
+				<a href="sports.html">
+				<p class='topic_header'  id="fitness">Фитнес</p></a>
+				<div class="row">
+					<div id="sportsFirst" style="margin-bottom:15px;padding-left:15px; width:100%;"></div>
+				</div>
+				<div class="row" id="sportsSecond"></div>
+				<div class="col-lg-16 col-md-16 mb-16" style="padding:0px!important">
+					<hr>
+				</div><!-- <div style="clear: both;"></div> -->
+				<!-- <div class="col-lg-12 col-md-12 mb-12" style="padding:0px!important"> -->
+				<a href="technology.html">
+				<p class='topic_header' id="diet">Питание</p></a>
+				<div class="row">
+					<div id="technologyFirst" style="margin-bottom:15px;padding-left:15px;"></div>
+				</div>
+				<div class="row" id="technologySecond"></div>
+				<hr>
+				<!-- <div class="col-lg-16 col-md-16 mb-16" style="padding:0px!important"> -->
+				<a href="entertainment.html">
+				<p class='topic_header' id="health">Здоровье</p></a>
+				<div class="row">
+					<div id="entertainmentFirst" style="margin-bottom:15px;padding-left:15px;position:relative;"></div>
+				</div>
+				<div class="row" id="entertainmentSecond"></div>
+				<div class="col-lg-16 col-md-16 mb-16" style="padding:0px!important"></div>
+			</div>
+			</div>
+			<div class="rightColumn">
+			<div class='nomargin2'>
+				<center>
+					 <h5 id="latest" style="color:rgb(73,86,120); margin-top: 5px;">ПОСЛЕДНИИ ПУБЛИКАЦИИ</h5>
+					 <hr>
+				</center>
 
-          <nav class="navbar navbar-expand-lg">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item active">
-                  <a class="nav-link" href="/about.html">Об Академии <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/management.html">Наше Руководство</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/projects.html">Наши Проекты</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/trainings.html">Наши Тренинги</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/sports.html">Запись на Тренинги</a>
-                </li>
-              </ul>
-            </div>
-        </nav>
-        <hr>
-        <p>
-        </div>
-        <div class="container-fluid">
-        </p>
-          <a href="news.html"><h3>Наши Беседы</h3></a>
-            <div class="row">
-            <div class="col-lg-5 col-md-5 mb-5" id="newsFirst">
-
-            </div>
-            <div class="col-lg-4 col-md-4 mb-4" id="newsSecond">
-
-            </div>
-            <div class="col-lg-3 col-md-3 mb-3">
-             <a href='https://subscription-education.herokuapp.com'> <img src="banner_online_course.jpg" width="300px" style="padding-left:5px;"> </a>
-            </div>
-
-        </div>
-
-
-        <div class="col-lg-9 col-md-9 mb-9" style="padding:0px!important">
-
-        </p>
-          <hr>
-          <a href=""><h3>Избранное</h3></a>
-            <div class="row" id="selected">
-
-            </div>
-          </div>
-          <div class="col-lg-9 col-md-9 mb-9" style="padding:0px!important">
-
-          <hr>
-           <img width=100% src='banner3.jpg' >
-
-          <h3>Фитнес-Здоровье-Питание </h3>
-            <div class="row" id="randomSix">
-
-            </div>
-            <hr>
-          </div>
-
-
-        <div class="col-lg-12 col-md-12 mb-12" style="padding:0px!important">
-          <a href="sports.html"><h3>Фитнес</h3></a>
-          <div class="row">
-            <div class="col-lg-9 col-md-9 mb-9" id="sportsFirst" style="margin-bottom:15px;">
-
-            </div>
-
-            </div>
-            <div class="row" id="sportsSecond">
-
-            </div>
-            <div class="col-lg-9 col-md-9 mb-9" style="padding:0px!important">
-            <hr>
-          </div>
-
-        </div>
-        <div style="clear: both;"></div>
-
-        <div class="col-lg-12 col-md-12 mb-12" style="padding:0px!important">
-          <a href="entertainment.html"><h3>Здоровье</h3></a>
-            <div class="row">
-              <div class="col-lg-9 col-md-9 mb-9" id="entertainmentFirst" style="margin-bottom:15px;">
-
-              </div>
-            </div>
-            <div class="row" id="entertainmentSecond">
-
-            </div>
-            <div class="col-lg-9 col-md-9 mb-9" style="padding:0px!important">
-            <hr>
-            </div>
-
-
-        <div class="col-lg-12 col-md-12 mb-12" style="padding:0px!important">
-          <a href="technology.html"><h3>Питание</h3></a>
-          <div class="row">
-            <div class="col-lg-9 col-md-9 mb-9" id="technologyFirst" style="margin-bottom:15px;">
-
-            </div>
-          </div>
-          <div class="row" id="technologySecond">
-
-          </div>
-        </div>
-      <hr>
-
-
-          <h3>VIDEO</h3>
-          <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
-          </div>
-
-
-        </br>
-          <div class="row">
-
-            <div class="col-lg-12 col-md-12 mb-12" id="banners" width="100%">
-            </div>
-          </div>
-
-          <br>
-          <hr>
-
-
-        </div>
-      </div>
- <!-- footer -->
-          <div class='container'>
-            <div class='row'>
-              <div class='col-md-3 footer_divider'>
-                <div>
-                  <img width='40px' src='logoPNG.png' class='float-left'>
-                  <h4 class='float-left blueHeading'>ACADEMY OF <br> NUTRITION AND DIET  </h4>
-                </div>
-              </div>
-              <div class='col-md-2 footer_divider'>
-                <h4>МЕНЮ</h4> <br>
-                <ul style='list-style-type: none; margin: 0; padding: 0;'>
-                  <li><a class="nav-link" href="/about.html">Об Академии <span class="sr-only">(current)</span></a></li>
-                  </li><a class="nav-link" href="/management.html">Наше Руководство</a> </li>
-                  </li><a class="nav-link" href="/projects.html">Наши Проекты</a> </li>
-                 </li> <a class="nav-link" href="/trainings.html">Наши Тренинги</a></li>
-                 </li> <a class="nav-link" href="/sports.html">Запись на Тренинги</a> </li>
-                </ul>
-              </div>
-              <div class='col-md-3 footer_divider'>
-                <h4>ОСТАВАЙСЯ НА СВЯЗИ</h4>
-                <ul style='list-style-type: none; margin: 0; padding: 0;'>
-                  <li><a class="nav-link" href="/about.html">Facebook <span class="sr-only">(current)</span></a></li>
-                  </li><a class="nav-link" href="/management.html">Twitter</a> </li>
-                  </li><a class="nav-link" href="/projects.html">Instagram</a> </li>
-                 </li> <a class="nav-link" href="/trainings.html">Youtube</a></li>
-                </ul>
-               </div>
-              <div class='col-md-3'>
-                <h4>КОНТАКТЫ</h4>
-<pre>
-Адрес: Азербайджан,Баку,
-Teлефон: +99412
-Мобильный: +99412
-Whatsapp: +99412
-E-mail:  info@andib.az
-</pre>
-              </div>
-            </div>
-          </div>
-          <!--end of footer-->
-  </body>
-  <script
-    src="https://code.jquery.com/jquery-3.3.1.js"
-    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-    crossorigin="anonymous"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
-  <script src="/scripts/index.js" charset="utf-8"></script>
+				<div id="latestPosts"></div>
+			</div>
+			</div>
+			</div>
+			<div style="clear: both;"></div>
+			<hr>
+			<div class="embed-responsive embed-responsive-16by9">
+				<video controls="" height="640px" width="100%"><source src="https://s3.amazonaws.com/andop.org/welcome_video.mp4" type="video/mp4"> <source src="https://s3.amazonaws.com/andop.org/welcome_video.flv" type="video/flv"> Your browser does not support the video tag.</video>
+			</div><br>
+			<div class="col-lg-12 col-md-12 mb-12" id="banners"></div><br>
+		</div>
+	</div><!-- footer -->
+	</div><!-- footer -->
+	<div id="footerPartial"></div><!--end of footer-->
+	<script src="https://code.jquery.com/jquery-3.3.1.js">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
+	</script>
+	<script charset="utf-8" src="/scripts/header.js">
+	</script>
+	<script charset="utf-8" src="/scripts/index.js">
+	</script>
+	<script charset="utf-8" src="/scripts/footer.js">
+	</script>
+	<script charset="utf-8" src="/scripts/banner_change.js">
+	</script>
+</body>
 </html>

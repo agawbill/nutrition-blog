@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "01/05/2019 1:06:18 PM"
+    "x-generation-date": "04/15/2019 11:12:06 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3030,6 +3030,36 @@
   },
   "components": {
     "schemas": {
+      "Banner": {
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string",
+            "default": ""
+          },
+          "url": {
+            "type": "string",
+            "default": ""
+          }
+        }
+      },
+      "NewBanner": {
+        "properties": {
+          "title": {
+            "type": "string",
+            "default": ""
+          },
+          "url": {
+            "type": "string",
+            "default": ""
+          }
+        }
+      },
       "Banners": {
         "required": [
           "id"
@@ -3063,13 +3093,35 @@
       "Post": {
         "required": [
           "id",
+          "title_eng",
+          "title",
+          "title_az",
+          "content_eng",
+          "content",
+          "content_az",
+          "cover",
           "category"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
+          "title_eng": {
+            "type": "string",
+            "default": "",
+            "maxLength": 300
+          },
           "title": {
+            "type": "string",
+            "default": "",
+            "maxLength": 300
+          },
+          "title_az": {
+            "type": "string",
+            "default": "",
+            "maxLength": 300
+          },
+          "content_eng": {
             "type": "string",
             "default": ""
           },
@@ -3078,6 +3130,10 @@
             "default": ""
           },
           "content": {
+            "type": "string",
+            "default": ""
+          },
+          "content_az": {
             "type": "string",
             "default": ""
           },
@@ -3131,24 +3187,54 @@
             "type": "boolean",
             "default": false
           },
+          "recPosts": {
+            "type": "boolean",
+            "default": false
+          },
           "category": {
             "type": "string",
-            "default": "",
+            "default": "Наши Беседы",
             "enum": [
               "Наши Беседы",
-              " Фитнес",
-              " Здоровье",
-              " Партнеры"
+              "Фитнес",
+              "Здоровье",
+              "Питание",
+              "Анонс"
             ]
+          },
+          "Count": {
+            "type": "integer",
+            "default": 0
           }
         }
       },
       "NewPost": {
         "required": [
+          "title_eng",
+          "title",
+          "title_az",
+          "content_eng",
+          "content",
+          "content_az",
           "category"
         ],
         "properties": {
+          "title_eng": {
+            "type": "string",
+            "default": "",
+            "maxLength": 300
+          },
           "title": {
+            "type": "string",
+            "default": "",
+            "maxLength": 300
+          },
+          "title_az": {
+            "type": "string",
+            "default": "",
+            "maxLength": 300
+          },
+          "content_eng": {
             "type": "string",
             "default": ""
           },
@@ -3160,19 +3246,32 @@
             "type": "string",
             "default": ""
           },
+          "content_az": {
+            "type": "string",
+            "default": ""
+          },
           "Избранное": {
+            "type": "boolean",
+            "default": false
+          },
+          "recPosts": {
             "type": "boolean",
             "default": false
           },
           "category": {
             "type": "string",
-            "default": "",
+            "default": "Наши Беседы",
             "enum": [
               "Наши Беседы",
-              " Фитнес",
-              " Здоровье",
-              " Партнеры"
+              "Фитнес",
+              "Здоровье",
+              "Питание",
+              "Анонс"
             ]
+          },
+          "Count": {
+            "type": "integer",
+            "default": 0
           }
         }
       },
@@ -3475,6 +3574,9 @@
     }
   },
   "tags": [
+    {
+      "name": "Banner"
+    },
     {
       "name": "Banners"
     },

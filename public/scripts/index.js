@@ -1,332 +1,640 @@
 var $ = jQuery;
+
+// arrays for different post categories
 var technology = [];
 var news = [];
 var entertainment = [];
 var selectedPosts = [];
 var sports = [];
+var recPostings = [];
 var allArray;
 var randomSix = [];
+var firstSix = [];
 
-const newsCycle = () => {
-  const first = news[0];
-  const news1 = `
-    <img src="${
-      first.cover.url
-    }" height="600vh" width="100%" class="rounded" ></p>
-    <h4 class="card-title">
-      <a href="/post.html?id=${first._id}">${first.title}</a>
-    </h4>
-    <h5>${first.description}</h5>
-    <p>
-    ${first.content.substring(0, 50)}
-    </p>
-    </br>
-    <span class="date">${first.createdAt}</span>
-    `;
-  $("#newsFirst").append(news1);
-  for (i = 1; i < news.length; i++) {
-    if (i === 4) {
-      break;
-    }
-    if (i === 2) {
-      const item = news[i];
-      const news2 = `
-        <div id="blocks">
-        <div style="border-top:2px dotted navy;border-bottom:2px dotted navy;width:100%;padding-top:10px;padding-bottom:10px;">
-          <table>
-            <tr>
-              <td>
-                  <img src="${
-                    item.cover.url
-                  }"  class="rounded" float="left" height="200vh" width="300vh" style="padding-right:10px;">
-              </td>
-              <td style="width: 100%;position:relative; clear:both;">
-                <span class="newsText">
-                    <h4 class="card-title">
-                      <a href="/post.html?id=${item._id}">${
-        item.description
-      }</a>
-                    </h4>
-                </span>
-                <span class="date">${item.createdAt}</span>
-              </td>
-            </tr>
-            </div>
-          </table>
-        </div>
-        <p>
-          `;
-      $("#newsSecond").append(news2);
-    } else {
-      const item = news[i];
-      const news2 = `
-        <div id="blocks">
-          <table>
-            <tr>
-              <td>
-                  <img src="${
-                    item.cover.url
-                  }"  class="rounded" float="left" height="200vh" width="300vh" style="padding-right:10px;">
-              </td>
-              <td style="width: 100%;position:relative; clear:both;">
-                <span class="newsText">
-                    <h4 class="card-title">
-                      <a href="/post.html?id=${item._id}">${
-        item.description
-      }</a>
-                    </h4>
-                </span>
-                <span class="date">${item.createdAt}</span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <p>
-          `;
-      $("#newsSecond").append(news2);
-    }
-  }
-};
+// language selected presets
+// window.onload = () => {
+// };
 
-const entertainmentCycle = () => {
-  const item = entertainment[0];
-  const ent = `
-  <img src="${
-    item.cover.url
-  }" class="rounded" height="400vh" width="50%" style="float:right;padding-left:15px;">
-    <h4 class="card-title">
-      <a href="/post.html?id=${item._id}">${item.title}</a>
-    </h4>
-
-    <h5>${item.description}</h5>
-    </p>
-    <span class="date2">${item.createdAt}</span>
-  `;
-  $("#entertainmentFirst").append(ent);
-  for (let i = 1; i < entertainment.length; i++) {
-    if (i === 4) {
-      break;
-    }
-    if (i === 2) {
-      const item = entertainment[i];
-      const ent = `
-    <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;float:center; border-left: 2px dotted navy; border-right: 2px dotted navy;">
-      <h4 class="card-title">
-        <a href="/post.html?id=${item._id}">${item.title}</a>
-      </h4>
-        <img src="${
-          item.cover.url
-        }" class="rounded" height="200vh" width="100%">
-      <h5>${item.content.substring(0, 50)}</h5>
-      </p>
-      <span class="date2">${item.createdAt}</span>
-    </div>
-    `;
-      $("#entertainmentSecond").append(ent);
-    } else {
-      const item = entertainment[i];
-      const ent = `
-    <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;">
-      <h4 class="card-title">
-        <a href="/post.html?id=${item._id}">${item.title}</a>
-      </h4>
-        <img src="${
-          item.cover.url
-        }" class="rounded" height="200vh" width="100%">
-      <h5>${item.description}</h5>
-      </p>
-      <span class="date2">${item.createdAt}</span>
-    </div>
-    `;
-      $("#entertainmentSecond").append(ent);
-    }
-  }
-};
-
-const techCycle = () => {
-  const item = technology[0];
-  const tech = `
-  <img src="${
-    item.cover.url
-  }" class="rounded" height="400vh" width="50%" style="float:left;padding-right:15px;">
-    <h4 class="bigTitle">
-      <a href="/post.html?id=${item._id}">${item.title}</a>
-    </h4>
-
-    <h5>${item.description}</h5>
-    </p>
-    <span class="date2">${item.createdAt}</span>
-  `;
-  $("#technologyFirst").append(tech);
-  for (let i = 1; i < technology.length; i++) {
-    if (i === 4) {
-      break;
-    }
-    if (i === 2) {
-      const item = technology[i];
-      const tech = `
-    <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;float:center; border-left: 2px dotted navy; border-right: 2px dotted navy;">
-      <h4 class="card-title">
-        <a href="/post.html?id=${item._id}">${item.title}</a>
-      </h4>
-        <img src="${
-          item.cover.url
-        }" class="rounded" height="200vh" width="100%">
-      <h5>${item.content.substring(0, 50)}</h5>
-      </p>
-      <span class="date2">${item.createdAt}</span>
-    </div>
-    `;
-      $("#technologySecond").append(tech);
-    } else {
-      const item = technology[i];
-      const tech = `
-    <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;">
-      <h4 class="card-title">
-        <a href="/post.html?id=${item._id}">${item.title}</a>
-      </h4>
-        <img src="${
-          item.cover.url
-        }" class="rounded" height="200vh" width="100%">
-      <h5>${item.description}</h5>
-      </p>
-      <span class="date2">${item.createdAt}</span>
-    </div>
-    `;
-      $("#technologySecond").append(tech);
-    }
-  }
-};
-
-const sportsCycle = () => {
-  const item = sports[0];
-  const sport = `
-  <img src="${
-    item.cover.url
-  }" class="rounded" height="400vh" width="50%" style="float:left; padding-right:15px;">
-    <h4 class="card-title">
-      <a href="/post.html?id=${item._id}">${item.title}</a>
-    </h4>
-
-    <h5>${item.content.substring(0, 50)}</h5>
-    </p>
-    <span class="date2">${item.createdAt}</span>
-  `;
-  $("#sportsFirst").append(sport);
-  for (let i = 1; i < sports.length; i++) {
-    if (i === 4) {
-      break;
-    }
-    if (i === 2) {
-      const item = sports[i];
-      const sport = `
-    <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;float:center; border-left: 2px dotted navy; border-right: 2px dotted navy;">
-      <h4 class="card-title">
-        <a href="/post.html?id=${item._id}">${item.title}</a>
-      </h4>
-        <img src="${
-          item.cover.url
-        }" class="rounded" height="200vh" width="100%">
-      <h5>${item.description}</h5>
-      </p>
-      <span class="date2">${item.createdAt}</span>
-    </div>
-    `;
-      $("#sportsSecond").append(sport);
-    } else {
-      const item = sports[i];
-      const sport = `
-    <div class="col-lg-3 col-md-3 mb-3" style="position:relative;line-height:0px!important;">
-      <h4 class="card-title">
-        <a href="/post.html?id=${item._id}">${item.title}</a>
-      </h4>
-        <img src="${
-          item.cover.url
-        }" class="rounded" height="200vh" width="100%">
-      <h5>${item.description}</h5>
-      </p>
-      <span class="date2">${item.createdAt}</span>
-    </div>
-    `;
-      $("#sportsSecond").append(sport);
-    }
-  }
-};
-
-const selectedCycle = () => {
-  for (let i = 0; i < selectedPosts.length; i++) {
-    if (i === 4) {
-      break;
-    } else if (i === 3) {
-      const item = selectedPosts[i];
-      const selected = `
-      <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 0px">
-        <a href="/post.html?id=${item._id}"><h5>${item.description}</h5></a>
-        <p>
-        ${item.content.substring(0, 50)}
-        </p>
-        </br>
-        <span class="date">${item.createdAt}</span>
-
-      </div>
-      `;
-      $("#selected").append(selected);
-    } else {
-      const item = selectedPosts[i];
-      const selected = `
-      <div class="col-lg-3 col-md-3 mb-3" style="position:relative;border-right: 2px dotted navY">
-        <a href="/post.html?id=${item._id}"><h5>${item.description}</h5></a>
-        <p>
-        ${item.content.substring(0, 50)}
-        </p>
-        </br>
-        <span class="date">${item.createdAt}</span>
-
-      </div>
-      `;
-      $("#selected").append(selected);
-    }
-  }
-};
-
-const randomSixCycle = () => {
-  for (let i = 0; i < allArray.length; i++) {
-    const item = allArray[i];
-    if (i === 2 || i === 5) {
-      const node = `
-        <div class="col-lg-4 col-md-4 mb-4" style="position:relative;border-right: 0px;">
-        <h4 class="card-title">
-          <a href="/post.html?id=${item._id}">${item.title}</a>
-        </h4>
-          <img src="${
-            item.cover.url
-          }" class="rounded" height="200vh" width="100%">
-        <h5>${item.description}</h5>
-        </p>
-        <span class="date2">${item.createdAt}</span>
-      </div>
-      `;
-      $("#randomSix").append(node);
-    } else {
-      const node = `
-      <div class="col-lg-4 col-md-4 mb-4" style="position:relative;line-height:0px!important;border-right:2px dotted navy">
-        <h4 class="card-title">
-          <a href="/post.html?id=${item._id}">${item.title}</a>
-        </h4>
-          <img src="${
-            item.cover.url
-          }" class="rounded"  height="200vh" width="100%">
-        <h5>${item.description}</h5>
-        <p>
-        <span class="date2">${item.createdAt}</span>
-      </div>
-      `;
-      $("#randomSix").append(node);
-    }
-  }
-};
+var contentLanguage = localStorage["myKey"] || "RU";
+var titleLanguage = localStorage["myKey"] || "RU";
+var descriptionLanguage = localStorage["myKey"] || "RU";
 
 $(document).ready(() => {
+  var languageSelect = document.getElementById("languageSelect");
+
+  const postLogic = item => {
+    if (item !== undefined) {
+      content = contentLanguage;
+      title = titleLanguage;
+      if (contentLanguage == "ENG") {
+        content = item.content_eng;
+        title = item.title_eng;
+        $("#big_banner").attr(
+          "src",
+          "https://s3-eu-west-1.amazonaws.com/andop.online/images/BANNER+EN.jpg"
+        );
+      } else if (contentLanguage == "RU") {
+        $("#big_banner").attr(
+          "src",
+          "https://s3-eu-west-1.amazonaws.com/andop.online/images/BANNER+RU.jpg"
+        );
+        content = item.content;
+        title = item.title;
+      } else {
+        $("#big_banner").attr(
+          "src",
+          "https://s3-eu-west-1.amazonaws.com/andop.online/images/BANNER+AZ.jpg"
+        );
+        content = item.content_az;
+        title = item.title_az;
+      }
+    }
+  };
+  // convert rich text
+  var converter = new showdown.Converter();
+  // below are the functions to list the posts, html and styling for each corresponding category
+  const newsCycle = () => {
+    news.sort(function compare(a, b) {
+      var dateA = new Date(a.createdAt);
+      var dateB = new Date(b.createdAt);
+      return dateB - dateA;
+    });
+    const item = news[0];
+    postLogic(item);
+    const news1 = `
+    <img src="${item.cover.url}"   width="100%" class="rounded" >
+    <span class="date3">   ${item.createdAt
+      .substring(0, 10)
+      .replace(/-/g, ".")}</span>
+    <p style="font-size:  2vw; font-weight: 600; " class="card-title">
+      <a href="/post.html?id=${
+        item._id
+      }" style="color:rgb(73, 86, 120)">${title.substring(0, 100)}</a>
+    <div style="margin-bottom:5px;">
+    ${converter.makeHtml(content).substring(0, 301) + " ..."}
+      <br>
+    </div>
+    </p>
+    `;
+    $("#newsFirst").append(news1);
+    for (let i = 1; i < news.length; i++) {
+      const item = news[i];
+      postLogic(item);
+      if (item !== undefined) {
+        if (i === 4) {
+          break;
+        } else if (i === 2) {
+          const news2 = `
+        <div id="blocks">
+          <div style="border-top:1px dotted navy;border-bottom:1px dotted navy;width:100%;padding-top:10px;padding-bottom:10px;">
+          <table>
+            <tr>
+              <td width="60%">
+                  <img src="${
+                    item.cover.url
+                  }"  class="rounded" float="left"    width="100%" style="padding-right:10px;">
+              </td>
+              <td style="width:100%;position:relative; clear:both;">
+                <span class="newsText">
+                          <span class="date3">${item.createdAt
+                            .substring(0, 10)
+                            .replace(/-/g, ".")}</span>
+                    <h4 class="card-title">
+                      <a href="/post.html?id=${
+                        item._id
+                      }" style="color:rgb(73, 86, 120)">${title.substring(
+            0,
+            100
+          )}</a>
+                    </h4>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <p>
+          `;
+          $("#newsSecond").append(news2);
+        } else {
+          const news2 = `
+        <div id="blocks">
+          <table>
+            <tr>
+              <td width='60%'>
+                  <img src="${
+                    item.cover.url
+                  }"  class="rounded" float="left"   width="100%" style="padding-right:10px;">
+              </td>
+              <td style="width:100%;position:relative; clear:both;">
+                <span class="newsText">
+                    <span class="date3">${item.createdAt
+                      .substring(0, 10)
+                      .replace(/-/g, ".")}</span>
+                    <h4 class="card-title">
+                      <a href="/post.html?id=${
+                        item._id
+                      }"style="color:rgb(73, 86, 120)">${title.substring(
+            0,
+            100
+          )}</a>
+                    </h4>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <p>
+          `;
+          $("#newsSecond").append(news2);
+        }
+      }
+    }
+  };
+  const entertainmentCycle = () => {
+    entertainment.sort(function compare(a, b) {
+      var dateA = new Date(a.createdAt);
+      var dateB = new Date(b.createdAt);
+      return dateB - dateA;
+    });
+
+    const item = entertainment[0];
+    postLogic(item);
+    const ent = `
+      <div class="col-lg-16 col-md-16 mb-16">
+      <img src="${
+        item.cover.url
+      }" class="rounded"   width="50%" style="float:left; padding-right:15px;">
+      <span class="date3">${item.createdAt
+        .substring(0, 10)
+        .replace(/-/g, ".")}</span>
+      </div>
+        <p style="font-size:  2vw; font-weight: 600; " class="card-title">
+          <a href="/post.html?id=${
+            item._id
+          }" style="color:rgb(73, 86, 120)">${title.substring(0, 100)}</a>
+        </h5>
+       <p class='font800'>${converter.makeHtml(content.substring(0, 209))}</p>
+        </p>
+      `;
+    $("#entertainmentFirst").append(ent);
+    for (let i = 1; i < entertainment.length; i++) {
+      const item = entertainment[i];
+      postLogic(item);
+      if (item !== undefined) {
+        if (i === 5) {
+          break;
+        } else if (i === 4) {
+          const ent = `
+    <div class="col-lg-3 col-md-3  " style="position:relative;float:center;">
+      <img src="${item.cover.url}" class="rounded"   width="100%">
+      <p>
+      <span class="date3">${item.createdAt
+        .substring(0, 10)
+        .replace(/-/g, ".")}</span>
+        <h5 class="card-title">
+          <a href="/post.html?id=${
+            item._id
+          }" style="color:rgb(73, 86, 120)">${title.substring(0, 100)}</a>
+        </h5>
+        </p>
+    </div>
+    `;
+          $("#entertainmentSecond").append(ent);
+        } else {
+          const item = entertainment[i];
+          postLogic(item);
+          const ent = `
+    <div class="col-lg-3 col-md-3  " style="position:relative;border-right: 1px dotted navY">
+    <img src="${item.cover.url}" class="rounded"   width="100%">
+  <p>
+  <span class="date3">${item.createdAt
+    .substring(0, 10)
+    .replace(/-/g, ".")}</span>
+  <h5 class="card-title">
+    <a href="/post.html?id=${
+      item._id
+    }" style="color:rgb(73, 86, 120)">${title.substring(0, 100)}</a>
+  </h5>
+    </div>
+    `;
+          $("#entertainmentSecond").append(ent);
+        }
+      }
+    }
+  };
+  const techCycle = () => {
+    technology.sort(function compare(a, b) {
+      var dateA = new Date(a.createdAt);
+      var dateB = new Date(b.createdAt);
+      return dateB - dateA;
+    });
+
+    const item = technology[0];
+    postLogic(item);
+    const tech = `
+  <div class="col-lg-16 col-md-16 mb-16">
+  <img src="${
+    item.cover.url
+  }" class="rounded"   width="50%" style="float:left;padding-right:15px;">
+  <span class="date3">${item.createdAt
+    .substring(0, 10)
+    .replace(/-/g, ".")}</span>
+    <p style="font-size:  2vw; font-weight: 600;" class="card-title">
+      <a href="/post.html?id=${
+        item._id
+      }"style="color:rgb(73, 86, 120)">${title.substring(0, 100)}</a>
+    </p>
+    <p>
+    ${converter.makeHtml(content).substring(0, 351)}
+    </p>
+    </div>
+  `;
+    $("#technologyFirst").append(tech);
+    for (let i = 1; i < technology.length; i++) {
+      const item = technology[i];
+      postLogic(item);
+      if (item !== undefined) {
+        if (i === 5) {
+          break;
+        } else if (i === 4) {
+          const tech = `
+        <div class="col-lg-3 col-md-3  " style="position:relative;float:center;">
+          <img src="${item.cover.url}" class="rounded"   width="100%">
+          <p>
+          <span class="date3">${item.createdAt
+            .substring(0, 10)
+            .replace(/-/g, ".")}</span>
+            <h5 class="card-title">
+              <a href="/post.html?id=${
+                item._id
+              }" style="color:rgb(73, 86, 120)">${title.substring(0, 100)}</a>
+            </h5>
+            </p>
+        </div>
+    `;
+          $("#technologySecond").append(tech);
+        } else {
+          const item = technology[i];
+          postLogic(item);
+          const tech = `
+    <div class="col-lg-3 col-md-3  " style="position:relative;border-right: 1px dotted navY">
+    <img src="${item.cover.url}" class="rounded"   width="100%">
+  <p>
+  <span class="date3">${item.createdAt
+    .substring(0, 10)
+    .replace(/-/g, ".")}</span>
+  <h5 class="card-title">
+    <a href="/post.html?id=${
+      item._id
+    }" style="color:rgb(73, 86, 120)">${title.substring(0, 100)}</a>
+  </h5>
+    </div>
+    `;
+          $("#technologySecond").append(tech);
+        }
+      }
+    }
+  };
+  const sportsCycle = () => {
+    sports.sort(function compare(a, b) {
+      var dateA = new Date(a.createdAt);
+      var dateB = new Date(b.createdAt);
+      return dateB - dateA;
+    });
+
+    const item = sports[0];
+    postLogic(item);
+    const sport = `
+  <div class="col-lg-16 col-md-16 mb-16">
+  <img src="${
+    item.cover.url
+  }" class="rounded"   width="50%" style="float:left; padding-right:15px;">
+  <span class="date3">${item.createdAt
+    .substring(0, 10)
+    .replace(/-/g, ".")}</span>
+    <p style="font-size:  2vw; font-weight: 600; " class="card-title">
+      <a href="/post.html?id=${
+        item._id
+      }" style="color:rgb(73, 86, 120)">${title.substring(0, 100)}</a>
+    </p>
+   <p class='font800'>${converter.makeHtml(content).substring(0, 351)}</p>
+    </p>
+    </div>
+  `;
+    $("#sportsFirst").append(sport);
+    for (let i = 1; i < sports.length; i++) {
+      const item = sports[i];
+      postLogic(item);
+      if (item !== undefined) {
+        if (i === 5) {
+          break;
+        } else if (i === 4) {
+          const sport = `
+    <div class="col-lg-3 col-md-3  " style="position:relative;">
+        <img src="${item.cover.url}" class="rounded"   width="100%">
+      <p>
+      <span class="date3">${item.createdAt
+        .substring(0, 10)
+        .replace(/-/g, ".")}</span>
+      <h5 class="card-title">
+        <a href="/post.html?id=${
+          item._id
+        }" style="color:rgb(73, 86, 120)">${title.substring(0, 100)}</a>
+      </h5>
+    </div> `;
+          $("#sportsSecond").append(sport);
+        } else {
+          const item = sports[i];
+          postLogic(item);
+          const sport = `
+    <div class="col-lg-3 col-md-3" style="position:relative;border-right: 1px dotted navY;">
+    <img src="${item.cover.url}" class="rounded"   width="100%">
+  <p>
+  <span class="date3">${item.createdAt
+    .substring(0, 10)
+    .replace(/-/g, ".")}</span>
+  <h5 class="card-title">
+    <a href="/post.html?id=${
+      item._id
+    }" style="color:rgb(73, 86, 120)">${title.substring(0, 100)}</a>
+  </h5>
+    </div>`;
+          $("#sportsSecond").append(sport);
+        }
+      }
+    }
+  };
+  const selectedCycle = () => {
+    for (let i = 0; i < selectedPosts.length; i++) {
+      const item = selectedPosts[i];
+      postLogic(item);
+      if (item !== undefined) {
+        if (i === 5) {
+          break;
+        } else if (i === 4) {
+          const selected = `
+      <div class="col-lg-3 col-md-3  " style="position:relative;border-right: 0px">
+         <span class="date3">${item.createdAt
+           .substring(0, 10)
+           .replace(/-/g, ".")}</span>
+        <a href="/post.html?id=${
+          item._id
+        }" style="color:rgb(73, 86, 120)"><h6>${title.substring(
+            0,
+            100
+          )}</h6></a>
+        <p>
+          ${converter.makeHtml(content).substring(0, 320)}
+        </p>
+      </div>
+      `;
+          $("#selected").append(selected);
+        } else {
+          const item = selectedPosts[i];
+          postLogic(item);
+          const selected = `
+          <div id=${"dotted" +
+            i} class="col-lg-3 col-md-3" style="position:relative;border-right: 1px dotted navY; ">
+            <a href="/post.html?id=${item._id}" style="color:rgb(73, 86, 120)">
+              <span class="date3">${item.createdAt
+                .substring(0, 10)
+                .replace(/-/g, ".")}</span>
+              <h6 class='font800'>${title.substring(0, 100)}</h6>
+            </a>
+            <br>
+            <p style="font-size:12px;  ">
+              ${content.substring(0, 330)}
+            </p>
+
+            <br>
+        </div>
+      `;
+          $("#selected").append(selected);
+        }
+      }
+    }
+  };
+  const randomSixCycle = () => {
+    for (let i = 0; i < allArray.length; i++) {
+      if (i == 6) {
+        break;
+      }
+      const item = allArray[i];
+      postLogic(item);
+      if (item !== undefined) {
+        if (i === 2 || i === 5) {
+          const node = `
+        <div class="col-lg-4 col-md-4 mb-4 randomSix${i}a " style="position:relative;border-right: 0px; padding:1%">
+        <img src="${item.cover.url}" class="rounded" width="100%">
+        <p>
+        <span class="date3">${item.createdAt
+          .substring(0, 10)
+          .replace(/-/g, ".")}</span>
+        <h5 class="card-title">
+        <a href="/post.html?id=${
+          item._id
+        }" style="color:rgb(73, 86, 120)">${title.substring(0, 100)} </a>
+        </h5>
+      </div>
+      `;
+          $("#randomSix").append(node);
+        } else {
+          const node = `
+      <div class="col-lg-4 col-md-4 mb-4 randomSix${i} " style="position:relative;border-right:1px dotted navy; padding:1%">
+      <img src="${item.cover.url}" class="rounded"   width="100%">
+      <p>
+      <span class="date3">${item.createdAt
+        .substring(0, 10)
+        .replace(/-/g, ".")}</span>
+      <h5 class="card-title">
+      <a href="/post.html?id=${
+        item._id
+      }"style="color:rgb(73, 86, 120)">${title.substring(0, 100)} </a>
+      </h5>
+      </div>
+      `;
+          $("#randomSix").append(node);
+        }
+      }
+    }
+  };
+  const recPostCycle = () => {
+    for (let i = 0; i < recPostings.length; i++) {
+      if (i === 5) {
+        break;
+      }
+      const item = recPostings[i];
+      postLogic(item);
+      const node = `
+      <div class="row">
+        <div style="display: block; padding-left:35px; padding-right:35px;  ">
+        <span class="date3">${item.createdAt
+          .substring(0, 10)
+          .replace(/-/g, ".")}</span>
+
+        <h6 style="border-bottom:1px dashed rgb(73,86,120); padding-bottom:10px;" class="card-title">
+        <a href="/post.html?id=${
+          item._id
+        }" style="color:rgb(73, 86, 120)">${title.substring(0, 70)}  </a>
+        </h6>
+      </div>
+    </div>
+      `;
+      $("#recPosts").append(node);
+    }
+  };
+  const latestPosts = () => {
+    for (let i = 0; i < firstSix.length; i++) {
+      const item = firstSix[i];
+      postLogic(item);
+
+      const node = `
+
+      <table style="margin-bottom:10px; display:block">
+        <tr>
+          <td>
+              <img src="${
+                item.cover.url
+              }"   width="90px" style="padding-right:5px;">
+          </td>
+          <td style="width:100%;position:relative; clear:both;">
+            <span class="newsText">
+                <p style="font-size:12px!important;" class="card-title font800">
+                <a href="/post.html?id=${
+                  item._id
+                }" style="color:rgb(73, 86, 120)">${title.substring(
+        0,
+        60
+      )}  </a>
+                </p>
+            </span>
+          </td>
+
+        </tr>
+        </div>
+      </table>
+      <hr>
+
+      <div style="clear:both;"></div>
+  `;
+      $("#latestPosts").append(node);
+    }
+  };
+  // headers in differnt languages for when language preset is changed
+  const swapHeaders = contentLanguage => {
+    headerArray = [
+      "#talks",
+      "#diet",
+      "#fitness",
+      "#upcoming",
+      "#health",
+      "#latest"
+    ];
+    eng = [
+      "Main News",
+      "Diet",
+      "Fitness",
+      "Recommended",
+      "Health",
+      "LATEST POSTS"
+    ];
+    azi = [
+      "Əsas Xəbərlər",
+      "Diet",
+      "Fintes",
+      "REDAKSİYA SEÇİMİ",
+      "Sağlamlığ",
+      "SON PUBLİKASİYALAR"
+    ];
+    rus = [
+      "Главные Новости",
+      "Питание",
+      "Фитнес",
+      "РЕКОМЕНДОВАННЫЕ",
+      "Здоровье",
+      "ПОСЛЕДНИИ ПУБЛИКАЦИИ "
+    ];
+    for (let i = 0; i < headerArray.length; i++) {
+      if (contentLanguage === "ENG") {
+        $(headerArray[i]).empty();
+        $(headerArray[i]).append(eng[i].toUpperCase());
+      } else if (contentLanguage === "AZ") {
+        $(headerArray[i]).empty();
+        $(headerArray[i]).append(azi[i].toUpperCase());
+      } else {
+        $(headerArray[i]).empty();
+        $(headerArray[i]).append(rus[i].toUpperCase());
+      }
+    }
+  };
+  swapHeaders(contentLanguage);
+  // wipe clear sections for new languages to load, and cycle through languages to be appended to emptied divs upon language change
+  const emptyAll = () => {
+    $("#latestPosts").empty();
+    $("#randomSix").empty();
+    $("#technologyFirst").empty();
+    $("#technologySecond").empty();
+    $("#sportsFirst").empty();
+    $("#sportsSecond").empty();
+    $("#newsFirst").empty();
+    $("#newsSecond").empty();
+    $("#entertainmentFirst").empty();
+    $("#entertainmentSecond").empty();
+    $("#recPosts").empty();
+    $("#selected").empty();
+  };
+  const functionCycle = postLogic => {
+    if (sports.length !== 0) {
+      sportsCycle(postLogic);
+    }
+    if (entertainment.length !== 0) {
+      entertainmentCycle();
+    }
+    if (news.length !== 0) {
+      newsCycle();
+    }
+    if (technology.length !== 0) {
+      techCycle();
+    }
+    if (selectedPosts.length !== 0) {
+      selectedCycle();
+    }
+    if (allArray.length !== 0) {
+      randomSixCycle();
+    }
+    if (recPostings.length !== 0) {
+      recPostCycle();
+    }
+    if (firstSix.length !== 0) {
+      latestPosts();
+    }
+  };
+  // language change logic
+  // window.onload = () => {
+  languageSelect.addEventListener("change", () => {
+    if (languageSelect.value == "ENG") {
+      localStorage["myKey"] = "ENG";
+      contentLanguage = "ENG";
+      emptyAll();
+      functionCycle();
+      swapHeaders(contentLanguage);
+    } else if (languageSelect.value == "RU") {
+      localStorage["myKey"] = "RU";
+      contentLanguage = "RU";
+      emptyAll();
+      functionCycle();
+      swapHeaders(contentLanguage);
+    } else if (languageSelect.value == "AZ") {
+      localStorage["myKey"] = "AZ";
+      contentLanguage = "AZ";
+      emptyAll();
+      functionCycle();
+      swapHeaders(contentLanguage);
+    }
+  });
+  // };
+  // ajax requests to get the data
+
   $.ajax({
     url: "banners",
     method: "GET",
@@ -350,28 +658,63 @@ $(document).ready(() => {
       console.log(err);
     }
   });
-
   $.ajax({
     url: "posts",
     method: "GET",
     dataType: "json",
     contentType: "json",
     success: data => {
-      for (let i = 0; i < data.length; i++) {
+      for (let i = data.length - 1; i >= 0; i--) {
         const item = data[i];
-
+        postLogic(item);
         if (item.Избранное == true) {
-          selectedPosts.unshift(item);
+          randomSix.unshift(item);
         }
-
+        if (item.recPosts == true) {
+          recPostings.unshift(item);
+        }
         if (item.category == "Наши Беседы") {
           news.unshift(item);
-        } else if (item.category == " Партнеры") {
+        } else if (item.category == "Питание") {
           technology.unshift(item);
-        } else if (item.category == " Здоровье") {
+        } else if (item.category == "Здоровье") {
           entertainment.unshift(item);
+        } else if (item.category == "Анонс") {
+          selectedPosts.unshift(item);
         } else {
           sports.unshift(item);
+        }
+        if (i > data.length - 6) {
+          firstSix.unshift(data[i]);
+          const node = `
+
+            <table style="margin-bottom:10px; display:block">
+              <tr>
+                <td>
+                    <img src="${
+                      item.cover.url
+                    }"   width="90px" style="padding-right:5px;">
+                </td>
+                <td style="width:100%;position:relative; clear:both;">
+                  <span class="newsText">
+                      <p style="font-size:12px!important;" class="card-title font800">
+                      <a href="/post.html?id=${
+                        item._id
+                      }" style="color:rgb(73, 86, 120)">${title.substring(
+            0,
+            70
+          )}  </a>
+                      </p>
+                  </span>
+                </td>
+
+              </tr>
+              </div>
+            </table>
+            <hr>
+            <div style="clear:both;"></div>
+        `;
+          $("#latestPosts").append(node);
         }
       }
       allArray = [
@@ -396,7 +739,7 @@ $(document).ready(() => {
     if (news.length !== 0) {
       newsCycle();
     }
-    if (technology.legnth !== 0) {
+    if (technology.length !== 0) {
       techCycle();
     }
     if (selectedPosts.length !== 0) {
@@ -404,6 +747,9 @@ $(document).ready(() => {
     }
     if (allArray.length !== 0) {
       randomSixCycle();
+    }
+    if (recPostings.length !== 0) {
+      recPostCycle();
     }
   });
 });
